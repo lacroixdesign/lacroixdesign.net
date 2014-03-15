@@ -1,0 +1,32 @@
+@mixin media-ie-only {
+  @media \0screen {
+    @content;
+  }
+}
+
+@mixin media-ie($args...) {
+
+  @if length($args) > 0 {
+    @include media($args) {
+      @content;
+    }
+  }
+
+  @include media-ie-only {
+    @content;
+  }
+
+}
+
+// Add min-width to containers for old IE
+@mixin ie-width {
+  @include media-ie-only {
+    min-width: $breakpoint-ipad;
+  }
+}
+
+.ie-omega {
+  @include media-ie-only {
+    margin-right: 0 !important;
+  }
+}

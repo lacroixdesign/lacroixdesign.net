@@ -1,0 +1,26 @@
+// Document
+
+html {
+  font-size: 100%;
+}
+
+body {
+  position: relative;
+  background: #fff;
+  color: $black;
+  font-family: $typeface-serif;
+  font-size: 100%;
+  @include media-ie { min-width: $breakpoint-desktop; }
+
+  @include media($typography-breakpoint1) {
+    font-size: 112.5%;
+  }
+
+  @include media-ie($typography-breakpoint2) {
+    font-size: 125%;
+  }
+} // body
+
+a {
+  @include transition(all 0.05s linear);
+}

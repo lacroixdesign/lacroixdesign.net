@@ -1,0 +1,52 @@
+@mixin input-sizing($base) {
+  height: $base;
+  padding: 0 $base / 3;
+  font-size: $base / 2;
+  line-height: $base;
+}
+
+@mixin input($bg: white, $color: #555) {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 2px;
+  box-shadow: none;
+  background: $bg;
+  color: $color;
+  font-family: $typeface-sans;
+  @include input-sizing($input-height-normal);
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  @include placeholder {
+    color: #ccc;
+  }
+
+  &.size--small {
+    @include input-sizing($input-height-small);
+  }
+  &.size--large {
+    @include input-sizing($input-height-large);
+  }
+
+} // @mixin input
+
+textarea,
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="password"] {
+  @include input($off-white, $grey);
+}
+
+textarea {
+  height: 5em;
+}

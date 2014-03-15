@@ -1,0 +1,20 @@
+/*  IcoMoon -- Icon Font
+*/
+
+@include font-face('icomoon', font-path('icomoon/icomoon'));
+
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+}
+
+[data-icon]{
+  display: inline-block;
+}

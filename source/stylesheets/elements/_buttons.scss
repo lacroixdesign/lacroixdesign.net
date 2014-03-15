@@ -1,0 +1,84 @@
+/*
+ * Button style
+ */
+@mixin btn($color, $bg, $border-size: 1px) {
+  @include appearance(none);
+  display: inline-block;
+  padding: 1em;
+  margin: 0.25em 0;
+  overflow-x: hidden;
+  font-family: $typeface-sans;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-rendering: optimizelegibility;
+  white-space: nowrap;
+  cursor: pointer;
+  @include user-select(none);
+  @include transition(none);
+
+  border: $border-size solid $color;
+  border-radius: 2px;
+  box-shadow: none;
+  background: transparent;
+  color: $color;
+
+  &:visited {
+    background: transparent;
+    color: $color;
+  }
+
+  &:hover {
+    background: $color;
+    color: $white;
+  }
+
+  &:active {
+    background: $color;
+    color: $white;
+  }
+
+  &:focus {
+    color: $color;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:active {
+    @include opacity(0.5);
+    background: transparent;
+  }
+
+  &.large {
+    font-size: 1em;
+  }
+  &.x-large {
+    font-size: 1.25em;
+  }
+  &.small {
+    font-size: 0.65em;
+  }
+  &.mini {
+    font-size: 0.6em;
+  }
+
+  [data-icon] {
+    vertical-align: middle;
+  }
+} // @mixin btn
+
+.btn {
+  @include btn($pink, transparent, 1px);
+}
+
+.btn-bright {
+  @include btn($white, transparent, 1px);
+  &:hover { color: $black; }
+}
+
+.btn-subtle {
+  @include btn($grey, transparent, 1px);
+}

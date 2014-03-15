@@ -1,0 +1,16 @@
+.s-home-welcome {
+  background: image-url('bg-home-welcome.jpg') center center;
+  background-size: cover;
+  color: $off-white;
+  font-weight: bold;
+
+  .s-home-welcome--overlay {
+    padding: 7em + $header-height 0 7em;
+    background: rgba(50,50,50,0.5);
+  }
+
+  h2 {
+    font-family: $typeface-serif;
+    line-height: normal;
+  }
+} // .s-home-welcome

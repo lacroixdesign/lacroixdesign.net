@@ -1,0 +1,11 @@
+.s-header {
+  @include clearfix;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  padding: 0 $page-gutter;
+  @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
+  color: $off-white;
+}

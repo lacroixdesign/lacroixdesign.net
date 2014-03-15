@@ -1,0 +1,67 @@
+.b-text {
+
+  a,
+  a:focus,
+  a:visited {
+    color: $pink;
+  }
+
+  a:hover {
+    color: lighten($pink, 10);
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    padding: 0.5em 1em;
+    margin: 1.5em 1em;
+    border-left: 10px solid #eee;
+    background: #f8f8f8;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+
+  blockquote:before {
+    vertical-align: -0.4em;
+    margin-right: 0.25em;
+    color: #ccc;
+    font-size: 4em;
+    line-height: 0.1em;
+    content: open-quote;
+  }
+
+  blockquote:after {
+    content: no-close-quote;
+  }
+
+  blockquote p {
+    margin-top: 1em;
+  }
+
+  blockquote :first-child {
+    display: inline;
+  }
+
+  blockquote :last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 1em auto;
+  }
+
+} // .b-text
+
+.b-tagline {
+  color: $pink;
+  font-family: $typeface-serif;
+  font-size: 1.125em;
+  font-style: italic;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
