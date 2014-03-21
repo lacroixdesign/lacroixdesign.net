@@ -2,7 +2,10 @@
   float: right;
   height: 100%;
   font-family: $typeface-sans;
+  // font-family: $typeface-serif;
+  // font-style: italic;
   font-weight: $bold-weight;
+  // font-weight: bold;
   line-height: $header-height;
 
   ul {
@@ -18,6 +21,7 @@
   }
 
   a {
+    position: relative;
     display: block;
     height: 100%;
     padding: 0 0.5em;
@@ -25,7 +29,20 @@
     text-decoration: none;
   }
 
-  a:hover {
-    border-color: $off-white;
+  a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    content: '';
+    @include transform(translateY(-0.5em));
+    @include transition(all 0.2s linear);
+  }
+
+  a:hover:after {
+    background: $off-white;
+    @include transform(translateY(0));
   }
 } // .b-menu

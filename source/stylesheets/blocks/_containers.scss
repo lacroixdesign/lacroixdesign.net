@@ -14,6 +14,13 @@ $containers-bp: $breakpoint-desktop;
   }
 } // .l-constrained
 
+.l-unconstrained {
+  @include row;
+  width: 100%;
+  padding: 0 $page-gutter;
+  margin: auto;
+}
+
 .l-main {
   margin-bottom: 2em;
   border-bottom: 1px solid $medium-white;

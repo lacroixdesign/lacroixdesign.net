@@ -1,10 +1,16 @@
 <header id="header" class="s-header">
-  <nav id="nav" class="b-menu">
-    <ul id="menu">
-      <li><a href="#">About</a>
-      <li><a href="#">Work</a>
-      <li><a href="#">Blog</a>
-      <li><a href="#">Contact</a>
-    </ul>
-  </nav>
+  <div class="l-unconstrained">
+    <div class="s-header--logo">
+      <!-- <img src="<%= image_path 'logo-dark.png' %>" alt="<%= data.site.title %>" class="image-fullheight"> -->
+      <a href="/"><img src="<%= image_path 'logo-light.png' %>" alt="<%= data.site.title %>" class="image-fullheight"></a>
+    </div>
+    <nav id="nav" class="b-menu">
+      <ul id="menu">
+        <li><a href="#">About</a>
+        <li><a href="#">Work</a>
+        <li><a href="#">Blog</a>
+        <li><a href="#">Contact</a>
+      </ul>
+    </nav>
+  </div>
 </header>

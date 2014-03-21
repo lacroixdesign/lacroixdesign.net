@@ -8,4 +8,14 @@
   padding: 0 $page-gutter;
   @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
   color: $off-white;
+
+  > * {
+    height: 100%;
+  }
+}
+
+.s-header--logo {
+  float: left;
+  height: 100%;
+  padding: 0.5em 0;
 }

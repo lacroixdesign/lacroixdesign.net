@@ -3,14 +3,16 @@
   background-size: cover;
   color: $off-white;
   font-weight: bold;
-
-  .s-home-welcome--overlay {
-    padding: 7em + $header-height 0 7em;
-    background: rgba(50,50,50,0.5);
-  }
+  text-align: center;
 
   h2 {
     font-family: $typeface-serif;
+    font-weight: normal;
     line-height: normal;
   }
 } // .s-home-welcome
+
+.s-home-welcome__overlay {
+  padding: 7em + $header-height 0 7em;
+  background: rgba(50,50,50,0.5);
+}
