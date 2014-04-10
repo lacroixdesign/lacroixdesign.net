@@ -1,0 +1,32 @@
+.b-recent-work {
+  position: relative;
+  overflow: hidden;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+
+  a {
+    text-decoration: none;
+  }
+} // .b-recent-work
+
+.b-recent-work__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.b-recent-work__title {
+  position: relative;
+  padding: 4em $page-gutter;
+  margin: 0;
+  background: rgba($black, 0.8);
+  color: $white;
+  font-family: $typeface-serif;
+  font-size: 2.5em;
+  font-weight: normal;
+}

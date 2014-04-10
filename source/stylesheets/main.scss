@@ -21,14 +21,17 @@
 @import "elements/buttons";
 @import "elements/inputs";
 @import "elements/images";
+@import "elements/titles";
 
 // Blocks/modules
 @import "blocks/containers";
 @import "blocks/text";
 @import "blocks/menu";
+@import "blocks/recent-work";
 
 // Sections
 @import "sections/header";
 @import "sections/nav";
 @import "sections/footer";
 @import "sections/home-welcome";
+@import "sections/home-work";

@@ -1,4 +1,4 @@
-<header id="header" class="s-header">
+<header id="header" class="s-header <%= 'negative' if current_page.data.negative_header %> <%= 'over' if current_page.data.over_header %>">
   <div class="l-unconstrained">
     <div class="s-header--logo">
       <!-- <img src="<%= image_path 'logo-dark.png' %>" alt="<%= data.site.title %>" class="image-fullheight"> -->
@@ -6,7 +6,6 @@
     </div>
     <nav id="nav" class="b-menu">
       <ul id="menu">
-        <li><a href="#">About</a>
         <li><a href="#">Work</a>
         <li><a href="#">Blog</a>
         <li><a href="#">Contact</a>

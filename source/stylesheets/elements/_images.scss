@@ -1,5 +1,11 @@
 .image {
   display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.image-fullwidth {
+  display: block;
   width: 100%;
   height: auto;
 }

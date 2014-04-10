@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+<head>
+  <!--
+  _
+  _
+  _          ///   ///    ..oOOOo..
+  _         ///   ///  .:OOOOOOOOOOO:.
+  _        ///   ///  .OOOOOOOOOOOOOOO.
+  _       ///   ///   OOOOOOOOOOOOOOOOO
+  _      ///   ///    OOOOOOOOOOOOOOOOO
+  _     ///   ///     OOOOOOOOOOOOOOOOO
+  _    ///   ///      `OOOOOOOOOOOOOOO'
+  _   ///   ///        `:OOOOOOOOOOO:'
+  _  ///   ///            ''*OOO*''
+  _
+  _  Designed & Developed by LaCroix Design Co.
+  _    http://lacroixdesign.net
+  _
+  _
+  -->
+
+  <meta charset="utf-8">
+  <title><%= "#{current_page.data.title} |" if current_page.data.title %> LaCroix Design Co.</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="description" content="<%= current_page.data.description || data.site.description %>">
+  <meta name="author" content="Michael LaCroix, James LaCroix">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="/assets/images/favicon.ico" rel="shortcut icon">
+  <link href="/assets/images/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon">
+  <link href="/assets/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+  <link href="/assets/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+  <link href="/assets/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+
+  <%# Stylesheets %>
+  <%= stylesheet_link_tag "main" %>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/806434/723404/css/fonts.css">
+
+  <%# Modernizr %>
+  <%= javascript_include_tag  "modernizr" %>
+
+  <%# Google Analytics %>
+  <% if data.site.google_analytics_id && data.site.google_analytics_domain && !development? %>
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '<%= data.site.google_analytics_id %>', '<%= data.site.google_analytics_domain %>');
+      ga('send', 'pageview');
+    </script>
+  <% end %>
+
+  <%# Guages %>
+  <% if data.site.gauges_id && !development? %>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '<%= data.site.gauges_id %>');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  <% end %>
+</head>
+
+<body>
+  <%= yield %>
+
+  <%# JavaScripts %>
+  <%= javascript_include_tag  "main" %>
+</body>
+</html>

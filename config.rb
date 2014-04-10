@@ -29,6 +29,8 @@ helpers TagHelper
 #   page "/admin/*"
 # end
 
+# page "*", :layout => :article
+
 # Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
@@ -58,13 +60,10 @@ activate :deploy do |deploy|
   # deploy.branch = "gh-pages" # uses 'gh-pages' by default
 end
 
-set :css_dir, 'stylesheets'
-
-set :js_dir, 'javascripts'
-
+set :css_dir,    'stylesheets'
+set :js_dir,     'javascripts'
 set :images_dir, 'images'
-
-set :fonts_dir, 'fonts'
+set :fonts_dir,  'fonts'
 
 # Build-specific configuration
 configure :build do
@@ -79,6 +78,9 @@ configure :build do
 
   activate :minify_html
   activate :gzip
+
+  # activate :asset_host
+  # set :asset_host, "http://cdn.example.com"
 
   # Use relative URLs
   # activate :relative_assets

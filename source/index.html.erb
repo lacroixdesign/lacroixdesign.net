@@ -2,9 +2,10 @@
 title: "Web Development & Design Studio - Chicago, IL"
 ---
 
-<div class="s-home-welcome">
+<%# Welcome %>
+<section class="s-home-welcome">
   <div class="s-home-welcome__overlay">
-    <div class="l-unconstrained">
+    <div class="l-constrained">
       <h1>LaCroix Design Co.</h1>
       <h2><em>Muji carefully curated Toto</em>, punctual flat white airport vibrant Sunspel international Washlet handsome Ginza.</h2>
       <p>
@@ -12,4 +13,23 @@ title: "Web Development & Design Studio - Chicago, IL"
       </p>
     </div>
   </div>
-</div>
+</section>
+
+<%# Recent Work %>
+<section class="s-home-work">
+  <div class="l-constrained">
+    <h1 class="section-title">Recent Work</h1>
+  </div>
+  <% data.recent_work.take(3).each do |work| %>
+    <article class="b-recent-work" style="background-image: url('<%= image_path "recent-work/#{work.image}" %>')">
+      <a href="/work/<%= work.page %>">
+        <!-- <img src="<%= image_path "recent-work/#{work.image}" %>" alt="<%= work.title %>" class="b-recent-work__image"> -->
+        <h2 class="b-recent-work__title"><%= work.title %></h2>
+      </a>
+    </article>
+  <% end %>
+</section>
+
+<%# TODO add these sections: %>
+<h1>Services</h1>
+<h1>About (+ made in Chicago)</h1>
