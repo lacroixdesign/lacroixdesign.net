@@ -1,15 +1,31 @@
 <header id="header" class="s-header <%= 'negative' if current_page.data.negative_header %> <%= 'over' if current_page.data.over_header %>">
-  <div class="l-unconstrained">
-    <div class="s-header--logo">
-      <!-- <img src="<%= image_path 'logo-dark.png' %>" alt="<%= data.site.title %>" class="image-fullheight"> -->
-      <a href="/"><img src="<%= image_path 'logo-light.png' %>" alt="<%= data.site.title %>" class="image-fullheight"></a>
-    </div>
-    <nav id="nav" class="b-menu">
-      <ul id="menu">
-        <li><a href="#">Work</a>
-        <li><a href="#">Blog</a>
-        <li><a href="#">Contact</a>
-      </ul>
-    </nav>
+
+  <div class="s-header__logo">
+    <a href="/">
+      <img src="<%= image_path 'logo-light.png' %>" alt="<%= data.site.title %>" class="image-fullheight">
+    </a>
   </div>
+
+  <nav id="nav" class="s-header__nav">
+    <a href="#menu" id="menu-open" class="b-menu-toggle">Menu <%= icon 'e2af' %></a>
+    <a href="#menu" id="menu-close" class="b-menu-toggle">Close <%= icon 'e36b' %></a>
+    <div id="menu" class="b-menu">
+      <ul class="b-menu-list">
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="b-menu-social">
+        <li><a href="<%= data.urls.twitter %>" target="_blank"><%= icon 'e49d' %></a></li>
+        <li><a href="<%= data.urls.facebook %>" target="_blank"><%= icon 'e49a' %></a></li>
+        <li><a href="<%= data.urls.google_plus %>" target="_blank"><%= icon 'e493' %></a></li>
+        <li><a href="<%= data.urls.dribbble %>" target="_blank"><%= icon 'e4af' %></a></li>
+        <li><a href="<%= data.urls.github %>" target="_blank"><%= icon 'e4b8' %></a></li>
+      </ul>
+      <div class="b-menu-contact">
+        <%= mail_to data.site.contact_email %>
+      </div>
+    </div>
+  </nav>
+
 </header>

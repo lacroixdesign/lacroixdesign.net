@@ -5,7 +5,6 @@
   left: 0;
   width: 100%;
   height: $header-height;
-  padding: 0 $page-gutter;
   @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
   color: $off-white;
 
@@ -14,8 +13,14 @@
   }
 } // .s-header
 
-.s-header--logo {
+.s-header__logo {
   float: left;
   height: 100%;
-  padding: 0.5em 0;
+  padding: $page-gutter;
+}
+
+.s-header__nav {
+  position: relative;
+  float: right;
+  height: 100%;
 }
