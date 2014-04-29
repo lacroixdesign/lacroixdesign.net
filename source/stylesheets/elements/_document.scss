@@ -21,9 +21,5 @@ body {
   }
 } // body
 
-a {
-  @include transition(all 0.05s linear);
-}
-
 ::-moz-selection { color: $black;  background: $off-white; }
 ::selection      { color: $black;  background: $off-white; }

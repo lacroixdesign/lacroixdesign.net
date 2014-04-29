@@ -52,7 +52,7 @@
   min-width: 20em;
   background: $white;
   color: $black-10;
-  font-family: $typeface-sans;
+  font-family: $typeface-serif;
 
   .is-menu-open & {
     display: block;
@@ -60,6 +60,10 @@
 } // .b-menu
 
 .b-menu-list {
+  li {
+    border-bottom: 1px solid $off-white;
+  }
+
   a {
     display: block;
     padding: 0.75em 1em 0.75em 0.75em;
@@ -67,6 +71,7 @@
     font-size: 1.25em;
     font-weight: $bold-weight;
     line-height: normal;
+    font-style: italic;
     text-decoration: none;
   }
 
@@ -105,6 +110,7 @@
   padding: 1em 0.5em;
   background: $off-white;
   font-size: 0.8125em;
+  font-style: italic;
   text-align: center;
   text-decoration: none;
 
