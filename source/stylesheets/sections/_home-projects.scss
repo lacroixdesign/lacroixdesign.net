@@ -1,0 +1,32 @@
+@import "blocks/containers";
+
+$home-projects-whitespace: 1em;
+
+.s-home-projects {
+  @include page-container(none, $max-width);
+  padding-top: $home-projects-whitespace;
+  padding-bottom: $home-projects-whitespace;
+  text-align: center;
+
+  header {
+    margin-bottom: $home-projects-whitespace;
+  }
+
+  .section-title {
+    margin: 0 auto;
+  }
+} // .s-home-projects
+
+.s-home-projects__items article {
+  max-width: 20em;
+  margin: 0 auto 1em;
+
+  h2 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    @include span-columns(4);
+  }
+} // .s-home-projects__items article
