@@ -2,23 +2,23 @@
 
 $containers-bp: $breakpoint-desktop;
 
-.l-constrained {
-  @include outer-container;
-  width: 100%;
-  max-width: 30em;
-  padding: 0 $page-gutter;
-  margin: auto;
-
-  @include media-ie($containers-bp) {
-    max-width: $max-width;
-  }
-} // .l-constrained
-
-.l-unconstrained {
+@mixin page-container($width1: none, $width2: none, $bp: $containers-bp) {
   @include row;
   width: 100%;
   padding: 0 $page-gutter;
   margin: auto;
+
+  @include media-ie($bp) {
+    max-width: $width2;
+  }
+}
+
+.l-constrained {
+  @include page-container(30em, $max-width);
+}
+
+.l-unconstrained {
+  @include page-container;
 }
 
 .l-main {

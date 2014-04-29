@@ -20,14 +20,25 @@ title: "Web Development & Design Studio - Chicago, IL"
   <div class="l-constrained">
     <h1 class="section-title">Recent Work</h1>
   </div>
-  <% data.recent_work.take(3).each do |work| %>
-    <article class="b-recent-work" style="background-image: url('<%= image_path "recent-work/#{work.image}" %>')">
-      <a href="/work/<%= work.page %>">
-        <!-- <img src="<%= image_path "recent-work/#{work.image}" %>" alt="<%= work.title %>" class="b-recent-work__image"> -->
-        <h2 class="b-recent-work__title"><%= work.title %></h2>
-      </a>
-    </article>
-  <% end %>
+  <div class="s-home-work__items">
+    <% data.recent_work.take(3).each do |work| %>
+      <article class="overlay__wrap">
+
+        <div class="image-16x9">
+          <img src="<%= image_path "recent-work/#{work.image}" %>" alt="<%= work.title %>">
+        </div>
+
+        <div class="overlay__centered-dark">
+          <div class="overlay__content">
+            <h2 class="bold title-link">
+              <a href="/work/<%= work.page %>"><%= work.title %></a>
+            </h2>
+          </div>
+        </div>
+
+      </article>
+    <% end %>
+  </div>
 </section>
 
 <%# TODO add these sections: %>

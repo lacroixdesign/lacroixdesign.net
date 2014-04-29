@@ -1,7 +1,13 @@
 .section-title {
-  display: inline-block;
   color: $grey-light;
   // color: lighten($black, 20);
-  font-size: 2em;
-  text-transform: uppercase;
+  font-family: $typeface-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.title-link {
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
 }
