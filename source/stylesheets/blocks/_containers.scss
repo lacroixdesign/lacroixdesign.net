@@ -5,7 +5,8 @@ $containers-bp: $breakpoint-desktop;
 @mixin page-container($width1: none, $width2: none, $bp: $containers-bp) {
   @include row;
   width: 100%;
-  padding: 0 $page-gutter;
+  padding-right: $page-gutter;
+  padding-left: $page-gutter;
   margin: auto;
 
   @include media-ie($bp) {
@@ -46,3 +47,13 @@ $containers-bp: $breakpoint-desktop;
   padding: 2em 0;
   background: $off-white;
 }
+
+.b-section {
+  $whitespace: 1em;
+  padding-top: $whitespace;
+  padding-bottom: $whitespace;
+
+  header {
+    margin-bottom: $whitespace;
+  }
+} // .b-section

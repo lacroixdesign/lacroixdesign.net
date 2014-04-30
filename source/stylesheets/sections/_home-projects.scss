@@ -1,16 +1,10 @@
 @import "blocks/containers";
 
-$home-projects-whitespace: 1em;
-
 .s-home-projects {
   @include page-container(none, $max-width);
-  padding-top: $home-projects-whitespace;
-  padding-bottom: $home-projects-whitespace;
+  // padding-top: $section-whitespace;
+  // padding-bottom: $section-whitespace;
   text-align: center;
-
-  header {
-    margin-bottom: $home-projects-whitespace;
-  }
 
   .section-title {
     margin: 0 auto;
@@ -30,3 +24,13 @@ $home-projects-whitespace: 1em;
     @include span-columns(4);
   }
 } // .s-home-projects__items article
+
+.s-home-projects__logo {
+  width: 50%;
+  margin: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+} // .s-home-projects__logo
