@@ -44,11 +44,36 @@ title: "Web Development & Design Studio - Chicago, IL"
   </div>
 </section>
 
+<%# TODO add Services section: %>
 <section class="b-section s-home-services">
   <header>
     <h1 class="section-title">Services</h1>
   </header>
+  <p style="text-align: center;">TODO add services</p>
 </section>
 
-<%# TODO add these sections: %>
-<h1>About (+ made in Chicago)</h1>
+<section class="b-section s-team">
+  <header>
+    <h1 class="section-title">Team</h1>
+  </header>
+  <div class="l-constrained-medium">
+    <div class="s-team__stars">
+      <img src="<%= image_path "chicago-stars.png" %>" alt="Chicago" class="image-fullwidth">
+    </div>
+    <h2 class="s-team__based">
+      Proudly based in Chicago
+    </h2>
+    <div class="s-team__about">
+      <p>Monocle ipsum dolor sit amet global exclusive bureaux, Muji essential delightful boutique bespoke Melbourne Swiss Scandinavian handsome sleepy Washlet Marylebone. Intricate boulevard handsome the best smart delightful. Bureaux exclusive sophisticated impeccable.</p>
+    </div>
+    <div class="s-team__photos">
+      <article>
+        <img src="<%= image_path "team/michael-lacroix.jpg" %>" alt="Michael LaCroix">
+      </article>
+      <article>
+        <img src="<%= image_path "team/james-lacroix.jpg" %>" alt="James LaCroix">
+      </article>
+    </div>
+    <a href="/work-with-us" class="s-team__btn">Work With Us</a>
+  </div>
+</section>

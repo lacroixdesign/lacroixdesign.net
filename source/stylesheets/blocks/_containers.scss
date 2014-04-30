@@ -5,6 +5,7 @@ $containers-bp: $breakpoint-desktop;
 @mixin page-container($width1: none, $width2: none, $bp: $containers-bp) {
   @include row;
   width: 100%;
+  max-width: $width1;
   padding-right: $page-gutter;
   padding-left: $page-gutter;
   margin: auto;
@@ -16,6 +17,10 @@ $containers-bp: $breakpoint-desktop;
 
 .l-constrained {
   @include page-container(30em, $max-width);
+}
+
+.l-constrained-medium {
+  @include page-container(30em, 30em);
 }
 
 .l-unconstrained {

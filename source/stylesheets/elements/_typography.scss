@@ -2,6 +2,7 @@
 
 p, a, h1, h2, h3, h4, h5, h6, label {
   font-family: inherit;
+  line-height: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -9,27 +10,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  margin-bottom: 0.63027em;
+  margin: 0 0 0.63027em;
   font-size: 2.61792em;
   font-weight: $bold-weight;
+  line-height: 1.13em;
 }
 
 h2 {
-  margin-bottom: 0.81582em;
+  margin: 0 0 0.81582em;
   font-size: 2.0225em;
+  line-height: 1.13em;
   &.bold { font-weight: $bold-weight; }
 }
 
-h3 {}
+h3 {
+  margin: 0 0 0.5em;
+  font-size: 2.318em;
+  font-weight: 700;
+  line-height: 1.25em;
+}
 
-h4 {}
+h4 {
+  margin: 0 0 0.5em;
+  font-size: 1.618em;
+  font-weight: 700;
+  line-height: 1.25em;
+}
 
-h5 {}
+h5 {
+  margin: 0 0 0.5em;
+  font-size: 1.432em;
+  font-weight: 700;
+  line-height: 1.25em;
+}
 
-h6 {}
+h6 {
+  margin: 0 0 0.5em;
+  font-size: 1.35em;
+  font-weight: 400;
+  line-height: 1.25em;
+}
 
 p {
   margin: 0;
+  line-height: 1.65;
 }
 
 strong {

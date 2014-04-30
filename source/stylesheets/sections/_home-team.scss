@@ -1,0 +1,54 @@
+.s-team {
+  text-align: center
+}
+
+.s-team__stars {
+  width: 100%;
+  max-width: 20em;
+  margin: 0 auto 1em;
+}
+
+.s-team__based {
+  margin-bottom: 1em;
+  color: $blue-chicago;
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.s-team__about {}
+
+.s-team__photos {
+  $border-width: 2px;
+  max-width: 20em;
+  margin: 2em auto;
+  text-align: center;
+
+  article {
+    display: inline-block;
+    width: 48%;
+    max-width: 6em;
+    border: $border-width solid $blue-chicago;
+    border-radius: 500px;
+  }
+
+  article:first-child {
+    margin-right: 4%;
+    border-left: none;
+    border: $border-width solid $blue-chicago;
+    border-radius: 500px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+  }
+} // .s-team__photos
+
+.s-team__btn {
+  @include btn($red-chicago, transparent, 2px);
+  font-family: $typeface-serif;
+  font-size: 1em;
+  font-style: italic;
+}
