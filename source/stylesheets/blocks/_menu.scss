@@ -66,7 +66,8 @@
 
   a {
     display: block;
-    padding: 0.75em 1em 0.75em 0.75em;
+    padding: 0.5em 1em 0.5em 0.75em;
+    // padding: 0.75em 1em 0.75em 0.75em;
     border-left: 0.5em solid transparent;
     font-size: 1.25em;
     font-weight: $bold-weight;
@@ -78,6 +79,10 @@
   a:hover {
     border-left-color: $pink;
     color: $pink;
+  }
+
+  @include media(min-height 37em) {
+    a { padding: 0.75em 1em 0.75em 0.75em; }
   }
 } // .b-menu-list
 
