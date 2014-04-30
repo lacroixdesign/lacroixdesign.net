@@ -1,3 +1,8 @@
+work: "/work"
+services: "/#services"
+team: "/#team"
+blog: "/blog"
+contact: "/contact"
 twitter: "https://twitter.com/lacroixdesign"
 facebook: "https://www.facebook.com/lacroixdesign"
 google_plus: "https://plus.google.com/117142158577597624459"

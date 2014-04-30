@@ -1,14 +1,12 @@
 (function() {
   var ESC_KEY = 27;
 
-  function openMenu(event) {
-    event.preventDefault();
+  function openMenu() {
     $('body').toggleClass('is-menu-open');
     $(document).on('keydown', closeMenuOnEsc);
   }
 
-  function closeMenu(event) {
-    event.preventDefault();
+  function closeMenu() {
     $('body').toggleClass('is-menu-open');
     $(document).off('keydown', closeMenuOnEsc);
   }
@@ -20,6 +18,13 @@
     }
   }
 
-  $(document).on('click', '#menu-open', openMenu);
-  $(document).on('click', '#menu-close', closeMenu);
+  $(document).on('click', '#menu-open', function(event) {
+    event.preventDefault();
+    openMenu();
+  });
+  $(document).on('click', '#menu-close', function(event) {
+    event.preventDefault();
+    closeMenu();
+  });
+  $(document).on('click', '[data-close-menu]', closeMenu);
 })();
