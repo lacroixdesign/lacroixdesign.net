@@ -1,19 +1,35 @@
 @import "blocks/containers";
 
 .s-home-projects {
-  @include page-container(none, $max-width);
-  // padding-top: $section-whitespace;
-  // padding-bottom: $section-whitespace;
+  background: image-url('backgrounds/struckaxiom.png') repeat;
   text-align: center;
 
   .section-title {
     margin: 0 auto;
   }
+
+  @include hidpi(1.5) {
+    background: image-url('backgrounds/struckaxiom_@2X.png') repeat;
+  }
 } // .s-home-projects
 
-.s-home-projects__items article {
-  max-width: 20em;
-  margin: 0 auto 1em;
+.s-home-projects__items {
+  $border-radius: 20px;
+  @include page-container(none, $max-width);
+
+  article {
+    max-width: 20em;
+    margin: 0 auto 1em;
+    border-radius: $border-radius 0 $border-radius 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    @include transition(border-radius 0.2s ease);
+  }
+
+  article:hover {
+    border-radius: 0 $border-radius 0 $border-radius;
+  }
 
   h2 {
     margin-bottom: 0;
@@ -21,7 +37,7 @@
   }
 
   @include media-ie($breakpoint-ipad) {
-    @include span-columns(4);
+    article { @include span-columns(4); }
   }
 } // .s-home-projects__items article
 

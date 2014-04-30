@@ -42,18 +42,3 @@ $containers-bp: $breakpoint-desktop;
     margin-right: 0;
   }
 } // .l-sidebar
-
-.b-page {
-  padding: 2em 0;
-  background: $off-white;
-}
-
-.b-section {
-  $whitespace: 1em;
-  padding-top: $whitespace;
-  padding-bottom: $whitespace;
-
-  header {
-    margin-bottom: $whitespace;
-  }
-} // .b-section

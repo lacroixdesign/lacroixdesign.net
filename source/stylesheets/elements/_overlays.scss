@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   padding: 1em;
+  border-radius: inherit;
 }
 
 @mixin centered-content-style {
@@ -16,6 +17,7 @@
 
 .overlay__wrap {
   position: relative;
+  border-radius: inherit;
 }
 
 .overlay__content {
