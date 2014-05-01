@@ -11,7 +11,7 @@
     <a href="#menu" id="menu-close" class="b-menu-toggle">Close <%= icon 'e36b' %></a>
     <div id="menu" class="b-menu">
       <ul class="b-menu-list">
-        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
         <li><a href="<%= data.urls.work %>">Work</a></li>
         <li><a href="<%= data.urls.services %>" data-close-menu>Services</a></li>
         <li><a href="<%= data.urls.team %>" data-close-menu>Team</a></li>
@@ -19,11 +19,7 @@
         <li><a href="<%= data.urls.contact %>">Contact</a></li>
       </ul>
       <ul class="b-menu-social">
-        <li><a href="<%= data.urls.twitter %>" target="_blank"><%= icon 'e49d' %></a></li>
-        <li><a href="<%= data.urls.facebook %>" target="_blank"><%= icon 'e49a' %></a></li>
-        <li><a href="<%= data.urls.google_plus %>" target="_blank"><%= icon 'e493' %></a></li>
-        <li><a href="<%= data.urls.dribbble %>" target="_blank"><%= icon 'e4af' %></a></li>
-        <li><a href="<%= data.urls.github %>" target="_blank"><%= icon 'e4b8' %></a></li>
+        <%= partial "components/social-icons" %>
       </ul>
       <div class="b-menu-contact">
         <%= mail_to data.site.contact_email %>

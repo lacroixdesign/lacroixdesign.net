@@ -1,4 +1,9 @@
-.bright-link {
+.link-bright {
+  color: $white;
+  &:hover { color: $white; }
+}
+
+.link-vivid {
   color: $pink;
   &:hover { color: $pink; }
 }

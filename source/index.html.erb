@@ -8,9 +8,16 @@ title: "Web Development & Design Studio - Chicago, IL"
     <div class="l-constrained-large">
       <h1>LaCroix Design Co.</h1>
       <h2><em>Muji carefully curated Toto</em>, punctual flat white airport vibrant Sunspel international Washlet handsome Ginza.</h2>
-      <p>
+      <nav class="s-home-welcome__cta">
         <a href="<%= data.urls.work_with_us %>" class="btn-bright">Work With Us</a>
-      </p>
+      </nav>
+      <!-- <nav class="s-home-welcome__links">
+        <a href="<%= data.urls.recent_projects %>" class="link-bright">Recent Work</a>
+        &bull;
+        <a href="<%= data.urls.services %>" class="link-bright">Services</a>
+        &bull;
+        <a href="<%= data.urls.team %>" class="link-bright">Team</a>
+      </nav> -->
     </div>
   </div>
 </section>
@@ -33,7 +40,7 @@ title: "Web Development & Design Studio - Chicago, IL"
                 <img src="<%= image_path "recent-projects/logos/#{project.logo}" %>" alt="<%= project.title %>">
               </div>
 
-              <a href="/work/<%= project.page %>" class="bright-link">
+              <a href="/work/<%= project.page %>" class="link-vivid">
                 <small><em>Learn more</em></small>
               </a>
 
