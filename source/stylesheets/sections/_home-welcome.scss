@@ -11,6 +11,12 @@
     font-weight: normal;
     line-height: normal;
   }
+
+  [class*="btn"] {
+    font-family: $typeface-serif;
+    font-weight: bold;
+    font-style: italic;
+  }
 } // .s-home-welcome
 
 .s-home-welcome__overlay {

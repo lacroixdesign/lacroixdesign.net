@@ -24,11 +24,13 @@
   text-align: center;
 
   article {
+    position: relative;
     display: inline-block;
     width: 48%;
     max-width: 6em;
     border: $border-width solid $blue-chicago;
     border-radius: 500px;
+    overflow: hidden;
   }
 
   article:first-child {
@@ -43,6 +45,29 @@
     width: 100%;
     height: auto;
     border-radius: inherit;
+  }
+
+  article div {
+    @include overlay-style;
+    @include centered-content-style;
+    display: none;
+    padding: 0.5em;
+    overflow: hidden;
+    background: $white;
+    background: rgba($white, 0.7);
+    color: $red-chicago;
+  }
+
+  article:hover div {
+    display: block;
+    @include display(flex);
+  }
+
+  article h1 {
+    margin: 0;
+    font-family: $typeface-serif;
+    font-size: 0.8125em;
+    font-style: italic;
   }
 } // .s-team__photos
 

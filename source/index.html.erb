@@ -9,7 +9,7 @@ title: "Web Development & Design Studio - Chicago, IL"
       <h1>LaCroix Design Co.</h1>
       <h2><em>Muji carefully curated Toto</em>, punctual flat white airport vibrant Sunspel international Washlet handsome Ginza.</h2>
       <p>
-        <a href="#" class="btn-bright">Standard Button</a>
+        <a href="<%= data.urls.work_with_us %>" class="btn-bright">Work With Us</a>
       </p>
     </div>
   </div>
@@ -21,20 +21,20 @@ title: "Web Development & Design Studio - Chicago, IL"
     <h1 class="section-title">Recent projects</h1>
   </header>
   <div class="s-home-projects__items">
-    <% data.recent_projects.take(3).each do |projects| %>
-      <article>
+    <% data.recent_projects.take(3).each_with_index do |project, index| %>
+      <article <% if index == 2 %> class="ie-omega"<% end %>>
         <div class="overlay__wrap">
 
           <div class="image-16x9">
-            <img src="<%= image_path "recent-projects/backgrounds/#{projects.image}" %>" alt="<%= projects.title %>">
+            <img src="<%= image_path "recent-projects/backgrounds/#{project.image}" %>" alt="<%= project.title %>">
           </div>
 
           <div class="overlay__centered-dark">
             <div class="overlay__content">
               <div class="s-home-projects__logo">
-                <img src="<%= image_path "recent-projects/logos/#{projects.logo}" %>" alt="<%= projects.title %>">
+                <img src="<%= image_path "recent-projects/logos/#{project.logo}" %>" alt="<%= project.title %>">
               </div>
-              <a href="/work/<%= projects.page %>" class="bright-link"><small><em>Learn more</em></small></a>
+              <a href="/work/<%= project.page %>" class="bright-link"><small><em>Learn more</em></small></a>
             </div>
           </div>
 
@@ -71,11 +71,13 @@ title: "Web Development & Design Studio - Chicago, IL"
     <div class="s-team__photos">
       <article>
         <img src="<%= image_path "team/michael-lacroix.jpg" %>" alt="Michael LaCroix">
+        <div><h1>Michael LaCroix</h1></div>
       </article>
       <article>
         <img src="<%= image_path "team/james-lacroix.jpg" %>" alt="James LaCroix">
+        <div><h1>James LaCroix</h1></div>
       </article>
     </div>
-    <a href="/work-with-us" class="s-team__btn">Work With Us</a>
+    <a href="<%= data.urls.work_with_us %>" class="s-team__btn">Work With Us</a>
   </div>
 </section>
