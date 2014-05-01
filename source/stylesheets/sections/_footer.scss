@@ -9,9 +9,6 @@
   display: inline-block;
   padding-bottom: 1em;
   margin-bottom: 2em;
-  border-bottom: 1px solid $grey-light;
-  border-bottom: 1px solid $medium-white;
-  border-bottom: 1px solid darken($medium-white, 10);
   border-bottom: 1px solid darken($medium-white, 5);
 
   ul {
@@ -35,7 +32,6 @@
 
 .s-footer__social {
   margin-bottom: 1em;
-  // color: $black-20;
   color: $grey;
   font-size: 1.5em;
 

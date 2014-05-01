@@ -54,11 +54,23 @@ title: "Web Development & Design Studio - Chicago, IL"
 
 <%# Services %>
 <%# TODO add Services section: %>
-<section class="b-section s-home-services" id="services">
+<section class="b-section s-services" id="services">
   <header>
     <h1 class="section-title">Services</h1>
   </header>
-  <p style="text-align: center;">TODO add services</p>
+  <div class="s-services__statement">
+    <p>Insert a short statement about the services offered by our studio. Just a basic gist about what we do.</p>
+  </div>
+  <div class="s-services__lists">
+    <% 4.times do %>
+      <ul>
+        <h2>LIST TITLE</h2>
+        <% ["izakaya Gaggenau", "alluring Shinkansen", "Toto lovely craftsmanship", "impeccable Muji", "remarkable ryokan"].shuffle.take(rand 4..5).each do |phrase| %>
+          <li><%= phrase %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 </section>
 
 <%# Team %>
