@@ -1,0 +1,28 @@
+@mixin responsive-media-grid($pad) {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: $pad;
+  border-radius: inherit;
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+} // @mixin responsive-media-grid
+
+.media-square {
+  @include responsive-media-grid(100%);
+}
+
+.media-16x9 {
+  @include responsive-media-grid(56.25%);
+}

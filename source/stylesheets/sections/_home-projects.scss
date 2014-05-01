@@ -21,6 +21,10 @@
     max-width: 20em;
     margin: 0 auto 1em;
     border-radius: $border-radius 0 $border-radius 0;
+    -webkit-background-size: cover cover;
+    background-size: cover cover;
+    background-attachment: fixed;
+    background-position: center;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;

@@ -1,24 +1,3 @@
-@mixin responsive-image-grid($pad) {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  padding-bottom: $pad;
-  border-radius: inherit;
-
-  > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
-  }
-} // @mixin responsive-image-grid
-
 .image {
   display: block;
   max-width: 100%;
@@ -35,12 +14,4 @@
   display: block;
   width: auto;
   height: 100%;
-}
-
-.image-square {
-  @include responsive-image-grid(100%);
-}
-
-.image-16x9 {
-  @include responsive-image-grid(56.25%);
 }

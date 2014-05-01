@@ -25,6 +25,11 @@
   width: 100%;
 }
 
+.overlay__centered {
+  @include overlay-style;
+  @include centered-content-style;
+}
+
 .overlay__centered-dark {
   @include overlay-style;
   @include centered-content-style;

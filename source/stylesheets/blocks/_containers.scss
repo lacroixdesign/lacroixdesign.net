@@ -23,6 +23,10 @@ $containers-bp: $breakpoint-desktop;
   @include page-container(30em, 30em);
 }
 
+.l-constrained-large {
+  @include page-container(30em, 40em);
+}
+
 .l-unconstrained {
   @include page-container;
 }
