@@ -5,31 +5,6 @@
   text-align: center;
 }
 
-.s-footer__nav {
-  display: inline-block;
-  padding-bottom: 1em;
-  margin-bottom: 2em;
-  border-bottom: 1px solid darken($medium-white, 5);
-
-  ul {
-    display: inline-block;
-    text-align: left;
-  }
-
-  li {
-    margin: 0 2em 0.5em;
-  }
-
-  a {
-    font-size: 0.875em;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-} // .s-footer__nav
-
 .s-footer__social {
   margin-bottom: 1em;
   color: $grey;

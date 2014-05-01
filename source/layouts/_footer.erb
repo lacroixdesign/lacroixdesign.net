@@ -1,16 +1,4 @@
 <footer id="footer" class="s-footer">
-  <nav class="s-footer__nav">
-    <ul>
-      <li><a href="/">About</a></li>
-      <li><a href="<%= data.urls.work %>">Work</a></li>
-      <li><a href="<%= data.urls.services %>" data-close-menu>Services</a></li>
-    </ul>
-    <ul>
-      <li><a href="<%= data.urls.team %>" data-close-menu>Team</a></li>
-      <li><a href="<%= data.urls.blog %>">Blog</a></li>
-      <li><a href="<%= data.urls.contact %>">Contact</a></li>
-    </ul>
-  </nav>
   <ul class="s-footer__social">
     <%= partial "components/social-icons" %>
   </ul>
@@ -18,3 +6,14 @@
     © <%= Time.now.year %> LaCroix Design Co.
   </p>
 </footer>
+
+<nav id="supplementary-nav" class="s-footer-nav">
+  <ul>
+    <li class="top-row"><a href="/">About</a></li>
+    <li class="top-row"><a href="<%= data.urls.work %>">Work</a></li>
+    <li class="top-row"><a href="<%= data.urls.services %>" data-close-menu>Services</a></li>
+    <li><a href="<%= data.urls.team %>" data-close-menu>Team</a></li>
+    <li><a href="<%= data.urls.blog %>">Blog</a></li>
+    <li><a href="<%= data.urls.contact %>">Contact</a></li>
+  </ul>
+</nav>
