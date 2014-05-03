@@ -28,27 +28,12 @@ title: "Web Development & Design Studio - Chicago, IL"
     <h1 class="section-title">Recent projects</h1>
   </header>
   <div class="s-home-projects__items">
-    <% data.recent_projects.take(3).each_with_index do |project, index| %>
-      <article
-        <% if index == 2 %> class="ie-omega"<% end %>
-        style="background-image: url('<%= image_path "recent-projects/backgrounds/#{project.image}" %>')">
-        <div class="media-16x9 overlay__wrap">
-          <div class="overlay__centered">
-            <div class="overlay__content">
-
-              <div class="s-home-projects__logo">
-                <img src="<%= image_path "recent-projects/logos/#{project.logo}" %>" alt="<%= project.title %>">
-              </div>
-
-              <a href="/work/<%= project.page %>" class="link-vivid">
-                <small><em>Learn more</em></small>
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </article>
-    <% end %>
+    <%= partial "components/featured_project", locals: {
+      project: find_case_study_by_title("The 5 Love Languages") } %>
+    <%= partial "components/featured_project", locals: {
+      project: find_case_study_by_title("Danger House") } %>
+    <%= partial "components/featured_project", locals: {
+      project: find_case_study_by_title("Melanie Joye LMT"), last: true } %>
   </div>
 </section>
 

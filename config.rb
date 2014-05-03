@@ -1,7 +1,11 @@
 require "boarding_pass"
 require "lib/tag_helper"
+require "lib/case_study_helper"
 
 helpers TagHelper
+helpers CaseStudyHelper
+
+Time.zone = "America/Chicago"
 
 ###
 # Compass
@@ -51,6 +55,30 @@ helpers TagHelper
 #     "Helping"
 #   end
 # end
+
+# activate :blog do |blog|
+#   blog.name = "blog"
+#   blog.prefix = "blog"
+#   blog.sources = ":title"
+#   blog.default_extension = ".erb"
+# end
+
+activate :blog do |blog|
+  blog.name = "case-studies"
+  # blog.permalink = "case-studies/{title}"
+  blog.permalink = "{title}"
+  blog.prefix = "case-studies"
+  # blog.sources = "case-studies/{title}"
+  # blog.sources = "case-studies/:title"
+  blog.default_extension = ".erb"
+  # blog.sources = "case-studies/:title.html"
+  # blog.sources = "case-studies/:title"
+  # #
+  blog.sources   = "{title}.html"
+  # blog.layout    = "portfolio_layout"
+  # blog.prefix    = "portfolio"
+  # blog.permalink = ":title"
+end
 
 activate :directory_indexes
 
