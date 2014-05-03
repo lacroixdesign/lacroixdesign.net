@@ -26,5 +26,5 @@
     event.preventDefault();
     closeMenu();
   });
-  $(document).on('click', '[data-close-menu]', closeMenu);
+  $(document).on('click', '#menu a:not("[target]"):not([href^="mailto:"])', closeMenu);
 })();

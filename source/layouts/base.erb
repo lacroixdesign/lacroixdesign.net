@@ -39,7 +39,7 @@
 
   <%# Stylesheets %>
   <%= stylesheet_link_tag "main" %>
-  <!-- <link rel="stylesheet" type="text/css" href="//cloud.typography.com/806434/723404/css/fonts.css"> -->
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/806434/723404/css/fonts.css">
 
   <%# Modernizr %>
   <%= javascript_include_tag  "modernizr" %>
@@ -76,8 +76,12 @@
 </head>
 
 <body>
-  <%= yield %>
+  <%= partial "layouts/header" %>
+  <div id="content">
+    <%= yield %>
+  </div>
   <div class="b-menu-body-overlay"></div>
+  <%= partial "layouts/footer" %>
 
   <%# JavaScripts %>
   <%= javascript_include_tag  "main" %>

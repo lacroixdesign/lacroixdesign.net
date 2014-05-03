@@ -3,19 +3,19 @@
 <article
   <% if last %> class="ie-omega"<% end %>
   style="background-image: url('<%= case_study_bg_path(project) %>')">
-  <div class="media-16x9 overlay__wrap">
-    <div class="overlay__centered">
-      <div class="overlay__content">
+  <a href="<%= project.url %>" data-pjax-project="case-study-overlay_<%= project.slug %>">
+    <div class="media-16x9 overlay__wrap">
+      <div class="overlay__centered">
+        <div class="overlay__content">
 
-        <div class="s-home-projects__logo">
-          <img src="<%= case_study_logo_path(project) %>" alt="<%= project.title %>">
-        </div>
+          <div class="s-home-projects__logo">
+            <img src="<%= case_study_logo_path(project) %>" alt="<%= project.title %>">
+          </div>
 
-        <a href="<%= project.url %>" class="link-vivid">
           <small><em>Learn more</em></small>
-        </a>
 
+        </div>
       </div>
     </div>
-  </div>
+  </a>
 </article>

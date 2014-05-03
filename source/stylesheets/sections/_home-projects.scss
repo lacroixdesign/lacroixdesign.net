@@ -40,6 +40,11 @@
     font-size: 1.5em;
   }
 
+  small {
+    color: $pink;
+    text-decoration: underline;
+  }
+
   @include media-ie($breakpoint-ipad) {
     article { @include span-columns(4); }
   }
@@ -47,6 +52,7 @@
 
 .s-home-projects__logo {
   width: 50%;
+  max-width: 8em;
   margin: auto;
 
   img {
