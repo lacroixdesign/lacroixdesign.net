@@ -1,15 +1,15 @@
 @import "blocks/containers";
 
 .s-home-projects {
-  background: image-url('backgrounds/struckaxiom.png') repeat;
+  padding-bottom: 6em;
   text-align: center;
 
   .section-title {
     margin: 0 auto;
   }
 
-  @include hidpi(1.5) {
-    background: image-url('backgrounds/struckaxiom_@2X.png') repeat;
+  .no-csstransforms & {
+    padding-bottom: 2em;
   }
 } // .s-home-projects
 

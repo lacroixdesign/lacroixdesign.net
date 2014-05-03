@@ -47,8 +47,8 @@ title: "Web Development & Design Studio - Chicago, IL"
     <p>Insert a short statement about the services offered by our studio. Just a basic gist about what we do.</p>
   </div>
   <div class="s-services__lists">
-    <% 4.times do %>
-      <ul>
+    <% 4.times do |i| %>
+      <ul <% if i == 3 %>class="ie-omega"<% end %>>
         <h2>LIST TITLE</h2>
         <% ["izakaya Gaggenau", "alluring Shinkansen", "Toto lovely craftsmanship", "impeccable Muji", "remarkable ryokan"].shuffle.take(rand 4..5).each do |phrase| %>
           <li><%= phrase %></li>

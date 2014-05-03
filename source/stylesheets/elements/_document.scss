@@ -21,5 +21,9 @@ body {
   }
 } // body
 
+#content {
+  overflow: hidden;
+}
+
 ::-moz-selection { color: $black;  background: $off-white; }
 ::selection      { color: $black;  background: $off-white; }

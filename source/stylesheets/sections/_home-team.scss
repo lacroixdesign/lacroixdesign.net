@@ -1,6 +1,31 @@
 .s-team {
-  text-align: center
-}
+  position: relative;
+  z-index: 1;
+  padding-top: 1em;
+  background: $white;
+  text-align: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 75%;
+    background: inherit;
+    content: '';
+    pointer-events: none;
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+
+  .no-csstransforms & {
+    padding-top: 2em;
+  }
+} // .s-team
 
 .s-team__stars {
   width: 100%;

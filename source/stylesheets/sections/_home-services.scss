@@ -1,8 +1,34 @@
 .s-services {
+  position: relative;
+  z-index: 1;
+  padding-top: 1em;
   padding-right: $page-gutter;
   padding-left: $page-gutter;
+  padding-bottom: 5em;
   background: $off-white;
   text-align: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 75%;
+    background: inherit;
+    content: '';
+    pointer-events: none;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  .no-csstransforms & {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
 } // .s-services
 
 .s-services__statement {
