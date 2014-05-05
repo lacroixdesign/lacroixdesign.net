@@ -2,8 +2,13 @@
   position: relative;
   z-index: 1;
   padding-top: 1em;
-  background: $white;
+  background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
   text-align: center;
+
+  @include hidpi(1.5) {
+    background-image: image-url('backgrounds/chicago-skyline_@2X.png');
+    background-size: 1200px 360px;
+  }
 
   &::before,
   &::after {
@@ -12,8 +17,9 @@
     left: -25%;
     z-index: -1;
     width: 150%;
-    height: 75%;
+    height: 30%;
     background: inherit;
+    background-image: none;
     content: '';
     pointer-events: none;
     -webkit-transform: rotate(3deg);
