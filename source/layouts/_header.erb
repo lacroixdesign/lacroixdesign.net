@@ -2,7 +2,10 @@
 
   <div class="s-header__logo">
     <a href="/">
-      <img src="<%= image_path 'logo-light.png' %>" alt="<%= data.site.title %>" class="image-fullheight">
+      <img src="<%= image_path 'logo.svg' %>"
+           onerror="this.src='<%= image_path 'logo.png' %>'"
+           alt="<%= data.site.title %>"
+           class="image-fullheight">
     </a>
   </div>
 
