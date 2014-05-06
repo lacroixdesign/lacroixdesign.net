@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: $header-height;
+  height: $header-height + 1em;
+  padding: 1em 1em 0;
   @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
   color: $off-white;
 
@@ -16,7 +17,6 @@
 .s-header__logo {
   float: left;
   height: 100%;
-  padding: $page-gutter;
 }
 
 .s-header__nav {

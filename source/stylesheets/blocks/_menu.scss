@@ -33,6 +33,8 @@ $nav-delay-delta: 0.05;
   display: block;
   height: 100%;
   padding: 0 $page-gutter;
+  background: $white;
+  color: $black-10;
   font-family: $typeface-sans;
   font-weight: $bold-weight;
   line-height: $header-height;
@@ -40,10 +42,17 @@ $nav-delay-delta: 0.05;
   text-transform: uppercase;
   @include transition(none);
 
-  &:hover,
-  .is-menu-open & {
-    background: $white;
+  i {
+    vertical-align: middle;
+  }
+
+  &:visited {
     color: $black-10;
+  }
+
+  &:hover,
+  &:active {
+    color: $pink;
   }
 } // .b-menu-toggle
 
