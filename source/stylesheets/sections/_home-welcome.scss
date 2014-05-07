@@ -1,9 +1,23 @@
+@mixin welcome-section-layout {
+  padding: 7em + $header-height 0 7em;
+
+  header {
+    font-size: 100%;
+  }
+} // @mixin welcome-section-layout
+
 .s-home-welcome {
+  padding: 4em + $header-height 0 4em;
   background: image-url('backgrounds/home-welcome.jpg') center center;
   -webkit-background-size: cover;
   background-size: cover;
   color: $off-white;
   text-align: center;
+
+  header {
+    padding: 0 $page-gutter;
+    font-size: 67.5%;
+  }
 
   h2 {
     font-family: $typeface-serif;
@@ -17,30 +31,12 @@
     font-weight: bold;
     font-style: italic;
   }
-} // .s-home-welcome
-
-@mixin welcome-section {
-  padding: 7em + $header-height 0 7em;
-
-  header {
-    font-size: 100%;
-  }
-} // @mixin welcome-section
-
-.s-home-welcome__overlay {
-  padding: 4em + $header-height 0 4em;
-  background: rgba(50,50,50,0.5);
-
-  header {
-    padding: 0 $page-gutter;
-    font-size: 67.5%;
-  }
 
   @include media(min-width 500px min-height 500px) {
-    @include welcome-section;
+    @include welcome-section-layout;
   }
 
   @include media-ie {
-    @include welcome-section;
+    @include welcome-section-layout;
   }
-} // .s-home-welcome__overlay
+} // .s-home-welcome

@@ -17,3 +17,4 @@ gem 'middleman-deploy'
 gem 'highline'
 
 gem 'boarding_pass', '>= 1.0.0.beta1'
+gem 'slim'

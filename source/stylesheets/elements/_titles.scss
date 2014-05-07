@@ -1,6 +1,5 @@
 .section-title {
   color: $grey-light;
-  // color: lighten($black, 20);
   font-family: $typeface-serif;
   font-size: 1.5em;
   font-weight: normal;
@@ -11,4 +10,11 @@
 .title-link {
   a { text-decoration: none; }
   a:hover { text-decoration: underline; }
+}
+
+.tagline__case-study {
+  font-family: $typeface-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: italic;
 }

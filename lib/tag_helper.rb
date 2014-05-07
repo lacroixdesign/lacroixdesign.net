@@ -11,4 +11,10 @@ module TagHelper
     "#{prefix}/#{article.slug}/"
   end
 
+  # Hero image
+  def hero_image(image = nil)
+    render(:partial, "components/_hero_image",
+      :locals => { image: image }) { yield if block_given? }
+  end
+
 end

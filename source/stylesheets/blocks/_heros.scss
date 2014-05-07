@@ -1,0 +1,21 @@
+@mixin hero-image {
+  padding: 4em + $header-height 0 4em;
+  background-color: $black;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $off-white;
+  text-align: center;
+
+  @include media(min-width 500px min-height 500px) {
+    padding: 7em + $header-height 0 7em;
+  }
+
+  @include media-ie {
+    padding: 7em + $header-height 0 7em;
+  }
+} // @mixin hero-image
+
+.b-hero-image {
+  @include hero-image;
+}

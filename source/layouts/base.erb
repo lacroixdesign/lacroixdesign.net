@@ -76,12 +76,12 @@
 </head>
 
 <body>
-  <%= partial "layouts/header" %>
   <div id="content">
+    <%= partial "layouts/header" %>
     <%= yield %>
+    <div class="b-menu-body-overlay"></div>
+    <%= partial "layouts/footer" %>
   </div>
-  <div class="b-menu-body-overlay"></div>
-  <%= partial "layouts/footer" %>
 
   <%# JavaScripts %>
   <%= javascript_include_tag  "main" %>

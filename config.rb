@@ -70,12 +70,12 @@ activate :blog do |blog|
   blog.prefix = "case-studies"
   # blog.sources = "case-studies/{title}"
   # blog.sources = "case-studies/:title"
-  blog.default_extension = ".erb"
+  blog.default_extension = ".slim"
   # blog.sources = "case-studies/:title.html"
   # blog.sources = "case-studies/:title"
   # #
   blog.sources   = "{title}.html"
-  # blog.layout    = "portfolio_layout"
+  blog.layout    = "layouts/case_study"
   # blog.prefix    = "portfolio"
   # blog.permalink = ":title"
 end
