@@ -3,7 +3,6 @@
   -webkit-background-size: cover;
   background-size: cover;
   color: $off-white;
-  font-weight: bold;
   text-align: center;
 
   h2 {
@@ -20,25 +19,28 @@
   }
 } // .s-home-welcome
 
-.s-home-welcome__overlay {
+@mixin welcome-section {
   padding: 7em + $header-height 0 7em;
+
+  header {
+    font-size: 100%;
+  }
+} // @mixin welcome-section
+
+.s-home-welcome__overlay {
+  padding: 4em + $header-height 0 4em;
   background: rgba(50,50,50,0.5);
-}
 
-// .s-home-welcome__cta {
-//   margin-bottom: 2em;
-// }
+  header {
+    padding: 0 $page-gutter;
+    font-size: 67.5%;
+  }
 
-// .s-home-welcome__links {
-//   font-family: $typeface-sans;
-//   font-weight: 800;
-//   text-transform: uppercase;
+  @include media(min-width 500px min-height 500px) {
+    @include welcome-section;
+  }
 
-//   a {
-//     text-decoration: none;
-//   }
-
-//   a:hover {
-//     text-decoration: underline;
-//   }
-// } // .s-home-welcome__links
+  @include media-ie {
+    @include welcome-section;
+  }
+} // .s-home-welcome__overlay
