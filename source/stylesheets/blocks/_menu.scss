@@ -1,3 +1,4 @@
+$nav-menu-open: ".is-menu-open";
 $nav-menu-width: 15em;
 $nav-link-total: 6;
 $nav-transition-time: 0.3s;
@@ -22,7 +23,7 @@ $nav-delay-delta: 0.05;
   height: 100%;
   background: rgba($black, 0.8);
 
-  .is-menu-open & {
+  #{$nav-menu-open} & {
     display: block;
   }
 } // .b-menu-body-overlay
@@ -33,14 +34,20 @@ $nav-delay-delta: 0.05;
   display: block;
   height: 100%;
   padding: 0 $page-gutter;
-  background: $white;
+  background: $off-white;
   color: $black-10;
   font-family: $typeface-sans;
   font-weight: $bold-weight;
-  line-height: $header-height;
+  line-height: $header-height - ($header-padding * 2);
   text-decoration: none;
   text-transform: uppercase;
   @include transition(none);
+
+  #{$header-alternate} &,
+  #{$header-fill} &,
+  #{$nav-menu-open} & {
+    background: $white;
+  }
 
   i {
     vertical-align: middle;
@@ -58,11 +65,11 @@ $nav-delay-delta: 0.05;
 
 #menu-open {
   display: block;
-  .is-menu-open & { display: none; }
+  #{$nav-menu-open} & { display: none; }
 }
 #menu-close {
   display: none;
-  .is-menu-open & { display: block; }
+  #{$nav-menu-open} & { display: block; }
 }
 
 .b-menu {
@@ -76,7 +83,7 @@ $nav-delay-delta: 0.05;
   font-family: $typeface-serif;
   @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 2));
 
-  .is-menu-open & {
+  #{$nav-menu-open} & {
     width: $nav-menu-width;
     @include transition-delay(0);
   }
@@ -169,7 +176,7 @@ $nav-delay-delta: 0.05;
 .b-menu-contact {
   @include transform(translateX($nav-menu-width));
 
-  .is-menu-open & {
+  #{$nav-menu-open} & {
     @include transform(translateX(0));
   }
 }

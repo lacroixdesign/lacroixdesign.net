@@ -1,16 +1,19 @@
 .s-header {
   @include clearfix;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: $header-height + 1em;
-  padding: 1em 1em 0;
-  @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
+  height: $header-height;
+  padding: $header-padding;
   color: $off-white;
 
   > * {
     height: 100%;
+  }
+
+  &#{$header-alternate} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
   }
 } // .s-header
 

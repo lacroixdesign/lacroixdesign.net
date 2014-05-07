@@ -1,11 +1,21 @@
-<header id="header" class="s-header <%= 'negative' if current_page.data.negative_header %> <%= 'over' if current_page.data.over_header %>">
+<%
+  cover = current_page.data.cover_header
+  bg    = current_page.data.header_background
+  logo  = cover || current_page.data.light_logo ? 'logo-light' : 'logo-dark'
+%>
+
+<header id="header"
+        class="s-header <%= 'has-cover-header' if cover %> <%= 'has-fill-header' if bg %>"
+        <% if bg && bg.is_a?(String) %>
+          style="background-color: <%= bg %>"
+        <% end %>>
 
   <div class="s-header__logo">
     <a href="/">
-      <img src="<%= image_path 'logo.svg' %>"
-           onerror="this.src='<%= image_path 'logo.png' %>'"
-           alt="<%= data.site.title %>"
-           class="image-fullheight">
+        <img src="<%= image_path "#{logo}.svg" %>"
+             onerror="this.src='<%= image_path "#{logo}.png" %>'"
+             alt="<%= data.site.title %>"
+             class="image-fullheight">
     </a>
   </div>
 
