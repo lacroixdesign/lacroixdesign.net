@@ -1,0 +1,16 @@
+<%#
+  img = {
+    src: "path/to/img.jpg",
+    alt: "An alt title"
+  }
+%>
+
+<section class="b-slideshow" data-slides>
+
+  <% slides.each do |img| %>
+    <article id="slide-{id}" class="b-carousel">
+      <%= image_tag img[:src], class: "image-fullwidth", alt: img[:alt] %>
+    </article>
+  <% end %>
+
+</section>
