@@ -13,7 +13,7 @@ module TagHelper
 
   # Hero image
   def hero_image(image = nil)
-    render(:partial, "components/_hero_image",
+    render(:partial, "components/_hero-image",
       :locals => { image: image }) { yield if block_given? }
   end
 

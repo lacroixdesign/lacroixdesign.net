@@ -22,11 +22,11 @@ cover_header: true
     <h1 class="section-title">Recent projects</h1>
   </header>
   <div class="s-home-projects__items">
-    <%= partial "components/featured_project", locals: {
+    <%= partial "components/featured-project", locals: {
       project: find_case_study_by_title("The 5 Love Languages") } %>
-    <%= partial "components/featured_project", locals: {
+    <%= partial "components/featured-project", locals: {
       project: find_case_study_by_title("Danger House") } %>
-    <%= partial "components/featured_project", locals: {
+    <%= partial "components/featured-project", locals: {
       project: find_case_study_by_title("Melanie Joye LMT"), last: true } %>
   </div>
 </section>

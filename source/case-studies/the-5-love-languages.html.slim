@@ -5,4 +5,9 @@ cover_header: true
 tagline: "Short tagline to relay the value or solution provided"
 ---
 
-h1 The 5 Love Languages
+/ = static_image_component src: case_study_image_path(current_page, 'cover-bg.jpg'), alt: current_page.title
+
+/ = text_block_component image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#f27390', color: '#f27390', fixed: true do
+/   h1 Example text
+
+/ = text_block_component background: '#f27390'

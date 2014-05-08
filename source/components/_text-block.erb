@@ -1,0 +1,28 @@
+<%#
+  OPTIONS
+  ---
+  image (background image)
+  color (text color)
+  background (background color)
+  fixed (fixed background image)
+%>
+
+<%
+  classes = [
+    "b-text-component",
+    ("has-fixed-bg" if fixed),
+    ("has-bg-image" if image)
+  ].join(' ')
+
+  style = [
+    ("color: #{color};" if color),
+    ("background-image: url('#{image}');" if image),
+    ("background-color: #{background};" if background)
+  ].join(' ')
+%>
+
+<div class="<%= classes %>" style="<%= style %>">
+  <div class="l-constrained-large">
+    <%= yield %>
+  </div>
+</div>

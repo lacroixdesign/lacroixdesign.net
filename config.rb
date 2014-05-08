@@ -1,9 +1,11 @@
 require "boarding_pass"
-require "lib/tag_helper"
-require "lib/case_study_helper"
 
-helpers TagHelper
-helpers CaseStudyHelper
+set :helpers_dir, "helpers"
+set :helpers_filename_glob, "**/*_helper.rb"
+set :helpers_filename_to_module_name_proc, Proc.new { |filename|
+  basename = File.basename(filename, File.extname(filename))
+  basename.camelcase
+}
 
 Time.zone = "America/Chicago"
 
@@ -44,7 +46,7 @@ Time.zone = "America/Chicago"
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
 # activate :livereload

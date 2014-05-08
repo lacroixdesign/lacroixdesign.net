@@ -5,6 +5,11 @@ module CaseStudyHelper
     blog('case-studies').articles.find {|a| a.title == title }
   end
 
+  # Case study image
+  def case_study_image_path(article, image)
+    image_path "#{article_path(article)}#{image}"
+  end
+
   # Image path for case study cover logo
   def case_study_logo_path(article, extension)
     filename = article.data.cover_logo || 'cover-logo'
@@ -12,10 +17,10 @@ module CaseStudyHelper
   end
 
   def case_study_logo(article, options = {})
-    options[:src] = case_study_logo_path(article, :svg)
+    src = case_study_logo_path(article, :svg)
     options[:alt] = article.title
     options[:onerror] = "this.src='#{case_study_logo_path(article, :png)}'"
-    tag(:img, options)
+    image_tag src, options
   end
 
   # Image path for case study cover background

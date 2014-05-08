@@ -11,3 +11,19 @@
     margin-bottom: 2em;
   }
 } // .b-section
+
+.b-text-component {
+  padding: 4em 0;
+  background-position: center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  text-align: center;
+
+  &.has-fixed-bg {
+    background-attachment: fixed;
+  }
+
+  &.has-bg-image {
+    color: $white;
+  }
+} // .b-text-component
