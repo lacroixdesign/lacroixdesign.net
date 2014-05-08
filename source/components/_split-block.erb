@@ -1,0 +1,39 @@
+<%#
+  OPTIONS
+  ---
+  image (background image)
+  color (text color)
+  background (background color)
+  text_side (which side to place the text block, default: left)
+%>
+
+<%
+  text_style = [
+    ("color: #{color};" if color),
+    ("background-color: #{background};" if background)
+  ].join(' ')
+
+  bg_image = "background-image: url('#{image}');"
+%>
+
+<% split_block_text = capture_html do %>
+  <article style="<%= text_style %>">
+    <div class="l-constrained-large">
+      <%= yield %>
+    </div>
+  </article>
+<% end %>
+
+<% split_block_image = capture_html do %>
+  <aside style="<%= bg_image %>"></aside>
+<% end %>
+
+<div class="b-split-component">
+  <% if text_side.to_s == 'right' %>
+    <%= concat_content split_block_image %>
+    <%= concat_content split_block_text %>
+  <% else %>
+    <%= concat_content split_block_text %>
+    <%= concat_content split_block_image %>
+  <% end %>
+</div>

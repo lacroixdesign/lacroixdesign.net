@@ -27,3 +27,32 @@
     color: $white;
   }
 } // .b-text-component
+
+.b-split-component {
+  display: table;
+  width: 100%;
+  text-align: center;
+
+  > article {
+    padding: 4em 0;
+  }
+
+  > aside {
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: inherit;
+  }
+
+  &.has-fixed-bg {
+    background-attachment: fixed;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    aside,
+    article {
+      display: table-cell;
+      width: 50%;
+    }
+  } // $breakpoint-ipad
+} // .b-split-component

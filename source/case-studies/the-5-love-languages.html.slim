@@ -7,7 +7,20 @@ tagline: "Short tagline to relay the value or solution provided"
 
 / = static_image_component src: case_study_image_path(current_page, 'cover-bg.jpg'), alt: current_page.title
 
-/ = text_block_component image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#f27390', color: '#f27390', fixed: true do
-/   h1 Example text
+= text_block do
+  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
-/ = text_block_component background: '#f27390'
+= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#f27390', color: '#fff'
+  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; left (default side). Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+
+= text_block
+  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+
+= text_block image: case_study_image_path(current_page, 'cover-bg.jpg')
+  p Text block component with a background image. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+
+= text_block background: '#8fceee', color: '#fff'
+  p Text block component with a custom text and background color. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+
+= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#c8493e', color: '#fff', text_side: "right"
+  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; right side. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.

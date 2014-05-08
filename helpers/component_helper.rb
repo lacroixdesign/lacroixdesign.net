@@ -12,14 +12,24 @@ module ComponentHelper
     image_tag src, options
   end
 
-  # Full text block
-  def text_block_component(image: nil, color: nil, background: nil, fixed: nil)
-    component('text-block', {
-      image: image,
-      color: color,
-      background: background,
-      fixed: fixed
+  def block_component(name, options = {})
+    component(name, {
+      image: options[:image],
+      color: options[:color],
+      background: options[:background],
+      fixed: options[:fixed],
+      text_side: options[:text_side] || 'left'
     }) { yield if block_given? }
+  end
+
+  # Full text block
+  def text_block(**options, &block)
+    block_component('text-block', options, &block)
+  end
+
+  # Split text/image block
+  def split_block(**options, &block)
+    block_component('split-block', options, &block)
   end
 
 end
