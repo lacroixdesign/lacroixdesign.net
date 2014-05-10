@@ -14,11 +14,13 @@
     background: transparent;
     text-decoration: none;
     @include transition(all 0.3s ease);
+    @include transform(scale(1));
   }
 
   .content {
     position: relative;
     @include transition(all 0.3s ease);
+    @include transform(scale(1));
   }
 
   > a:hover {
