@@ -7,31 +7,31 @@ tagline: "Short tagline to relay the value or solution provided"
 
 / Text
 = text_block do
-  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class. Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
-/ Split text + image (text on left is the default)
-= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#f27390', color: '#fff'
-  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; left (default side). Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+/ Split text + image – text on left (the default side)
+= split_block image: case_study_image_path('cover-bg.jpg'), background: '#f27390', color: '#fff'
+  p Split block component &mdash; left (default side). Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
 / Text
-= text_block
+= text_block callout: true
   p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
 / Text w/ background image
-= text_block image: case_study_image_path(current_page, 'cover-bg.jpg')
+= text_block image: case_study_image_path('cover-bg.jpg'), callout: true
   p Text block component with a background image. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
 / Text w/ background color & text color
-= text_block background: '#8fceee', color: '#fff'
+= text_block background: '#8fceee', color: '#fff', callout: true
   p Text block component with a custom text and background color. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
 / Slideshow
-= case_study_slideshow(current_page, %w(5ll-2 5ll-1 5ll-2 5ll-1 5ll-2 5ll-1))
+= case_study_slideshow %w(5ll-2 5ll-1 5ll-2 5ll-1 5ll-2 5ll-1)
 
 / Text
-= text_block
+= text_block callout: true
   p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
 
-/ Split text + image
-= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#c8493e', color: '#fff', text_side: "right"
-  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; right side. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+/ Split text + image – text on right
+= split_block image: case_study_image_path('cover-bg.jpg'), background: '#c8493e', color: '#fff', text_side: "right"
+  p Split block component &mdash; right side. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.

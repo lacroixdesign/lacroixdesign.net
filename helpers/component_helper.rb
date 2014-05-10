@@ -18,6 +18,7 @@ module ComponentHelper
       color: options[:color],
       background: options[:background],
       fixed: options[:fixed],
+      callout: options[:callout],
       text_side: options[:text_side] || 'left'
     }) { yield if block_given? }
   end

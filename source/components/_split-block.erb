@@ -19,7 +19,9 @@
 <% split_block_text = capture_html do %>
   <article style="<%= text_style %>">
     <div class="l-constrained-large">
-      <%= yield %>
+      <div class="b-split-component__text">
+        <%= yield %>
+      </div>
     </div>
   </article>
 <% end %>

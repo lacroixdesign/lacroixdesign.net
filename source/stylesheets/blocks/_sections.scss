@@ -17,7 +17,11 @@
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
-  text-align: center;
+
+  .is-callout {
+    font-size: 1.25em;
+    text-align: center;
+  }
 
   &.has-fixed-bg {
     background-attachment: fixed;
@@ -42,6 +46,11 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: inherit;
+  }
+
+  .b-split-component__text {
+    font-size: 1.5em;
+    font-style: italic;
   }
 
   &.has-fixed-bg {

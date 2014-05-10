@@ -6,30 +6,30 @@ module CaseStudyHelper
   end
 
   # Case study image
-  def case_study_image_path(article, image)
+  def case_study_image_path(image, article = current_page)
     image_path "#{article_path(article)}#{image}"
   end
 
   # Image path for case study cover logo
-  def case_study_logo_path(article, extension)
+  def case_study_logo_path(extension, article = current_page)
     filename = article.data.cover_logo || 'cover-logo'
     image_path "#{article_path(article)}#{filename}.#{extension.to_s}"
   end
 
-  def case_study_logo(article, options = {})
-    src = case_study_logo_path(article, :svg)
+  def case_study_logo(options = {}, article = current_page)
+    src = case_study_logo_path(:svg, article)
     options[:alt] = article.title
-    options[:onerror] = "this.src='#{case_study_logo_path(article, :png)}'"
+    options[:onerror] = "this.src='#{case_study_logo_path(:png, article)}'"
     image_tag src, options
   end
 
   # Image path for case study cover background
-  def case_study_bg_path(article)
+  def case_study_bg_path(article = current_page)
     image_path "#{article_path(article)}#{article.data.cover_bg || 'cover-bg.jpg'}"
   end
 
   # Slideshow builder
-  def case_study_slideshow(article, image_names)
+  def case_study_slideshow(image_names, article = current_page)
     path   = article_path(article)
     slides = image_names.map do |name|
       {

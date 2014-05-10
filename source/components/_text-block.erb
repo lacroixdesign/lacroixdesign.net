@@ -19,10 +19,14 @@
     ("background-image: url('#{image}');" if image),
     ("background-color: #{background};" if background)
   ].join(' ')
+
+  is_callout = callout ? 'is-callout' : nil
 %>
 
 <div class="<%= classes %>" style="<%= style %>">
   <div class="l-constrained-large">
-    <%= yield %>
+    <div class="<%= is_callout %>">
+      <%= yield %>
+    </div>
   </div>
 </div>

@@ -6,7 +6,7 @@ module TagHelper
   end
 
   # URL path for blog articles
-  def article_path(article)
+  def article_path(article = current_page)
     prefix = article.blog_data.options.prefix.gsub(/\//, '')
     "#{prefix}/#{article.slug}/"
   end

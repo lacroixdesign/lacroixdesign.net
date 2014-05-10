@@ -1,6 +1,6 @@
 - wrap_layout :base do
-  = hero_image case_study_bg_path(current_page) do
+  = hero_image case_study_bg_path do
     .l-constrained-large.s-case-study__hero-content
-      .logo__case-study = case_study_logo(current_page)
+      .logo__case-study = case_study_logo
       h2.tagline__case-study = current_page.data.tagline
   .s-case-study = yield
