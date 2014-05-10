@@ -83,6 +83,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
+# activate :sitemap
 
 activate :deploy do |deploy|
   deploy.method = :git

@@ -14,6 +14,7 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem 'middleman-minify-html'
 
 gem 'middleman-deploy'
+# gem 'middleman-sitemap'
 gem 'highline'
 
 gem 'boarding_pass', '>= 1.0.0.beta1'

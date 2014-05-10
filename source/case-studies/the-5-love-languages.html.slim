@@ -4,27 +4,3 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Short tagline to relay the value or solution provided"
 ---
-
-/ = static_image_component src: case_study_image_path(current_page, 'cover-bg.jpg'), alt: current_page.title
-
-- slide1 = { src: "images/placeholder-slide-1.jpg", alt: "The 5 Love Languages #1" }
-- slide2 = { src: "images/placeholder-slide-2.jpg", alt: "The 5 Love Languages #2" }
-= component "slideshow", { slides: [slide2, slide1, slide2, slide1, slide2, slide1] }
-
-= text_block do
-  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
-
-= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#f27390', color: '#fff'
-  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; left (default side). Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
-
-= text_block
-  p Plain text block component. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
-
-= text_block image: case_study_image_path(current_page, 'cover-bg.jpg')
-  p Text block component with a background image. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
-
-= text_block background: '#8fceee', color: '#fff'
-  p Text block component with a custom text and background color. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
-
-= split_block image: case_study_image_path(current_page, 'cover-bg.jpg'), background: '#c8493e', color: '#fff', text_side: "right"
-  p(style="font-size: 1.5em; font-style: italic") Split block component &mdash; right side. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.

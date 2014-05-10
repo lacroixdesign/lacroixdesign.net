@@ -28,4 +28,16 @@ module CaseStudyHelper
     image_path "#{article_path(article)}#{article.data.cover_bg || 'cover-bg.jpg'}"
   end
 
+  # Slideshow builder
+  def case_study_slideshow(article, image_names)
+    path   = article_path(article)
+    slides = image_names.map do |name|
+      {
+        src: "#{path}slides/#{name}.jpg",
+        alt: article.title
+      }
+    end
+    component "slideshow", { slides: slides }
+  end
+
 end
