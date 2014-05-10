@@ -16,15 +16,18 @@ $containers-bp: $breakpoint-desktop;
 }
 
 .l-constrained {
-  @include page-container(30em, $max-width);
+  // 30em, 1200px
+  @include page-container($layout-width-medium, $max-width);
 }
 
 .l-constrained-medium {
-  @include page-container(30em, 30em);
+  // 30em, 30em
+  @include page-container($layout-width-medium, $layout-width-medium);
 }
 
 .l-constrained-large {
-  @include page-container(30em, 40em);
+  // 30em, 40em
+  @include page-container($layout-width-medium, $layout-width-large);
 }
 
 .l-unconstrained {

@@ -1,5 +1,27 @@
+.s-case-studies {
+  > h2 {
+    @include page-container(20em, 20em);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 0;
+    font-family: $typeface-serif;
+    font-size: 1.5em;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: center;
+  }
+
+  > article {
+    margin-bottom: 1px;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    > h2 {
+      font-size: 2em;
+    }
+  } // $breakpoint-ipad
+} // .s-case-studies
+
 .s-case-study__hero-content h2 {
   margin: 1em 0 0;
 }
-
-.s-case-study {}

@@ -1,0 +1,14 @@
+<%#
+  item -- case_study article
+%>
+
+<article class="b-case-study-preview" id="case-study-<%= item.slug %>">
+  <a href="<%= item.url %>" style="background-image: url('<%= case_study_bg_path(item) %>')">
+    <div class="content">
+      <div class="logo__case-study">
+        <%= case_study_logo({}, item) %>
+      </div>
+      <h2><%= item.data.tagline %></h2>
+    </div>
+  </a>
+</article>
