@@ -1,14 +1,31 @@
 ---
 title: "Blog"
+pageable: true
+per_page: 5
 ---
 
 <section class="l-constrained-medium b-posts">
-  <% blog('blog').articles.each do |item| %>
-    <article>
+
+  <%# blog('blog').articles.each do |item| %>
+  <% page_articles('blog').each do |item| %>
+    <article class="b-post-preview">
       <h1><a href="<%= item.url %>"><%= item.title %></a></h1>
+      <time datetime="<%= item.date %>"><%= item.date.strftime "%B %-d, %Y" %></time>
       <% if item.data.tagline %>
         <h2><a href="<%= item.url %>"><%= item.data.tagline %></a></h2>
       <% end %>
     </article>
   <% end %>
+
+  <% if prev_page || next_page %>
+    <div class="b-pagination">
+      <% if prev_page %>
+        <a href="<%= prev_page.url %>" class="prev">&larr; Newer</a>
+      <% end %>
+      <% if next_page %>
+        <a href="<%= next_page.url %>" class="next">Older &rarr;</a>
+      <% end %>
+    </div>
+  <% end %>
+
 </section>

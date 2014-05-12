@@ -3,25 +3,41 @@
   margin-bottom: 3em;
 
   article {
-    margin-bottom: 2em;
+    margin-bottom: 3em;
   }
 
   article:last-child {
     margin-bottom: 0;
   }
+} // .b-posts
 
-  article h1 {
-    margin-bottom: 0;
-    font-size: 1.5em;
+.b-post-preview {
+  h1,
+  h2 {
     a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
   }
 
-  article h2 {
+  h1 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  h2 {
     margin: 0.5em 0 0;
+    color: $grey-dark;
     font-family: $typeface-serif;
     font-size: 1em;
     font-weight: normal;
     font-style: italic;
-    a { text-decoration: none; }
   }
-} // .b-posts
+
+  time {
+    display: block;
+    margin-top: 0.5em;
+    color: $grey;
+    font-family: $typeface-sans;
+    font-size: 0.75em;
+    text-transform: uppercase;
+  }
+} // .b-post-preview

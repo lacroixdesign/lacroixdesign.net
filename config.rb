@@ -65,8 +65,8 @@ activate :blog do |blog|
   blog.layout    = "layouts/blog-post"
   blog.permalink = "{title}"
   blog.paginate  = true
-  blog.page_link = "p{num}"
-  blog.per_page  = 1
+  # blog.page_link = "p{num}"
+  blog.per_page  = 5
   blog.default_extension = ".md"
 end
 

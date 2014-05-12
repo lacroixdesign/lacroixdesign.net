@@ -1,0 +1,29 @@
+.b-pagination {
+  @include clearfix;
+  padding-top: 1em;
+  margin: 1em auto 0;
+  border-top: 1px solid $medium-white;
+  color: $grey;
+  font-family: $typeface-sans;
+  font-size: 0.75em;
+  text-transform: uppercase;
+
+  a {
+    margin-bottom: 1em;
+    text-decoration: none;
+  }
+
+  .prev {
+    float: left;
+    text-align: left;
+  }
+
+  .next {
+    float: right;
+    text-align: right;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+} // .b-pagination
