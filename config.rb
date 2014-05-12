@@ -58,28 +58,25 @@ activate :automatic_image_sizes
 #   end
 # end
 
-# activate :blog do |blog|
-#   blog.name = "blog"
-#   blog.prefix = "blog"
-#   blog.sources = ":title"
-#   blog.default_extension = ".erb"
-# end
+activate :blog do |blog|
+  blog.name    = "blog"
+  blog.prefix  = "blog"
+  blog.sources = "{title}"
+  blog.layout    = "layouts/blog-post"
+  blog.permalink = "{title}"
+  blog.paginate  = true
+  blog.page_link = "p{num}"
+  blog.per_page  = 1
+  blog.default_extension = ".md"
+end
 
 activate :blog do |blog|
-  blog.name = "case-studies"
-  # blog.permalink = "case-studies/{title}"
+  blog.name    = "case-studies"
+  blog.prefix  = "case-studies"
+  blog.sources = "{title}.html"
+  blog.layout    = "layouts/case-study"
   blog.permalink = "{title}"
-  blog.prefix = "case-studies"
-  # blog.sources = "case-studies/{title}"
-  # blog.sources = "case-studies/:title"
   blog.default_extension = ".slim"
-  # blog.sources = "case-studies/:title.html"
-  # blog.sources = "case-studies/:title"
-  # #
-  blog.sources   = "{title}.html"
-  blog.layout    = "layouts/case_study"
-  # blog.prefix    = "portfolio"
-  # blog.permalink = ":title"
 end
 
 activate :directory_indexes

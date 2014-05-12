@@ -8,7 +8,8 @@ $containers-bp: $breakpoint-desktop;
   max-width: $width1;
   padding-right: $page-gutter;
   padding-left: $page-gutter;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 
   @include media-ie($bp) {
     max-width: $width2;

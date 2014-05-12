@@ -1,0 +1,27 @@
+.b-posts {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  article {
+    margin-bottom: 2em;
+  }
+
+  article:last-child {
+    margin-bottom: 0;
+  }
+
+  article h1 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+    a { text-decoration: none; }
+  }
+
+  article h2 {
+    margin: 0.5em 0 0;
+    font-family: $typeface-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+    a { text-decoration: none; }
+  }
+} // .b-posts
