@@ -65,5 +65,13 @@
       width: 50%;
       min-height: none;
     }
+
+    .left {
+      margin-right: 0;
+    }
+
+    .right {
+      margin-left: 0;
+    }
   } // $breakpoint-ipad
 } // .b-split-component
