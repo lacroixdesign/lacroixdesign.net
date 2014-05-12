@@ -14,6 +14,10 @@
     margin-bottom: 1em;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   blockquote {
     padding: 0.5em 1em;
     margin: 1.5em 1em;
