@@ -66,9 +66,6 @@
 
   article:first-child {
     margin-right: 4%;
-    border-left: none;
-    border: $border-width solid $blue-chicago;
-    border-radius: 500px;
   }
 
   img {
@@ -78,20 +75,26 @@
     border-radius: inherit;
   }
 
-  article div {
+  article .overlay {
     @include overlay-style;
     @include centered-content-style;
-    display: none;
+    @include display(flex);
+    @include transition(all 0.3s ease);
+    @include transform-origin(25% 50%);
+    @include transform(rotateY(135deg) scale(0.25));
+    opacity: 0;
     padding: 0.5em;
     overflow: hidden;
     background: $white;
     background: rgba($white, 0.7);
     color: $red-chicago;
+    @include media-ie-only { display: none; }
   }
 
-  article:hover div {
-    display: block;
-    @include display(flex);
+  article:hover .overlay {
+    @include transform(rotateY(0deg) scale(1));
+    opacity: 1;
+    @include media-ie-only { display: block; }
   }
 
   article h1 {
