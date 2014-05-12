@@ -42,6 +42,7 @@
   }
 
   > aside {
+    min-height: 25em;
     background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -62,6 +63,7 @@
     article {
       display: table-cell;
       width: 50%;
+      min-height: none;
     }
   } // $breakpoint-ipad
 } // .b-split-component
