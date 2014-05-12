@@ -1,6 +1,6 @@
 (function() {
 
-  $(document).ready(function() {
+  window.pageReady(function() {
     var $slideshow = $('[data-slides]');
 
     $slideshow.slick({
