@@ -2,8 +2,7 @@
 title: Example Blog Post with Thumbnail Image
 date: 2014-05-03 15:00
 inline_header: "header.jpg"
-header_background: "#6bd0d8"
-light_logo: true
+above_header: true
 tagline: "Short tagline with keywords for the blog post"
 author: "James LaCroix"
 ---
