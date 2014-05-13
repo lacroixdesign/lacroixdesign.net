@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.2.2"
 gem "middleman-blog"
+gem "redcarpet"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
@@ -15,6 +16,7 @@ gem 'middleman-minify-html'
 
 gem 'middleman-deploy'
 # gem 'middleman-sitemap'
+# gem "middleman-syntax"
 gem 'highline'
 
 gem 'boarding_pass', '>= 1.0.0.beta1'

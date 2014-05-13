@@ -9,9 +9,10 @@
       = hero_image post_image_path(current_page.data.cover_header) do
         .l-constrained-medium.b-post-cover-header__content
           h1 = current_page.data.title
-          time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
           - if current_page.data.tagline
             h2 = current_page.data.tagline
+          time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
+          .author <em>by</em> <strong>#{author.name}</strong>
 
   - else
     - if current_page.data.inline_header
@@ -20,9 +21,10 @@
     .b-post-header
       .l-constrained-medium
         h1 = current_page.data.title
-        time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
         - if current_page.data.tagline
           h2 = current_page.data.tagline
+        time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
+        .author <em>by</em> <strong>#{author.name}</strong>
 
   .b-post-body.l-constrained-medium.b-text
     article(id="post-#{current_page.slug}") = yield

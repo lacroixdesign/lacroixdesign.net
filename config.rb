@@ -9,6 +9,13 @@ set :helpers_filename_to_module_name_proc, Proc.new { |filename|
 
 Time.zone = "America/Chicago"
 
+set :markdown_engine, :redcarpet
+set :markdown,
+    :fenced_code_blocks => true,
+    :no_intra_emphasis => true,
+    :strikethrough => true,
+    :tables => true
+
 ###
 # Compass
 ###
@@ -47,6 +54,9 @@ Time.zone = "America/Chicago"
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
+
+# Syntax highlighting
+# activate :syntax
 
 # Reload the browser automatically whenever files change
 # activate :livereload

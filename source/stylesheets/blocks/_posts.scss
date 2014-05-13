@@ -50,8 +50,9 @@
     color: $grey-dark;
   }
 
-  time {
-    color: $grey;
+  time,
+  .author {
+    color: $grey-dark;
   }
 }
 
@@ -60,11 +61,16 @@
   margin-bottom: 2em;
 
   time {
-    margin-top: 1em;
+    margin-top: 3em;
   }
 
   h2 {
-    margin-top: 1.5em;
+    margin-top: 1em;
+  }
+
+  .author {
+    margin-top: 0.5em;
+    font-size: 0.75em;
   }
 
   hr {
