@@ -1,7 +1,7 @@
 /*  IcoMoon -- Icon Font
 */
 
-@include font-face('icomoon', font-path('icomoon/icomoon'));
+@include font-face('icomoon', 'icomoon/icomoon', normal, $asset-pipeline: true);
 
 [data-icon]:before {
   font-family: 'icomoon';
