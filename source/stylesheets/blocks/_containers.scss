@@ -34,24 +34,3 @@ $containers-bp: $breakpoint-desktop;
 .l-unconstrained {
   @include page-container;
 }
-
-.l-main {
-  margin-bottom: 2em;
-  border-bottom: 1px solid $medium-white;
-
-  @include media-ie($containers-bp) {
-    @include span-columns(8);
-    border-bottom: none;
-  }
-} // .l-main
-
-.l-sidebar {
-  max-width: 25em;
-  margin: auto;
-
-  @include media-ie($containers-bp) {
-    @include span-columns(4);
-    max-width: none;
-    margin-right: 0;
-  }
-} // .l-sidebar
