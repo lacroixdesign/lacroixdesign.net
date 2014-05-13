@@ -1,5 +1,5 @@
 ---
-title: "New Adventures In Collaboration: Apps & Services (Part 2)"
+title: "New Adventures In Collaboration: Apps & Services (Part 3)"
 date: 2013-01-18 12:00
 inline_header: "collaboration-part-3.jpg"
 above_header: true
