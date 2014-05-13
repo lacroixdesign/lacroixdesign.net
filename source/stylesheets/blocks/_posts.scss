@@ -17,7 +17,11 @@
     a { text-decoration: none; }
     a:hover { text-decoration: underline; }
   }
+} // .b-post-preview
 
+.b-post-header,
+.b-post-preview,
+.b-post-cover-header {
   h1 {
     margin-bottom: 0;
     font-size: 1.5em;
@@ -25,7 +29,6 @@
 
   h2 {
     margin: 0.5em 0 0;
-    color: $grey-dark;
     font-family: $typeface-serif;
     font-size: 1em;
     font-weight: normal;
@@ -35,9 +38,49 @@
   time {
     display: block;
     margin-top: 0.5em;
-    color: $grey;
     font-family: $typeface-sans;
     font-size: 0.75em;
     text-transform: uppercase;
   }
-} // .b-post-preview
+}
+
+.b-post-header,
+.b-post-preview {
+  h2 {
+    color: $grey-dark;
+  }
+
+  time {
+    color: $grey;
+  }
+}
+
+.b-post-header,
+.b-post-cover-header {
+  margin-bottom: 2em;
+
+  time {
+    margin-top: 1em;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+  }
+
+  hr {
+    margin-top: 2em;
+  }
+}
+
+.b-post-cover-header__content {
+  text-align: left;
+}
+
+.b-post-header {
+  padding: 2em 0;
+  background: $off-white;
+}
+
+.b-post-body {
+  margin: 2em auto;
+}

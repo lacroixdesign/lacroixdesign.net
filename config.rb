@@ -61,7 +61,7 @@ activate :automatic_image_sizes
 activate :blog do |blog|
   blog.name    = "blog"
   blog.prefix  = "blog"
-  blog.sources = "{title}"
+  blog.sources = "{title}.html"
   blog.layout    = "layouts/blog-post"
   blog.permalink = "{title}"
   blog.paginate  = true

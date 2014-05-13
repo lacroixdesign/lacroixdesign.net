@@ -61,7 +61,9 @@ strong {
   font-weight: $bold-weight;
 }
 
-hr {}
+hr {
+  border-color: $off-white;
+}
 
 pre,
 code {

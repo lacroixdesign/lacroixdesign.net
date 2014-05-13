@@ -1,6 +1,6 @@
 module CaseStudyHelper
 
-  # Published case studies
+  # Find case studies
   def find_case_study_by_title(title)
     blog('case-studies').articles.find {|a| a.title == title }
   end
