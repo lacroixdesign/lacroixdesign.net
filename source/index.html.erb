@@ -86,14 +86,13 @@ cover_header: true
       <p>Operating out of the Wicker Park neighborhood and serving clients globally, we are a small team of two brothers who are passionate about helping our partners grow their business. We strategically create engaging user experiences &amp; functional products through a collaborative process with businesses large and small. We look forward to working for you on your next project.</p>
     </div>
     <div class="s-team__photos">
-      <article id="michael">
-        <img src="<%= image_path "team/michael-lacroix.jpg" %>" alt="Michael LaCroix">
-        <div class="overlay"><h1>Michael LaCroix</h1></div>
-      </article>
-      <article id="james">
-        <img src="<%= image_path "team/james-lacroix.jpg" %>" alt="James LaCroix">
-        <div class="overlay"><h1>James LaCroix</h1></div>
-      </article>
+      <% [ find_team_member_by_name("Michael LaCroix"),
+           find_team_member_by_name("James LaCroix") ].each do |member| %>
+        <article id="<%= member.slug %>">
+          <img src="<%= image_path "team/#{member.avatar}.jpg" %>" alt="<%= member.name %>">
+          <div class="overlay"><h1><%= member.name %></h1></div>
+        </article>
+      <% end %>
     </div>
     <a href="<%= data.urls.work_with_us %>" class="s-team__btn">Work With Us</a>
   </div>

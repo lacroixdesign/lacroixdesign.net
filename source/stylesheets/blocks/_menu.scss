@@ -1,6 +1,6 @@
 $nav-menu-open: ".is-menu-open";
 $nav-menu-width: 15em;
-$nav-link-total: 6;
+$nav-link-total: 5;
 $nav-transition-time: 0.3s;
 $nav-delay-delta: 0.05;
 
@@ -89,7 +89,7 @@ $nav-delay-delta: 0.05;
   overflow: hidden;
   color: $black-10;
   font-family: $typeface-serif;
-  @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 2));
+  @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 3));
 
   #{$nav-menu-open} & {
     width: $nav-menu-width;
@@ -159,29 +159,47 @@ $nav-delay-delta: 0.05;
   }
 } // .b-menu-social
 
-.b-menu-contact {
+.b-menu-email,
+.b-menu-phone {
   width: $nav-menu-width;
-  @include nav-transition($nav-link-total + 2);
-}
 
-.b-menu-contact a {
-  display: block;
-  padding: 1em 0.5em;
-  background: $off-white;
-  font-size: 0.8125em;
-  font-style: italic;
-  text-align: center;
-  text-decoration: none;
+  a {
+    display: block;
+    padding: 1em 0.5em;
+    font-size: 0.8125em;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+  }
 
-  &:hover {
+  a:hover {
     background: $pink;
     color: $white;
   }
-} // .b-menu-contact
+} // .b-menu-email, .b-menu-phone
+
+.b-menu-email {
+  @include nav-transition($nav-link-total + 2);
+
+  a {
+    background: $off-white;
+  }
+} // .b-menu-email
+
+.b-menu-phone {
+  @include nav-transition($nav-link-total + 3);
+  color: $grey;
+
+  a {
+    background: $white;
+    font-size: 65%;
+  }
+} // .b-menu-phone
 
 .b-menu-list li,
 .b-menu-social,
-.b-menu-contact {
+.b-menu-email,
+.b-menu-phone {
   @include transform(translateX($nav-menu-width));
 
   #{$nav-menu-open} & {

@@ -29,13 +29,15 @@
         <li><a href="<%= data.urls.services %>">Services</a></li>
         <li><a href="<%= data.urls.team %>">Team</a></li>
         <li><a href="<%= data.urls.blog %>">Blog</a></li>
-        <li><a href="<%= data.urls.contact %>">Contact</a></li>
       </ul>
       <ul class="b-menu-social">
         <%= partial "components/social-icons" %>
       </ul>
-      <div class="b-menu-contact">
+      <div class="b-menu-email">
         <%= mail_to data.site.contact_email %>
+      </div>
+      <div class="b-menu-phone">
+        <%= link_to data.site.phone_number, "tel:#{data.site.phone_number}" %>
       </div>
     </div>
   </nav>

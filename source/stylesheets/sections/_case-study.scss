@@ -6,6 +6,7 @@
     margin-bottom: 0;
     font-family: $typeface-serif;
     font-size: 1.5em;
+    font-weight: normal;
     line-height: 1.5;
     font-style: italic;
     text-align: center;
@@ -14,12 +15,6 @@
   > article {
     margin-bottom: 1px;
   }
-
-  @include media-ie($breakpoint-ipad) {
-    > h2 {
-      font-size: 2em;
-    }
-  } // $breakpoint-ipad
 } // .s-case-studies
 
 .s-case-study__hero-content h2 {
