@@ -1,9 +1,6 @@
 .b-case-study-preview {
   overflow: hidden;
-  background: $black;
-  background-position: center center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  background-color: $black;
   color: $white;
   text-align: center;
 
@@ -11,7 +8,11 @@
     position: relative;
     display: block;
     padding: 4em $page-gutter;
-    background: transparent;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
     text-decoration: none;
     @include transition(all 0.2s ease);
     @include transform(scale(1.05));

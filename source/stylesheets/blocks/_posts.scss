@@ -1,5 +1,9 @@
 .b-post-feed-hero {
-  background: $black image-url('backgrounds/blog-bg.jpg') top center;
+  background-color: $black;
+  background-image: image-url('backgrounds/blog-bg.jpg');
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 .b-posts {
