@@ -19,15 +19,12 @@ cover_header: true
 <%# Recent Work %>
 <section class="b-section s-home-projects" id="recent-work">
   <header>
-    <h1 class="section-title">Recent projects</h1>
+    <h1 class="section-title">Featured Work</h1>
   </header>
   <div class="s-home-projects__items">
-    <%= partial "components/featured-project", locals: {
-      project: find_case_study_by_title("The 5 Love Languages®") } %>
-    <%= partial "components/featured-project", locals: {
-      project: find_case_study_by_title("Danger House") } %>
-    <%= partial "components/featured-project", locals: {
-      project: find_case_study_by_title("Melanie Joye LMT"), last: true } %>
+    <%= component "featured-project", { project: find_case_study_by_title("The 5 Love Languages®") } %>
+    <%= component "featured-project", { project: find_case_study_by_title("Melanie Joye LMT") } %>
+    <%= component "featured-project", { project: find_case_study_by_title("Justice Film Fest 2014"), last: true } %>
   </div>
 </section>
 
