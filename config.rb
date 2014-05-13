@@ -114,13 +114,13 @@ configure :build do
   activate :minify_javascript, :inline => true
 
   # Enable cache buster
-  activate :asset_hash, :ignore => [%r{^fonts/165355}]
+  activate :asset_hash, :ignore => [%r{^fonts/cloud}]
 
   activate :minify_html
   activate :gzip
 
-  # activate :asset_host
-  # set :asset_host, "http://cdn.example.com"
+  activate :asset_host
+  set :asset_host, "http://d2s13a5qoldi0f.cloudfront.net"
 
   # Use relative URLs
   # activate :relative_assets
