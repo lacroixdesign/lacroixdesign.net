@@ -3,16 +3,17 @@ title: "LandID"
 date: 2014-05-02 15:00
 cover_header: true
 tagline: "From Concept to App Store"
+color: "#ed462f"
 ---
 / Split text + image – text on left (the default side)
-= split_block image: case_study_image_path('landid-1.jpg'), background: '#ed462f', color: '#fff'
+= split_block image: case_study_image_path('landid-1.jpg'), background: current_page.data.color, color: '#fff'
   p LandID is an iOS application for iphone that seeks to capture the meaningful moments of your life.
 
 = text_block do
   p To help bring LandID to life, LaCroix Design Co. was brought in to work alongside the developers of the app, <a href="http://launchpadlab.com/" target="_blank">Launchpad Lab</a>, to provide the design direction for the application. Together, we worked with the client to bring their idea to reality. The process involved charting out the flow of how users would interact with the app. From there, we created sketches and wireframes to conceive and revise the views that users of the app would interact with. These rough ideas evolved into full designed screens which were refined to create a fantastic user experience. Throughout the whole processes, both wireframes and final designs were delivered in an animated prototype showcasing the interactions and flow.
 
 / Split text + image – text on right
-= split_block image: case_study_image_path('landid-2.jpg'), background: '#ed462f', color: '#fff', text_side: "right"
+= split_block image: case_study_image_path('landid-2.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
   p The brand new product was in need of a strong brand identity to help it compete within the app store environment. Thus, a brand identity was established to communicate a sense of youth and adventure. The identity utilized a color scheme that would distnguish the application from the other photo apps available.
 
 = text_block do
@@ -22,8 +23,8 @@ tagline: "From Concept to App Store"
 = case_study_slideshow %w(landid-slide-1 landid-slide-2 landid-slide-3 landid-slide-4 landid-slide-5)
 
 / Split text + image – text on left (the default side)
-= split_block image: case_study_image_path('landid-3.jpg'), background: '#ed462f', color: '#fff'
+= split_block image: case_study_image_path('landid-3.jpg'), background: current_page.data.color, color: '#fff'
   p To draw new users to the app, we designed and developed an attractive, responsive landing page to showcase the features of the application.
 
 = text_block callout: true
-  a(href='http://landidapp.com/' class='btn') Download the App
+  a(href='http://landidapp.com/' target='_blank' class='btn') Download the App

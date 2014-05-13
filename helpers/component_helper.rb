@@ -19,7 +19,8 @@ module ComponentHelper
       background: options[:background],
       fixed: options[:fixed],
       callout: options[:callout],
-      text_side: options[:text_side] || 'left'
+      text_side: options[:text_side] || 'left',
+      title: options[:title] || current_page.title
     }) { yield if block_given? }
   end
 
@@ -31,6 +32,11 @@ module ComponentHelper
   # Split text/image block
   def split_block(**options, &block)
     block_component('split-block', options, &block)
+  end
+
+  # Full-width image block
+  def image_block(**options)
+    block_component('image-block', options)
   end
 
 end

@@ -13,7 +13,7 @@
 } // .b-section
 
 .b-text-component {
-  padding: 4em 0;
+  padding: 2.5em 0;
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -38,7 +38,7 @@
   text-align: center;
 
   > article {
-    padding: 4em 0;
+    padding: 2.5em 0;
   }
 
   > aside {
@@ -64,6 +64,14 @@
       display: table-cell;
       width: 50%;
       min-height: none;
+    }
+
+    .left {
+      margin-right: 0;
+    }
+
+    .right {
+      margin-left: 0;
     }
   } // $breakpoint-ipad
 } // .b-split-component

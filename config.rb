@@ -61,12 +61,12 @@ activate :automatic_image_sizes
 activate :blog do |blog|
   blog.name    = "blog"
   blog.prefix  = "blog"
-  blog.sources = "{title}"
+  blog.sources = "{title}.html"
   blog.layout    = "layouts/blog-post"
   blog.permalink = "{title}"
   blog.paginate  = true
-  blog.page_link = "p{num}"
-  blog.per_page  = 1
+  # blog.page_link = "p{num}"
+  blog.per_page  = 5
   blog.default_extension = ".md"
 end
 

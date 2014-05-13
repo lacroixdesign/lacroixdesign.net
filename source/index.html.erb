@@ -23,9 +23,9 @@ cover_header: true
   </header>
   <div class="s-home-projects__items">
     <%= partial "components/featured-project", locals: {
-      project: find_case_study_by_title("The 5 Love Languages") } %>
+      project: find_case_study_by_title("Justice Film Fest 2014") } %>
     <%= partial "components/featured-project", locals: {
-      project: find_case_study_by_title("Danger House") } %>
+      project: find_case_study_by_title("LandID") } %>
     <%= partial "components/featured-project", locals: {
       project: find_case_study_by_title("Melanie Joye LMT"), last: true } %>
   </div>
@@ -91,11 +91,11 @@ cover_header: true
     <div class="s-team__photos">
       <article id="michael">
         <img src="<%= image_path "team/michael-lacroix.jpg" %>" alt="Michael LaCroix">
-        <div><h1>Michael LaCroix</h1></div>
+        <div class="overlay"><h1>Michael LaCroix</h1></div>
       </article>
       <article id="james">
         <img src="<%= image_path "team/james-lacroix.jpg" %>" alt="James LaCroix">
-        <div><h1>James LaCroix</h1></div>
+        <div class="overlay"><h1>James LaCroix</h1></div>
       </article>
     </div>
     <a href="<%= data.urls.work_with_us %>" class="s-team__btn">Work With Us</a>

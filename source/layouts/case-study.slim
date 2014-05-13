@@ -1,4 +1,27 @@
 - wrap_layout :base do
+  - if current_page.data.color
+    css:
+      .b-text p a,
+      .b-text p a:focus,
+      .b-text p a:visited {
+        color: #{current_page.data.color};
+      }
+      .b-text p a:hover {
+        color: #{current_page.data.color};
+      }
+      .btn,
+      .btn:focus,
+      .btn:visited {
+        border-color: #{current_page.data.color};
+        color: #{current_page.data.color};
+      }
+      .btn:hover,
+      .btn:active {
+        border-color: #{current_page.data.color};
+        background-color: #{current_page.data.color};
+        color: #fff;
+      }
+
   = hero_image case_study_bg_path do
     .l-constrained-large.s-case-study__hero-content
       .logo__case-study = case_study_logo

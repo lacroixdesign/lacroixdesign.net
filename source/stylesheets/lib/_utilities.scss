@@ -1,7 +1,7 @@
 // Opacity
 @mixin opacity($level: 1){
   $ms-level: $level*100;
-  filter: alpha(opacity=#{$ms-level});
+  // filter: alpha(opacity=#{$ms-level});
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$ms-level})";
   opacity: #{$level};
 }
