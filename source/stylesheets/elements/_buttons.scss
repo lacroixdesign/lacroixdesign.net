@@ -29,6 +29,11 @@
   background: transparent;
   color: $color;
 
+  &.alt {
+    font-family: $typeface-serif;
+    font-style: italic;
+  }
+
   &:visited {
     background: transparent;
     color: $color;
@@ -36,7 +41,7 @@
 
   &:hover {
     background: $color;
-    color: $white;
+    color: $white !important;
   }
 
   &:active {
