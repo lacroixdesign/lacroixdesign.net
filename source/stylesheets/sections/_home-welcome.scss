@@ -30,6 +30,7 @@
     font-family: $typeface-serif;
     font-weight: bold;
     font-style: italic;
+    &:hover { color: $black !important; }
   }
 
   @include media(min-width 500px min-height 500px) {
