@@ -6,8 +6,7 @@ per_page: 5
 
 <section class="l-constrained-medium b-posts">
 
-  <%# blog('blog').articles.each do |item| %>
-  <% page_articles('blog').each do |item| %>
+  <% page_articles.each do |item| %>
     <% author = find_team_member_by_name(item.data.author) %>
     <article class="b-post-preview">
       <h1><a href="<%= item.url %>"><%= item.title %></a></h1>
