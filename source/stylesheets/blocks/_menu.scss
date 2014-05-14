@@ -93,7 +93,7 @@ $nav-delay-delta: 0.05;
 
   #{$nav-menu-open} & {
     width: $nav-menu-width;
-    @include transition-delay(0);
+    @include transition-delay(0s);
   }
 } // .b-menu
 

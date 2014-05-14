@@ -106,19 +106,27 @@ set :fonts_dir,  'fonts'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  activate :minify_css, :inline => true
+  activate :minify_css,
+            :ignore => [%r{fonts}],
+            :inline => true
 
   # Minify Javascript on build
   activate :minify_javascript, :inline => true
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, :ignore => [%r{^fonts/cloud}]
 
   activate :minify_html
   activate :gzip
 
-  # activate :asset_host
-  # set :asset_host, "http://cdn.example.com"
+  activate :asset_host
+  set :asset_host do |asset|
+    if asset =~ %r{^/fonts/}
+      "http://www.lacroixdesign.net"
+    else
+      "http://d2s13a5qoldi0f.cloudfront.net"
+    end
+  end
 
   # Use relative URLs
   # activate :relative_assets
