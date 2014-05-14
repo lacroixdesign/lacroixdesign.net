@@ -1,1 +1,9 @@
-<a href="<%= data.urls.work_with_us %>" class="btn alt">Work With Us</a>
+<% btn = btn || 'btn' %>
+
+<a
+  href="<%= data.urls.work_with_us %>"
+  class="<%= btn %> typeform-share"
+  data-mode="2"
+  target="_blank">
+  Work With Us
+</a>

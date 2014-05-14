@@ -105,9 +105,7 @@
   }
 } // .s-team__photos
 
-.s-team__btn {
+.s-team__btn [class*="btn"] {
   @include btn($red-chicago, transparent, 2px);
-  font-family: $typeface-serif;
   font-size: 1em;
-  font-style: italic;
 }

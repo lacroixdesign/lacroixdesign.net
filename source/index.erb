@@ -11,7 +11,7 @@ cover_header: true
       <h2>Empowering businesses to become more successful, we design and develop bespoke, innovative experiences for web, mobile and physical interactions.</h2>
     </header>
     <nav class="s-home-welcome__cta">
-      <a href="<%= data.urls.work_with_us %>" class="btn-bright">Work With Us</a>
+      <%= component "cta-button", btn: "btn-bright" %>
     </nav>
   </div>
 </section>
@@ -97,6 +97,8 @@ cover_header: true
         </article>
       <% end %>
     </div>
-    <a href="<%= data.urls.work_with_us %>" class="s-team__btn">Work With Us</a>
+    <div class="s-team__btn">
+      <%= component "cta-button" %>
+    </div>
   </div>
 </section>
