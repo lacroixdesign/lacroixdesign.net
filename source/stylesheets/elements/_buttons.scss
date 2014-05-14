@@ -10,9 +10,10 @@
   padding: 1em;
   margin: 0.25em 0;
   overflow-x: hidden;
-  font-family: $typeface-sans;
+  font-family: $typeface-serif;
   font-size: 0.875em;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: bold;
   line-height: normal;
   text-align: center;
   vertical-align: middle;
@@ -28,11 +29,6 @@
   box-shadow: none;
   background: transparent;
   color: $color;
-
-  &.alt {
-    font-family: $typeface-serif;
-    font-style: italic;
-  }
 
   &:visited {
     background: transparent;
@@ -71,6 +67,11 @@
   }
   &.mini {
     font-size: 0.6em;
+  }
+
+  &.short {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
   }
 
   [data-icon] {

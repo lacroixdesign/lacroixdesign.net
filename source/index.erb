@@ -26,6 +26,9 @@ cover_header: true
     <%= component "featured-project", { project: find_case_study_by_title("LandID") } %>
     <%= component "featured-project", { project: find_case_study_by_title("Melanie Joye LMT"), last: true } %>
   </div>
+  <div class="l-constrained">
+    <a href="<%= data.urls.work %>" class="btn small short">View All</a>
+  </div>
 </section>
 
 <%# Services %>
