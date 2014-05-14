@@ -1,5 +1,6 @@
 ---
 title: "What Does Success Look Like?"
+tagline: "The value of defining expectations."
 date: 2013-04-04 12:00
 inline_header: "success.jpg"
 above_header: true

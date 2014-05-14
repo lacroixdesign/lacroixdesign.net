@@ -1,5 +1,6 @@
 ---
 title: "DISH 2013 Student Design Conference"
+tagline: "A fantastic two day event in Nashville, TN."
 date: 2013-02-20 12:00
 cover_header: "dish-2013-showcase.jpg"
 author: "James LaCroix"

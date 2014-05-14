@@ -1,5 +1,6 @@
 ---
-title: "New Adventures In Collaboration: Apps & Services (Part 1)"
+title: "New Adventures In Collaboration (Part 1)"
+tagline: "Apps & services for communicating when working remotely."
 date: 2013-01-11 12:00
 inline_header: "collaboration-part-1.jpg"
 above_header: true

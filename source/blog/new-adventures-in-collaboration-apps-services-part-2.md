@@ -1,5 +1,6 @@
 ---
-title: "New Adventures In Collaboration: Apps & Services (Part 2)"
+title: "New Adventures In Collaboration (Part 2)"
+tagline: "Apps & services for design iteration when working remotely."
 date: 2013-01-17 12:00
 inline_header: "collaboration-part-2.jpg"
 above_header: true

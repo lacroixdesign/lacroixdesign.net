@@ -1,5 +1,6 @@
 ---
 title: "Setting Goals For Your Web Project"
+tagline: "How to make your next web project successful."
 date: 2013-04-15 12:00
 inline_header: "goals.jpg"
 above_header: true
