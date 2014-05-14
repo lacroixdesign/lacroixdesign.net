@@ -122,7 +122,7 @@ configure :build do
   activate :asset_host
   set :asset_host do |asset|
     if asset =~ %r{^/fonts/}
-      ""
+      "http://www.lacroixdesign.net"
     else
       "http://d2s13a5qoldi0f.cloudfront.net"
     end
