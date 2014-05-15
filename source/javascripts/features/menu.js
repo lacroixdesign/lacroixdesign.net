@@ -5,14 +5,20 @@
     $('body').addClass('is-menu-open');
     $(document).on('keydown', closeMenuOnEsc);
     $(document).on('click', closeMenu);
-    window.clickyEvent('#menu', 'Menu - Open');
+    window.clickyEvent(
+      document.location.pathname + '#menu',
+      'Menu - Open'
+    );
   }
 
   function closeMenu() {
     $('body').removeClass('is-menu-open');
     $(document).off('keydown', closeMenuOnEsc);
     $(document).off('click', closeMenu);
-    window.clickyEvent('#menu', 'Menu - Close');
+    window.clickyEvent(
+      document.location.pathname + '#menu',
+      'Menu - Close'
+    );
   }
 
   function closeMenuOnEsc(event) {

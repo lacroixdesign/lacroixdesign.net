@@ -106,6 +106,6 @@
 } // .s-team__photos
 
 .s-team__btn [class*="btn"] {
-  @include btn($red-chicago, transparent, 2px);
+  @include btn($red-chicago, $white, $border-size: 2px);
   font-size: 1em;
 }
