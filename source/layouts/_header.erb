@@ -14,14 +14,18 @@
           style="background-color: <%= bg %>"
         <% end %>>
 
-  <div class="s-header__logo">
-    <a href="/">
-        <img src="<%= image_path "#{logo}.svg" %>"
-             onerror="this.src='<%= image_path "#{logo}.png" %>'"
-             alt="<%= data.site.title %>"
-             class="image-fullheight">
-    </a>
-  </div>
+  <%# don't show logo on homepage %>
+  <% unless current_page.url == "/" %>
+    <div class="s-header__logo">
+      <a href="/">
+          <img
+            src="<%= image_path "#{logo}.svg" %>"
+            onerror="this.src='<%= image_path "#{logo}.png" %>'"
+            alt="<%= data.site.title %>"
+            class="image-fullheight">
+      </a>
+    </div>
+  <% end %>
 
   <nav id="nav" class="s-header__nav">
     <a href="#menu" id="menu-open" class="b-menu-toggle"><%= icon 'e2af' %></a>

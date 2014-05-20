@@ -6,13 +6,19 @@ cover_header: true
 <%# Welcome %>
 <section class="s-home-welcome" id="welcome">
   <div class="l-constrained-large">
+    <div class="s-home-welcome__logo">
+      <img
+        src="<%= image_path "full-logo.svg" %>"
+        onerror="this.src='<%= image_path "full-logo.png" %>'"
+        alt="<%= data.site.title %>"
+        class="image-fullwidth">
+    </div>
     <header>
-      <h1>LACROIX DESIGN CO.</h1>
       <h2>Empowering businesses to become more successful, we design and develop bespoke, innovative experiences for web, mobile and physical interactions.</h2>
     </header>
-    <nav class="s-home-welcome__cta">
+    <div class="s-home-welcome__cta">
       <%= component "cta-button", btn: "btn-bright", id: "cta-welcome" %>
-    </nav>
+    </div>
   </div>
 </section>
 
