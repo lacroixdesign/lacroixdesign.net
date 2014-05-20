@@ -80,7 +80,7 @@
     @include display(flex);
     @include transition(all 0.3s ease);
     @include transform-origin(25% 50%);
-    @include transform(rotateY(135deg) scale(0.25));
+    @include transform(scale(0.5));
     opacity: 0;
     padding: 0.5em;
     overflow: hidden;
@@ -91,7 +91,7 @@
   }
 
   article:hover .overlay {
-    @include transform(rotateY(0deg) scale(1));
+    @include transform(scale(1));
     opacity: 1;
     @include media-ie-only { display: block; }
   }
