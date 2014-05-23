@@ -28,7 +28,7 @@
     }
   }
 
-  $(document).on('click', '#menu-open', function(event) {
+  $(document).on('click', '#menu-open, [data-open-nav]', function(event) {
     event.stopPropagation();
     event.preventDefault();
     openMenu();
@@ -42,7 +42,6 @@
     event.stopPropagation();
     closeMenu();
   });
-  $(document).on('click', '[data-open-nav]', openMenu);
   $(document).on('click', '#menu', function(event) {
     event.stopPropagation();
   });
