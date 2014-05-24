@@ -121,8 +121,10 @@ cover_header: true
         <% [ find_team_member_by_name("Michael LaCroix"),
              find_team_member_by_name("James LaCroix") ].each do |member| %>
           <article id="<%= member.slug %>">
-            <img src="<%= image_path "team/#{member.avatar}.jpg" %>" alt="<%= member.name %>">
-            <div class="overlay"><h1><%= member.name %></h1></div>
+            <a href="/team/<%= member.slug %>">
+              <img src="<%= image_path "team/#{member.avatar}.jpg" %>" alt="<%= member.name %>">
+              <div class="overlay"><h1><%= member.name %></h1></div>
+            </a>
           </article>
         <% end %>
       </div>

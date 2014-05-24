@@ -46,6 +46,10 @@
     margin-bottom: 0;
   }
 
+  img {
+    @include fadeInOnPageLoad;
+  }
+
   @include media-ie(568px) {
     @include row;
     @include display(flex);

@@ -1,0 +1,15 @@
+@include keyframes(fadeIn50) {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin fadeInOnPageLoad {
+  @include animation(fadeIn50 0.7s ease-in);
+}

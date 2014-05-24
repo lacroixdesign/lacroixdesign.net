@@ -52,6 +52,7 @@
   max-width: 20em;
   margin: 2em auto;
   text-align: center;
+  @include fadeInOnPageLoad;
 
   article {
     position: relative;
@@ -67,6 +68,7 @@
     margin-right: 4%;
   }
 
+  a,
   img {
     display: block;
     width: 100%;

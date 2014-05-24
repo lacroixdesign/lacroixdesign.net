@@ -10,6 +10,7 @@
     line-height: 1.5;
     font-style: italic;
     text-align: center;
+    @include fadeInOnPageLoad;
   }
 
   > article {
@@ -17,6 +18,10 @@
   }
 } // .s-case-studies
 
-.s-case-study__hero-content h2 {
-  margin: 1em 0 0;
-}
+.s-case-study__hero-content {
+  @include fadeInOnPageLoad;
+
+  h2 {
+    margin: 1em 0 0;
+  }
+} // .s-case-study__hero-content

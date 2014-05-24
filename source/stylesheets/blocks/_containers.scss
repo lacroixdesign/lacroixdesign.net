@@ -34,3 +34,7 @@ $containers-bp: $breakpoint-desktop;
 .l-unconstrained {
   @include page-container;
 }
+
+.b-simple-callout {
+  text-align: center;
+}
