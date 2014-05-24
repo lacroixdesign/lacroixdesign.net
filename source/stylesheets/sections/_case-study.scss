@@ -19,8 +19,6 @@
 } // .s-case-studies
 
 .s-case-study__hero-content {
-  @include fadeInOnPageLoad;
-
   h2 {
     margin: 1em 0 0;
   }
