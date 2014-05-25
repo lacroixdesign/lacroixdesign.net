@@ -13,15 +13,16 @@ module ComponentHelper
   end
 
   def block_component(name, options = {})
-    component(name, {
-      image: options[:image],
-      color: options[:color],
-      background: options[:background],
-      fixed: options[:fixed],
-      callout: options[:callout],
-      text_side: options[:text_side] || 'left',
-      title: options[:title] || current_page.title
-    }) { yield if block_given? }
+    opts = {
+      image: nil,
+      color: nil,
+      background: nil,
+      fixed: nil,
+      callout: nil,
+      text_side: 'left',
+      title: current_page.title
+    }
+    component(name, opts.merge(options)) { yield if block_given? }
   end
 
   # Full text block
@@ -37,6 +38,14 @@ module ComponentHelper
   # Full-width image block
   def image_block(**options)
     block_component('image-block', options)
+  end
+
+  # Live website preview block
+  def live_preview_block(**options)
+    unless options[:url]
+      raise "A URL is required for `live_preview_block`"
+    end
+    block_component('live-preview-block', options)
   end
 
 end

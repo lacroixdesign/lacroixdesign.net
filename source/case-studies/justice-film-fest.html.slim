@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Effective Event Marketing"
 color: "#cc2023"
+website_url: "http://www.justicefilmfest.com/"
 ---
 
 / Split text + image – text on left (the default side)
@@ -16,7 +17,9 @@ color: "#cc2023"
 / Slideshow
 = case_study_slideshow %w(justicefilmfest-slide-1 justicefilmfest-slide-2 justicefilmfest-slide-3 justicefilmfest-slide-4 justicefilmfest-slide-5)
 
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
 = text_block callout: true
   p Looking for a website to successfully market your next event?
   p = component "cta-button"
-  p You can also visit the <a href="http://www.justicefilmfest.com" target="_blank">Justice Film Fest website</a>.
+  p You can also visit the <a href="#{current_page.data.website_url}" target="_blank">Justice Film Fest website</a>.
