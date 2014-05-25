@@ -14,36 +14,41 @@
           style="background-color: <%= bg %>"
         <% end %>>
 
-  <div class="s-header__logo">
-    <a href="/">
-        <img src="<%= image_path "#{logo}.svg" %>"
-             onerror="this.src='<%= image_path "#{logo}.png" %>'"
-             alt="<%= data.site.title %>"
-             class="image-fullheight">
-    </a>
-  </div>
-
-  <nav id="nav" class="s-header__nav">
-    <a href="#menu" id="menu-open" class="b-menu-toggle"><%= icon 'e2af' %></a>
-    <a href="#menu" id="menu-close" class="b-menu-toggle"><%= icon 'e36b' %></a>
-    <div id="menu" class="b-menu">
-      <ul class="b-menu-list">
-        <li><a href="/">About</a></li>
-        <li><a href="<%= data.urls.work %>">Work</a></li>
-        <li><a href="<%= data.urls.services %>">Services</a></li>
-        <li><a href="<%= data.urls.team %>">Team</a></li>
-        <li><a href="<%= data.urls.blog %>">Blog</a></li>
-      </ul>
-      <ul class="b-menu-social">
-        <%= partial "components/social-icons" %>
-      </ul>
-      <div class="b-menu-email">
-        <%= mail_to data.site.contact_email, data.site.display_email %>
-      </div>
-      <div class="b-menu-phone">
-        <%= link_to data.site.phone_number, "tel:#{data.site.phone_number}" %>
-      </div>
+  <%# don't show logo on homepage %>
+  <% unless current_page.url == "/" %>
+    <div class="s-header__logo">
+      <a href="/">
+          <img
+            src="<%= image_path "#{logo}.svg" %>"
+            onerror="this.src='<%= image_path "#{logo}.png" %>'"
+            alt="<%= data.site.title %>"
+            class="image-fullheight">
+      </a>
     </div>
-  </nav>
+  <% end %>
 
 </header>
+
+<nav id="nav" class="b-nav">
+  <a href="#menu" id="menu-open" class="b-menu-toggle"><%= icon 'e2af' %></a>
+  <a href="#menu" id="menu-close" class="b-menu-toggle"><%= icon 'e36b' %></a>
+</nav>
+
+<nav id="menu" class="b-menu">
+  <ul class="b-menu-list">
+    <li><a href="/">About</a></li>
+    <li><a href="<%= data.urls.work %>">Work</a></li>
+    <li><a href="<%= data.urls.services %>">Services</a></li>
+    <li><a href="<%= data.urls.team %>">Team</a></li>
+    <li><a href="<%= data.urls.blog %>">Blog</a></li>
+  </ul>
+  <ul class="b-menu-social">
+    <%= partial "components/social-icons" %>
+  </ul>
+  <div class="b-menu-email">
+    <%= mail_to data.site.contact_email, data.site.display_email %>
+  </div>
+  <div class="b-menu-phone">
+    <%= link_to data.site.phone_number, "tel:#{data.site.phone_number}" %>
+  </div>
+</nav>

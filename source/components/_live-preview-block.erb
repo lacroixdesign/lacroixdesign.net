@@ -1,0 +1,49 @@
+<%#
+  OPTIONS
+  ---
+  url (URL to load in the live preview) [require]
+  color (text color) [optional]
+  background (background color) [optional]
+%>
+
+<%
+  style = [
+    ("color: #{color};" if color),
+    ("border-color: #{color || data.colors.black };"),
+    ("background-color: #{background};" if background)
+  ].join(' ')
+%>
+
+<section class="b-interactive-devices b-section" style="<%= style %>">
+
+  <p><em>Select a device below to view &amp; interact with a live preview of the website.</em></p>
+
+  <nav>
+    <button data-show-live-preview="mobile">
+      <%= icon "e125" %>
+    </button>
+    <button data-show-live-preview="tablet">
+      <%= icon "e127" %>
+    </button>
+    <button data-show-live-preview="desktop">
+      <%= icon "e120" %>
+    </button>
+  </nav>
+
+  <figure class="live-preview" data-live-preview>
+    <img
+      src="<%= image_path "live-preview/mobile.svg" %>"
+      alt="<%= title %> - Mobile Device Preview"
+      data-live-preview-img="mobile">
+    <img
+      src="<%= image_path "live-preview/tablet.svg" %>"
+      alt="<%= title %> Tablet - Device Preview"
+      data-live-preview-img="tablet">
+    <img
+      src="<%= image_path "live-preview/desktop.svg" %>"
+      alt="<%= title %> Desktop - Device Preview"
+      data-live-preview-img="desktop">
+    <iframe data-src="<%= url %>" frameborder="0"></iframe>
+  </figure>
+
+</section>

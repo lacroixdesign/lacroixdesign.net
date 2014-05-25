@@ -1,15 +1,16 @@
 /*
  * Button style
  */
-@mixin btn($color, $bg, $border-size: 1px, $border-color: inherit) {
+@mixin btn($color, $inverse, $border-size: 1px, $border-color: inherit) {
   @if $border-color == inherit {
     $border-color: $color;
   }
   @include appearance(none);
+  position: relative;
+  z-index: 1;
   display: inline-block;
   padding: 1em;
   margin: 0.25em 0;
-  overflow-x: hidden;
   font-family: $typeface-serif;
   font-size: 0.875em;
   font-style: italic;
@@ -37,12 +38,12 @@
 
   &:hover {
     background: $color;
-    color: $white !important;
+    color: $inverse !important;
   }
 
   &:active {
     background: $color;
-    color: $white;
+    color: $inverse !important;
   }
 
   &:focus {
@@ -74,20 +75,53 @@
     padding-bottom: 0.75em;
   }
 
+  &.animate-faux-progress {
+    $transition-time: 4s;
+    background: transparent;
+    color: $inverse;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 0%;
+      height: 100%;
+      background: $color;
+      content: '';
+      @include animation(btn-progress $transition-time ease-out);
+      @include animation-iteration-count(1);
+    }
+
+    &:hover,
+    &:active {
+      background: transparent;
+    }
+  } // &.animate-faux-progress
+
   [data-icon] {
     vertical-align: middle;
   }
 } // @mixin btn
 
+@include keyframes(btn-progress) {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+} // keyframes
+
 .btn {
-  @include btn($pink, transparent, 2px);
+  @include btn($pink, $white, $border-size: 2px);
+  // $inverse
 }
 
 .btn-bright {
-  @include btn($white, transparent, 2px);
-  &:hover { color: $black; }
+  @include btn($white, $black, $border-size: 2px);
 }
 
 .btn-subtle {
-  @include btn($grey, transparent, 2px);
+  @include btn($grey, $white, $border-size: 2px);
 }

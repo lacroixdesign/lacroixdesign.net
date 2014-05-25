@@ -1,10 +1,9 @@
 .s-services {
   position: relative;
   z-index: 1;
-  padding-top: 1em;
   padding-right: $page-gutter;
   padding-left: $page-gutter;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
   background: $off-white;
   text-align: center;
 
@@ -25,52 +24,40 @@
     transform-origin: 0 0;
   }
 
-  .no-csstransforms & {
-    padding-top: 2em;
-    padding-bottom: 2em;
+  @include media(600px) {
+    padding-bottom: 10%;
+  }
+
+  .no-csstransforms3d & {
+    padding-bottom: 0;
   }
 } // .s-services
 
 .s-services__lists {
-  display: inline-block;
-  max-width: 30em;
-  margin: auto;
+  max-width: 19em;
+  margin: 0 auto 0;
   font-size: 87.5%;
-  text-align: left;
 
-  h2 {
-    border-bottom: 1px solid $grey-light;
-    color: $black-20;
-    font-size: 0.9375em;
-    font-weight: 800;
-    line-height: 1.25;
-    text-transform: uppercase;
-  }
-
-  ul {
+  article {
     margin-bottom: 1.5em;
   }
 
-  li {
-    margin-bottom: 0.75em;
+  article:last-child {
+    margin-bottom: 0;
   }
 
-  @include media(min-width 360px max-width $breakpoint-large-screen - 1) {
-    @include row;
-    max-width: 40em;
+  img {
+    @include fadeInOnPageLoad;
+  }
 
-    ul {
-      @include span-columns(6);
-      @include omega(2n);
-    }
-  } // @media 360px to $breakpoint-large-screen - 1
-
-  @include media-ie($breakpoint-large-screen) {
+  @include media-ie(568px) {
     @include row;
+    @include display(flex);
     max-width: 60em;
 
-    ul {
-      @include span-columns(3);
+    article {
+      @include span-columns(4);
+      margin-bottom: 0;
     }
-  } // @media $breakpoint-large-screen
+  } // @media 568px
 } // .s-services__lists

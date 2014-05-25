@@ -1,5 +1,5 @@
 @mixin welcome-section-layout {
-  padding: 7em + $header-height 0 7em;
+  padding: 4em + $header-height 0 7em;
 
   header {
     font-size: 100%;
@@ -7,7 +7,7 @@
 } // @mixin welcome-section-layout
 
 .s-home-welcome {
-  padding: 4em + $header-height 0 4em;
+  padding: 2em + $header-height 0 4em;
   background: $black image-url('backgrounds/home-welcome.jpg') no-repeat top center;
   -webkit-background-size: cover;
   background-size: cover;
@@ -15,8 +15,12 @@
   text-align: center;
 
   header {
-    padding: 0 $page-gutter;
     font-size: 67.5%;
+  }
+
+  .s-home-welcome__logo {
+    max-width: 20em;
+    margin: 0 auto 1.5em;
   }
 
   h2 {
@@ -33,7 +37,11 @@
     &:hover { color: $black !important; }
   }
 
-  @include media(min-width 500px min-height 500px) {
+  > * {
+    @include fadeInOnPageLoad;
+  }
+
+  @include media(min-width 600px min-height 550px) {
     @include welcome-section-layout;
   }
 

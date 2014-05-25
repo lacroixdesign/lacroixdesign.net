@@ -7,3 +7,8 @@
   color: $pink;
   &:hover { color: $pink; }
 }
+
+.link-plain-til-hover {
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}

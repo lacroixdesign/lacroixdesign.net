@@ -10,19 +10,6 @@
   color: $grey;
   font-size: 1.5em;
 
-  li {
-    display: inline;
-    margin-left: 0.5em;
-  }
-
-  li:first-child {
-    margin-left: 0;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
   a:hover {
     color: $black;
   }

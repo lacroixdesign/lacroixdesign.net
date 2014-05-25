@@ -1,0 +1,25 @@
+.b-service-list {
+  padding: 2em 1em;
+  border-radius: 8px;
+  background: $medium-white;
+  text-align: center;
+
+  header {
+    max-width: 8em;
+    margin: 0 auto 2em;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+    color: $black-20;
+    font-size: 0.9375em;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  li {
+    font-style: italic;
+    margin-top: 0.75em;
+  }
+} // .b-service-list

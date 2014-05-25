@@ -14,6 +14,7 @@ set :markdown,
     :fenced_code_blocks => true,
     :no_intra_emphasis => true,
     :strikethrough => true,
+    :smartypants => true,
     :tables => true
 
 ###
@@ -68,6 +69,14 @@ activate :automatic_image_sizes
 #   end
 # end
 
+###
+# Team member pages
+###
+page "/team/*", :layout => "team-member"
+
+###
+# Blogs
+###
 activate :blog do |blog|
   blog.name    = "blog"
   blog.prefix  = "blog"
