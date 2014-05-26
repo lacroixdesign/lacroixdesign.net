@@ -99,7 +99,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-# activate :sitemap
+page "/sitemap.xml", :layout => false
 
 activate :deploy do |deploy|
   deploy.method = :git

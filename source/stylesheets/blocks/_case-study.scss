@@ -1,4 +1,5 @@
 .b-case-study-preview {
+  @include display(flex);
   overflow: hidden;
   background-color: $black;
   color: $white;
@@ -7,6 +8,7 @@
   > a {
     position: relative;
     display: block;
+    width: 100%;
     padding: 4em $page-gutter;
     background-color: transparent;
     background-repeat: no-repeat;
