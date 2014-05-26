@@ -16,9 +16,9 @@
     border-bottom: 3px solid transparent;
     background: none transparent;
     color: inherit;
-    font-size: 1.5em;
+    font-size: 2.5em;
     @include transform(scale(1));
-    @include transition(all 0.2s ease);
+    @include transition(all 0.1s ease);
 
     &:first-child {
       margin-left: 0;
@@ -39,7 +39,7 @@
   } // button
 
   figure {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
 
   @include media(1015px) {
