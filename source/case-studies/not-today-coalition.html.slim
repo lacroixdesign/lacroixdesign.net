@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Increased Support & Dononations for a Nonprofit"
 color: "#6ea430"
+website_url: "http://www.ntc.io"
 ---
 
 / Split text + image – text on left (the default side)
@@ -23,6 +24,8 @@ color: "#6ea430"
 
 / Slideshow
 = case_study_slideshow %w(ntc-slide-1 ntc-slide-2 ntc-slide-3 ntc-slide-4 ntc-slide-5)
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
   p Looking for ways to increase awareness for your organization?

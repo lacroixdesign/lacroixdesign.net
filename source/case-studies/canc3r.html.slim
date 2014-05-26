@@ -4,6 +4,8 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Raising Funds for Cancer Victims and their Families"
 color: "#b186bf"
+published: false
+website_url: "http://www.canc3r.org/"
 ---
 
 / Text
@@ -36,3 +38,5 @@ color: "#b186bf"
 
 / Slideshow
 = case_study_slideshow %w(canc3r-slide-1 canc3r-slide-2 canc3r-slide-3 canc3r-slide-4)
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white

@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Packaged Service for Effective Websites"
 color: "#E66D17"
+website_url: "http://www.1pagesites.net"
 ---
 
 / Split text + image – text on left (the default side)
@@ -22,6 +23,8 @@ color: "#E66D17"
 
 / Text w/ background image
 = image_block image: case_study_image_path('1pagesites-3.jpg')
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
   p Looking for a way to promote your business, product, service or event?

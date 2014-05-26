@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "From Concept to App Store"
 color: "#ed462f"
+website_url: "http://landidapp.com"
 ---
 / Split text + image – text on left (the default side)
 = split_block image: case_study_image_path('landid-1.jpg'), background: current_page.data.color, color: '#fff'
@@ -25,6 +26,8 @@ color: "#ed462f"
 / Split text + image – text on left (the default side)
 = split_block image: case_study_image_path('landid-3.jpg'), background: current_page.data.color, color: '#fff'
   p To draw new users to the app, we designed and developed an attractive, responsive landing page to showcase the features of the application.
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
   p Looking for a brand identity or to conceptualize your next app?

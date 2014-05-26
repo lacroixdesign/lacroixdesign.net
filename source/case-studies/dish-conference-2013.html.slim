@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Attracting Conference Attendees"
 color: "#308fbf"
+website_url: "http://2013.dishconference.com/"
 ---
 
 / Split text + image – text on left (the default side)
@@ -25,6 +26,8 @@ color: "#308fbf"
 
 / Text w/ background image
 = image_block image: case_study_image_path('dish-2013-3.jpg')
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
   p Looking for a website to attract attendees to your conference or event?

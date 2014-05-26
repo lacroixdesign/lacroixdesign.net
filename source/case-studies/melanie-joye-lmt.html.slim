@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Helping a Small Business Make a Lasting Impression"
 color: '#009aa6'
+website_url: "http://www.melaniejoyelmt.com"
 ---
 
 / Text
@@ -26,6 +27,8 @@ color: '#009aa6'
   / Split text + image – text on right
 = split_block image: case_study_image_path('melanie-joye-2.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
   p Utilizing responsive web design, the site responds and adapts to the size of the browser, thus providing visitors with a great online experience regardless of which device they use.
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
   p Looking for ways to make an impression with your business?
