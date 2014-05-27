@@ -21,7 +21,7 @@
   -->
 
   <meta charset="utf-8">
-  <title><%= "#{current_page.data.title} | " if current_page.data.title %>LaCroix Design Co.</title>
+  <title><%= "#{current_page.data.title} | " if current_page.data.title %><%= data.site.title %></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -30,6 +30,11 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta property="og:title" content="<%= data.site.title %>">
+  <meta property="og:image" content="<%= image_path "images/social/lacroixdesignco.jpg" %>">
+  <meta property="og:url" content="<%= data.site.host + current_page.url %>">
+  <meta property="og:description" content="<%= current_page.data.description || site_description %>">
 
   <link href="/favicon.ico" rel="shortcut icon">
   <link rel="apple-touch-icon" href="/apple-touch-icon-60x60.png">
