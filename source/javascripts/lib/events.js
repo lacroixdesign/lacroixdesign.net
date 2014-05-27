@@ -1,7 +1,8 @@
 (function() {
   var clickyEvent = function(href, title, type) {
+    type = type || 'click';
     if (typeof window.clicky !== "undefined")
-      window.clicky.log(href, title, type);
+      return window.clicky.log(href, title, type);
   };
 
   window.clickyEvent = clickyEvent;

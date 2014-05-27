@@ -17,9 +17,9 @@
         });
 
       var id = $this.attr('id');
-      id = (id) ? '#'+id : '';
+      id = (id) ? '#'+id : '#work-with-us';
       window.clickyEvent(
-        document.location.pathname,
+        document.location.pathname + id,
         'Work With Us'
       );
 
