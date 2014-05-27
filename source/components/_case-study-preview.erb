@@ -3,12 +3,19 @@
 %>
 
 <article class="b-case-study-preview" id="case-study-<%= item.slug %>">
-  <a href="<%= item.url %>" style="background-image: url('<%= case_study_bg_path(item) %>')">
-    <div class="content">
-      <div class="logo__case-study">
-        <%= case_study_logo({}, item) %>
+  <a
+    href="<%= item.url %>"
+    style="
+      background-image: url('<%= case_study_bg_path(item) %>');
+      background-color: <%= rgba (item.data.color || data.colors.black), 0.4 %>;
+    ">
+    <div class="content-wrap">
+      <div class="content">
+        <div class="logo__case-study">
+          <%= case_study_logo({}, item) %>
+        </div>
+        <h2><%= item.data.tagline %></h2>
       </div>
-      <h2><%= item.data.tagline %></h2>
     </div>
   </a>
 </article>

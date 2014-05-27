@@ -37,18 +37,34 @@
 
   @include media($breakpoint-desktop) {
     > article:nth-child(2n+1) {
-      border-right: 1px solid $white;
+      margin-right: 1px;
     }
 
     > article:nth-child(4n),
     > article:nth-child(4n+1) {
-      width: 60%;
+      @include flex-basis(60%);
     }
 
     > article:nth-child(4n+2),
     > article:nth-child(4n+3) {
-      width: 40%;
+      @include flex(1 0.3 39%);
     }
+
+    @supports not ((flex-wrap: wrap) or (-ms-flex-wrap: wrap) or (-moz-flex-wrap: wrap) or (-webkit-flex-wrap: wrap)) {
+      display: block;
+      > article:nth-child(1n) {
+        display: block;
+        margin-right: 0;
+      }
+    } // @supports not (flex-wrap: wrap)
+
+    .no-flexbox & {
+      display: block;
+      > article:nth-child(1n) {
+        display: block;
+        margin-right: 0;
+      }
+    } // .no-flexbox &
   } // $breakpoint-ipad
 } // .s-case-studies__list
 

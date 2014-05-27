@@ -6,7 +6,7 @@
     $(document).on('keydown', closeMenuOnEsc);
     $(document).on('click', closeMenu);
     window.clickyEvent(
-      document.location.pathname + '#menu',
+      document.location.pathname + '#menu-open',
       'Menu - Open'
     );
   }
@@ -16,7 +16,7 @@
     $(document).off('keydown', closeMenuOnEsc);
     $(document).off('click', closeMenu);
     window.clickyEvent(
-      document.location.pathname + '#menu',
+      document.location.pathname + '#menu-close',
       'Menu - Close'
     );
   }
