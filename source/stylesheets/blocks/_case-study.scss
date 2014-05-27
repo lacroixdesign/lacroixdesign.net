@@ -8,9 +8,10 @@
   > a {
     position: relative;
     display: block;
+    @include display(flex);
     width: 100%;
-    padding: 4em $page-gutter;
     background-color: transparent;
+    background-color: inherit;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -20,16 +21,30 @@
     @include transform(scale(1.05));
   }
 
+  .content-wrap {
+    width: 100%;
+    padding: 4em $page-gutter;
+    background-color: transparent;
+    @include transition(background-color 0.2s ease);
+  }
+
   .content {
     position: relative;
     @include transition(all 0.2s ease);
-    @include transform(scale(0.9));
+    @include transform(scale(0.952380952));
   }
 
   > a:hover {
     @include transform(scale(1));
-   .content { @include transform(scale(1)); }
-  }
+
+    .content-wrap {
+      background-color: inherit;
+    }
+
+   .content {
+      @include transform(scale(1.05));
+    }
+  } // > a:hover
 
   h2 {
     margin-top: 1em;
