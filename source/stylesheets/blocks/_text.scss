@@ -2,7 +2,10 @@
 
   p {
     margin-bottom: 1em;
+  }
 
+  p,
+  ul {
     a,
     a:focus,
     a:visited {
@@ -12,10 +15,28 @@
     a:hover {
       color: lighten($pink, 10);
     }
-  } // p
+  } // p, ul
 
   p:last-child {
     margin-bottom: 0;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 2.25em;
+    margin: 1.5em auto;
+  }
+
+  ul li {
+    margin-bottom: 1em;
+  }
+
+  ul ul {
+    list-style: circle;
+  }
+
+  ul ul ul {
+    list-style: square;
   }
 
   blockquote {
@@ -23,16 +44,17 @@
     margin: 1.5em 1em;
     border-left: 10px solid #eee;
     background: #f8f8f8;
+    color: $grey-dark;
     quotes: "\201C""\201D""\2018""\2019";
   }
 
   blockquote:before {
-    vertical-align: -0.4em;
-    margin-right: 0.25em;
-    color: #ccc;
-    font-size: 4em;
-    line-height: 0.1em;
-    content: open-quote;
+    // vertical-align: -0.4em;
+    // margin-right: 0.25em;
+    // color: #ccc;
+    // font-size: 4em;
+    // line-height: 0.1em;
+    // content: open-quote;
   }
 
   blockquote:after {
@@ -43,12 +65,12 @@
     margin-top: 1em;
   }
 
-  blockquote :first-child {
-    display: inline;
-  }
+  // blockquote p:first-child {
+  //   display: inline;
+  // }
 
   blockquote :last-child {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
 
   img {

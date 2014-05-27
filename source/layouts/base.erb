@@ -21,21 +21,25 @@
   -->
 
   <meta charset="utf-8">
-  <title><%= "#{current_page.data.title} |" if current_page.data.title %> LaCroix Design Co.</title>
+  <title><%= "#{current_page.data.title} | " if current_page.data.title %>LaCroix Design Co.</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <meta name="description" content="<%= current_page.data.description || data.site.description %>">
+  <meta name="description" content="<%= current_page.data.description || site_description %>">
   <meta name="author" content="Michael LaCroix, James LaCroix">
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-  <link href="/assets/images/favicon.ico" rel="shortcut icon">
-  <link href="/assets/images/apple-touch-icon-57x57-precomposed.png" rel="apple-touch-icon">
-  <link href="/assets/images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
-  <link href="/assets/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
-  <link href="/assets/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" sizes="152x152">
+
+  <% if content_for? :authorship %>
+    <%= yield_content :authorship %>
+  <% end %>
 
   <%# Stylesheets %>
   <%= stylesheet_link_tag "main" %>
@@ -57,20 +61,11 @@
     </script>
   <% end %>
 
-  <%# Guages %>
-  <% if data.site.gauges_id && !development? %>
-    <script>
-      var _gauges = _gauges || [];
-      (function() {
-        var t   = document.createElement('script');
-        t.type  = 'text/javascript';
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '<%= data.site.gauges_id %>');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-      })();
+  <%# Heap Analytics %>
+  <% if data.site.heap_analytics_id %>
+    <script type="text/javascript">
+      window.heap=window.heap||[];heap.load=function(a){window._heapid=a;var b=document.createElement("script");b.type="text/javascript",b.async=!0,b.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c);var d=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}},e=["identify","track"];for(var f=0;f<e.length;f++)heap[e[f]]=d(e[f])};
+      heap.load("<%= data.site.heap_analytics_id %>");
     </script>
   <% end %>
 </head>
@@ -87,9 +82,17 @@
   <%= javascript_include_tag  "main" %>
 
   <% if data.site.clicky_analytics_id %>
-    <script src="//static.getclicky.com/js" type="text/javascript"></script>
-    <script type="text/javascript">try{ clicky.init(<%= data.site.clicky_analytics_id %>); }catch(e){}</script>
-    <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100733305ns.gif" /></p></noscript>
+    <script type="text/javascript">
+      var clicky_site_ids = clicky_site_ids || [];
+      clicky_site_ids.push(<%= data.site.clicky_analytics_id %>);
+      (function() {
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.async = true;
+        s.src = '//static.getclicky.com/js';
+        ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+      })();
+    </script>
   <% end %>
 </body>
 </html>

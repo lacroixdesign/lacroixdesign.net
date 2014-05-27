@@ -4,6 +4,7 @@ date: 2014-05-02 15:00
 cover_header: true
 tagline: "Packaged Service for Effective Websites"
 color: "#E66D17"
+website_url: "http://www.1pagesites.net"
 ---
 
 / Split text + image – text on left (the default side)
@@ -11,17 +12,21 @@ color: "#E66D17"
   p <a href="http://www.1pagesites.net/" target="_blank">1 Page Sites</a> is a packaged service for the design and development of single page responsive websites with static content. One page sites are perfect for a business, product, service, location or event.
 
 = text_block do
-  p We've given potential clients a way to get a great site online quickly and affordably. In addition to being a popular choice, single page sites offer a great way to present information in a creative way. Visitors have immediate access to everything that they need to know to make an informed decision without ever leaving the homepage, thus increasing conversions. Using responsive web design, all of the sites look great on every device and load quickly.
+  p We've given potential clients a way to get a great site online quickly and affordably. In addition to being a popular choice, single page sites offer an excellent way to present information in a creative way. Visitors have immediate access to everything that they need to know to make an informed decision without ever leaving the homepage, thus increasing conversions. Using responsive web design, the sites provide a superb user experience across a multitude of devices.
 
   / Split text + image – text on right
 = split_block image: case_study_image_path('1pagesites-2.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
-  p Shopping for a website can be hard. There is quite a bit that can go into creating a site for your business and the the process can be very involved. We wanted to make it easier for clients that want to get their message across with a great web presence.
+  p Shopping for a website can be hard. There is quite a bit that can go into creating a site for your business and the the process can become very involved. We wanted to make it easier for clients who want to get their message across with a great web presence.
 
 = text_block do
-  p To show how effective one page sites can be, we created a site to market the service. In addition to covering the basics, the site features social media links, a contact form to allow visitors to easily begin a project and a mailing list sign up so that they can begin receiving regular emails with tips on how to make their next site a success. Within the first day of launching the product, we have already acquired new projects for single page sites.
+  p To show how effective one page sites can be, we created a site to market the service. In addition to covering the basics, the site features social media links, a contact form to allow visitors to easily begin a project and a mailing list sign-up so that they can begin receiving regular emails with tips on how to make their next site a success. Within the first day of launching the product, we have already acquired new projects for single page sites.
 
 / Text w/ background image
-= text_block image: case_study_image_path('1pagesites-3.jpg'), callout: true
+= image_block image: case_study_image_path('1pagesites-3.jpg')
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
 
 = text_block callout: true
-  a(href='http://www.melaniejoyelmt.com/' class='btn') Visit the Site
+  p Looking for a way to promote your business, product, service or event?
+  p = component "cta-button"
+  p You can also visit the <a href="http://www.1pagesites.net" target="_blank">1 Page Sites website</a>.

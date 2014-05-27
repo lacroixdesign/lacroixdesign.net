@@ -1,0 +1,15 @@
+.s-404 {
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+  @include fadeInOnPageLoad;
+
+  .s-404__image {
+    max-width: 20em;
+    margin: 0 auto 2em;
+  }
+
+  p {
+    font-style: italic;
+  }
+} // .s-404

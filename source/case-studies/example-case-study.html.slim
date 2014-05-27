@@ -3,6 +3,9 @@ title: "Example Case Study"
 date: 2014-05-02 15:00
 cover_header: true
 tagline: "Short tagline to relay the value or solution provided"
+published: false
+color: "#7bbbb2"
+website_url: "http://www.1pagesites.net"
 ---
 
 / Text
@@ -35,3 +38,5 @@ tagline: "Short tagline to relay the value or solution provided"
 / Split text + image – text on right
 = split_block image: case_study_image_path('cover-bg.jpg'), background: '#c8493e', color: '#fff', text_side: "right"
   p Split block component &mdash; right side. Izakaya cutting-edge boutique exquisite. Sleepy impeccable Melbourne Washlet artisanal Sunspel Tsutaya exquisite, Toto the highest quality first-class.
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white

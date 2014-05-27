@@ -4,10 +4,9 @@ $off-white:    #fafaf7;
 $medium-white: #f4f4ee;
 
 // Black
-// $black: #0e1319;
-$black: #14191f;
-$black-10: lighten($black, 10);
-$black-20: lighten($black, 20);
+$black:    #14191f;
+$black-10: #28323e; // lighten($black, 10)
+$black-20: #3c4b5d; // lighten($black, 20)
 
 // Grey
 $grey-dark:  #777;
@@ -18,6 +17,5 @@ $grey-light: #ccc;
 $pink: #f27390;
 
 // Chicago
-// $blue-chicago: #b4ddf1;
-$blue-chicago: #8fceee;
-$red-chicago: #c8493e;
+$blue-chicago: #8fd7fc;
+$red-chicago:  #d94e41;

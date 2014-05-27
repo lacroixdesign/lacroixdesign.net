@@ -1,27 +1,75 @@
 .s-case-studies {
+  // @include clearfix;
+  // @include display(flex);
+  // max-width: 50em;
+  margin-right: auto;
+  margin-left: auto;
+
+  > h1 {
+    margin-top: 0.5em;
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
   > h2 {
     @include page-container(20em, 20em);
-    padding-top: 2em;
     padding-bottom: 2em;
     margin-bottom: 0;
     font-family: $typeface-serif;
     font-size: 1.5em;
+    font-weight: normal;
     line-height: 1.5;
     font-style: italic;
     text-align: center;
+    @include fadeInOnPageLoad;
   }
+} // .s-case-studies
+
+.s-case-studies__list {
+  @include display(flex);
+  @include flex-wrap(wrap);
 
   > article {
+    width: 100%;
     margin-bottom: 1px;
   }
 
-  @include media-ie($breakpoint-ipad) {
-    > h2 {
-      font-size: 2em;
+  @include media($breakpoint-desktop) {
+    > article:nth-child(2n+1) {
+      margin-right: 1px;
     }
-  } // $breakpoint-ipad
-} // .s-case-studies
 
-.s-case-study__hero-content h2 {
-  margin: 1em 0 0;
-}
+    > article:nth-child(4n),
+    > article:nth-child(4n+1) {
+      @include flex-basis(60%);
+    }
+
+    > article:nth-child(4n+2),
+    > article:nth-child(4n+3) {
+      @include flex(1 0.3 39%);
+    }
+
+    @supports not ((flex-wrap: wrap) or (-ms-flex-wrap: wrap) or (-moz-flex-wrap: wrap) or (-webkit-flex-wrap: wrap)) {
+      display: block;
+      > article:nth-child(1n) {
+        display: block;
+        margin-right: 0;
+      }
+    } // @supports not (flex-wrap: wrap)
+
+    .no-flexbox & {
+      display: block;
+      > article:nth-child(1n) {
+        display: block;
+        margin-right: 0;
+      }
+    } // .no-flexbox &
+  } // $breakpoint-ipad
+} // .s-case-studies__list
+
+.s-case-study__hero-content {
+  h2 {
+    margin: 1em 0 0;
+  }
+} // .s-case-study__hero-content

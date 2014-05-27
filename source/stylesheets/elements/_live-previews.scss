@@ -1,0 +1,70 @@
+.live-preview {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+
+  img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    position: absolute;
+  }
+
+  &.run-animation {
+    @include animation(fadeIn 0.7s ease-in);
+  }
+
+  &[data-live-preview="mobile"] {
+    display: block;
+    width: 19em;
+
+    [data-live-preview-img="mobile"] {
+      display: block;
+    }
+
+    iframe {
+      top: 12%;
+      left: 8%;
+      width: 84%;
+      height: 76%;
+    }
+  } // &[data-live-preview="mobile"]
+
+
+  &[data-live-preview="tablet"] {
+    display: block;
+    width: 47.407407407em;
+
+    [data-live-preview-img="tablet"] {
+      display: block;
+    }
+
+    iframe {
+      top: 10%;
+      left: 9.5%;
+      width: 81%;
+      height: 80%;
+    }
+  } // &[data-live-preview="tablet"]
+
+  &[data-live-preview="desktop"] {
+    display: block;
+    width: 100%;
+    max-width: 65em;
+
+    [data-live-preview-img="desktop"] {
+      display: block;
+    }
+
+    iframe {
+      top: 5.75%;
+      left: 9.5%;
+      width: 81%;
+      height: 84.75%;
+    }
+  } // &[data-live-preview="desktop"]
+
+} // .live-preview

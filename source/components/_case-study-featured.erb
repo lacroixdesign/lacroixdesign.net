@@ -1,0 +1,22 @@
+<% last ||= nil %>
+
+<article
+  id="case-study-<%= project.slug %>"
+  <% if last %> class="ie-omega"<% end %>
+  style="background-image: url('<%= case_study_bg_path(project) %>')">
+  <a href="<%= project.url %>">
+    <div class="media-16x9 overlay__wrap">
+      <div class="overlay__centered">
+        <div class="overlay__content">
+
+          <div class="s-home-projects__logo">
+            <%= case_study_logo({}, project) %>
+          </div>
+
+          <small><em>Learn More</em></small>
+
+        </div>
+      </div>
+    </div>
+  </a>
+</article>

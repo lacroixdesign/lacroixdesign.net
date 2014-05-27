@@ -3,27 +3,33 @@ title: "LandID"
 date: 2014-05-02 15:00
 cover_header: true
 tagline: "From Concept to App Store"
+color: "#ed462f"
+website_url: "http://landidapp.com"
 ---
 / Split text + image – text on left (the default side)
-= split_block image: case_study_image_path('landid-1.jpg'), background: '#ed462f', color: '#fff'
-  p LandID is an iOS application for iphone that seeks to capture the meaningful moments of your life.
+= split_block image: case_study_image_path('landid-1.jpg'), background: current_page.data.color, color: '#fff'
+  p LandID is an iOS application for iPhone that seeks to capture the meaningful moments of your life. LandID users use the app to capture an image of their view, an image of where their feet are planted and a note about why the event is meaninful.
 
 = text_block do
-  p To help bring LandID to life, LaCroix Design Co. was brought in to work alongside the developers of the app, <a href="http://launchpadlab.com/" target="_blank">Launchpad Lab</a>, to provide the design direction for the application. Together, we worked with the client to bring their idea to reality. The process involved charting out the flow of how users would interact with the app. From there, we created sketches and wireframes to conceive and revise the views that users of the app would interact with. These rough ideas evolved into full designed screens which were refined to create a fantastic user experience. Throughout the whole processes, both wireframes and final designs were delivered in an animated prototype showcasing the interactions and flow.
+  p To help bring LandID to life, we were brought in to work alongside the developers of the app, <a href="http://launchpadlab.com/" target="_blank">Launchpad Lab</a>, to provide the design direction for the application. Together, we worked with the client to bring their idea to reality. The process involved charting out the flow of how users would interact with the app. From there, we created sketches and wireframes to conceive and revise the views that users of the app would interact with. These rough ideas evolved into full designed screens which were refined to create a fantastic user experience. Throughout the whole process, both wireframes and final designs were delivered in an animated prototype showcasing the interactions and flow.
 
 / Split text + image – text on right
-= split_block image: case_study_image_path('landid-2.jpg'), background: '#ed462f', color: '#fff', text_side: "right"
-  p The brand new product was in need of a strong brand identity to help it compete within the app store environment. Thus, a brand identity was established to communicate a sense of youth and adventure. The identity utilized a color scheme that would distnguish the application from the other photo apps available.
+= split_block image: case_study_image_path('landid-2.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
+  p The new product was in need of a strong visual presence to help it compete within the app store environment. Thus, a brand identity was established to communicate a sense of youth and adventure. The identity utilized a color scheme intended to distnguish the application from the other photo apps available.
 
 = text_block do
-  p LandID differentiates itself by recording the details of the users experience. The application captures what the user,where their feet are planted and why the event is significant. Along with this information, the exact coordinates are recorded to allow for others or themselves to return to the exact spot. The design for the app focused on delivering this information in the most accessible way while also setting up an intuitive user experience that would allow new users to easily acclimate to the app.
+  p LandID allows for the exact coordinates to be recorded so that other users or themselves can return to the exact spot. The design focused on delivering this information in the most accessible way while also setting up an intuitive user experience that would allow new users to easily acclimate to the app.
 
   / Slideshow
 = case_study_slideshow %w(landid-slide-1 landid-slide-2 landid-slide-3 landid-slide-4 landid-slide-5)
 
 / Split text + image – text on left (the default side)
-= split_block image: case_study_image_path('landid-3.jpg'), background: '#ed462f', color: '#fff'
+= split_block image: case_study_image_path('landid-3.jpg'), background: current_page.data.color, color: '#fff'
   p To draw new users to the app, we designed and developed an attractive, responsive landing page to showcase the features of the application.
 
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
 = text_block callout: true
-  a(href='http://landidapp.com/' class='btn') Download the App
+  p Looking for a brand identity or to conceptualize your next app?
+  p = component "cta-button"
+  p You can also visit the <a href="http://landidapp.com" target="_blank">LandID website</a> to download the app.

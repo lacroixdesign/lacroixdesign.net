@@ -1,14 +1,17 @@
 .s-team {
   position: relative;
   z-index: 1;
-  padding-top: 1em;
-  background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
+  background: $white;
   text-align: center;
 
-  @include hidpi(1.5) {
-    background-image: image-url('backgrounds/chicago-skyline_@2X.png');
-    background-size: 1200px 360px;
-  }
+  > .wrap {
+    background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
+
+    @include hidpi(1.5) {
+      background-image: image-url('backgrounds/chicago-skyline_@2X.png');
+      background-size: 1200px 360px;
+    }
+  } // > .wrap
 
   &::before,
   &::after {
@@ -17,7 +20,7 @@
     left: -25%;
     z-index: -1;
     width: 150%;
-    height: 30%;
+    height: 100%;
     background: inherit;
     background-image: none;
     content: '';
@@ -26,10 +29,6 @@
     transform: rotate(3deg);
     -webkit-transform-origin: 100% 100%;
     transform-origin: 100% 100%;
-  }
-
-  .no-csstransforms & {
-    padding-top: 2em;
   }
 } // .s-team
 
@@ -53,6 +52,7 @@
   max-width: 20em;
   margin: 2em auto;
   text-align: center;
+  @include fadeInOnPageLoad;
 
   article {
     position: relative;
@@ -68,6 +68,7 @@
     margin-right: 4%;
   }
 
+  a,
   img {
     display: block;
     width: 100%;
@@ -81,7 +82,7 @@
     @include display(flex);
     @include transition(all 0.3s ease);
     @include transform-origin(25% 50%);
-    @include transform(rotateY(135deg) scale(0.25));
+    @include transform(scale(0.5));
     opacity: 0;
     padding: 0.5em;
     overflow: hidden;
@@ -92,7 +93,7 @@
   }
 
   article:hover .overlay {
-    @include transform(rotateY(0deg) scale(1));
+    @include transform(scale(1));
     opacity: 1;
     @include media-ie-only { display: block; }
   }
@@ -105,9 +106,7 @@
   }
 } // .s-team__photos
 
-.s-team__btn {
-  @include btn($red-chicago, transparent, 2px);
-  font-family: $typeface-serif;
+.s-team__btn [class*="btn"] {
+  @include btn($red-chicago, $white, $border-size: 2px);
   font-size: 1em;
-  font-style: italic;
 }

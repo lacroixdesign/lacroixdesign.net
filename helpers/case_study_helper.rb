@@ -1,8 +1,15 @@
 module CaseStudyHelper
 
-  # Published case studies
+  # Find case studies
   def find_case_study_by_title(title)
-    blog('case-studies').articles.find {|a| a.title == title }
+    unless title
+      raise "A title is required to look up a case study"
+    end
+    case_study = blog('case-studies').articles.find {|a| a.title == title }
+    unless case_study
+      raise "Could not find a case study with the title of: #{title}"
+    end
+    case_study
   end
 
   # Case study image

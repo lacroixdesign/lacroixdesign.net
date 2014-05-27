@@ -1,0 +1,48 @@
+.b-interactive-devices {
+  display: none;
+  background: $off-white;
+  text-align: center;
+
+  > p {
+    margin-bottom: 1em;
+  }
+
+  button {
+    @include appearance(none);
+    display: inline-block;
+    padding: 0.25em;
+    margin-left: 0.5em;
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: none transparent;
+    color: inherit;
+    font-size: 2.5em;
+    @include transform(scale(1));
+    @include transition(all 0.1s ease);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover,
+    &.active {
+      border-color: inherit;
+    }
+
+    &:hover {
+      @include transform(scale(1.2));
+    }
+
+    &:focus {
+      outline: none;
+    }
+  } // button
+
+  figure {
+    margin-top: 1.5em;
+  }
+
+  @include media(1015px) {
+    display: block;
+  }
+} // .b-interactive-devices

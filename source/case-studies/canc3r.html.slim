@@ -1,0 +1,37 @@
+---
+title: "CANC3R"
+date: 2014-05-02 15:00
+cover_header: true
+tagline: "Raising Money to Help Those Fighting Cancer"
+color: "#b186bf"
+website_url: "http://www.canc3r.org/"
+---
+
+/ Text
+= text_block do
+  p A cancer survivor all too familiar with the financial burden of treatment, Jeremy Picker founded CANC3R as a way to use his knowledge of the apparel industry to raise funds for those fighting the disease. Proceeds from the sale of a line of hip tee shirts featuring positive messages go directly toward a patient fighting cancer.
+
+/ Text w/ background image
+= text_block image: case_study_image_path('canc3r-logo.jpg'), callout: true
+  p To support this great cause, we donated our services to create a brand identity for CANC3R. The logo needed to have a modern, youthful aesthetic to complement the apparel line while also showcasing the unique spelling of the brand. Additionally, the wordmark was designed to have a strong presence to represent the strength of the patients fighting cancer.
+
+/ Text
+= text_block do
+  p CANC3R needed a bright, visual website that clearly delivered their message and showcased their product. Taking advantage of our <a href="http://www.1PageSites.com" target="_blank">1 Page Sites</a> service, CANC3R was able to quickly launch a site to begin raising money for their first campaign.
+
+/ Split text + image – text on left (the default side)
+= split_block image: case_study_image_path('canc3r-progress.jpg'), background: current_page.data.color, color: '#fff'
+  p To encourage sharing and increase support for the cause, we developed a system for CANC3R to visually display the progress of each campaign.
+/ Text
+= text_block do
+  p With a young target audience, CANC3R was aware that a large portion of their visitors would be visiting the site on a mobile phone or table. Thus, a responsive website was the perfect choice for delivering their message across a multitude of device sizes.
+
+/ Slideshow
+= case_study_slideshow %w(canc3r-slide-1 canc3r-slide-2 canc3r-slide-3 canc3r-slide-4)
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
+= text_block callout: true
+  p Do you need help raising money for a good cause?
+  p = component "cta-button"
+  p You can also visit the <a href="http://www.canc3r.org/" target="_blank">CANC3R website</a>.

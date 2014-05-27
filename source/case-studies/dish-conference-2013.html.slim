@@ -1,0 +1,35 @@
+---
+title: "Dish Conference 2013"
+date: 2014-05-02 15:00
+cover_header: true
+tagline: "Attracting Conference Attendees"
+color: "#308fbf"
+website_url: "http://2013.dishconference.com/"
+---
+
+/ Split text + image – text on left (the default side)
+= split_block image: case_study_image_path('dish-2013-1.jpg'), background: '#308FBF', color: '#fff'
+  p Dish Conference is annual student-led design event that is hosted by <a href="http://nashville.aiga.org/" target="_blank">AIGA, the Professional Association of Design's Nashville chapter</a>. This yearly meeting lasts two days and features presentations by prominent graphic designers leading the field both locally and nationally.
+
+/ Text
+= text_block do
+  p We are very active in <a href="http://www.aiga.org/" target="_blank">AIGA</a>, both on a national level and a chapter level. The organization is one that we are strong promoters of and LaCroix Design Co. appreciates the benefits that the organization brings to the design community, but also to the world. Therefore, the opportunity to be able to contribute our talents to making this event a success was very important to us.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('dish-2013-2.jpg'), background: '#BF3030', color: '#fff', text_side: "right"
+
+  p AIGA Nashville provided the logo for the 2013 event and we were asked to create the corresponding website. The site serves to advertise for the event and provide attendees with pertinent information about it.
+
+/ Text
+= text_block do
+  p We utilized the bright, rich colors of the logo to create a fun, single-page online experience. A focus was placed on the content and a typographic system was designed to facilitate a comfortable reading environment. Since the information only changes once a year, in lieu of the former WordPress setup we developed a responsive, static HTML site to quickly deliver content across a multitude of devices. This way, attendees will be able to readily access the schedule or speaker information on whatever device they bring with them to the event.
+
+/ Text w/ background image
+= image_block image: case_study_image_path('dish-2013-3.jpg')
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
+= text_block callout: true
+  p Looking for a website to attract attendees to your conference or event?
+  p = component "cta-button"
+  p You can also visit the <a href="http://2013.dishconference.com/" target="_blank">Dish Conference 2013 website</a>.

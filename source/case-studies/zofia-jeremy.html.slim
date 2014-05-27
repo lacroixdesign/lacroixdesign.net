@@ -1,0 +1,28 @@
+---
+title: "Zofia & Jeremy Wedding Invitations"
+date: 2014-05-02 15:00
+cover_header: true
+tagline: "Creating Memorable Moments"
+color: "#48afaa"
+---
+
+/ Text
+= text_block do
+  p We have known Jeremy Picker for quite a while, both as a client when we worked with his company <a href="http://amb3r.com" target="_blank">AMB3R</a> and also as a long-time friend. Therefore, we felt honored and privileged when we were asked to create the invitations for Jeremy and Zofia's wedding.
+
+/ Split text + image – text on left (the default side)
+= split_block image: case_study_image_path('zofia-jeremy-1.jpg'), background: current_page.data.color, color: '#fff'
+  p Rather than a traditional invitation, Jeremy and Zofia wanted to send out a folded screenprinted poster inviting guests to their wedding.
+
+= text_block do
+  p The couple was inspired by vintage theater posters and other prints featuring classic woodcuts. They wanted to combine this with a clean, modern style.
+
+  p Their wedding colors were coral and lagoon. We wanted to integrate these colors into the posters in a way that wasn't overwhelming. Therefore, we left plenty of white space on the poster to retain the wedding feel. We used modern typography and illustration techniques blending with some vintage style to create a poster that reflected the couple for this special occasion. The design was then printed by <a href="http://kangaroopress.com" target="_blank">Ryan Nole at Kangaroo Press</a>.
+
+/ Slideshow
+= case_study_slideshow %w(zofia-jeremy-slide-1 zofia-jeremy-slide-2 zofia-jeremy-slide-3 zofia-jeremy-slide-4 zofia-jeremy-slide-5)
+
+  = text_block callout: true
+  p Looking for a memorable print design for your next event?
+  p = component "cta-button"
+  p You can also view photos of the wedding at <a href="http://www.couturecolorado.com/wedding/2012/09/19/a-castle-a-barn-and-chandeliers/" target="_blank">Couture Colorado</a>.

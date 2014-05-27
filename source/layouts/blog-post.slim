@@ -1,6 +1,39 @@
 - wrap_layout :base do
-  = hero_image case_study_bg_path do
-    .l-constrained-large.s-case-study__hero-content
-      .logo__case-study = case_study_logo
-      h2.tagline__case-study = current_page.data.tagline
-  .b-text = yield
+
+  - author = find_team_member_by_name(current_page.data.author)
+  - content_for :authorship do
+    link(rel="author" href="https://plus.google.com/#{author.google_plus_id}")
+
+  - if current_page.data.cover_header
+    .b-post-cover-header
+      = hero_image post_image_path(current_page.data.cover_header) do
+        .l-constrained-medium.b-post-cover-header__content
+          h1 = current_page.data.title
+          - if current_page.data.tagline
+            h2 = current_page.data.tagline
+          time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
+          .author <em>by</em> <strong>#{author.name}</strong>
+
+  - else
+    - if current_page.data.inline_header
+      .b-post-inline-header
+        img.image-fullwidth src=post_image_path(current_page.data.inline_header)
+    .b-post-header
+      .l-constrained-medium
+        h1 = current_page.data.title
+        - if current_page.data.tagline
+          h2 = current_page.data.tagline
+        time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
+        .author <em>by</em> <strong>#{author.name}</strong>
+
+  .b-post-body.l-constrained-medium.b-text
+    article(id="post-#{current_page.slug}") = yield
+
+    - if current_page.previous_article || current_page.next_article
+      .b-pagination
+        - current_page.previous_article.tap do |prev_post|
+          - if prev_post
+            a(href=prev_post.url class="prev" title=prev_post.title) &larr; Previous Post
+        - current_page.next_article.tap do |next_post|
+          - if next_post
+            a(href=next_post.url class="next" title=next_post.title) Next Post &rarr;

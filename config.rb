@@ -9,6 +9,14 @@ set :helpers_filename_to_module_name_proc, Proc.new { |filename|
 
 Time.zone = "America/Chicago"
 
+set :markdown_engine, :redcarpet
+set :markdown,
+    :fenced_code_blocks => true,
+    :no_intra_emphasis => true,
+    :strikethrough => true,
+    :smartypants => true,
+    :tables => true
+
 ###
 # Compass
 ###
@@ -48,6 +56,9 @@ Time.zone = "America/Chicago"
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 
+# Syntax highlighting
+# activate :syntax
+
 # Reload the browser automatically whenever files change
 # activate :livereload
 
@@ -58,15 +69,23 @@ activate :automatic_image_sizes
 #   end
 # end
 
+###
+# Team member pages
+###
+page "/team/*", :layout => "team-member"
+
+###
+# Blogs
+###
 activate :blog do |blog|
   blog.name    = "blog"
   blog.prefix  = "blog"
-  blog.sources = "{title}"
+  blog.sources = "{title}.html"
   blog.layout    = "layouts/blog-post"
   blog.permalink = "{title}"
   blog.paginate  = true
-  blog.page_link = "p{num}"
-  blog.per_page  = 1
+  # blog.page_link = "p{num}"
+  blog.per_page  = 5
   blog.default_extension = ".md"
 end
 
@@ -80,7 +99,7 @@ activate :blog do |blog|
 end
 
 activate :directory_indexes
-# activate :sitemap
+page "/sitemap.xml", :layout => false
 
 activate :deploy do |deploy|
   deploy.method = :git
@@ -96,19 +115,27 @@ set :fonts_dir,  'fonts'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  activate :minify_css, :inline => true
+  activate :minify_css,
+            :ignore => [%r{fonts}],
+            :inline => true
 
   # Minify Javascript on build
   activate :minify_javascript, :inline => true
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, :ignore => [%r{^fonts/cloud}]
 
   activate :minify_html
   activate :gzip
 
-  # activate :asset_host
-  # set :asset_host, "http://cdn.example.com"
+  activate :asset_host
+  set :asset_host do |asset|
+    if asset =~ %r{^/fonts/}
+      "http://www.lacroixdesign.net"
+    else
+      "http://d2s13a5qoldi0f.cloudfront.net"
+    end
+  end
 
   # Use relative URLs
   # activate :relative_assets

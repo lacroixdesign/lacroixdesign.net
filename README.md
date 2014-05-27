@@ -22,7 +22,13 @@ Use the *cover header* for pages that have a cover image:
 cover_header: true
 ```
 
-Set a background color for the header. Does not work with *cover header*:
+An *above header* is just like a *cover header*, but ditches the subtle gradient:
+
+```
+above_header: true
+```
+
+Set a background color for the header. **Not recommended** to combine with *cover header* or *above header* since it will cover up content:
 
 ```
 header_background: "#fafaf7"

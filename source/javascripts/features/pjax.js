@@ -1,5 +1,5 @@
 (function() {
-  $(document).on('pjax:complete', function() {
+  $(document).on('pjax:end', function() {
 
     var google = window[window.GoogleAnalyticsObject];
     if (google) {

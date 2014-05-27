@@ -1,20 +1,31 @@
 .b-case-study-preview {
+  @include display(flex);
   overflow: hidden;
-  background: $black;
-  background-position: center center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  background-color: $black;
   color: $white;
   text-align: center;
 
   > a {
     position: relative;
     display: block;
-    padding: 4em $page-gutter;
-    background: transparent;
+    @include display(flex);
+    width: 100%;
+    background-color: transparent;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
     text-decoration: none;
     @include transition(all 0.2s ease);
     @include transform(scale(1.05));
+  }
+
+  .content-wrap {
+    width: 100%;
+    padding: 4em $page-gutter;
+    background-color: transparent;
+    @include transition(background-color 0.2s ease);
   }
 
   .content {
@@ -25,8 +36,15 @@
 
   > a:hover {
     @include transform(scale(1));
-   .content { @include transform(scale(1)); }
-  }
+
+    .content-wrap {
+      background-color: inherit;
+    }
+
+   .content {
+      @include transform(scale(1));
+    }
+  } // > a:hover
 
   h2 {
     margin-top: 1em;

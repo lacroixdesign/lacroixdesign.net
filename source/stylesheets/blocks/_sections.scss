@@ -7,7 +7,7 @@
   padding-top: 2em;
   padding-bottom: 2em;
 
-  header {
+  > header {
     margin-bottom: 2em;
   }
 } // .b-section
@@ -64,6 +64,14 @@
       display: table-cell;
       width: 50%;
       min-height: none;
+    }
+
+    .left {
+      margin-right: 0;
+    }
+
+    .right {
+      margin-left: 0;
     }
   } // $breakpoint-ipad
 } // .b-split-component

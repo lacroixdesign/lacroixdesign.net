@@ -1,0 +1,26 @@
+- wrap_layout :base do
+  - find_team_member_by_name(current_page.data.member).tap do |member|
+
+    .b-hero-team-member(style="background-image: url(#{current_page.data.cover_header});")
+      .l-constrained-large
+        img.image-circle(src=image_path("team/#{member.avatar}.jpg"))
+        h1 = member.name
+        h2 = member.job_title
+        ul.social-icons-list
+          - if member.twitter
+            li: a(href="https://twitter.com/#{member.twitter}" target="_blank") = icon 'e49d'
+          - if member.google_plus_id
+            li: a(href="https://plus.google.com/#{member.google_plus_id}" target="_blank") = icon 'e493'
+          - if member.email
+            li: a(href="mailto:#{member.email}" target="_blank") = icon 'e601'
+          - if member.github
+            li: a(href="https://github.com/#{member.github}" target="_blank") = icon 'e4b8'
+
+
+    .l-constrained-medium.b-post-body
+      .b-text
+        = yield
+        p: em: a.link-vivid.link-plain-til-hover(href="/#team") &larr; back to team
+      hr
+      .b-simple-callout
+        = component "cta-button"

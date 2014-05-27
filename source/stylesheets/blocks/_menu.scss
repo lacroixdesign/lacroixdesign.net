@@ -1,6 +1,7 @@
 $nav-menu-open: ".is-menu-open";
 $nav-menu-width: 15em;
-$nav-link-total: 6;
+$nav-position-offset: 1em;
+$nav-link-total: 5;
 $nav-transition-time: 0.3s;
 $nav-delay-delta: 0.05;
 
@@ -13,11 +14,15 @@ $nav-delay-delta: 0.05;
   @include transition(all $nav-transition-time ease $delay);
 }
 
+body#{$nav-menu-open} {
+  overflow: hidden;
+}
+
 .b-menu-body-overlay {
   position: fixed;
   top: -1px;
   left: -1px;
-  z-index: 1;
+  z-index: 10;
   display: block;
   width: 0;
   height: 0;
@@ -35,22 +40,32 @@ $nav-delay-delta: 0.05;
   }
 } // .b-menu-body-overlay
 
+.b-nav {
+  position: fixed;
+  top: $nav-position-offset;
+  right: $nav-position-offset;
+  z-index: 1000;
+  @include transition(right $nav-transition-time ease);
+  #{$nav-menu-open} & { right: $nav-menu-width + $nav-position-offset; }
+}
+
+
 .b-menu-toggle {
   position: relative;
   z-index: 2;
   display: block;
-  height: 100%;
   padding: 0 0.5em;
-  background: $off-white;
-  color: $black-10;
+  background: $medium-white;
+  color: $black;
   font-family: $typeface-sans;
+  font-size: 125%;
   font-weight: $bold-weight;
   line-height: $header-height - ($header-padding * 2);
   text-decoration: none;
   text-transform: uppercase;
   @include transition(none);
 
-  #{$header-alternate} &,
+  #{$header-cover} &,
   #{$header-fill} &,
   #{$nav-menu-open} & {
     background: $white;
@@ -61,7 +76,7 @@ $nav-delay-delta: 0.05;
   }
 
   &:visited {
-    color: $black-10;
+    color: $black;
   }
 
   &:hover,
@@ -81,19 +96,25 @@ $nav-delay-delta: 0.05;
 }
 
 .b-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 2;
+  position: fixed;
+  top: $nav-position-offset;
+  right: $nav-position-offset;
+  z-index: 1000;
   width: 0;
   overflow: hidden;
+  max-height: 95%;
+  max-height: -webkit-calc(100% - #{$nav-position-offset});
+  max-height: -moz-calc(100% - #{$nav-position-offset});
+  max-height: calc(100% - #{$nav-position-offset});
   color: $black-10;
   font-family: $typeface-serif;
-  @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 2));
+  @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 3));
 
   #{$nav-menu-open} & {
+    overflow: auto;
+    overflow-x: hidden;
     width: $nav-menu-width;
-    @include transition-delay(0);
+    @include transition-delay(0s);
   }
 } // .b-menu
 
@@ -115,6 +136,7 @@ $nav-delay-delta: 0.05;
   a {
     display: block;
     padding: 0.5em 1em 0.5em 0.75em;
+    padding: 0.75em 1em 0.75em 0.75em;
     border-left: 0.5em solid transparent;
     font-size: 1.25em;
     font-weight: $bold-weight;
@@ -159,29 +181,47 @@ $nav-delay-delta: 0.05;
   }
 } // .b-menu-social
 
-.b-menu-contact {
+.b-menu-email,
+.b-menu-phone {
   width: $nav-menu-width;
-  @include nav-transition($nav-link-total + 2);
-}
 
-.b-menu-contact a {
-  display: block;
-  padding: 1em 0.5em;
-  background: $off-white;
-  font-size: 0.8125em;
-  font-style: italic;
-  text-align: center;
-  text-decoration: none;
+  a {
+    display: block;
+    padding: 1em 0.5em;
+    font-size: 0.8125em;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+  }
 
-  &:hover {
+  a:hover {
     background: $pink;
     color: $white;
   }
-} // .b-menu-contact
+} // .b-menu-email, .b-menu-phone
+
+.b-menu-email {
+  @include nav-transition($nav-link-total + 2);
+
+  a {
+    background: $off-white;
+  }
+} // .b-menu-email
+
+.b-menu-phone {
+  @include nav-transition($nav-link-total + 3);
+  color: $grey;
+
+  a {
+    background: $white;
+    font-size: 65%;
+  }
+} // .b-menu-phone
 
 .b-menu-list li,
 .b-menu-social,
-.b-menu-contact {
+.b-menu-email,
+.b-menu-phone {
   @include transform(translateX($nav-menu-width));
 
   #{$nav-menu-open} & {

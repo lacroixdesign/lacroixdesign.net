@@ -1,21 +1,56 @@
-@mixin hero-image {
-  padding: 4em + $header-height 0 4em;
+@mixin hero-image($pad-small: 4em, $pad-large: 7em) {
+  padding: $pad-small + $header-height 0 $pad-small;
   background-color: $black;
   background-position: center center;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   color: $off-white;
   text-align: center;
 
   @include media(min-width 500px min-height 500px) {
-    padding: 7em + $header-height 0 7em;
+    padding: $pad-large + $header-height 0 $pad-large;
   }
 
   @include media-ie {
-    padding: 7em + $header-height 0 7em;
+    padding: $pad-large + $header-height 0 $pad-large;
   }
 } // @mixin hero-image
 
 .b-hero-image {
   @include hero-image;
-}
+
+  > * {
+    @include fadeInOnPageLoad;
+  }
+} // .b-hero-image
+
+.b-hero-team-member {
+  @include hero-image(3em, 3em);
+
+  img {
+    width: 6em;
+    margin: 0 auto 1.75em;
+  }
+
+  h1 {
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    margin-bottom: 1.5em;
+    font-family: $typeface-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  ul {
+    font-size: 1em;
+  }
+
+  > * {
+    @include fadeInOnPageLoad;
+  }
+} // .b-hero-team-member

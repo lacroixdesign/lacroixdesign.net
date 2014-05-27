@@ -1,14 +1,38 @@
 ---
 title: "Blog"
+pageable: true
+per_page: 5
+cover_header: true
 ---
 
+<section class="b-hero-image b-post-feed-hero">
+  <section class="l-constrained-medium">
+    <h1>BLOG</h1>
+  </section>
+</section>
+
 <section class="l-constrained-medium b-posts">
-  <% blog('blog').articles.each do |item| %>
-    <article>
+
+  <% page_articles.each do |item| %>
+    <% author = find_team_member_by_name(item.data.author) %>
+    <article class="b-post-preview">
       <h1><a href="<%= item.url %>"><%= item.title %></a></h1>
+      <time datetime="<%= item.date %>"><%= item.date.strftime "%B %-d, %Y" %></time>
       <% if item.data.tagline %>
         <h2><a href="<%= item.url %>"><%= item.data.tagline %></a></h2>
       <% end %>
     </article>
   <% end %>
+
+  <% if prev_page || next_page %>
+    <div class="b-pagination">
+      <% if prev_page %>
+        <a href="<%= prev_page.url %>" class="prev">&larr; Newer Posts</a>
+      <% end %>
+      <% if next_page %>
+        <a href="<%= next_page.url %>" class="next">Older Posts &rarr;</a>
+      <% end %>
+    </div>
+  <% end %>
+
 </section>
