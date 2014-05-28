@@ -29,7 +29,7 @@
         .author <em>by</em> <strong>#{author.name}</strong>
 
   .b-post-body.l-constrained-medium.b-text
-    article.will-animate.fadeIn(id="post-#{current_page.slug}" data-wow-duration="0.7s" data-wow-delay="0.2s") = yield
+    article.will-animate.fadeIn(id="post-#{current_page.slug}" data-wow-duration="0.7s" data-wow-delay="0.2s" data-wow-offset="50") = yield
 
     - if current_page.previous_article || current_page.next_article
       .b-pagination
@@ -39,3 +39,6 @@
         - current_page.next_article.tap do |next_post|
           - if next_post
             a.will-animate.fadeInRight(href=next_post.url class="next" title=next_post.title) Next Post &rarr;
+
+    .b-post-cta
+      = component "cta-button"
