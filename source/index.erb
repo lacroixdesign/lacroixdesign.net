@@ -5,7 +5,7 @@ cover_header: true
 
 <%# Welcome %>
 <section class="s-home-welcome" id="welcome">
-  <div class="l-constrained-large">
+  <div class="l-constrained-large will-animate fadeIn" data-wow-duration="0.7s">
     <div class="s-home-welcome__logo">
       <img
         src="<%= image_path "full-logo.svg" %>"
@@ -49,7 +49,7 @@ cover_header: true
 
     <div class="s-services__lists">
 
-      <article class="b-service-list">
+      <article class="b-service-list will-animate fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
         <header>
           <img
             src="<%= image_path 'icons/design.svg' %>"
@@ -66,7 +66,7 @@ cover_header: true
         </ul>
       </article>
 
-      <article class="b-service-list">
+      <article class="b-service-list will-animate fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
         <header>
           <img
             src="<%= image_path 'icons/development.svg' %>"
@@ -82,7 +82,7 @@ cover_header: true
         </ul>
       </article>
 
-      <article class="b-service-list ie-omega">
+      <article class="b-service-list ie-omega will-animate fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.2s">
         <header>
           <img
             src="<%= image_path 'icons/consulting.svg' %>"
@@ -110,7 +110,7 @@ cover_header: true
       <h1 class="section-title">Team</h1>
     </header>
     <div class="l-constrained-medium">
-      <div class="s-team__stars">
+      <div class="s-team__stars will-animate fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
         <img src="<%= image_path "chicago-stars.png" %>" alt="Chicago" class="image-fullwidth">
       </div>
       <h2 class="s-team__based">PROUDLY BASED IN CHICAGO</h2>
@@ -119,8 +119,8 @@ cover_header: true
       </div>
       <div class="s-team__photos">
         <% [ find_team_member_by_name("Michael LaCroix"),
-             find_team_member_by_name("James LaCroix") ].each do |member| %>
-          <article id="<%= member.slug %>">
+             find_team_member_by_name("James LaCroix") ].each_with_index do |member, index| %>
+          <article id="<%= member.slug %>" class="will-animate <%= index == 0 ? 'fadeInLeft' : 'fadeInRight' %>" data-wow-duration="1s" data-wow-delay="0.2s">
             <a href="/team/<%= member.slug %>">
               <img src="<%= image_path "team/#{member.avatar}.jpg" %>" alt="<%= member.name %>">
               <div class="overlay"><h1><%= member.name %></h1></div>

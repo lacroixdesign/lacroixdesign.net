@@ -52,7 +52,6 @@
   max-width: 20em;
   margin: 2em auto;
   text-align: center;
-  @include fadeInOnPageLoad;
 
   article {
     position: relative;

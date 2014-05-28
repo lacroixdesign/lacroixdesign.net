@@ -1,12 +1,12 @@
 ---
 title: "Blog"
 pageable: true
-per_page: 5
+per_page: 10
 cover_header: true
 ---
 
 <section class="b-hero-image b-post-feed-hero">
-  <section class="l-constrained-medium">
+  <section class="l-constrained-medium will-animate fadeInUp" data-wow-duration="0.7s" data-wow-delay="0.2s">
     <h1>BLOG</h1>
   </section>
 </section>
@@ -15,7 +15,7 @@ cover_header: true
 
   <% page_articles.each do |item| %>
     <% author = find_team_member_by_name(item.data.author) %>
-    <article class="b-post-preview">
+    <article class="b-post-preview will-animate fadeIn" data-wow-duration="0.7s" data-wow-delay="0.2s">
       <h1><a href="<%= item.url %>"><%= item.title %></a></h1>
       <time datetime="<%= item.date %>"><%= item.date.strftime "%B %-d, %Y" %></time>
       <% if item.data.tagline %>
@@ -27,10 +27,10 @@ cover_header: true
   <% if prev_page || next_page %>
     <div class="b-pagination">
       <% if prev_page %>
-        <a href="<%= prev_page.url %>" class="prev">&larr; Newer Posts</a>
+        <a href="<%= prev_page.url %>" class="prev will-animate fadeInLeft">&larr; Newer Posts</a>
       <% end %>
       <% if next_page %>
-        <a href="<%= next_page.url %>" class="next">Older Posts &rarr;</a>
+        <a href="<%= next_page.url %>" class="next will-animate fadeInRight">Older Posts &rarr;</a>
       <% end %>
     </div>
   <% end %>

@@ -37,10 +37,6 @@
     &:hover { color: $black !important; }
   }
 
-  > * {
-    @include fadeInOnPageLoad;
-  }
-
   @include media(min-width 600px min-height 550px) {
     @include welcome-section-layout;
   }

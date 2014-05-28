@@ -45,7 +45,8 @@ body#{$nav-menu-open} {
   top: $nav-position-offset;
   right: $nav-position-offset;
   z-index: 1000;
-  @include transition(right $nav-transition-time ease);
+  @include transition(right #{$nav-transition-time / 2} ease);
+  @include fadeInOnPageLoad;
   #{$nav-menu-open} & { right: $nav-menu-width + $nav-position-offset; }
 }
 
