@@ -19,6 +19,7 @@
     text-decoration: none;
     @include transition(all 0.2s ease);
     @include transform(scale(1.05));
+    .no-flexbox & { display: block; }
   }
 
   .content-wrap {
