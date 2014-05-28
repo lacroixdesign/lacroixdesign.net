@@ -5,15 +5,15 @@ cover_header: true
 
 <%# Welcome %>
 <section class="s-home-welcome" id="welcome">
-  <div class="l-constrained-large will-animate fadeIn" data-wow-duration="0.7s">
-    <div class="s-home-welcome__logo">
+  <div class="l-constrained-large">
+    <div class="s-home-welcome__logo will-animate fadeIn">
       <img
         src="<%= image_path "full-logo.svg" %>"
         onerror="this.src='<%= image_path "full-logo.png" %>'"
         alt="<%= data.site.title %>"
         class="image-fullwidth">
     </div>
-    <header>
+    <header class="will-animate fadeIn">
       <h2><%= site_description %></h2>
     </header>
     <div class="s-home-welcome__cta">
@@ -29,9 +29,19 @@ cover_header: true
       <h1 class="section-title">Featured Work</h1>
     </header>
     <div class="s-home-projects__items">
-      <%= component "case-study-featured", { project: find_case_study_by_title("Justice Film Fest 2014") } %>
-      <%= component "case-study-featured", { project: find_case_study_by_title("LandID") } %>
-      <%= component "case-study-featured", { project: find_case_study_by_title("The 5 Love Languages®"), last: true } %>
+      <%= component "case-study-featured", {
+        project: find_case_study_by_title("Justice Film Fest 2014"),
+        delay: '0.2s'
+      } %>
+      <%= component "case-study-featured", {
+        project: find_case_study_by_title("LandID"),
+        delay: '0.4s'
+      } %>
+      <%= component "case-study-featured", {
+        project: find_case_study_by_title("The 5 Love Languages®"),
+        delay: '0.6s',
+        last: true
+      } %>
     </div>
     <div class="l-constrained">
       <a href="<%= data.urls.work %>" class="btn small short">View All</a>
@@ -49,7 +59,11 @@ cover_header: true
 
     <div class="s-services__lists">
 
-      <article class="b-service-list will-animate fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+      <article
+        class="b-service-list will-animate flipInX"
+        data-wow-duration="0.8s"
+        data-wow-delay="0.2s"
+        data-wow-offset="50">
         <header>
           <img
             src="<%= image_path 'icons/design.svg' %>"
@@ -66,7 +80,7 @@ cover_header: true
         </ul>
       </article>
 
-      <article class="b-service-list will-animate fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+      <article class="b-service-list will-animate flipInX" data-wow-duration="0.8s" data-wow-delay="0.4s">
         <header>
           <img
             src="<%= image_path 'icons/development.svg' %>"
@@ -82,7 +96,7 @@ cover_header: true
         </ul>
       </article>
 
-      <article class="b-service-list ie-omega will-animate fadeInRight" data-wow-duration="0.7s" data-wow-delay="0.2s">
+      <article class="b-service-list ie-omega will-animate flipInX" data-wow-duration="0.8s" data-wow-delay="0.6s">
         <header>
           <img
             src="<%= image_path 'icons/consulting.svg' %>"
