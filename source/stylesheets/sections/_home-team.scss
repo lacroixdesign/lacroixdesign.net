@@ -45,7 +45,9 @@
   font-weight: 800;
 }
 
-.s-team__about {}
+.s-team__about {
+  margin: 2em auto;
+}
 
 .s-team__photos {
   $border-width: 2px;
@@ -58,7 +60,7 @@
     display: inline-block;
     width: 48%;
     max-width: 6em;
-    border: $border-width solid $blue-chicago;
+    border: $border-width solid $grey-light;
     border-radius: 500px;
     overflow: hidden;
   }
