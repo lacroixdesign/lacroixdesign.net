@@ -66,10 +66,6 @@
       min-height: none;
     }
 
-    .b-split-component__text {
-      font-size: 1.5em;
-    }
-
     .left {
       margin-right: 0;
     }
@@ -78,4 +74,10 @@
       margin-left: 0;
     }
   } // $breakpoint-ipad
+
+  @include media-ie($breakpoint-large-screen) {
+    .b-split-component__text {
+      font-size: 1.5em;
+    }
+  } // $breakpoint-large-screen
 } // .b-split-component
