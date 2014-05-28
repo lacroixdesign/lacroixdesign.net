@@ -49,7 +49,7 @@ body#{$nav-menu-open} {
   @include animation(fadeIn50 1s ease-in, pulse 0.5s linear 2.5s);
 
   #{$nav-menu-open} & > .wrap {
-    @include animation(fadeIn50 1s ease);
+    @include animation(fadeIn50 0.7s ease);
   }
 
   #{$nav-menu-open} & {
