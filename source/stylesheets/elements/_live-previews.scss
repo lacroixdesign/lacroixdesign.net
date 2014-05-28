@@ -14,7 +14,7 @@
   }
 
   &.run-animation {
-    @include animation(fadeIn 0.7s ease-in);
+    @include animation(fadeInUp 0.7s ease);
   }
 
   &[data-live-preview="mobile"] {
