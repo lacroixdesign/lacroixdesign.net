@@ -3,8 +3,18 @@
   background: $off-white;
   text-align: center;
 
-  > p {
-    margin-bottom: 1em;
+  > h1 {
+    font-family: $typeface-serif;
+    font-size: 1.25em;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 1.25;
+  }
+
+  > h2 {
+    margin-bottom: 1.75em;
+    font-size: 0.8em;
+    font-weight: normal;
   }
 
   button {

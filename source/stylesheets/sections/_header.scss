@@ -22,6 +22,9 @@
 } // .s-header
 
 .s-header__logo {
+  position: relative;
+  z-index: 2;
   float: left;
   height: 100%;
+  @include fadeInOnPageLoad;
 }

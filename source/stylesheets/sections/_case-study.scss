@@ -1,7 +1,4 @@
 .s-case-studies {
-  // @include clearfix;
-  // @include display(flex);
-  // max-width: 50em;
   margin-right: auto;
   margin-left: auto;
 
@@ -22,13 +19,19 @@
     line-height: 1.5;
     font-style: italic;
     text-align: center;
-    @include fadeInOnPageLoad;
   }
 } // .s-case-studies
+
+.s-case-study__hero-content {
+  h2 {
+    margin: 1em 0 0;
+  }
+} // .s-case-study__hero-content
 
 .s-case-studies__list {
   @include display(flex);
   @include flex-wrap(wrap);
+  @include animation(fadeIn50 1s ease);
 
   > article {
     width: 100%;
@@ -67,9 +70,3 @@
     } // .no-flexbox &
   } // $breakpoint-ipad
 } // .s-case-studies__list
-
-.s-case-study__hero-content {
-  h2 {
-    margin: 1em 0 0;
-  }
-} // .s-case-study__hero-content

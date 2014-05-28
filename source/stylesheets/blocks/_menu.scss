@@ -45,9 +45,17 @@ body#{$nav-menu-open} {
   top: $nav-position-offset;
   right: $nav-position-offset;
   z-index: 1000;
-  @include transition(right $nav-transition-time ease);
-  #{$nav-menu-open} & { right: $nav-menu-width + $nav-position-offset; }
-}
+  @include transition(right #{$nav-transition-time / 2} ease);
+  @include animation(fadeIn50 1s ease-in, pulse 0.5s linear 2.5s);
+
+  #{$nav-menu-open} & > .wrap {
+    @include animation(fadeIn50 0.7s ease);
+  }
+
+  #{$nav-menu-open} & {
+    right: $nav-menu-width + $nav-position-offset;
+  }
+} // .b-nav
 
 
 .b-menu-toggle {

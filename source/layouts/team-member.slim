@@ -3,10 +3,10 @@
 
     .b-hero-team-member(style="background-image: url(#{current_page.data.cover_header});")
       .l-constrained-large
-        img.image-circle(src=image_path("team/#{member.avatar}.jpg"))
-        h1 = member.name
-        h2 = member.job_title
-        ul.social-icons-list
+        img.image-circle.will-animate.fadeInDown(data-wow-duration="0.7s" src=image_path("team/#{member.avatar}.jpg"))
+        h1.will-animate.fadeInUp(data-wow-duration="0.7s") = member.name
+        h2.will-animate.fadeInUp(data-wow-duration="0.7s") = member.job_title
+        ul.social-icons-list.will-animate.fadeInUp(data-wow-duration="0.7s")
           - if member.twitter
             li: a(href="https://twitter.com/#{member.twitter}" target="_blank") = icon 'e49d'
           - if member.google_plus_id
@@ -18,7 +18,7 @@
 
 
     .l-constrained-medium.b-post-body
-      .b-text
+      .b-text.will-animate.fadeIn(data-wow-duration="0.7s" data-wow-delay="0.2s")
         = yield
         p: em: a.link-vivid.link-plain-til-hover(href="/#team") &larr; back to team
       hr

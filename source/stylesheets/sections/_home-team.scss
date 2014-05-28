@@ -45,21 +45,22 @@
   font-weight: 800;
 }
 
-.s-team__about {}
+.s-team__about {
+  margin: 2em auto;
+}
 
 .s-team__photos {
   $border-width: 2px;
   max-width: 20em;
   margin: 2em auto;
   text-align: center;
-  @include fadeInOnPageLoad;
 
   article {
     position: relative;
     display: inline-block;
     width: 48%;
     max-width: 6em;
-    border: $border-width solid $blue-chicago;
+    border: $border-width solid $grey-light;
     border-radius: 500px;
     overflow: hidden;
   }
