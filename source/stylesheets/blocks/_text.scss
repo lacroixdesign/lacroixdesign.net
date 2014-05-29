@@ -40,21 +40,11 @@
   }
 
   blockquote {
-    padding: 0.5em 1em;
+    padding: 0 1em;
     margin: 1.5em 1em;
-    border-left: 10px solid #eee;
-    background: #f8f8f8;
-    color: $grey-dark;
+    border-left: 5px solid #eee;
+    color: $black-20;
     quotes: "\201C""\201D""\2018""\2019";
-  }
-
-  blockquote:before {
-    // vertical-align: -0.4em;
-    // margin-right: 0.25em;
-    // color: #ccc;
-    // font-size: 4em;
-    // line-height: 0.1em;
-    // content: open-quote;
   }
 
   blockquote:after {
@@ -63,14 +53,6 @@
 
   blockquote p {
     margin-top: 1em;
-  }
-
-  // blockquote p:first-child {
-  //   display: inline;
-  // }
-
-  blockquote :last-child {
-    // margin-bottom: 0;
   }
 
   img {

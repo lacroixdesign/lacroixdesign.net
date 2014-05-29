@@ -19,11 +19,7 @@
 
 .b-hero-image {
   @include hero-image;
-
-  > * {
-    @include fadeInOnPageLoad;
-  }
-} // .b-hero-image
+}
 
 .b-hero-team-member {
   @include hero-image(3em, 3em);
@@ -50,7 +46,7 @@
     font-size: 1em;
   }
 
-  > * {
-    @include fadeInOnPageLoad;
+  ul a:hover {
+    color: $pink;
   }
 } // .b-hero-team-member

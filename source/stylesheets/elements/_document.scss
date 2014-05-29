@@ -25,5 +25,5 @@ body {
   overflow: hidden;
 }
 
-::-moz-selection { color: $black;  background: $off-white; }
-::selection      { color: $black;  background: $off-white; }
+::-moz-selection { color: $off-white;  background: $black; }
+::selection      { color: $off-white;  background: $black; }

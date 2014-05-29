@@ -15,7 +15,8 @@ set :markdown,
     :no_intra_emphasis => true,
     :strikethrough => true,
     :smartypants => true,
-    :tables => true
+    :tables => true,
+    :link_attributes => { target: "_blank" }
 
 ###
 # Compass

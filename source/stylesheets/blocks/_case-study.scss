@@ -11,7 +11,7 @@
     @include display(flex);
     width: 100%;
     background-color: transparent;
-    background-color: inherit;
+    background-color: rgba($black, 0.4);
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: cover;
@@ -19,6 +19,7 @@
     text-decoration: none;
     @include transition(all 0.2s ease);
     @include transform(scale(1.05));
+    .no-flexbox & { display: block; }
   }
 
   .content-wrap {

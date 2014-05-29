@@ -12,7 +12,7 @@
     padding-bottom: 10%;
   }
 
-  .no-csstransforms3d & {
+  .no-csstransforms & {
     padding-bottom: 0;
   }
 } // .s-home-projects
@@ -25,6 +25,7 @@
     max-width: 20em;
     margin: 0 auto 1em;
     border-radius: $border-radius 0 $border-radius 0;
+    background-color: $black;
     -webkit-background-size: cover cover;
     background-size: cover cover;
     background-attachment: fixed;

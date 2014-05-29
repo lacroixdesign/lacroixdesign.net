@@ -1,11 +1,17 @@
-<% last ||= nil %>
+<%
+  last  ||= nil
+  delay ||= '0.2s'
+%>
 
 <article
   id="case-study-<%= project.slug %>"
   <% if last %> class="ie-omega"<% end %>
   style="background-image: url('<%= case_study_bg_path(project) %>')">
   <a href="<%= project.url %>">
-    <div class="media-16x9 overlay__wrap">
+    <div
+      class="media-16x9 overlay__wrap will-animate flipInX"
+      data-wow-delay="<%= delay %>"
+      data-wow-offset="50">
       <div class="overlay__centered">
         <div class="overlay__content">
 

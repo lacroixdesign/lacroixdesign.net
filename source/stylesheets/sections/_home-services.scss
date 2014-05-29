@@ -28,7 +28,7 @@
     padding-bottom: 10%;
   }
 
-  .no-csstransforms3d & {
+  .no-csstransforms & {
     padding-bottom: 0;
   }
 } // .s-services
@@ -44,10 +44,6 @@
 
   article:last-child {
     margin-bottom: 0;
-  }
-
-  img {
-    @include fadeInOnPageLoad;
   }
 
   @include media-ie(568px) {

@@ -50,7 +50,7 @@
   }
 
   .b-split-component__text {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-style: italic;
   }
 
@@ -74,4 +74,10 @@
       margin-left: 0;
     }
   } // $breakpoint-ipad
+
+  @include media-ie($breakpoint-large-screen) {
+    .b-split-component__text {
+      font-size: 1.5em;
+    }
+  } // $breakpoint-large-screen
 } // .b-split-component
