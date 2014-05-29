@@ -17,5 +17,5 @@
 
   });
 
-  $(document).pjax('a', '#content', {fragment: '#content'});
+  $(document).pjax('a', '#content', {fragment: '#content', timeout: 1500});
 })();
