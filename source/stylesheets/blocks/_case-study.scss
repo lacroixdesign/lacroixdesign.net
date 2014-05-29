@@ -10,7 +10,7 @@
     display: block;
     @include display(flex);
     width: 100%;
-    background-color: $black;
+    background-color: transparent;
     background-color: rgba($black, 0.4);
     background-repeat: no-repeat;
     background-position: center center;
