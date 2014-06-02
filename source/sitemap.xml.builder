@@ -5,14 +5,14 @@ xml.instruct!
 #
 # Uses the builder gem.
 # Add
-# gem 'builder', '~> 2.0' 
+# gem 'builder', '~> 2.0'
 # to the Gemfile, and run builder install
 #
-# Add this line to config.rb: 
-# page "/sitemap.xml", :layout => false  
-# 
+# Add this line to config.rb:
+# page "/sitemap.xml", :layout => false
+#
 # To tell Google and other search services about the sitemap, add
-# Sitemap: http://www.lacroixdesign.net/sitemap.xml   
+# Sitemap: http://www.lacroixdesign.net/sitemap.xml
 # to the robots.txt file. Or see
 # http://support.google.com/webmasters/bin/answer.py?hl=en&answer=183669&topic=8476&ctx=topic for other options.
 #
@@ -44,6 +44,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url == '/robots.txt'
       throw :next_page if page.url == '/favicon.ico'
       throw :next_page if page.url == '/humans.txt'
+      throw :next_page if page.is_a? Middleman::Sitemap::Extensions::Redirects::RedirectResource
 
       # Exclude drafts
       throw :next_page if defined?(page.data) && page.data['published'] == false
