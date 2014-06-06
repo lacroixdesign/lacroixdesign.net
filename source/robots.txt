@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /services
+Disallow: /services/
+Disallow: /team
+Disallow: /team/
+Disallow: /portfolio
+Disallow: /portfolio/

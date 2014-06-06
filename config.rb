@@ -99,6 +99,10 @@ activate :blog do |blog|
   blog.default_extension = ".slim"
 end
 
+redirect "services.html", :to => "/#services"
+redirect "team.html", :to => "/#team"
+redirect "portfolio.html", :to => "/case-studies/"
+
 activate :directory_indexes
 page "/sitemap.xml", :layout => false
 
