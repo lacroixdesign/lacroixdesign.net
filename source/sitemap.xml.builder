@@ -44,6 +44,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url == '/robots.txt'
       throw :next_page if page.url == '/favicon.ico'
       throw :next_page if page.url == '/humans.txt'
+      throw :next_page if page.url == '/404.html'
       throw :next_page if page.is_a? Middleman::Sitemap::Extensions::Redirects::RedirectResource
 
       # Exclude drafts
