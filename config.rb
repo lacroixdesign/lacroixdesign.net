@@ -99,7 +99,12 @@ activate :blog do |blog|
   blog.default_extension = ".slim"
 end
 
+redirect "services.html", :to => "/#services"
+redirect "team.html", :to => "/#team"
+redirect "portfolio.html", :to => "/case-studies/"
+
 activate :directory_indexes
+page "/pinterest-e87c7.html", :directory_index => false
 page "/sitemap.xml", :layout => false
 
 activate :deploy do |deploy|
