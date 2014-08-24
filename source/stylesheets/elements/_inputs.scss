@@ -44,7 +44,7 @@ input[type="email"],
 input[type="search"],
 input[type="number"],
 input[type="password"] {
-  @include input($off-white, $grey);
+  @include input($medium-white, $grey);
 }
 
 textarea {
