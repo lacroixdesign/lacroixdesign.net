@@ -5,10 +5,30 @@
   text-align: center;
 }
 
+.s-footer__newsletter {
+  margin-bottom: 2em;
+
+  a,
+  [data-icon] {
+    color: $pink;
+    font-family: $typeface-serif;
+    font-size: 0.8125em;
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+} // .s-footer__newsletter
+
 .s-footer__social {
   margin-bottom: 1em;
-  color: $grey;
-  font-size: 1.5em;
+
+  a {
+    color: $grey;
+    font-size: 1.5em;
+  }
 
   a:hover {
     color: $black;
