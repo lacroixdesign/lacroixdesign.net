@@ -48,6 +48,9 @@
   <% if content_for? :authorship %>
     <%= yield_content :authorship %>
   <% end %>
+  <% if content_for? :twitter_card %>
+    <%= yield_content :twitter_card %>
+  <% end %>
 
   <%# Stylesheets %>
   <%= stylesheet_link_tag "main" %>

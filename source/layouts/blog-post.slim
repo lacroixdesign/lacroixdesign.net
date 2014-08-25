@@ -1,8 +1,21 @@
 - wrap_layout :base do
 
   - author = find_team_member_by_name(current_page.data.author)
+
   - content_for :authorship do
     link(rel="author" href="https://plus.google.com/#{author.google_plus_id}")
+
+  - content_for :twitter_card do
+    meta name="twitter:card" content="summary_large_image"
+    meta name="twitter:site" content="@lacroixdesign"
+    meta name="twitter:creator" content="@#{author.twitter}"
+    meta name="twitter:title" content="#{current_page.data.title}"
+    - if current_page.data.tagline
+      meta name="twitter:description" content="#{current_page.data.tagline}"
+    - if current_page.data.cover_header
+      meta name="twitter:image:src" content="#{post_image_path(current_page.data.cover_header)}"
+    - elsif current_page.data.inline_header
+      meta name="twitter:image:src" content="#{post_image_path(current_page.data.inline_header)}"
 
   - if current_page.data.cover_header
     - content_for :featured_image, post_image_path(current_page.data.cover_header)
