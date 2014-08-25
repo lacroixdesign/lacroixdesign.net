@@ -11,7 +11,7 @@
 
 } // .b-newsletter-hero
 
-.b-newsletter {
+.b-newsletter-form {
   margin-top: 3em;
   margin-bottom: 3em;
 
@@ -33,12 +33,6 @@
     margin-bottom: 1em;
   } // .mc-field-group
 
-  label {
-    color: $grey-dark;
-    font-size: 0.75em;
-    font-family: $typeface-sans;
-    text-transform: uppercase;
-  }
   .asterisk {
     color: $red-chicago;
   }
@@ -50,4 +44,4 @@
     font-size: 0.5em;
   }
 
-} // .b-newsletter
+} // .b-newsletter-form

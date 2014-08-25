@@ -50,3 +50,10 @@ input[type="password"] {
 textarea {
   height: 5em;
 }
+
+label {
+  color: $grey-dark;
+  font-size: 0.75em;
+  font-family: $typeface-sans;
+  text-transform: uppercase;
+}
