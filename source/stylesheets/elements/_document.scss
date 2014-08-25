@@ -25,5 +25,17 @@ body {
   overflow: hidden;
 }
 
+.flexbox {
+  #content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .page-content {
+    flex: 1;
+  }
+} // .flexbox
+
 ::-moz-selection { color: $off-white;  background: $black; }
 ::selection      { color: $off-white;  background: $black; }
