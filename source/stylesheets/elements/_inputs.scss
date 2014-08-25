@@ -1,8 +1,17 @@
+@function input-padding($base) {
+  @return $base * 3 / 4;
+}
+
+@function input-height($base) {
+  $padding: input-padding($base);
+  @return $base + ($padding * 2);
+}
+
 @mixin input-sizing($base) {
-  height: $base;
-  padding: 0 $base / 3;
-  font-size: $base / 2;
-  line-height: $base;
+  height: input-height($base);
+  padding: input-padding($base);
+  font-size: $base;
+  line-height: normal;
 }
 
 @mixin input($bg: white, $color: #555) {
@@ -56,4 +65,17 @@ label {
   font-size: 0.75em;
   font-family: $typeface-sans;
   text-transform: uppercase;
+}
+
+.input__group {
+  margin-bottom: 1em;
+
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+} // .input__group
+
+.input__required-asterisk {
+  color: $red-chicago;
 }

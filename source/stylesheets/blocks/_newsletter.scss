@@ -1,7 +1,4 @@
 .b-newsletter-form {
-  margin-top: 3em;
-  margin-bottom: 3em;
-
   h1 {
     margin-bottom: 0;
     font-size: 1.5em;
@@ -14,20 +11,5 @@
     font-size: 1em;
     font-weight: normal;
     font-style: italic;
-  }
-
-  .mc-field-group {
-    margin-bottom: 1em;
-  }
-
-  .asterisk {
-    color: $red-chicago;
-  }
-
-  .indicates-required {
-    margin-top: 2em;
-    text-align: right;
-    font-family: $typeface-sans;
-    font-size: 0.5em;
   }
 } // .b-newsletter-form

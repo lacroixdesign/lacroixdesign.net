@@ -14,11 +14,16 @@ $containers-bp: $breakpoint-desktop;
   @include media-ie($bp) {
     max-width: $width2;
   }
-}
+} // page-container
 
 .l-constrained {
   // 30em, 1200px
   @include page-container($layout-width-medium, $max-width);
+}
+
+.l-constrained-small {
+  // 20em, 20em
+  @include page-container($layout-width-small, $layout-width-small);
 }
 
 .l-constrained-medium {

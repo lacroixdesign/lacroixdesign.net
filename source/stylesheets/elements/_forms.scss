@@ -1,0 +1,11 @@
+.form__required-indicator {
+  margin-top: 2em;
+  text-align: right;
+  font-family: $typeface-sans;
+  font-size: 0.5em;
+
+  .input__required-asterisk {
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+} // .form__required-indicator
