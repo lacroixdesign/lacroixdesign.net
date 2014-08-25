@@ -19,7 +19,8 @@
   width: 100%;
   margin: 0;
   border: none;
-  border-radius: 2px;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
   box-shadow: none;
   background: $bg;
   color: $color;
@@ -28,6 +29,8 @@
 
   &:focus {
     border: none;
+    border-bottom: 2px solid $pink;
+    border-radius: 0;
     outline: none;
     box-shadow: none;
   }
@@ -53,7 +56,7 @@ input[type="email"],
 input[type="search"],
 input[type="number"],
 input[type="password"] {
-  @include input($medium-white, $grey);
+  @include input($off-white, $black);
 }
 
 textarea {
