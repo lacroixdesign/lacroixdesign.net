@@ -8,6 +8,10 @@
   color: $off-white;
   text-align: center;
 
+  &.hero-image__top-center {
+    background-position: top center;
+  }
+
   @include media(min-width 500px min-height 500px) {
     padding: $pad-large + $header-height 0 $pad-large;
   }
@@ -20,6 +24,20 @@
 .b-hero-image {
   @include hero-image;
 }
+
+.b-hero-image__content {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  @include media(500px) {
+    h1 { font-size: 2.25em; }
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    h1 { font-size: $h1-font-size; }
+  }
+} // .b-hero-image__content
 
 .b-hero-team-member {
   @include hero-image(3em, 3em);

@@ -1,16 +1,3 @@
-.b-newsletter-hero {
-  background-color: $black;
-  background-image: image-url('backgrounds/newsletter-bg.jpg');
-  background-position: top center;
-  -webkit-background-size: cover;
-  background-size: cover;
-
-  h1 {
-    font-size: 2.375em;
-  }
-
-} // .b-newsletter-hero
-
 .b-newsletter-form {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -31,7 +18,7 @@
 
   .mc-field-group {
     margin-bottom: 1em;
-  } // .mc-field-group
+  }
 
   .asterisk {
     color: $red-chicago;
@@ -43,5 +30,4 @@
     font-family: $typeface-sans;
     font-size: 0.5em;
   }
-
 } // .b-newsletter-form
