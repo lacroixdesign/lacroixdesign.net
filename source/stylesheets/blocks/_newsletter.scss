@@ -1,0 +1,47 @@
+.b-newsletter-hero {
+  background-color: $black;
+  background-image: image-url('backgrounds/newsletter-bg.jpg');
+  background-position: top center;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    font-size: 2.375em;
+  }
+
+} // .b-newsletter-hero
+
+.b-newsletter-form {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+
+  h2 {
+    margin: 0.5em 0 0;
+    color: $grey-dark;
+    font-family: $typeface-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .mc-field-group {
+    margin-bottom: 1em;
+  } // .mc-field-group
+
+  .asterisk {
+    color: $red-chicago;
+  }
+
+  .indicates-required {
+    margin-top: 2em;
+    text-align: right;
+    font-family: $typeface-sans;
+    font-size: 0.5em;
+  }
+
+} // .b-newsletter-form
