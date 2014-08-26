@@ -1,0 +1,23 @@
+---
+title: Announcing Our New Monthly Newsletter
+tagline: On why we finally decided to launch an email newsletter.
+date: "2014-08-26 9:00"
+inline_header: "announcing-our-new-monthly-newsletter.jpg"
+author: "James LaCroix"
+above_header: true
+published: true
+---
+
+With our inaugural issue nearly complete and subsequent monthly issues already in the works, we are pleased to announce the launch of our new email newsletter. Our first issue will be sent out at the beginning of September and we will be regularly creating original content each month.
+
+The format will allow us to approach concepts that do not necessarily fit within the structure of our blog or case studies. This will include a behind the scenes look at what we have been building to inspire new ideas and provide benefit to your business. With these curated briefings, we hope to give readers inside access to what we have been researching, designing, building and thinking. We hope this will be a welcome addition to your inbox and encourage you to [subscribe here](http://www.lacroixdesign.net/newsletter/).
+ 
+We have worked with numerous clients over the years to design and develop successful email marketing campaigns. As a result, we have consistently been fascinated with finding better ways to connect to an audience through this medium.
+
+It has long been a goal of ours to create our own newsletter. In fact, we have had a form to subscribe on our site for nearly four years. Yet, we have never once sent out a LaCroix Design Co. Newsletter. During this time, we often wrestled with creating valuable email content that our readers would appreciate. As people who regularly receive large amounts of email, we never just wanted to contribute to the noise.
+
+Our goal with this newsletter is to create something that is candid, genuine and beneficial to our readers. We chose a monthly schedule to ensure that our correspondence is never overwhelming and that the content delivered is relevant. 
+
+As with most things that we do, we also view the creation of our own newsletter as a great opportunity to experiment. We are excited to use [Mailchimp’s](http://eepurl.com/v7UmP) wonderful tools and features for an internal project. It will also be exciting to evaluate how our readers are engaging with our content as we go along. Thus, we will welcome any feedback and will seek to continually improve with each issue. It is through this ongoing experiment that we look to gain more knowledge, insight and ideas that we will pass along to our current and future clients.
+
+We will be sending out the first issue next week. Feel free to [subscribe here](http://www.lacroixdesign.net/newsletter/).
