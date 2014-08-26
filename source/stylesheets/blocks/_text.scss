@@ -1,5 +1,4 @@
 .b-text {
-
   p {
     margin-bottom: 1em;
   }
@@ -63,6 +62,50 @@
     margin: 1em auto;
   }
 
+  figure figcaption {
+    $font-size: 0.625em;
+    padding: 0 #{($page-gutter / $font-size)}em;
+    color: $grey;
+    font-family: $typeface-sans;
+    font-size: $font-size;
+    line-height: 1.75;
+
+    a {
+      color: $pink;
+    }
+  } // figure figcaption
+
+  .video {
+    margin: 1.5em #{$page-gutter * -1};
+
+    > div,
+    > iframe {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  } // .video
+
+  .image-stretch-wrap {
+    margin: 1.5em #{$page-gutter * -1};
+  }
+
+  .pullquote {
+    margin: 1.5em auto;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+      color: $pink;
+      font-size: 1.5em;
+      font-style: italic;
+      line-height: 1.375;
+    }
+
+    figcaption {
+      margin-top: 1em;
+      font-size: 1em;
+    }
+  } // .pullquote
 } // .b-text
 
 .b-tagline {

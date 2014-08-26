@@ -48,4 +48,79 @@ module ComponentHelper
     block_component('live-preview-block', options)
   end
 
+  # Vimeo
+  def vimeo(id, caption=nil)
+    src  = "//player.vimeo.com/video/#{id}"
+    src += "?title=0&amp;byline=0&amp;portrait=0&amp;color=f27390&amp;badge=0"
+    content_tag(:figure, class: "video") do
+      content_tag(:iframe, nil, {
+        src: src,
+        width: "500",
+        height: "281",
+        frameborder: "0",
+        webkitallowfullscreen: true,
+        mozallowfullscreen: true,
+        allowfullscreen: true
+      }) +
+      build_figcaption(caption)
+    end
+  end
+
+  # YouTube
+  def youtube(id, caption=nil)
+    src  = "//www.youtube.com/embed/#{id}"
+    src += "?showinfo=0&amp;color=white&amp;theme=light&amp;controls=2&amp;rel=0"
+    # src += "?showinfo=0&amp;modestbranding=1&amp;theme=light&amp;controls=2&amp;rel=0"
+    content_tag(:figure, class: "video") do
+      content_tag(:iframe, nil, {
+        src: src,
+        width: "560",
+        height: "315",
+        frameborder: "0",
+        webkitallowfullscreen: true,
+        mozallowfullscreen: true,
+        allowfullscreen: true
+      }) +
+      build_figcaption(caption)
+    end
+  end
+
+  # Stretch image
+  def stretch_image(path, alt=nil, caption=nil)
+    # figcaption = if caption
+    #   content_tag(:figcaption, caption)
+    # else
+    #   nil
+    # end
+    content_tag(:figure, class: "image-stretch-wrap") do
+      image_tag(path, alt: alt, class: "image-fullwidth") +
+      build_figcaption(caption)
+    end
+  end
+
+  # Pull quotes
+  def pullquote(text, author=nil)
+    figcaption = if author
+      content_tag(:figcaption, "&mdash; " + author)
+    else
+      nil
+    end
+    leftquote  = "&ldquo;"
+    rightquote = "&rdquo;"
+    content_tag(:figure, class: 'pullquote') do
+      content_tag(:p, leftquote + text + rightquote) +
+      figcaption
+    end
+  end
+
+private
+
+  def build_figcaption(caption)
+    if caption
+      content_tag(:figcaption, caption)
+    else
+      nil
+    end
+  end
+
 end
