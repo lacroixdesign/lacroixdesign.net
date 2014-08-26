@@ -87,11 +87,6 @@ module ComponentHelper
 
   # Stretch image
   def stretch_image(path, alt=nil, caption=nil)
-    # figcaption = if caption
-    #   content_tag(:figcaption, caption)
-    # else
-    #   nil
-    # end
     content_tag(:figure, class: "image-stretch-wrap") do
       image_tag(path, alt: alt, class: "image-fullwidth") +
       build_figcaption(caption)
