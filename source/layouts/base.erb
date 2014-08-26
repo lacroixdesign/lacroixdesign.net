@@ -30,6 +30,12 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="application-name" content="&nbsp;">
+  <meta name="msapplication-TileColor" content="#14191f">
+  <meta name="msapplication-square70x70logo" content="<%= image_path('windows-tiles/tiny.png') %>">
+  <meta name="msapplication-square150x150logo" content="<%= image_path('windows-tiles/square.png') %>">
+  <meta name="msapplication-wide310x150logo" content="<%= image_path('windows-tiles/wide.png') %>">
+  <meta name="msapplication-square310x310logo" content="<%= image_path('windows-tiles/large.png') %>">
   <meta name="alexaVerifyID" content="CgyCTgGx9rVfA-ErPwE9Of_cnu8">
 
   <meta property="og:title" content="<%= page_title %>">
@@ -44,7 +50,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" sizes="120x120">
   <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" sizes="152x152">
   <link rel="canonical" href="<%= data.site.host + current_page.url %>">
-  <link rel="alternate" type="application/atom+xml" title="LaCroix Design Co. Blog" href="/feed.xml" />
+  <link rel="alternate" type="application/atom+xml" title="LaCroix Design Co. Blog" href="/feed.xml">
 
   <% if content_for? :authorship %>
     <%= yield_content :authorship %>
