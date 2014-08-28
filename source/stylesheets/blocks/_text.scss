@@ -75,6 +75,11 @@
     }
   } // figure figcaption
 
+  .figure-small {
+    max-width: $layout-width-small;
+    margin: 1.5em auto;
+  }
+
   .video {
     margin: 1.5em #{$page-gutter * -1};
 
@@ -107,9 +112,14 @@
     }
   } // .pullquote
 
-  .figure-small {
-    max-width: $layout-width-small;
-    margin: 1.5em auto;
+  .gist-embed-wrapper {
+    $ratio: 0.7;
+    // margin: #{1.5em / $ratio} #{($page-gutter / $ratio) * -1};
+    margin: #{1.5em / $ratio} auto;
+    color: $grey;
+    font-size: #{$ratio}em;
+    font-style: italic;
+    line-height: 1.5;
   }
 } // .b-text
 
