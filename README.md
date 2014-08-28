@@ -70,7 +70,7 @@ The helper takes a path to the image, an optional alt tag, and an optional capti
 stretch_image(path, alt, caption)
 ```
 
-Examples:
+Example:
 
 ```erb
 <%= stretch_image "blog/blog-title/image-name.jpg", "An Alt for the Image", "A caption with #{link_to 'a link', '/blog'}." %>
@@ -90,4 +90,18 @@ Examples:
 <%= pullquote "Some text to quote" %>
 
 <%= pullquote "Some text to quote", "Barack Obama" %>
+```
+
+## Code
+
+Load a GitHub Gist by passing the `gist` helper a Gist ID:
+
+```ruby
+gist(id)
+```
+
+Example:
+
+```erb
+<%= gist "f3be83a2cabf9e1061fc" %>
 ```

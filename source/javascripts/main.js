@@ -3,5 +3,6 @@
 //= require vendor/slick.min
 //= require vendor/wow.min
 //= require vendor/jquery.fitvids
+//= require vendor/gist-embed
 //= require_tree ./lib
 //= require_tree ./features

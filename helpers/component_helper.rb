@@ -108,6 +108,17 @@ module ComponentHelper
     end
   end
 
+  # Gist
+  def gist(id)
+    options = {
+      :class => 'gist-embed-wrapper',
+      :style => 'display:none;',
+      'data-gist-id' => id,
+      'data-gist-hide-footer' => true
+    }
+    content_tag(:figure, nil, options)
+  end
+
 private
 
   def build_figcaption(caption)
