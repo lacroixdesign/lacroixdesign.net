@@ -1,3 +1,5 @@
+require 'net/http'
+
 module ComponentHelper
 
   # Render component
@@ -117,6 +119,14 @@ module ComponentHelper
       'data-gist-hide-footer' => true
     }
     content_tag(:figure, nil, options)
+  end
+
+  def tweet(id)
+    url = "https://api.twitter.com/1/statuses/oembed.json?id=#{id}&omit_script=true"
+    uri = URI.parse(url)
+    res = Net::HTTP.get_response(uri)
+    tweet_json = JSON.parse(res.body)
+    content_tag(:figure, tweet_json['html'], :class => "tweet")
   end
 
 private

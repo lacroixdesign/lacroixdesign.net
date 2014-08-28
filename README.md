@@ -92,9 +92,9 @@ Examples:
 <%= pullquote "Some text to quote", "Barack Obama" %>
 ```
 
-## Code
+## Gists / Code
 
-Load a GitHub Gist by passing the `gist` helper a Gist ID:
+Embed a GitHub Gist by passing the `gist` helper a Gist ID:
 
 ```ruby
 gist(id)
@@ -104,4 +104,18 @@ Example:
 
 ```erb
 <%= gist "f3be83a2cabf9e1061fc" %>
+```
+
+## Tweets
+
+Embed a tweet by passing the `tweet` helper a tweet/status ID:
+
+```ruby
+tweet(id)
+```
+
+Example:
+
+```erb
+<%= tweet "504323875963170817" %>
 ```
