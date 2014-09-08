@@ -125,6 +125,22 @@
     font-style: italic;
     line-height: 1.5;
   }
+
+  pre {
+    padding: 1em $page-gutter;
+    margin: 1.5em #{$page-gutter * -1};
+    background: $off-white;
+  }
+
+  pre code {
+    font-size: 0.75em;
+  }
+
+  p code {
+    display: inline-block;
+    padding: 0 0.25em;
+    background: $off-white;
+  }
 } // .b-text
 
 .b-tagline {

@@ -4,5 +4,6 @@
 //= require vendor/wow.min
 //= require vendor/jquery.fitvids
 //= require vendor/gist-embed
+//= require vendor/prism
 //= require_tree ./lib
 //= require_tree ./features

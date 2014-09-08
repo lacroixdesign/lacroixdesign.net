@@ -121,6 +121,7 @@ module ComponentHelper
     content_tag(:figure, nil, options)
   end
 
+  # Embedded tweets
   def tweet(id)
     url = "https://api.twitter.com/1/statuses/oembed.json?id=#{id}&omit_script=true"
     uri = URI.parse(url)
