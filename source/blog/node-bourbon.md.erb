@@ -1,0 +1,66 @@
+---
+title: One Year of Node Bourbon
+tagline: Porting the Bourbon Sass library to focus on gulp.js, Grunt, and other Node.js-based build tools.
+date: "2014-09-10 14:00"
+author: "Michael LaCroix"
+above_header: true
+published: false
+---
+
+A year ago we released [node-bourbon](https://github.com/lacroixdesign/node-bourbon), our port of [thoughtbot's](http://thoughtbot.com/) excellent [Bourbon](http://bourbon.io/) library to [node-sass](https://github.com/sass/node-sass). Node-sass is a Node.js wrapper of [LibSass](http://libsass.org/), an extremely fast version of Sass written in C/C++. The original version of Sass is written in Ruby which, while a wonderful language, can be a bit slow. With the forthcoming anniversary, we figured it was due time we wrote a blog post about it.
+
+In case you're not familiar, Bourbon is a mixin library for [Sass](http://sass-lang.com/), the popular CSS preprocessor. Bourbon provides a great amount of utility while appreciatively remaining lean and simple.
+
+## Why port it?
+
+LibSass introduced a dramatic speed increase in Sass compliation that we wanted to take advantage of in our client-side build tools. The original Bourbon was being utilized in our projects for a couple years at that point, however we ran into compilation issues when trying to include it directly since LibSass does not have 100% feature compatibility with Ruby Sass.
+
+We decided to create a project which would include workarounds for those issues, while also providing some conveniences for Node.js-based build tools.
+
+Our primary goals for the project were:
+
+- A focus on LibSass compatibility
+- Packaged for npm
+- A convenience method for supplying the project path to the build tool
+
+## How to use it
+
+I'll provide an example for using node-bourbon in a gulp.js project. Assuming you've already [set up gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md), you'll next want to add node-bourbon to your project:
+
+```language-bash
+npm install --save-dev node-bourbon
+```
+
+Then in your `gulpfile.js`, use node-bourbon in conjuction with gulp-sass. The `includePaths` property returns an array containing the path to the Bourbon directory. Example usage:
+
+```language-scss
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+  gulp.src('path/to/input.scss')
+    .pipe(sass({
+      includePaths: require('node-bourbon').includePaths
+    }))
+   language- .pipe(gulp.dest('path/to/output.css'));
+});
+```
+
+If you have additional paths you would like to load, the `with()` helper can assist:
+
+```language-scss
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+  gulp.src('path/to/input.scss')
+    .pipe(sass({
+      includePaths: require('node-bourbon').with(['first/path', 'second/path'])
+    }))
+   language- .pipe(gulp.dest('path/to/output.css'));
+});
+```
+
+Examples for other tools can be found in the [readme on GitHub](https://github.com/lacroixdesign/node-bourbon#contents).
+
+Feel free to [send me a tweet](https://twitter.com/iamlacroix) if you have any questions!
