@@ -1,0 +1,39 @@
+<% if member.twitter %>
+  <li>
+    <a href="https://twitter.com/<%= member.twitter %>" target="_blank">
+      <%= icon 'e49d' %>
+    </a>
+  </li>
+<% end %>
+
+<% if member.google_plus_id %>
+  <li>
+    <a href="https://plus.google.com/<%= member.google_plus_id %>" target="_blank">
+      <%= icon 'e493' %>
+    </a>
+  </li>
+<% end %>
+
+<% if member.email %>
+  <li>
+    <a href="mailto:<%= member.email %>" target="_blank">
+      <%= icon 'e601' %>
+    </a>
+  </li>
+<% end %>
+
+<% if member.github %>
+  <li>
+    <a href="https://github.com/<%= member.github %>" target="_blank">
+      <%= icon 'e4b8' %>
+    </a>
+  </li>
+<% end %>
+
+<% if member.stackoverflow %>
+  <li>
+    <a href="http://stackoverflow.com/users/<%= member.stackoverflow %>" target="_blank">
+      <%= icon 'e4d5' %>
+    </a>
+  </li>
+<% end %>

@@ -51,14 +51,7 @@
       h1 = link_to author.name, team_member_path(author)
       h2 = author.job_title
       ul.social-icons-list
-        - if author.twitter
-          li: a(href="https://twitter.com/#{author.twitter}" target="_blank") = icon 'e49d'
-        - if author.google_plus_id
-          li: a(href="https://plus.google.com/#{author.google_plus_id}" target="_blank") = icon 'e493'
-        - if author.email
-          li: a(href="mailto:#{author.email}" target="_blank") = icon 'e601'
-        - if author.github
-          li: a(href="https://github.com/#{author.github}" target="_blank") = icon 'e4b8'
+        = team_member_social_list(author)
 
     - if current_page.previous_article || current_page.next_article
       .b-pagination#pagination

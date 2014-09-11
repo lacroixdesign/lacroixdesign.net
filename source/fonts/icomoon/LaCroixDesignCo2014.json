@@ -1,7 +1,7 @@
 {
 	"metadata": {
 		"name": "LaCroixDesignCo2014",
-		"lastOpened": 1409006470819,
+		"lastOpened": 1410476424392,
 		"created": 1398122091067
 	},
 	"iconSets": [
@@ -5098,7 +5098,12 @@
 				},
 				{
 					"id": 1237,
-					"order": 0
+					"order": 13,
+					"prevSize": 32,
+					"code": 58581,
+					"name": "stackoverflow",
+					"tempChar": "",
+					"ligatures": ""
 				},
 				{
 					"id": 1238,
@@ -9693,7 +9698,7 @@
 					],
 					"defaultCode": 57632,
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 289,
@@ -9710,7 +9715,7 @@
 					],
 					"defaultCode": 57633,
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 290,
@@ -9727,7 +9732,7 @@
 					],
 					"defaultCode": 57634,
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 291,
@@ -9743,7 +9748,7 @@
 					],
 					"defaultCode": 57635,
 					"grid": 16,
-					"matchesSearch": true
+					"matchesSearch": false
 				},
 				{
 					"id": 292,
@@ -23705,7 +23710,7 @@
 					],
 					"defaultCode": 58581,
 					"grid": 16,
-					"matchesSearch": false
+					"matchesSearch": true
 				},
 				{
 					"id": 1238,

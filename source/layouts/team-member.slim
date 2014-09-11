@@ -7,14 +7,7 @@
         h1.will-animate.fadeInUp(data-wow-duration="0.7s") = member.name
         h2.will-animate.fadeInUp(data-wow-duration="0.7s") = member.job_title
         ul.social-icons-list.will-animate.fadeInUp(data-wow-duration="0.7s")
-          - if member.twitter
-            li: a(href="https://twitter.com/#{member.twitter}" target="_blank") = icon 'e49d'
-          - if member.google_plus_id
-            li: a(href="https://plus.google.com/#{member.google_plus_id}" target="_blank") = icon 'e493'
-          - if member.email
-            li: a(href="mailto:#{member.email}" target="_blank") = icon 'e601'
-          - if member.github
-            li: a(href="https://github.com/#{member.github}" target="_blank") = icon 'e4b8'
+          = team_member_social_list(member)
 
 
     .l-constrained-medium.b-post-body

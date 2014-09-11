@@ -22,4 +22,10 @@ module TeamHelper
     "/team/#{member.slug}/"
   end
 
+  # Output <li>'s of the user's social links
+  # The <ul> is NOT included
+  def team_member_social_list(member)
+    partial "partials/team_member_social_list", locals: {member:  member}
+  end
+
 end
