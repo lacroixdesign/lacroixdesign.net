@@ -43,7 +43,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: require('node-bourbon').includePaths
     }))
-   language- .pipe(gulp.dest('path/to/output.css'));
+   .pipe(gulp.dest('path/to/output.css'));
 });
 ```
 
@@ -58,7 +58,7 @@ gulp.task('sass', function () {
     .pipe(sass({
       includePaths: require('node-bourbon').with(['first/path', 'second/path'])
     }))
-   language- .pipe(gulp.dest('path/to/output.css'));
+   .pipe(gulp.dest('path/to/output.css'));
 });
 ```
 
