@@ -12,9 +12,14 @@ module TeamHelper
     member
   end
 
-  # Team image path
-  def team_image_path(image, article = current_page)
-    image_path "#{article_path(article)}#{image}"
+  # Team avatar path
+  def team_member_avatar_path(author)
+    image_path("team/#{author.avatar}.jpg")
+  end
+
+  # Team member URL path
+  def team_member_path(member)
+    "/team/#{member.slug}/"
   end
 
 end

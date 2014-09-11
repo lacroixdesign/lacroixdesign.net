@@ -26,7 +26,7 @@
           - if current_page.data.tagline
             h2 = current_page.data.tagline
           time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
-          .author <em>by</em> <strong>#{author.name}</strong>
+          .author <em>by</em> <strong>#{link_to author.name, team_member_path(author)}</strong>
 
   - else
     - if current_page.data.inline_header
@@ -39,13 +39,29 @@
         - if current_page.data.tagline
           h2 = current_page.data.tagline
         time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
-        .author <em>by</em> <strong>#{author.name}</strong>
+        .author <em>by</em> <strong>#{link_to author.name, team_member_path(author)}</strong>
 
-  .b-post-body.l-constrained-medium.b-text
-    article.will-animate.fadeIn(id="post-#{current_page.slug}" data-wow-duration="0.7s" data-wow-delay="0.2s" data-wow-offset="50") = yield
+  .b-post-body.l-constrained-medium.s-post#post
+    article.b-text.will-animate.fadeIn(id="post-#{current_page.slug}" data-wow-duration="0.7s" data-wow-delay="0.2s" data-wow-offset="50") = yield
+
+    .b-author-meta.will-animate.fadeInUp#author
+      .b-author-meta__avatar
+        = link_to team_member_path(author) do
+          img.image-circle.image-fullwidth.pulse-grey-to-pink(src=team_member_avatar_path(author))
+      h1 = link_to author.name, team_member_path(author)
+      h2 = author.job_title
+      ul.social-icons-list
+        - if author.twitter
+          li: a(href="https://twitter.com/#{author.twitter}" target="_blank") = icon 'e49d'
+        - if author.google_plus_id
+          li: a(href="https://plus.google.com/#{author.google_plus_id}" target="_blank") = icon 'e493'
+        - if author.email
+          li: a(href="mailto:#{author.email}" target="_blank") = icon 'e601'
+        - if author.github
+          li: a(href="https://github.com/#{author.github}" target="_blank") = icon 'e4b8'
 
     - if current_page.previous_article || current_page.next_article
-      .b-pagination
+      .b-pagination#pagination
         - current_page.previous_article.tap do |prev_post|
           - if prev_post
             a.will-animate.fadeInLeft(href=prev_post.url class="prev" title=prev_post.title) &larr; Previous Post

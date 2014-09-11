@@ -30,6 +30,8 @@
 .b-post-header,
 .b-post-preview,
 .b-post-cover-header {
+  @include underline-links-on-hover-only;
+
   h1 {
     margin-bottom: 0;
     font-size: 1.5em;

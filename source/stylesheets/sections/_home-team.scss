@@ -50,7 +50,6 @@
 }
 
 .s-team__photos {
-  $border-width: 2px;
   max-width: 20em;
   margin: 2em auto;
   text-align: center;
@@ -60,9 +59,7 @@
     display: inline-block;
     width: 48%;
     max-width: 6em;
-    border: $border-width solid $grey-light;
-    border-radius: 500px;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   article:first-child {
@@ -74,15 +71,14 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: inherit;
   }
 
   article .overlay {
     @include overlay-style;
     @include centered-content-style;
     @include display(flex);
-    @include transition(all 0.3s ease);
-    @include transform-origin(25% 50%);
+    @include transition(all 0.5s ease);
+    @include transform-origin(50% 50%);
     @include transform(scale(0.5));
     opacity: 0;
     padding: 0.5em;
@@ -96,6 +92,7 @@
   article:hover .overlay {
     @include transform(scale(1));
     opacity: 1;
+    border-radius: 500px;
     @include media-ie-only { display: block; }
   }
 

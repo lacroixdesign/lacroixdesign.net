@@ -129,7 +129,9 @@ cover_header: true
              find_team_member_by_name("James LaCroix") ].each_with_index do |member, index| %>
           <article id="<%= member.slug %>" class="will-animate <%= index == 0 ? 'fadeInLeft' : 'fadeInRight' %>" data-wow-duration="0.7s" data-wow-delay="0.2s">
             <a href="/team/<%= member.slug %>">
-              <img src="<%= image_path "team/#{member.avatar}.jpg" %>" alt="<%= member.name %>">
+              <img src="<%= team_member_avatar_path(member) %>"
+                   alt="<%= member.name %>"
+                   class="image-circle pulse-grey-to-pink">
               <div class="overlay"><h1><%= member.name %></h1></div>
             </a>
           </article>

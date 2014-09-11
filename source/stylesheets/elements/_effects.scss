@@ -1,0 +1,26 @@
+@mixin pulse-grey-to-pink-start {
+  box-shadow: 0 0 0 4px $dark-white, 0 0 0 8px rgba($pink, 0.3);
+}
+
+@include keyframes(pulseGreyToPink) {
+  0% {
+    @include pulse-grey-to-pink-start;
+  }
+  50% {
+    box-shadow: 0 0 0 10px $dark-white, 0 0 0 20px rgba($pink, 0.8);
+  }
+  100% {
+    @include pulse-grey-to-pink-start;
+  }
+}
+
+.pulse-grey-to-pink {
+  box-shadow: 0 0 0 2px $grey-light;
+  @include transition(box-shadow 0.1s linear);
+
+  a:hover & {
+    @include pulse-grey-to-pink-start;
+    @include animation(pulseGreyToPink 1.3s linear infinite);
+    @include animation-delay(0.1s);
+  }
+} // .pulse-grey-to-pink

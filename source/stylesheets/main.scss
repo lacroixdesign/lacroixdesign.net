@@ -15,6 +15,7 @@
 @import "lib/ie";
 @import "lib/flexbox";
 @import "lib/utilities";
+@import "lib/styles";
 @import "lib/icomoon";
 @import "lib/animations";
 
@@ -30,6 +31,7 @@
 @import "elements/links";
 @import "elements/media";
 @import "elements/overlays";
+@import "elements/effects";
 @import "elements/live-previews";
 
 // Blocks/modules
@@ -43,6 +45,7 @@
 @import "blocks/posts";
 @import "blocks/pagination";
 @import "blocks/services";
+@import "blocks/authors";
 @import "blocks/interactive-devices";
 
 // Sections
@@ -54,5 +57,6 @@
 @import "sections/home-services";
 @import "sections/home-team";
 @import "sections/case-study";
+@import "sections/posts";
 @import "sections/new-client";
 @import "sections/404";

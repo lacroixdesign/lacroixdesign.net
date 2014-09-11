@@ -1,0 +1,13 @@
+@mixin text-selection-styles {
+  color: $off-white;
+  background: $black;
+}
+
+@mixin underline-self-on-hover-only {
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+@mixin underline-links-on-hover-only {
+  a { @include underline-self-on-hover-only; }
+}

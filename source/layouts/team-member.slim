@@ -3,7 +3,7 @@
 
     .b-hero-team-member(style="background-image: url(#{current_page.data.cover_header});")
       .l-constrained-large
-        img.image-circle.will-animate.fadeInDown(data-wow-duration="0.7s" src=image_path("team/#{member.avatar}.jpg"))
+        img.image-circle.will-animate.fadeInDown(data-wow-duration="0.7s" src=team_member_avatar_path(member))
         h1.will-animate.fadeInUp(data-wow-duration="0.7s") = member.name
         h2.will-animate.fadeInUp(data-wow-duration="0.7s") = member.job_title
         ul.social-icons-list.will-animate.fadeInUp(data-wow-duration="0.7s")

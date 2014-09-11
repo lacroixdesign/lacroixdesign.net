@@ -37,5 +37,5 @@ body {
   }
 } // .flexbox
 
-::-moz-selection { color: $off-white;  background: $black; }
-::selection      { color: $off-white;  background: $black; }
+::-moz-selection { @include text-selection-styles; }
+::selection      { @include text-selection-styles; }

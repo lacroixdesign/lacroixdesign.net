@@ -1,0 +1,32 @@
+.b-author-meta {
+  text-align: center;
+
+  .b-author-meta__avatar {
+    max-width: 6em;
+    margin: 0 auto 1em;
+  }
+
+  h1 {
+    font-size: 1.25em;
+    margin-bottom: 0.25em;
+    @include underline-links-on-hover-only;
+  }
+
+  h2 {
+    margin-bottom: 1em;
+    color: $grey;
+    font-family: $typeface-serif;
+    font-size: 1em;
+    font-size: 0.875em;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  ul {
+    color: $grey;
+
+    a:hover {
+      color: $pink;
+    }
+  } // ul
+} // .b-author-meta
