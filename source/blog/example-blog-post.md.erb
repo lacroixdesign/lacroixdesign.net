@@ -13,6 +13,21 @@ With our inaugural issue nearly complete and subsequent monthly issues already i
 
 With our inaugural issue nearly complete and subsequent monthly issues already in the works, we are pleased to announce the launch of our new email newsletter. Our first issue will be sent out at the beginning of September and we will be regularly creating original content each month.
 
+```language-javascript
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function () {
+  gulp.src('path/to/input.scss')
+    .pipe(sass({
+      includePaths: require('node-bourbon').includePaths
+    }))
+   .pipe(gulp.dest('path/to/output.css'));
+});
+```
+
+With our inaugural issue nearly complete and subsequent monthly issues already in the works, we are pleased to announce the launch of our new email newsletter. Our first issue will be sent out at the beginning of September and we will be regularly creating original content each month.
+
 <%= gist "f3be83a2cabf9e1061fc" %>
 
 With our inaugural issue nearly complete and subsequent monthly issues already in the works, we are pleased to announce the launch of our new email newsletter. Our first issue will be sent out at the beginning of September and we will be regularly creating original content each month.
