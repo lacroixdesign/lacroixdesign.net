@@ -122,6 +122,7 @@
     font-size: #{$ratio}em;
     font-style: italic;
     line-height: 1.5;
+    .gist { font-style: normal; }
   }
 
   pre {
