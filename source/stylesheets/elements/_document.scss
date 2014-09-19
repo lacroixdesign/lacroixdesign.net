@@ -33,7 +33,8 @@ body {
   }
 
   .page-content {
-    flex: 1;
+    flex: 1 0 0;
+    @-moz-document url-prefix() { flex: 1; }
   }
 } // .flexbox
 
