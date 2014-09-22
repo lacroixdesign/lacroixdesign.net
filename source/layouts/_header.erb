@@ -29,14 +29,13 @@
 
 </header>
 
-<nav id="nav" class="b-nav">
-  <div class="wrap">
-    <a href="#menu" id="menu-open" class="b-menu-toggle"><%= icon 'e2af' %></a>
-    <a href="#menu" id="menu-close" class="b-menu-toggle"><%= icon 'e36b' %></a>
-  </div>
-</nav>
+<a id="nav-toggle-btn" href="#menu" data-toggle-nav>
+  <span class="line line-1"></span>
+  <span class="line line-2"></span>
+  <span class="line line-3"></span>
+</a>
 
-<nav id="menu" class="b-menu">
+<nav id="menu" class="b-menu" role="navigation">
   <ul class="b-menu-list">
     <li><a href="/">About</a></li>
     <li><a href="<%= data.urls.work %>">Work</a></li>

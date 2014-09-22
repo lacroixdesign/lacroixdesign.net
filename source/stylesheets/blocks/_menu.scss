@@ -1,9 +1,10 @@
 $nav-menu-open: ".is-menu-open";
 $nav-menu-width: 15em;
+$nav-toggle-size: 2.5em;
 $nav-position-offset: 1em;
 $nav-link-total: 5;
 $nav-transition-time: 0.3s;
-$nav-delay-delta: 0.05;
+$nav-delay-delta: 0.075;
 
 @function nav-delay($position) {
   @return $position * $nav-delay-delta;
@@ -14,115 +15,120 @@ $nav-delay-delta: 0.05;
   @include transition(all $nav-transition-time ease $delay);
 }
 
-body#{$nav-menu-open} {
-  overflow: hidden;
-}
-
 .b-menu-body-overlay {
   position: fixed;
-  top: -1px;
-  left: -1px;
+  top: 0;
+  left: 0;
   z-index: 10;
-  display: block;
-  width: 0;
-  height: 0;
-  background: rgba($black, 0.8);
+  visibility: hidden;
   opacity: 0;
-  @include transition(all 0 ease 1s, opacity ($nav-transition-time / 2) linear);
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba($black, 0.8);
+  @include transition(all $nav-transition-time linear);
 
   #{$nav-menu-open} & {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    visibility: visible;
     opacity: 1;
-    @include transition-delay(0);
   }
 } // .b-menu-body-overlay
 
-.b-nav {
+#nav-toggle-btn {
   position: fixed;
   top: $nav-position-offset;
   right: $nav-position-offset;
   z-index: 1000;
-  @include transition(right #{$nav-transition-time / 2} ease);
+  display: block;
+  width: $nav-toggle-size;
+  height: $nav-toggle-size;
+  background: $white;
   @include animation(fadeIn50 1s ease-in, pulse 0.5s linear 2.5s);
+  @include transition(all 200ms linear);
 
-  #{$nav-menu-open} & > .wrap {
-    @include animation(fadeIn50 0.7s ease);
+  @mixin line-top-position($pos) {
+    $offset: 2px;
+    top: $pos;
+    top: -webkit-calc(#{$pos} - #{$offset});
+    top: -moz-calc(#{$pos} - #{$offset});
+    top: calc(#{$pos} - #{$offset});
   }
 
-  #{$nav-menu-open} & {
-    right: $nav-menu-width + $nav-position-offset;
+  .line {
+    position: absolute;
+    right: 25%;
+    left: 25%;
+    display: block;
+    height: 1px;
+    background: $black;
+    @include transition(all 200ms linear);
   }
-} // .b-nav
+  .line-1 { top: 35%; }
+  .line-2 { top: 50%; }
+  .line-3 { top: 65%; }
 
-
-.b-menu-toggle {
-  position: relative;
-  z-index: 2;
-  display: block;
-  padding: 0 0.5em;
-  background: $medium-white;
-  color: $black;
-  font-family: $typeface-sans;
-  font-size: 125%;
-  font-weight: $bold-weight;
-  line-height: $header-height - ($header-padding * 2);
-  text-decoration: none;
-  text-transform: uppercase;
-  @include transition(none);
-
-  #{$header-cover} &,
-  #{$header-fill} &,
-  #{$nav-menu-open} & {
-    background: $white;
+  &:hover .line {
+    background: $pink;
   }
 
-  i {
-    vertical-align: middle;
-  }
+  .csstransforms3d & {
+    // $line-offset: 8px;
+    $line-offset: 0.4em;
 
-  &:visited {
-    color: $black;
-  }
+    .line {
+      height: 4px;
+      @include line-top-position(50%);
+      @include backface-visibility(hidden);
+      @include transform-origin(center);
+    }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: $pink;
-  }
-} // .b-menu-toggle
+    .line-1 {
+      @include transform( translate(0,-#{$line-offset}) );
+    }
 
-#menu-open {
-  display: block;
-  #{$nav-menu-open} & { display: none; }
-}
-#menu-close {
-  display: none;
-  #{$nav-menu-open} & { display: block; }
-}
+    .line-3 {
+      @include transform( translate(0,#{$line-offset}) );
+    }
+  } // .csstransforms3d &
+
+  .csstransforms3d #{$nav-menu-open} & {
+    .line {
+      @include line-top-position(50%);
+    }
+
+    .line-1 {
+      @include transform( rotate3d(0,0,1,45deg) );
+    }
+
+    .line-2 {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .line-3 {
+      @include transform( rotate3d(0,0,1,-45deg) );
+    }
+  } // .csstransforms3d #{$nav-menu-open} &
+} // #nav-toggle-btn
 
 .b-menu {
   position: fixed;
   top: $nav-position-offset;
-  right: $nav-position-offset;
+  right: $nav-position-offset + $nav-toggle-size;
   z-index: 1000;
-  width: 0;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  width: $nav-menu-width;
   max-height: 95%;
   max-height: -webkit-calc(100% - #{$nav-position-offset});
   max-height: -moz-calc(100% - #{$nav-position-offset});
   max-height: calc(100% - #{$nav-position-offset});
   color: $black-10;
   font-family: $typeface-serif;
-  @include transition-delay($nav-transition-time + nav-delay($nav-link-total + 3));
 
   #{$nav-menu-open} & {
-    overflow: auto;
-    overflow-x: hidden;
-    width: $nav-menu-width;
-    @include transition-delay(0s);
+    visibility: visible;
   }
 } // .b-menu
 

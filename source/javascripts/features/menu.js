@@ -1,8 +1,9 @@
 (function() {
   var ESC_KEY = 27;
+  var MENU_OPEN_CLASS = 'is-menu-open';
 
   function openMenu() {
-    $('body').addClass('is-menu-open');
+    $('body').addClass(MENU_OPEN_CLASS);
     $(document).on('keydown', closeMenuOnEsc);
     $(document).on('click', closeMenu);
     window.clickyEvent(
@@ -12,7 +13,7 @@
   }
 
   function closeMenu() {
-    $('body').removeClass('is-menu-open');
+    $('body').removeClass(MENU_OPEN_CLASS);
     $(document).off('keydown', closeMenuOnEsc);
     $(document).off('click', closeMenu);
     window.clickyEvent(
@@ -28,21 +29,27 @@
     }
   }
 
-  $(document).on('click', '#menu-open, [data-open-nav]', function(event) {
-    event.stopPropagation();
-    event.preventDefault();
+  function toggleMenu() {
+    var isOpen = $('body').hasClass(MENU_OPEN_CLASS);
+    if (isOpen)
+      return closeMenu();
     openMenu();
-  });
-  $(document).on('click', '#menu-close', function(event) {
+  }
+
+  $(document).on('click', '[data-toggle-nav]', function(event) {
     event.stopPropagation();
     event.preventDefault();
-    closeMenu();
+    // openMenu();
+    toggleMenu();
   });
+
   $(document).on('click', '#menu a:not("[target]"):not([href^="mailto:"])', function(event) {
     event.stopPropagation();
     closeMenu();
   });
+
   $(document).on('click', '#menu', function(event) {
     event.stopPropagation();
   });
+
 })();
