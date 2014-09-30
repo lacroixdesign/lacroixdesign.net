@@ -83,13 +83,12 @@
     opacity: 0;
     padding: 0.5em;
     overflow: hidden;
-    background: $white;
     background: rgba($white, 0.7);
     color: $red-chicago;
     @include media-ie-only { display: none; }
   }
 
-  article:hover .overlay {
+  a:hover .overlay {
     @include transform(scale(1));
     opacity: 1;
     border-radius: 500px;
