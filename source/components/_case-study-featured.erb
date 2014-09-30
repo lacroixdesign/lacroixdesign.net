@@ -3,9 +3,9 @@
   delay ||= '0.2s'
 %>
 
-<article
+<div
   id="case-study-<%= project.slug %>"
-  <% if last %> class="ie-omega"<% end %>
+  class="b-featured-work <% if last %>ie-omega<% end %>"
   style="background-image: url('<%= case_study_bg_path(project) %>')">
   <a href="<%= project.url %>">
     <div
@@ -25,4 +25,4 @@
       </div>
     </div>
   </a>
-</article>
+</div>

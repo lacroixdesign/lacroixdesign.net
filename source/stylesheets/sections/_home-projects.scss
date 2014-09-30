@@ -18,10 +18,11 @@
 } // .s-home-projects
 
 .s-home-projects__items {
+  $item: '.b-featured-work';
   $border-radius: 20px;
   @include page-container(none, $max-width);
 
-  article {
+  #{$item} {
     max-width: 20em;
     margin: 0 auto 1em;
     border-radius: $border-radius 0 $border-radius 0;
@@ -36,7 +37,7 @@
     @include transition(border-radius 0.2s ease);
   }
 
-  article:hover {
+  #{$item}:hover {
     border-radius: 0 $border-radius 0 $border-radius;
   }
 
@@ -51,9 +52,9 @@
   }
 
   @include media-ie($breakpoint-ipad) {
-    article { @include span-columns(4); }
+    #{$item} { @include span-columns(4); }
   }
-} // .s-home-projects__items article
+} // .s-home-projects__items #{$item}
 
 .s-home-projects__logo {
   width: 50%;
