@@ -46,7 +46,7 @@
     margin-bottom: 0;
   }
 
-  @include media-ie(568px) {
+  @include media-ie(700px) {
     @include row;
     @include display(flex);
     max-width: 60em;

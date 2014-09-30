@@ -6,12 +6,15 @@
   text-align: center;
 
   header {
+    margin-bottom: 1em;
+  }
+
+  .image-icon {
     max-width: 8em;
     margin: 0 auto 2em;
   }
 
   h2 {
-    margin-bottom: 1em;
     color: $black-20;
     font-size: 0.9375em;
     font-weight: 800;
