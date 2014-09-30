@@ -5,12 +5,12 @@
   }
 %>
 
-<section class="b-slideshow" data-slides>
+<ul class="b-slideshow" data-slides>
 
-  <% slides.each do |img| %>
-    <article id="slide-{id}" class="b-carousel">
+  <% slides.each_with_index do |img, i| %>
+    <li id="slide-<%= i %>" class="b-carousel">
       <%= image_tag img[:src], class: "image-fullwidth", alt: img[:alt] %>
-    </article>
+    </li>
   <% end %>
 
-</section>
+</ul>

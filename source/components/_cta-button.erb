@@ -4,7 +4,7 @@
 <a
   href="<%= data.urls.work_with_us %>"
   class="<%= btn %> typeform-share will-animate pulse"
-  id="<%= id %>"
+  <% if id %>id="<%= id %>"<% end %>
   data-mode="1"
   data-faux-progress
   data-wow-delay="0.5s"

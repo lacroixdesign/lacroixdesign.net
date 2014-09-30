@@ -4,7 +4,7 @@
     var $slideshow = $('[data-slides]');
 
     $slideshow.slick({
-      slide: 'article',
+      slide: 'li',
       dots: true,
       speed: 400,
       fade: false,
