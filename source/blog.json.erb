@@ -1,0 +1,27 @@
+<%
+site_url = "http://www.lacroixdesign.net/"
+src_posts = blog("blog").articles
+
+posts = src_posts.map do |post|
+  author = find_team_member_by_name(post.data.author)
+  thumbnail = post.data.cover_header || post.data.inline_header
+  if thumbnail
+    thumbnail = post_image_path(thumbnail, post)
+  end
+  {
+    title: post.title,
+    link: URI.join(site_url, post.url).to_s,
+    id: URI.join(site_url, post.url).to_s,
+    published: post.date.to_time.iso8601,
+    updated: File.mtime(post.source_file).iso8601,
+    author: {
+      name: author.name
+    },
+    content: post.body, "type" => "html",
+    thumbnail: post_image_path(thumbnail, post)
+  }
+end
+
+%>
+
+<%= posts.to_json %>
