@@ -29,18 +29,5 @@ iframe {
   overflow: hidden;
 }
 
-.flexbox {
-  #content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  .page-content {
-    flex: 1 0 0;
-    @-moz-document url-prefix() { flex: 1; }
-  }
-} // .flexbox
-
 ::-moz-selection { @include text-selection-styles; }
 ::selection      { @include text-selection-styles; }
