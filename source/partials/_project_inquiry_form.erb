@@ -1,0 +1,97 @@
+<% stuff = capture do %>
+  <h1>PROJECT form</h1>
+<% end %>
+
+<%#= stuff %>
+
+<form action=""
+      id="project-inquiry-form"
+      class="b-form b-project-form"
+      name=""
+      method="post"
+      target="_blank">
+  <div class="form__required-indicator">
+    <span class="input__required-asterisk">*</span> indicates required
+  </div>
+
+  <fieldset>
+    <legend>Contact Information</legend>
+
+    <%# Name %>
+    <div class="input__group">
+      <label for="">Your name <span class="input__required-asterisk">*</span></label>
+      <input type="text" value="" name="" id="" class="input">
+    </div>
+
+    <%# Email %>
+    <div class="input__group">
+      <label for="mce-EMAIL">Your email address <span class="input__required-asterisk">*</span></label>
+      <input type="email" value="" name="" id="" class="input">
+    </div>
+
+    <%# Phone %>
+    <div class="input__group">
+      <label for="">Your phone number <span class="input__required-asterisk">*</span></label>
+      <input type="text" value="" name="" id="" class="input">
+    </div>
+
+    <%# Company/Organization %>
+    <div class="input__group">
+      <label for="">Your company or organization name</label>
+      <input type="text" value="" name="" id="" class="input">
+    </div>
+
+    <%# Website %>
+    <div class="input__group">
+      <label for="">Your website</label>
+      <input type="text" value="" name="" id="" class="input">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Project Information</legend>
+
+    <%# Description %>
+    <div class="input__group">
+      <label for="">Describe your project <span class="input__required-asterisk">*</span></label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+
+    <%# Services %>
+    <!-- TODO checkboxes -->
+    <div class="input__group">
+      <label for="">Which of our services will you be needing?</label>
+      <select name="" id="">
+        <option value=""></option>
+      </select>
+    </div>
+
+    <%# Start Date %>
+    <!-- TODO radio buttons -->
+    <div class="input__group">
+      <label for="">When are you looking to start?</label>
+      <select name="" id="">
+        <option value=""></option>
+      </select>
+    </div>
+
+    <%# Budget %>
+    <!-- TODO radio buttons -->
+    <div class="input__group">
+      <label for="">What is the budget for this project? <span class="input__required-asterisk">*</span></label>
+      <select name="" id="">
+        <option value=""></option>
+      </select>
+    </div>
+
+    <%# Success %>
+    <div class="input__group">
+      <label for="">How will you determine the success of this project?</label>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </div>
+  </fieldset>
+
+  <div class="b-form__actions">
+    <button type="submit" name="subscribe" class="btn short">Send</button>
+  </div>
+</form>

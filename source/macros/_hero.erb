@@ -1,0 +1,16 @@
+<section class="b-hero-image <%= classes %>"
+         style="background-image: url('<%= image %>');">
+  <div class="l-constrained">
+    <% if block_given? %>
+      <% if replace %>
+        <%= yield %>
+      <% else %>
+        <div class="b-hero-image__content will-animate fadeInUp"
+             data-wow-duration="0.7s"
+             data-wow-delay="0.2s">
+          <%= yield %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>

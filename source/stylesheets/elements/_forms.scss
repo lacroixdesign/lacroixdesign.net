@@ -1,6 +1,5 @@
 .form__required-indicator {
-  margin-top: 2em;
-  text-align: right;
+  color: $grey-dark;
   font-family: $typeface-sans;
   font-size: 0.5em;
 
@@ -9,3 +8,13 @@
     font-size: 1.5em;
   }
 } // .form__required-indicator
+
+fieldset {
+  border: 1px solid $dark-white;
+  padding: 1.25em 0.75em 0.75em;
+  margin: 0 auto;
+}
+
+legend {
+  font-style: italic;
+}

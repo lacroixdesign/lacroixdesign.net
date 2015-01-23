@@ -5,8 +5,12 @@
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  color: $off-white;
+  color: $white;
   text-align: center;
+
+  &.theme--inverse {
+    color: $black;
+  }
 
   &.hero-image__top-center {
     background-position: top center;

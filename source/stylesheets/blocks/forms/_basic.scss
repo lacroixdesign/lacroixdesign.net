@@ -1,0 +1,17 @@
+.b-form {
+  .form__required-indicator {
+    margin: 2em auto;
+  }
+
+  fieldset {
+    margin-bottom: 1.5em;
+  }
+
+  .input__group {
+    margin-bottom: 1em;
+  }
+
+  .input__group:last-child {
+    margin-bottom: 0;
+  }
+} // .b-form

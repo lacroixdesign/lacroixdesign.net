@@ -1,0 +1,18 @@
+---
+title: "Work with Us"
+above_header: true
+---
+
+<% hero = capture do %><h1>Work with Us</h1><% end %>
+<%= macro_hero(
+    image: asset_url("images/backgrounds/blog-bg.jpg")
+  ) { hero } %>
+
+<section class="l-constrained-medium b-page s-project-inquiry">
+  <div class="will-animate fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <h2>Let's get started!</h2>
+    <h3>Just a few questions to jump-start the process.</h3>
+    <hr>
+    <%= partial "partials/project_inquiry_form" %>
+  </div>
+</section>

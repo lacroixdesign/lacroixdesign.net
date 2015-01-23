@@ -47,6 +47,8 @@
 @import "blocks/services";
 @import "blocks/authors";
 @import "blocks/interactive-devices";
+@import "blocks/forms/basic";
+@import "blocks/forms/project";
 
 // Sections
 @import "sections/header";
@@ -59,4 +61,5 @@
 @import "sections/case-study";
 @import "sections/posts";
 @import "sections/new-client";
+@import "sections/project-inquiry";
 @import "sections/404";
