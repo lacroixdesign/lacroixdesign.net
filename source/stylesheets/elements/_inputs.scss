@@ -35,6 +35,10 @@
     box-shadow: none;
   }
 
+  &.theme--error {
+    background: lighten($pink, 25);
+  }
+
   @include placeholder {
     color: #ccc;
   }
@@ -65,18 +69,97 @@ textarea {
 }
 
 label {
-  color: $grey-dark;
+  color: $black-20;
   font-size: 0.75em;
   font-family: $typeface-sans;
+  cursor: pointer;
 }
 
-.input__group {
+.input--group {
   label {
     display: block;
     margin-bottom: 0.5em;
   }
-} // .input__group
+} // .input--group
 
-.input__required-asterisk {
+.input--help {
+  color: $grey;
+  font-family: $typeface-sans;
+  font-size: 0.65em;
+  font-style: italic;
+}
+
+.input--radio,
+.input--checkbox {
+  position: relative;
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    border: 0;
+  }
+
+  label {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 0.7em;
+    cursor: pointer;
+  }
+
+  label:before {
+    vertical-align: middle;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
+    border: 1px solid $grey-dark;
+    font-size: 1em;
+    line-height: 1em;
+    content: "";
+  }
+
+  input[type="radio"] + label:before {
+    border-radius: 500px;
+  }
+
+  input[type="radio"]:focus + label,
+  input[type="checkbox"]:focus + label {
+    color: $black;
+    &:before { outline: 1px dotted $grey; }
+  }
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label {
+    color: $black;
+    // outline: none;
+  }
+
+  input[type="radio"]:checked + label:before,
+  input[type="checkbox"]:checked + label:before {
+    content: "\2713";
+    border-color: $pink ;
+    background: $pink ;
+    color: $white ;
+    text-align: center;
+  }
+} // .input--checkbox, .input--radio
+
+.input--error-msg {
+  display: block;
+  font-family: $typeface-sans;
+  font-size: 0.65em;
+  font-weight: $bold-weight;
+  color: $pink;
+}
+
+.input--required-asterisk {
   color: $red-chicago;
 }

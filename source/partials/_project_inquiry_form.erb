@@ -1,50 +1,53 @@
-<% stuff = capture do %>
-  <h1>PROJECT form</h1>
-<% end %>
-
-<%#= stuff %>
-
 <form action=""
       id="project-inquiry-form"
+      name="project-inquiry-form"
       class="b-form b-project-form"
-      name=""
       method="post"
       target="_blank">
+
   <div class="form__required-indicator">
-    <span class="input__required-asterisk">*</span> indicates required
+    <span class="input--required-asterisk">*</span> indicates required
   </div>
+
+  <input type="hidden" name="utf8" value="✓">
 
   <fieldset>
     <legend>Contact Information</legend>
 
     <%# Name %>
-    <div class="input__group">
-      <label for="">Your name <span class="input__required-asterisk">*</span></label>
-      <input type="text" value="" name="" id="" class="input">
+    <div class="input--group">
+      <label for="field--name">
+        Your name <span class="input--required-asterisk">*</span>
+      </label>
+      <input type="text" name="name" id="field--name" class="input" required>
     </div>
 
     <%# Email %>
-    <div class="input__group">
-      <label for="mce-EMAIL">Your email address <span class="input__required-asterisk">*</span></label>
-      <input type="email" value="" name="" id="" class="input">
+    <div class="input--group">
+      <label for="field--email">
+        Your email address <span class="input--required-asterisk">*</span>
+      </label>
+      <input type="email" name="email" id="field--email" class="input" required>
     </div>
 
     <%# Phone %>
-    <div class="input__group">
-      <label for="">Your phone number <span class="input__required-asterisk">*</span></label>
-      <input type="text" value="" name="" id="" class="input">
+    <div class="input--group">
+      <label for="field--phone">
+        Your phone number <span class="input--required-asterisk">*</span>
+      </label>
+      <input type="tel" name="phone" id="field--phone" class="input" required>
     </div>
 
     <%# Company/Organization %>
-    <div class="input__group">
-      <label for="">Your company or organization name</label>
-      <input type="text" value="" name="" id="" class="input">
+    <div class="input--group">
+      <label for="field--company">Your company or organization name</label>
+      <input type="text" name="company" id="field--company" class="input">
     </div>
 
     <%# Website %>
-    <div class="input__group">
-      <label for="">Your website</label>
-      <input type="text" value="" name="" id="" class="input">
+    <div class="input--group">
+      <label for="field--website">Your website</label>
+      <input type="url" name="website" id="field--website" class="input">
     </div>
   </fieldset>
 
@@ -52,42 +55,100 @@
     <legend>Project Information</legend>
 
     <%# Description %>
-    <div class="input__group">
-      <label for="">Describe your project <span class="input__required-asterisk">*</span></label>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div class="input--group">
+      <label for="field--description">
+        Describe your project <span class="input--required-asterisk">*</span>
+      </label>
+      <textarea name="description" id="field--description"
+                cols="30" rows="10" required></textarea>
     </div>
 
     <%# Services %>
-    <!-- TODO checkboxes -->
-    <div class="input__group">
-      <label for="">Which of our services will you be needing?</label>
-      <select name="" id="">
-        <option value=""></option>
-      </select>
-    </div>
+    <% services = [
+        "Website / Web Application",
+        "Brand Identity",
+        "Mobile",
+        "Print",
+        "Product Development",
+        "Email Marketing",
+        "SEO / SEM",
+        "Other"
+      ] %>
+    <fieldset class="input--group">
+      <legend>Which of our services will you be needing?</legend>
+      <div class="input--help">Select all that apply</div>
+      <div class="input--options">
+        <% services.each do |value| %>
+          <div class="input--checkbox">
+            <% id = "field--service-#{value.parameterize}" %>
+            <input type="checkbox" name="services" value="<%= value %>" id="<%= id %>">
+            <label for="<%= id %>">
+                <%= value %><% if value == "Other" %>:
+                  <input type="text" name="services" class="size--small">
+                <% end %>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    </fieldset>
 
     <%# Start Date %>
-    <!-- TODO radio buttons -->
-    <div class="input__group">
-      <label for="">When are you looking to start?</label>
-      <select name="" id="">
-        <option value=""></option>
-      </select>
-    </div>
+    <% dates = [
+        "Immediately",
+        "30 – 90 Days",
+        "This Year",
+        "Other"
+      ] %>
+    <fieldset class="input--group">
+      <legend>When are you looking to start?</legend>
+      <div class="input--options">
+        <% dates.each do |value| %>
+          <div class="input--radio">
+            <% id = "field--date-#{value.parameterize}" %>
+            <input type="radio" name="date" value="<%= value %>" id="<%= id %>">
+            <label for="<%= id %>">
+                <%= value %><% if value == "Other" %>:
+                  <input type="text" name="date" class="size--small">
+                <% end %>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    </fieldset>
 
     <%# Budget %>
-    <!-- TODO radio buttons -->
-    <div class="input__group">
-      <label for="">What is the budget for this project? <span class="input__required-asterisk">*</span></label>
-      <select name="" id="">
-        <option value=""></option>
-      </select>
-    </div>
+    <% budgets = [
+        "$10,000 – $15,000",
+        "$15,000 – $25,000",
+        "$25,000 – $50,000",
+        "$50,000 – $75,000",
+        "Over $75,000",
+        "Other"
+      ] %>
+    <fieldset class="input--group">
+      <legend>What is the budget for this project? <span class="input--required-asterisk">*</span></legend>
+      <div class="input--options">
+        <% budgets.each do |value| %>
+          <div class="input--radio">
+            <% id = "field--budget-#{value.parameterize}" %>
+            <input type="radio" name="budget"
+                    value="<%= value %>" id="<%= id %>" required>
+            <label for="<%= id %>">
+                <%= value %><% if value == "Other" %>:
+                  <input type="text" name="budget" class="size--small">
+                <% end %>
+            </label>
+          </div>
+        <% end %>
+      </div>
+    </fieldset>
 
     <%# Success %>
-    <div class="input__group">
-      <label for="">How will you determine the success of this project?</label>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
+    <div class="input--group">
+      <label for="field--success">
+        How will you determine the success of this project?
+      </label>
+      <textarea name="success" id="field--success" cols="30" rows="10"></textarea>
     </div>
   </fieldset>
 

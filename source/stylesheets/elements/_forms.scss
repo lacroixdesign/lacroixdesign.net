@@ -3,7 +3,7 @@
   font-family: $typeface-sans;
   font-size: 0.5em;
 
-  .input__required-asterisk {
+  .input--required-asterisk {
     vertical-align: middle;
     font-size: 1.5em;
   }
@@ -15,6 +15,19 @@ fieldset {
   margin: 0 auto;
 }
 
+fieldset.input--group {
+  padding: 0.5em 0.75em 0.5em;
+  border: 1px solid $medium-white;
+}
+
 legend {
+  font-weight: $bold-weight;
   font-style: italic;
+}
+
+fieldset.input--group legend {
+  @extend label;
+  font-weight: normal;
+  font-style: normal;
+  cursor: default;
 }

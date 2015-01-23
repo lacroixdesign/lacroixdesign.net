@@ -7,11 +7,33 @@
     margin-bottom: 1.5em;
   }
 
-  .input__group {
+  fieldset.input--group {}
+
+  .input--group {
+    margin-bottom: 1.5em;
+  }
+
+  .input--group:last-child,
+  .input--radio:last-child,
+  .input--checkbox:last-child {
+    margin-bottom: 0;
+  }
+
+  .input--help {
     margin-bottom: 1em;
   }
 
-  .input__group:last-child {
-    margin-bottom: 0;
+  .input--radio,
+  .input--checkbox {
+    margin-bottom: 0.25em;
+
+    #{$all-text-inputs} {
+      max-width: 10em;
+      margin-left: 0.5em;
+    }
+  } // .input--checkbox, .input--radio
+
+  .input--error-msg {
+    margin-top: 0.5em;
   }
 } // .b-form
