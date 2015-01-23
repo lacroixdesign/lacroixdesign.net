@@ -80,10 +80,10 @@
         <% services.each do |value| %>
           <div class="input--checkbox">
             <% id = "field--service-#{value.parameterize}" %>
-            <input type="checkbox" name="services" value="<%= value %>" id="<%= id %>">
+            <input type="checkbox" name="services[]" value="<%= value %>" id="<%= id %>">
             <label for="<%= id %>">
                 <%= value %><% if value == "Other" %>:
-                  <input type="text" name="services" class="size--small">
+                  <input type="text" name="" class="size--small">
                 <% end %>
             </label>
           </div>
@@ -107,7 +107,7 @@
             <input type="radio" name="date" value="<%= value %>" id="<%= id %>">
             <label for="<%= id %>">
                 <%= value %><% if value == "Other" %>:
-                  <input type="text" name="date" class="size--small">
+                  <input type="text" name="" class="size--small">
                 <% end %>
             </label>
           </div>
@@ -134,7 +134,7 @@
                     value="<%= value %>" id="<%= id %>" required>
             <label for="<%= id %>">
                 <%= value %><% if value == "Other" %>:
-                  <input type="text" name="budget" class="size--small">
+                  <input type="text" name="" class="size--small">
                 <% end %>
             </label>
           </div>
@@ -152,6 +152,6 @@
   </fieldset>
 
   <div class="b-form__actions">
-    <button type="submit" name="subscribe" class="btn short">Send</button>
+    <button type="submit" class="btn short">Send</button>
   </div>
 </form>
