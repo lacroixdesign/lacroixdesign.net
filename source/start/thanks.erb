@@ -1,11 +1,11 @@
 ---
-title: "Work with Us"
+title: "Thanks! - Work with Us"
 above_header: true
 ---
 
 <% hero = capture do %>
-  <h1>Let's get started!</h1>
-  <h2 class="title--subheading">Just a few questions to jump-start your project.</h2>
+  <h1>Thank you!</h1>
+  <h2 class="title--subheading">We'll be in touch shortly.</h2>
 <% end %>
 <%= macro_hero(
     image: asset_url("images/backgrounds/blog-bg.jpg")
@@ -13,11 +13,8 @@ above_header: true
 
 <section class="l-constrained-medium b-page s-project-inquiry" id="thanks">
   <div class="will-animate fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.2s">
-    <div class="s-project-inquiry__thanks">
-      <h2>Thank you!</h2>
-      <p>We'll be in touch shortly.</p>
-      <hr>
+    <div class="b-simple-callout">
+      <a href="/" class="btn">Return Home</a>
     </div>
-    <%= partial "partials/project_inquiry_form" %>
   </div>
 </section>

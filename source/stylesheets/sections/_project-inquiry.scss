@@ -14,13 +14,4 @@
     font-weight: normal;
     font-style: italic;
   }
-
-  .s-project-inquiry__thanks {
-    display: none;
-    color: $pink;
-  }
-
-  &#thanks:target .s-project-inquiry__thanks {
-    display: block;
-  }
 } // .s-project-inquiry
