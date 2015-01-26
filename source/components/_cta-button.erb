@@ -1,13 +1,11 @@
 <% btn = btn || 'btn' %>
 <% id  = id  || nil %>
 
-<a
-  href="<%= data.urls.work_with_us %>"
-  class="<%= btn %> typeform-share will-animate pulse"
-  <% if id %>id="<%= id %>"<% end %>
-  data-mode="1"
-  data-faux-progress
-  data-wow-delay="0.5s"
-  target="_blank">
+<a href="<%= data.urls.work_with_us %>"
+    class="<%= btn %> will-animate pulse"
+    <% if id %>
+      id="<%= id %>"
+    <% end %>
+  >
   Work With Us
 </a>
