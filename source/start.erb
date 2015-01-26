@@ -3,7 +3,10 @@ title: "Work with Us"
 above_header: true
 ---
 
-<% hero = capture do %><h1>Work with Us</h1><% end %>
+<% hero = capture do %>
+  <h1>Let's get started!</h1>
+  <h2 class="title--subheading">Just a few questions to jump-start your project.</h2>
+<% end %>
 <%= macro_hero(
     image: asset_url("images/backgrounds/blog-bg.jpg")
   ) { hero } %>
@@ -15,9 +18,6 @@ above_header: true
       <p>We'll be in touch shortly.</p>
       <hr>
     </div>
-    <h2>Let's get started!</h2>
-    <h3>Just a few questions to jump-start the process.</h3>
-    <hr>
     <%= partial "partials/project_inquiry_form" %>
   </div>
 </section>
