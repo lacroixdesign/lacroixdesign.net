@@ -1,10 +1,12 @@
 (function() {
+
   var sendPageview = function() {
     var location = window.location.pathname +
         window.location.hash +
         window.location.search;
 
-    if (typeof window.ga !== "undefined")
+    var ga = window[window.GoogleAnalyticsObject];
+    if (typeof ga !== "undefined")
       ga('send', 'pageview', location);
 
     if (typeof window.clicky !== "undefined")
@@ -12,4 +14,5 @@
   };
 
   window.sendPageview = sendPageview;
+
 })();

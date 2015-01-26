@@ -6,20 +6,24 @@
     $('body').addClass(MENU_OPEN_CLASS);
     $(document).on('keydown', closeMenuOnEsc);
     $(document).on('click', closeMenu);
-    window.clickyEvent(
-      document.location.pathname + '#menu-open',
-      'Menu - Open'
-    );
+    _.debounce(function() {
+      window.clickyEvent(
+        document.location.pathname + '#menu-open',
+        'Menu - Open'
+      );
+    }, 300);
   }
 
   function closeMenu() {
     $('body').removeClass(MENU_OPEN_CLASS);
     $(document).off('keydown', closeMenuOnEsc);
     $(document).off('click', closeMenu);
-    window.clickyEvent(
-      document.location.pathname + '#menu-close',
-      'Menu - Close'
-    );
+    _.debounce(function() {
+      window.clickyEvent(
+        document.location.pathname + '#menu-close',
+        'Menu - Close'
+      );
+    }, 300);
   }
 
   function closeMenuOnEsc(event) {

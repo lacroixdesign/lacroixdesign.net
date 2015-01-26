@@ -74,8 +74,10 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '<%= data.site.google_analytics_id %>', '<%= data.site.google_analytics_domain %>');
-      ga('send', 'pageview');
+      ga('create', '<%= data.site.google_analytics_id %>', 'auto');
+      ga('send', 'pageview', {
+        'page': location.pathname + location.search  + location.hash
+      });
     </script>
   <% end %>
 
@@ -99,10 +101,16 @@
   </div>
 
   <%# JavaScripts %>
+  <% jquery = asset_url("javascripts/vendor/jquery-1.11.2.min.js") %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="<%= jquery %>"><\/script>')</script>
   <%= javascript_include_tag  "main" %>
 
   <% if data.site.clicky_analytics_id %>
     <script type="text/javascript">
+      var clicky_custom = clicky_custom || {};
+      clicky_custom.title = document.title.replace(' | LaCroix Design Co.', '');
+
       var clicky_site_ids = clicky_site_ids || [];
       clicky_site_ids.push(<%= data.site.clicky_analytics_id %>);
       (function() {
