@@ -123,7 +123,7 @@ module ComponentHelper
 
   # Embedded tweets
   def tweet(id)
-    url = "https://api.twitter.com/1/statuses/oembed.json?id=#{id}&omit_script=true"
+    url = "https://api.twitter.com/1/statuses/oembed.json?id=#{id}&omit_script=true&align=center&maxwidth=450"
     uri = URI.parse(url)
     res = Net::HTTP.get_response(uri)
     tweet_json = JSON.parse(res.body)

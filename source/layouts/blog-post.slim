@@ -21,7 +21,7 @@
     - content_for :featured_image, post_image_path(current_page.data.cover_header)
     .b-post-cover-header
       = hero_image post_image_path(current_page.data.cover_header) do
-        .l-constrained-medium.b-post-cover-header__content.will-animate.fadeInUp(data-wow-duration="0.7s")
+        .l-constrained-large.b-post-cover-header__content.will-animate.fadeInUp(data-wow-duration="0.7s")
           h1 = current_page.data.title
           - if current_page.data.tagline
             h2 = current_page.data.tagline
@@ -34,14 +34,14 @@
       .b-post-inline-header.will-animate.fadeIn(data-wow-duration="0.7s")
         img.image-fullwidth src=post_image_path(current_page.data.inline_header)
     .b-post-header
-      .l-constrained-medium.will-animate.fadeInUp(data-wow-duration="0.7s")
+      .l-constrained-large.will-animate.fadeInUp(data-wow-duration="0.7s")
         h1 = current_page.data.title
         - if current_page.data.tagline
           h2 = current_page.data.tagline
         time(datetime=current_page.date) = current_page.date.strftime("%B %-d, %Y")
         .author <em>by</em> <strong>#{link_to author.name, team_member_path(author)}</strong>
 
-  .b-post-body.l-constrained-medium.s-post#post
+  .b-post-body.l-constrained-large.s-post#post
     article.b-text.will-animate.fadeIn(id="post-#{current_page.slug}" data-wow-duration="0.7s" data-wow-delay="0.2s" data-wow-offset="50") = yield
 
     .b-author-meta.will-animate.fadeInUp#author
