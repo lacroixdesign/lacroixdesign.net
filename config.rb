@@ -1,4 +1,5 @@
 require "boarding_pass"
+require 'uglifier'
 
 set :helpers_dir, "helpers"
 set :helpers_filename_glob, "**/*_helper.rb"
@@ -127,7 +128,12 @@ configure :build do
             :inline => true
 
   # Minify Javascript on build
-  activate :minify_javascript, :inline => true
+  uglifier = Uglifier.new(output: {
+    inline_script: true
+  })
+  activate :minify_javascript,
+            :inline => true,
+            :compressor => uglifier
 
   # Enable cache buster
   activate :asset_hash, :ignore => [%r{^fonts/cloud}]
