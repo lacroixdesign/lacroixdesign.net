@@ -1,7 +1,19 @@
+/*
+* ------------------------------------------------
+* Page
+* ------------------------------------------------
+*/
+
 .b-page {
   margin-top: 3em;
   margin-bottom: 3em;
 }
+
+/*
+* ------------------------------------------------
+* Section
+* ------------------------------------------------
+*/
 
 .b-section {
   padding-top: 2em;
@@ -11,6 +23,12 @@
     margin-bottom: 2em;
   }
 } // .b-section
+
+/*
+* ------------------------------------------------
+* Text component
+* ------------------------------------------------
+*/
 
 .b-text-component {
   padding: 2.5em 0;
@@ -32,16 +50,22 @@
   }
 } // .b-text-component
 
+/*
+* ------------------------------------------------
+* Split component
+* ------------------------------------------------
+*/
+
 .b-split-component {
   display: table;
   width: 100%;
   text-align: center;
 
-  > article {
-    padding: 2.5em 0;
+  article {
+    padding: 4em 0;
   }
 
-  > aside {
+  aside {
     min-height: 25em;
     background-position: center center;
     -webkit-background-size: cover;
@@ -57,27 +81,21 @@
   &.has-fixed-bg {
     background-attachment: fixed;
   }
-
-  @include media-ie($breakpoint-ipad) {
-    aside,
-    article {
-      display: table-cell;
-      width: 50%;
-      min-height: none;
-    }
-
-    .left {
-      margin-right: 0;
-    }
-
-    .right {
-      margin-left: 0;
-    }
-  } // $breakpoint-ipad
-
-  @include media-ie($breakpoint-large-screen) {
-    .b-split-component__text {
-      font-size: 1.5em;
-    }
-  } // $breakpoint-large-screen
 } // .b-split-component
+
+@mixin split-component-desktop-styles {
+  aside,
+  article {
+    display: table-cell;
+    width: 50%;
+    min-height: 0;
+  }
+
+  .left {
+    margin-right: 0;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+} // $breakpoint-ipad

@@ -22,12 +22,6 @@
   }
 } // .s-case-studies
 
-.s-case-study__hero-content {
-  .title--subheading {
-    margin: 1em 0 0;
-  }
-} // .s-case-study__hero-content
-
 .s-case-studies__list {
   @include animation(fadeIn50 1s ease);
 

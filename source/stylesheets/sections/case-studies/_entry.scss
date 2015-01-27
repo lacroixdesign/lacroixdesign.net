@@ -1,0 +1,79 @@
+/*
+* ------------------------------------------------
+* Hero
+* ------------------------------------------------
+*/
+
+.s-case-study__hero-content {
+  .title--subheading {
+    margin: 1em 0 0;
+  }
+} // .s-case-study__hero-content
+
+/*
+* ------------------------------------------------
+* Text component
+* ------------------------------------------------
+*/
+
+.s-case-study .b-text-component {
+  @include media-ie(500px) {
+    padding: 3em 0;
+  }
+
+  @include media-ie(700px) {
+    padding: 4em 0;
+  }
+
+  @include media-ie(1000px) {
+    padding: 5em 0;
+  }
+} // .s-case-study .b-text-component
+
+/*
+* ------------------------------------------------
+* Split component
+* ------------------------------------------------
+*/
+
+.s-case-study .b-split-component {
+  @include media-ie(500px) {
+    article { padding: 5em 0; }
+  }
+
+  @include media-ie(700px) {
+    article { padding: 6em 0; }
+  }
+
+  @include media-ie($breakpoint-ipad) {
+    @include split-component-desktop-styles;
+  }
+
+  @include media-ie(1000px) {
+    article { padding: 7em 0; }
+  }
+
+  @include media-ie(1100px) {
+    article { padding: 8em 0; }
+  }
+
+  @include media-ie($breakpoint-large-screen) {
+    .b-split-component__text {
+      font-size: 1.5em;
+    }
+
+    article {
+      padding: 10em 0;
+    }
+  } // $breakpoint-large-screen
+} // .s-case-study .b-split-component
+
+/*
+* ------------------------------------------------
+* Interactive devices
+* ------------------------------------------------
+*/
+
+.s-case-study .b-interactive-devices {
+  padding: 5em 0;
+}
