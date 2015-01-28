@@ -19,7 +19,12 @@
 */
 
 .s-post__more-posts {
+  display: none;
   margin-top: 3em;
+
+  &.is--loaded {
+    display: block;
+  }
 
   .b-post-box {
     min-height: 18em;
@@ -43,8 +48,11 @@
 */
 
 .flexbox .s-post__more-posts {
+  @include flex-wrap(wrap);
+
+  &.is--loaded {
     @include display(flex);
-    @include flex-wrap(wrap);
+  }
 
   .b-post-box {
     width: 100%;

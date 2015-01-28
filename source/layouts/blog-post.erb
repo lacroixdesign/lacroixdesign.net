@@ -77,9 +77,9 @@
 
   </div>
 
-  <section class="s-post__more-posts" style="display:none;"
-            data-random-posts="<%= current_page.url %>">
-    <%= partial "partials/random_posts" %>
+  <section class="s-post__more-posts"
+            data-current-post="<%= current_page.url %>"
+            data-random-posts="3">
   </section>
 
 <% end %>

@@ -5,5 +5,7 @@
 //= require vendor/jquery.fitvids
 //= require vendor/gist-embed
 //= require vendor/prism.min
+//= require vendor/moment.min
+//= require vendor/hogan-3.0.2.min
 //= require_tree ./lib
 //= require_tree ./features

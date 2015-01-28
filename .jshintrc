@@ -71,5 +71,5 @@
   "passfail"      : false,
   "white"         : false,
 
-  "predef"        : [ "Modernizr", "_" ]
+  "predef"        : [ "Modernizr", "_", "Hogan", "moment" ]
 }

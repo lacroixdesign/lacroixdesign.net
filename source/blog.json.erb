@@ -3,25 +3,25 @@ site_url = "http://www.lacroixdesign.net/"
 src_posts = blog("blog").articles
 
 posts = src_posts.map do |post|
-  author = find_team_member_by_name(post.data.author)
-  thumbnail = post.data.image
-  if thumbnail
-    thumbnail = post_image_path(thumbnail, post)
-  end
+  author = page_author(post)
   {
+    id: post.url,
     title: post.title,
-    link: URI.join(site_url, post.url).to_s,
-    id: URI.join(site_url, post.url).to_s,
+    description: page_description,
+    url: URI.join(site_url, post.url).to_s,
+    path: post.url,
     published: post.date.to_time.iso8601,
     updated: File.mtime(post.source_file).iso8601,
     author: {
-      name: author.name
+      name: author.name,
+      url: URI.join(site_url, team_member_path(author)).to_s,
+      path: team_member_path(author),
+      thumbnail: team_member_avatar_path(author)
     },
-    content: post.body, "type" => "html",
-    thumbnail: post_image_path(thumbnail, post)
+    content: post.body,
+    thumbnail: page_image(post)
   }
 end
-
 %>
 
 <%= posts.to_json %>
