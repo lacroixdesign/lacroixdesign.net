@@ -43,10 +43,8 @@
 */
 
 .flexbox .s-post__more-posts {
-  .b-post-box-set {
     @include display(flex);
     @include flex-wrap(wrap);
-  }
 
   .b-post-box {
     width: 100%;

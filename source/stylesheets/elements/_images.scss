@@ -34,3 +34,50 @@
   -webkit-background-size: cover;
   background-size: cover;
 }
+
+/*
+* ------------------------------------------------
+* Background image
+* ------------------------------------------------
+*/
+
+.image--bg-holder {
+  position: relative;
+  overflow: hidden;
+}
+
+.image--bg-link {
+  @include position(absolute, 0 0 0 0);
+  overflow: hidden;
+  display: block;
+  opacity: 1;
+  @include transform( scale(1.0) );
+  @include transition( transform 0.15s ease-in-out, opacity 0.15s ease-in-out );
+}
+
+a.image--bg-link:hover,
+.image--bg-holder:hover a.image--bg-link {
+  opacity: 0.7;
+  cursor: pointer;
+  @include transform( scale(1.025) );
+}
+
+.image--bg {
+  @include position(absolute, 0 0 0 0);
+  @extend .image--cover;
+  background-image: image-url('backgrounds/blog-bg.jpg');
+}
+
+.image--bg:after {
+  @include position(absolute, 0 0 0 0);
+  content: '';
+}
+.theme--medium-dark.image--bg:after {
+  background: rgba($black, 0.2);
+}
+.theme--dark.image--bg:after {
+  background: rgba($black, 0.4);
+}
+.theme--very-dark.image--bg:after {
+  background: rgba($black, 0.7);
+}

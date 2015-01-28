@@ -1,58 +1,6 @@
 .b-post-box {
-  position: relative;
-  overflow: hidden;
   padding: $page-gutter;
   background: $black;
-
-  /*
-  * ------------------------------------------------
-  * Background wrapper
-  * ------------------------------------------------
-  */
-
-  .b-post-box__bg,
-  .b-post-box__bg-link {
-    @include position(absolute, 0 0 0 0);
-    overflow: hidden;
-  }
-
-  .b-post-box__bg-link {
-    display: block;
-    opacity: 1;
-    @include transform( scale(1.0) );
-    @include transition( transform 0.15s ease-in-out, opacity 0.15s ease-in-out );
-  }
-
-  a.b-post-box__bg-link:hover,
-  &:hover a.b-post-box__bg-link {
-    opacity: 0.7;
-    cursor: pointer;
-    @include transform( scale(1.025) );
-  }
-
-  /*
-  * ------------------------------------------------
-  * Background image
-  * ------------------------------------------------
-  */
-
-  .b-post-box__bg-image {
-    @include position(absolute, 0 0 0 0);
-    @extend .image--cover;
-    background-image: image-url('backgrounds/blog-bg.jpg');
-  }
-
-  .b-post-box__bg-image:after {
-    @include position(absolute, 0 0 0 0);
-    background: rgba(0,0,0, 0.2);
-    content: '';
-  }
-
-  /*
-  * ------------------------------------------------
-  * Metadata
-  * ------------------------------------------------
-  */
 
   .b-post-box__meta {
     position: relative;

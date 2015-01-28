@@ -2,10 +2,11 @@ module MacroHelper
 
   # Hero
   def macro_hero(**data, &block)
-    required = [:image, :replace, :classes]
+    required = [:image, :replace, :classes, :theme]
     opts = {
       replace: false,
-      classes: ""
+      classes: "",
+      theme: ""
     }.merge(data)
     macro("hero", opts, required, &block)
   end

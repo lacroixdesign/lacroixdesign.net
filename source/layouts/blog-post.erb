@@ -13,12 +13,18 @@
           <%= current_page.date.strftime("%B %-d, %Y") %>
         </time>
         <div class="author">
-          <em>by</em> <strong>#{link_to page_author.name, team_member_path(page_author)}</strong>
+          <em>by</em> <strong><%= link_to page_author.name, team_member_path(page_author) %></strong>
         </div>
       </div>
     <% end %>
+
     <div class="b-post-cover-header">
-      <%= hero_image(post_image_path(current_page.data.image)) { cover_header_content } %>
+      <%= macro_hero(
+          image: asset_url(post_image_path(current_page.data.image)),
+          classes: "image--bg-holder",
+          replace: true,
+          theme: "theme--very-dark"
+        ) { cover_header_content } %>
     </div>
 
   <% else %>
@@ -71,7 +77,8 @@
 
   </div>
 
-  <section class="s-post__more-posts" style="display:none;">
+  <section class="s-post__more-posts" style="display:none;"
+            data-random-posts="<%= current_page.url %>">
     <%= partial "partials/random_posts" %>
   </section>
 

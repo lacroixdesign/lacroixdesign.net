@@ -82,6 +82,9 @@
       <%= yield %>
     </div>
     <%= partial "layouts/includes/footer" %>
+    <% if content_for? :post_footer %>
+      <%= yield_content :post_footer %>
+    <% end %>
     <div class="b-menu-body-overlay"></div>
   </div>
 
