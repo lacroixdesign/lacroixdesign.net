@@ -68,6 +68,10 @@ a.image--bg-link:hover,
   background-image: image-url('backgrounds/blog-bg.jpg');
 }
 
+.image--bg ~ * {
+  position: relative;
+}
+
 .image--bg:after {
   @include position(absolute, 0 0 0 0);
   content: '';
