@@ -4,7 +4,7 @@ tagline: "We recently designed and developed a new responsive website for explor
 date: "2015-01-28 15:00"
 author: "James LaCroix"
 published: true
-image: "new-work-chicago-food-magazine.jpg"
+image: "website-launch-chicago-food-magazine.jpg"
 cover_header: true
 ---
 
