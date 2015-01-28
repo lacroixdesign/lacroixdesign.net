@@ -51,6 +51,7 @@ module PageHelper
   end
 
   def page_social_image(page = current_page)
+    # TODO check for 'social_image' property
     if page_image
       page_image
     else

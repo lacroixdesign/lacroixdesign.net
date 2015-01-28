@@ -65,36 +65,14 @@
       </ul>
     </div>
 
-    <% if current_page.previous_article || current_page.next_article %>
-      <div class="b-pagination" id="pagination">
-        <% current_page.previous_article.tap do |prev_post| %>
-          <% if prev_post %>
-            <a class="prev will-animate fadeInLeft"
-                href="<%= prev_post.url %>"
-                title="<%= prev_post.title %>">
-              &larr; Previous Post
-            </a>
-          <% end %>
-        <% end %>
-        <% current_page.next_article.tap do |next_post| %>
-          <% if next_post %>
-            <a class="next will-animate fadeInRight"
-                href="<%= next_post.url %>"
-                title="<%= next_post.title %>">
-              Next Post &rarr;
-            </a>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-
     <div class="b-post-cta">
       <%= component "cta-button" %>
     </div>
 
-    <%#<section class="s-post__more-posts" style="display:none;">
-      <%= partial "partials/random_posts" %>
-    <%#</section>%>
   </div>
+
+  <section class="s-post__more-posts" style="display:none;">
+    <%= partial "partials/random_posts" %>
+  </section>
 
 <% end %>

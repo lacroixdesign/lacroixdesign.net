@@ -10,7 +10,8 @@ $input-height-normal: 1em;
 $input-height-large:  1.125em;
 
 // Layout widths
-$max-width: 1200px;
+$max-width:       60em; // 1200px / 20px
+$max-width-media: 75em; // 1200px / 16px
 $layout-width-small:  20em;
 $layout-width-medium: 30em;
 $layout-width-large:  40em;

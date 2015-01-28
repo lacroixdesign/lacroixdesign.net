@@ -1,27 +1,28 @@
-<div class="b-post-grid" data-random-posts="3" style="display:block;">
-  <% blog("blog").articles[0..2].each do |post| %>
-    <div class="b-post-grid">
+<div class="b-post-box-set" data-random-posts="3">
+  <% blog("blog").articles.shuffle[0..2].each do |post| %>
+    <div class="b-post-box">
 
-      <a class="b-post-grid__bg" href="<%= post.url %>"></a>
-
-      <div class="b-post-grid__bg">
-        <a href="<%= post.url %>" class="b-post-grid__link">
-          <div style="background-image: url('{{ imageUrl }}')"
-          class="b-post-grid__bg-image"></div>
+      <%# Background image %>
+      <div class="b-post-box__bg">
+        <a href="<%= post.url %>" class="b-post-box__bg-link">
+          <div class="b-post-box__bg-image"
+                <% if page_image(post) %>
+                  style="background-image: url('<%= page_image(post) %>')"
+                <% end %>></div>
         </a>
       </div>
 
-      <div class="b-post-grid__meta">
-        <h1>
-          <a href="<%= post.url %>"><%= post.title %></a>
-        </h1>
-        <% if post.data.tagline %>
-          <h2>
-            <a href="<%= post.url %>"><%= post.data.tagline %></a>
-          </h2>
-        <% end %>
+      <%# Meta %>
+      <a class="b-post-box__meta b-post-preview will-animate fadeIn"
+            data-wow-duration="0.7s"
+            data-wow-delay="0.2s"
+            href="<%= post.url %>">
+        <h1><%= post.title %></h1>
         <time datetime="<%= post.date %>"><%= post.date.strftime "%B %-d, %Y" %></time>
-      </div>
+        <% if post.data.tagline %>
+          <h2><%= post.data.tagline %></h2>
+        <% end %>
+      </a>
 
     </div>
   <% end %>

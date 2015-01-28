@@ -27,3 +27,10 @@
   margin: auto;
   img { width: 100%; }
 }
+
+.image--cover {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
