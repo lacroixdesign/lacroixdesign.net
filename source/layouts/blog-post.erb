@@ -20,7 +20,7 @@
 
     <div class="b-post-cover-header">
       <%= macro_hero(
-          image: asset_url(post_image_path(current_page.data.image)),
+          image: page_image,
           classes: "image--bg-holder",
           replace: true,
           theme: "theme--very-dark"
@@ -32,7 +32,7 @@
     <% if current_page.data.inline_header %>
       <% content_for :featured_image, post_image_path(current_page.data.image) %>
       <div class="b-post-inline-header will-animate fadeIn" data-wow-duration="0.7s">
-        <img class="image-fullwidth" src="<%= post_image_path(current_page.data.image) %>">
+        <img class="image-fullwidth" src="<%= page_image %>">
       </div>
     <% end %>
     <div class="b-post-header">
