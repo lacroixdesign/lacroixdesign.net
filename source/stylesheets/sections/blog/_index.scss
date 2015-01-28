@@ -1,0 +1,12 @@
+.s-posts-index {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  article {
+    margin-bottom: 3em;
+  }
+
+  article:last-child {
+    margin-bottom: 0;
+  }
+} // .s-posts-index

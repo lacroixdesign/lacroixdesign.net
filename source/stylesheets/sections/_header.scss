@@ -13,11 +13,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    @include linear-gradient(rgba($black, 0.2), transparent, $fallback: transparent);
-  }
-
-  &.has-no-gradient {
-    background-image: none;
   }
 } // .s-header
 

@@ -3,11 +3,12 @@
 %>
 
 <article class="b-case-study-preview" id="case-study-<%= item.slug %>">
+  <% color = rgba (item.data.color || data.colors.black), 0.4 %>
   <a
     href="<%= item.url %>"
     style="
       background-image: url('<%= case_study_bg_path(item) %>');
-      background-color: <%= rgba (item.data.color || data.colors.black), 0.4 %>;
+      background-color: rgba(<%= color.rgba.join(",") %>);
     ">
     <div
       class="content-wrap will-animate fadeIn"

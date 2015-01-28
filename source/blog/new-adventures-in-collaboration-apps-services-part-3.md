@@ -2,9 +2,10 @@
 title: "New Adventures In Collaboration (Part 3)"
 tagline: "Newly implemented services for working remotely."
 date: 2013-01-18 12:00
-inline_header: "collaboration-part-3.jpg"
-above_header: true
 author: "James LaCroix"
+image: "collaboration-part-3.jpg"
+inline_header: true
+above_header: true
 ---
 
 In the [first post](/blog/new-adventures-in-collaboration-apps-services-part-1) of this series, I talked about the tools that we are regularly using for collaboration internally at [LaCroix Design Co.](/) and for external collaboration with our clients. The [second installment](/blog/new-adventures-in-collaboration-apps-services-part-2) delved into the services and applications that facilitate the collaborative iteration in our design process. We see our process as one that is evolving and ever improving. Therefore, this third and final post on our collaborative tools will focus on tools that we have recently implemented into our routine. Since we are always experimenting, this is far from exhaustive. Rather, it represents tools that we expect to remain in our arsenal for some time.

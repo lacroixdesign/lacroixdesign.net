@@ -2,9 +2,10 @@
 title: "What Does Success Look Like?"
 tagline: "The value of defining expectations."
 date: 2013-04-04 12:00
-inline_header: "success.jpg"
-above_header: true
 author: "James LaCroix"
+image: "success.jpg"
+inline_header: true
+above_header: true
 ---
 
 Prior to starting any new project with a client, it's typical to ask a lot of questions. Often, these inquiries help us get a good idea of what the client's business and values are like. Additionally, it helps us to determine the technologies, features and scope involved with the project. However, there is one question that ends up being most important -- "What does success look like?"

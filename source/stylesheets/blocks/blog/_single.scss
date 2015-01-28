@@ -1,24 +1,3 @@
-.b-post-feed-hero {
-  background-color: $black;
-  background-image: image-url('backgrounds/blog-bg.jpg');
-  background-position: top center;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-.b-posts {
-  margin-top: 3em;
-  margin-bottom: 3em;
-
-  article {
-    margin-bottom: 3em;
-  }
-
-  article:last-child {
-    margin-bottom: 0;
-  }
-} // .b-posts
-
 .b-post-preview {
   h1,
   h2 {

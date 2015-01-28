@@ -2,10 +2,11 @@
 title: Lessons Learned From Working Remotely
 tagline: How a year of remote work transformed our operation.
 date: "2014-08-19 9:00"
-inline_header: "lessons-learned-from-working-remotely.jpg"
 author: "James LaCroix"
-above_header: true
 published: true
+image: "lessons-learned-from-working-remotely.jpg"
+inline_header: true
+above_header: true
 ---
 
 From day one, my business has been a laboratory for experimentation. My time spent working in the music industry piqued my interest in entrepreneurship and small business ventures, but I initially knew very little about running a design studio. With no previous experience as a design employee, my company was a blank canvas for how a design studio could be run. Of course, this has resulted in plenty of mistakes and hard lessons but over time, I've continually welcomed the opportunity to experiment with all aspects of the business.

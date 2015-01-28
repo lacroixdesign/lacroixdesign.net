@@ -2,10 +2,11 @@
 title: "Setting Goals For Your Web Project"
 tagline: "How to make your next web project successful."
 date: 2013-04-15 12:00
-inline_header: "goals.jpg"
-above_header: true
 author: "James LaCroix"
 published: true
+image: "goals.jpg"
+inline_header: true
+above_header: true
 ---
 
 Every great design project begins with clear goals. In a recent post, we wrote about why we ask our clients, "[What Does Success Look Like?](/blog/what-does-success-look-like/)" Setting concrete goals for a project makes way for successful outcomes. It also creates a path to measure how design adds value to your business.

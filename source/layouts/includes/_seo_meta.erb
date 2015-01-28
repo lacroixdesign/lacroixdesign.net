@@ -1,0 +1,33 @@
+<%# Basic  %>
+<title><%= page_browser_title %></title>
+<meta name="description" content="<%= page_description %>">
+<link rel="canonical" href="<%= page_url %>">
+
+<%# Facebook  %>
+<meta property="fb:app_id" content="<%= data.site.facebook_app_id %>">
+<meta property="og:title" content="<%= page_title %>">
+<meta property="og:type" content="<%= page_fb_type %>">
+<meta property="og:image" content="<%= page_social_image %>">
+<meta property="og:url" content="<%= page_url %>">
+<meta property="og:description" content="<%= page_description %>">
+<meta property="og:site_name" content="<%= data.site.title %>">
+<% if page_author %>
+  <meta property="article:author" content="<%= page_author.facebook %>">
+<% end %>
+
+<%# Twitter  %>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lacroixdesign">
+<meta name="twitter:title" content="<%= page_title %>">
+<meta name="twitter:description" content="<%= page_description %>">
+<% if page_author %>
+  <meta name="twitter:creator" content="@<%= page_author.twitter %>">
+<% end %>
+<% if page_image %>
+  <meta name="twitter:image:src" content="<%= page_social_image %>">
+<% end %>
+
+<%# Google authorship %>
+<% if page_author %>
+  <link rel="author" href="https://plus.google.com/<%= page_author.google_plus_id %>"></link>
+<% end %>

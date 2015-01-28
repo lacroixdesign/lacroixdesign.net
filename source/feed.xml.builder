@@ -20,8 +20,7 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
       # xml.summary article.summary, "type" => "html"
       xml.content article.body, "type" => "html"
       thumbnail = nil
-      thumbnail ||= article.data.cover_header
-      thumbnail ||= article.data.inline_header
+      thumbnail ||= article.data.image
       if thumbnail
         xml.media :thumbnail,
                   "xmlns:media" => "http://search.yahoo.com/mrss/",

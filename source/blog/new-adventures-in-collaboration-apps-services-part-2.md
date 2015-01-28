@@ -2,9 +2,10 @@
 title: "New Adventures In Collaboration (Part 2)"
 tagline: "Apps & services for design iteration when working remotely."
 date: 2013-01-17 12:00
-inline_header: "collaboration-part-2.jpg"
-above_header: true
 author: "James LaCroix"
+image: "collaboration-part-2.jpg"
+inline_header: true
+above_header: true
 ---
 
 In the [first part](/blog/new-adventures-in-collaboration-apps-services-part-1) of this series, I wrote about the applications and services that we are constantly using for collaboration. However, as we conceive, iterate and perfect the products that we are designing and developing, there are several services in the background that make collaborating as team much easier.

@@ -2,9 +2,10 @@
 title: "Why Choose Responsive Web Design?"
 tagline: "The benefits of a flexible web experience."
 date: 2013-04-01 12:00
-inline_header: "responsive.jpg"
-above_header: true
 author: "James LaCroix"
+image: "responsive.jpg"
+inline_header: true
+above_header: true
 ---
 
 A little over a year ago, we designed our first responsive website. <a href="http://alistapart.com/article/responsive-web-design" target="_blank">Responsive web design</a> was something that we had been following for awhile but had yet to try on our own. We had both recently read <a href="http://ethanmarcotte.com" target="_blank">Ethan Marcotte's</a> <a href="http://www.abookapart.com/products/responsive-web-design" target="_blank">wonderful book</a> and were in the midst of designing materials for <a href="http://nashville.aiga.org" target="_blank">AIGA Nashville's</a> 2012 Student Design Conference, Dish. It just so happened that on this Saturday afternoon, we decided that we were going to take a crack at it and complete the project in a day. It took all night &mdash and several bottles of sake &mdash to complete and as the sun came up, we had our first, albeit very basic, responsive site.

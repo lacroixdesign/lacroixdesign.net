@@ -2,10 +2,11 @@
 title: Doing More With Less
 tagline: A little background on our new site.
 date: "2014-05-27 12:30"
-inline_header: "doing-more-with-less.jpg"
 author: "James LaCroix"
-above_header: true
 published: true
+image: "doing-more-with-less.jpg"
+inline_header: true
+above_header: true
 ---
 
 After a couple of months of hard work, we recently launched a new site for LaCroix Design Co. Odds are if you are reading this, you've seen the site and I hope that you are enjoying it.

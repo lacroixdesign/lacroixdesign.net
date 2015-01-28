@@ -1,0 +1,100 @@
+<% wrap_layout :base do %>
+
+  <% if current_page.data.cover_header %>
+
+    <% content_for :featured_image, post_image_path(current_page.data.image) %>
+    <% cover_header_content = capture do %>
+      <div class="l-constrained-large b-post-cover-header__content will-animate fadeInUp" data-wow-duration="0.7s">
+        <h1><%= current_page.data.title %></h1>
+        <% if current_page.data.tagline %>
+          <h2><%= current_page.data.tagline %></h2>
+        <% end %>
+        <time datetime=current_page.date>
+          <%= current_page.date.strftime("%B %-d, %Y") %>
+        </time>
+        <div class="author">
+          <em>by</em> <strong>#{link_to page_author.name, team_member_path(page_author)}</strong>
+        </div>
+      </div>
+    <% end %>
+    <div class="b-post-cover-header">
+      <%= hero_image(post_image_path(current_page.data.image)) { cover_header_content } %>
+    </div>
+
+  <% else %>
+
+    <% if current_page.data.inline_header %>
+      <% content_for :featured_image, post_image_path(current_page.data.image) %>
+      <div class="b-post-inline-header will-animate fadeIn" data-wow-duration="0.7s">
+        <img class="image-fullwidth" src="<%= post_image_path(current_page.data.image) %>">
+      </div>
+    <% end %>
+    <div class="b-post-header">
+      <div class="l-constrained-large will-animate fadeInUp" data-wow-duration="0.7s">
+        <h1><%= current_page.data.title %></h1>
+        <% if current_page.data.tagline %>
+          <h2><%= current_page.data.tagline %></h2>
+        <% end %>
+        <time datetime="<%= current_page.date %>">
+          <%= current_page.date.strftime("%B %-d, %Y") %>
+        </time>
+        <div class="author">
+          <em>by</em> <strong><%= link_to page_author.name, team_member_path(page_author) %></strong>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+
+  <div class="b-post-body l-constrained-large s-post" id="post">
+    <article class="b-text will-animate fadeIn" id="post-<%= current_page.slug %>" data-wow-duration="0.7s" data-wow-delay="0.2s" data-wow-offset="50">
+      <%= yield %>
+    </article>
+
+    <div class="b-author-meta will-animate fadeInUp" id="author">
+      <div class="b-author-meta__avatar">
+        <% img = capture do %>
+          <img class="image-circle image-fullwidth pulse-grey-to-pink" src="<%= team_member_avatar_path(page_author) %>">
+        <% end %>
+        <%= link_to img, team_member_path(page_author) %>
+      </div>
+      <h1><%= link_to page_author.name, team_member_path(page_author) %></h1>
+      <h2><%= page_author.job_title %></h2>
+      <ul class="social-icons-list">
+        <%= team_member_social_list(page_author) %>
+      </ul>
+    </div>
+
+    <% if current_page.previous_article || current_page.next_article %>
+      <div class="b-pagination" id="pagination">
+        <% current_page.previous_article.tap do |prev_post| %>
+          <% if prev_post %>
+            <a class="prev will-animate fadeInLeft"
+                href="<%= prev_post.url %>"
+                title="<%= prev_post.title %>">
+              &larr; Previous Post
+            </a>
+          <% end %>
+        <% end %>
+        <% current_page.next_article.tap do |next_post| %>
+          <% if next_post %>
+            <a class="next will-animate fadeInRight"
+                href="<%= next_post.url %>"
+                title="<%= next_post.title %>">
+              Next Post &rarr;
+            </a>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="b-post-cta">
+      <%= component "cta-button" %>
+    </div>
+
+    <%#<section class="s-post__more-posts" style="display:none;">
+      <%= partial "partials/random_posts" %>
+    <%#</section>%>
+  </div>
+
+<% end %>

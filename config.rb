@@ -124,7 +124,7 @@ set :fonts_dir,  'fonts'
 configure :build do
   # For example, change the Compass output style for deployment
   activate :minify_css,
-            :ignore => [%r{fonts}],
+            :ignore => ['fonts', 'stylesheets/cloud'],
             :inline => true
 
   # Minify Javascript on build

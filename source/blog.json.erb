@@ -4,7 +4,7 @@ src_posts = blog("blog").articles
 
 posts = src_posts.map do |post|
   author = find_team_member_by_name(post.data.author)
-  thumbnail = post.data.cover_header || post.data.inline_header
+  thumbnail = post.data.image
   if thumbnail
     thumbnail = post_image_path(thumbnail, post)
   end

@@ -2,9 +2,10 @@
 title: "New Adventures In Collaboration (Part 1)"
 tagline: "Apps & services for communicating when working remotely."
 date: 2013-01-11 12:00
-inline_header: "collaboration-part-1.jpg"
-above_header: true
 author: "James LaCroix"
+image: "collaboration-part-1.jpg"
+inline_header: true
+above_header: true
 ---
 
 We work in an industry that is always changing. While the web industry has matured quite a bit, new technologies and methods still arise, warrant consideration and often adaptation. As a studio, we are always improving on what we do with refined processes to create better systems for a improved client experience and more successful products.
