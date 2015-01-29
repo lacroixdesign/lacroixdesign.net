@@ -3,7 +3,7 @@
     <article class="b-post-box image--bg-holder">
 
       <%# Background image %>
-      <a href="{{link}}" class="image--bg-link">
+      <a href="{{path}}" class="image--bg-link">
         <div class="image--bg theme--dark"
               {{#thumbnail}}
                 style="background-image: url('{{thumbnail}}')"
@@ -11,13 +11,9 @@
       </a>
 
       <%# Meta %>
-      <a class="b-post-box__meta b-post-preview will-animate fadeIn"
-            data-wow-duration="0.7s"
-            data-wow-delay="0.2s"
-            href="{{path}}">
+      <a class="b-post-box__meta b-post-preview fadeIn" href="{{path}}">
         <h1>{{title}}</h1>
         <time datetime="{{published}}">{{publishedHuman}}</time>
-        <%# if post.data.tagline %>
         {{#description}}
           <h2>{{description}}</h2>
         {{/description}}

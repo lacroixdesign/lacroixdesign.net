@@ -11,6 +11,16 @@ module MacroHelper
     macro("hero", opts, required, &block)
   end
 
+  # Post Box
+  def macro_post_box(**data, &block)
+    required = [:post, :classes, :theme]
+    opts = {
+      classes: "",
+      theme: "theme--dark"
+    }.merge(data)
+    macro("post_box", opts, required, &block)
+  end
+
 private
 
   # Render macro

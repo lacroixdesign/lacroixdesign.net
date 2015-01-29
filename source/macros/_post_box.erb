@@ -1,0 +1,21 @@
+<article class="b-post-box image--bg-holder <%= classes %>">
+
+  <%# Background image %>
+  <a href="<%= post.url %>" class="image--bg-link">
+    <div class="image--bg <%= theme %>"
+          <% if page_image(post) %>
+            style="background-image: url('<%= page_image(post) %>')"
+          <% end %>>
+    </div>
+  </a>
+
+  <%# Meta %>
+  <a class="b-post-box__meta b-post-preview fadeIn" href="<%= post.url %>">
+    <h1><%= page_title(post) %></h1>
+    <time datetime="<%= post.date %>"><%= post.date.strftime "%B %-d, %Y" %></time>
+    <% if post.data.tagline %>
+      <h2><%= post.data.tagline %></h2>
+    <% end %>
+  </a>
+
+</article>
