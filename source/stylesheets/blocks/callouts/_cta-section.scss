@@ -1,0 +1,16 @@
+/*
+* ------------------------------------------------
+* Call to action section
+* ------------------------------------------------
+*/
+
+.b-callout--cta-section {
+  @include page-container($layout-width-large, $layout-width-large);
+  margin: 4em auto;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 1em;
+    font-size: 2em;
+  }
+} // .b-callout--cta-section

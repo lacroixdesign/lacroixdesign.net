@@ -95,20 +95,3 @@
     color: $white;
   }
 } // .s-posts-index__pagination
-
-/*
-* ------------------------------------------------
-* Call to action
-* ------------------------------------------------
-*/
-
-.s-posts-index__cta {
-  @include page-container($layout-width-large, $layout-width-large);
-  margin: 4em auto;
-  text-align: center;
-
-  h3 {
-    margin-bottom: 1em;
-    font-size: 2em;
-  }
-} // .s-posts-index__cta

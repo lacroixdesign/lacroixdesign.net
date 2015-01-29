@@ -1,9 +1,4 @@
 .s-case-studies {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.s-case-studies__list {
   @include animation(fadeIn50 1s ease);
 
   > article {
@@ -49,4 +44,4 @@
       }
     } // .no-flexbox &
   } // $breakpoint-ipad
-} // .s-case-studies__list
+} // .s-case-studies
