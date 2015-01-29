@@ -14,6 +14,7 @@
       var template  = $('[data-template-post]').html();
 
       if (count > 0 && typeof template !== 'undefined') {
+        $this.empty();
         $.getJSON('/blog.json', function randomPostsCb (data) {
 
           var filtered = _.chain(data)
