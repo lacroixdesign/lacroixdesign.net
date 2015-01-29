@@ -16,6 +16,11 @@ $grey-light: #ccc;
 
 // Pink
 $pink: #f27390;
+$pink-30: lighten($pink, 10);
+$pink-40: lighten($pink, 5);
+$pink-50: $pink;
+$pink-60: darken($pink, 5);
+$pink-70: darken($pink, 10);
 
 // Chicago
 $blue-chicago: #8fd7fc;

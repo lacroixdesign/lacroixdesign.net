@@ -1,43 +1,77 @@
-.s-footer {
-  padding: 3em $page-gutter;
-  background: $off-white;
-  font-family: $typeface-sans;
-  text-align: center;
-}
+.s-footer-signup {
+  padding: 3.5em 0;
+  background: $pink;
+  color: $white;
 
-.s-footer__newsletter {
-  margin-bottom: 2em;
+  h3 {
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
 
-  a,
-  [data-icon] {
-    color: $pink;
-    font-family: $typeface-serif;
-    font-size: 0.8125em;
+  p {
+    margin-bottom: 2.5em;
+    margin-bottom: 2rem;
+    font-size: 0.875em;
     font-style: italic;
-    text-decoration: none;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-} // .s-footer__newsletter
-
-.s-footer__social {
-  margin-bottom: 1em;
-
-  a {
-    color: $grey;
+  [data-icon] {
+    vertical-align: baseline;
+    margin-right: 0.25em;
     font-size: 1.5em;
   }
 
+  form {
+    @include page-container($layout-width-medium, $layout-width-medium);
+  }
+
+  #{$all-text-inputs} {
+    padding: 1.5em 1em;
+    border: none;
+    background: $pink-40;
+    color: $white;
+    font-size: 0.875em;
+
+    @include placeholder {
+      color: $white;
+      color: rgba($white, 0.7);
+    }
+
+    &:focus {
+      @include placeholder { color: rgba($white, 0.4); }
+    }
+  } // input
+
+  #{$all-text-inputs-focus} {
+    border-color: $pink-60;
+  }
+} // .s-footer-signup
+
+.s-footer {
+  padding: 3.5em $page-gutter;
+  background: $pink-60;
+  color: $white;
+  font-family: $typeface-serif;
+  text-align: center;
+}
+
+.s-footer__social {
+  margin-bottom: 1.5em;
+
+  li {
+    font-size: 1.75em;
+  }
+
+  a {
+    color: inherit;
+  }
+
   a:hover {
-    color: $black;
+    color: rgba($white, 0.6);
   }
 } // .s-footer__social
 
 .s-footer__copyright {
-  color: $grey;
-  font-family: $typeface-serif;
   font-size: 0.75em;
   font-style: italic;
 }

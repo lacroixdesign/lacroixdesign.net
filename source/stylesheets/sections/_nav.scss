@@ -1,10 +1,6 @@
 .s-footer-nav {
-  $border-color: darken($medium-white, 5);
-
-  border-top: 1px solid $border-color;
-  border-bottom: 0.5em solid $pink;
-  // background: $medium-white;
-  background: $off-white;
+  background: $pink-70;
+  color: $white;
   font-family: $typeface-sans;
   text-align: center;
   text-transform: uppercase;
@@ -19,15 +15,6 @@
   li {
     float: left;
     width: 33.333333333%;
-    border-left: 1px solid $border-color;
-  }
-
-  li:first-child {
-    border-left: none;
-  }
-
-  li.top-row {
-    border-bottom: 1px solid $border-color;
   }
 
   a {
@@ -37,7 +24,8 @@
   }
 
   a:hover {
-    background: $border-color;
+    background: $white;
+    color: $pink-70;
     text-decoration: none;
   }
 
@@ -48,10 +36,6 @@
 
     li {
       width: auto;
-    }
-
-    li.top-row {
-      border-bottom: none;
     }
   } // @include media-ie(500px)
 } // .s-footer__nav
