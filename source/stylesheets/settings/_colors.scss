@@ -6,9 +6,9 @@ $dark-white:   #edede8;
 
 // Black
 $black:    #14191f;
-$black-30: lighten($black, 20);
-$black-40: lighten($black, 15);
-$black-50: lighten($black, 10);
+$black-30: lighten($black, 20); // #3c4b5d
+$black-40: lighten($black, 15); // #323e4e
+$black-50: lighten($black, 10); // #28323e
 $black-60: $black;
 $black-70: darken($black, 5);
 // Legacy black

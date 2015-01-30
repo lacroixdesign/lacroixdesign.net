@@ -28,6 +28,15 @@
     background-color: $black;
   }
 
+  #{$item}:last-child {
+    margin-bottom: 0;
+  }
+
+  #{$content} {
+    max-width: 10em;
+    margin: auto;
+  }
+
   // small {
   //   color: $pink;
   //   text-decoration: underline;
@@ -55,6 +64,7 @@
         margin-bottom: 1px;
 
         #{$content} {
+          max-width: 15em;
           margin: 0 auto;
         }
       } // first-child
@@ -65,13 +75,3 @@
     } // 768px
   } // .flexbox &
 } // .s-home-projects__items
-
-.s-home-projects__logo {
-  max-width: 8em;
-  margin: auto;
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-} // .s-home-projects__logo

@@ -40,9 +40,7 @@ cover_header: true
 
         <% content = capture do %>
           <a href="<% case_study.url %>">
-            <div class="s-home-projects__logo">
-              <%= case_study_logo({}, case_study) %>
-            </div>
+            <%= case_study_logo({ class: "image-fullwidth" }, case_study) %>
             <%#<small><em>Learn More</em></small>%>
           </a>
         <% end %>
