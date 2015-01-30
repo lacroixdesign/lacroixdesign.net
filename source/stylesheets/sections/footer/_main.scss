@@ -1,0 +1,28 @@
+.s-footer {
+  padding: 3.5em $page-gutter;
+  background: $black-10;
+  color: $white;
+  font-family: $typeface-serif;
+  text-align: center;
+}
+
+.s-footer__social {
+  margin-bottom: 1.5em;
+
+  li {
+    font-size: 1.75em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: $pink;
+  }
+} // .s-footer__social
+
+.s-footer__copyright {
+  font-size: 0.75em;
+  font-style: italic;
+}

@@ -55,8 +55,9 @@
 
 // Sections
 @import "sections/header";
-@import "sections/nav";
-@import "sections/footer";
+@import "sections/footer/subscribe";
+@import "sections/footer/main";
+@import "sections/footer/nav";
 @import "sections/home-welcome";
 @import "sections/home-projects";
 @import "sections/home-services";
