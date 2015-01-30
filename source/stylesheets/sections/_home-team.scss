@@ -5,6 +5,7 @@
   text-align: center;
 
   > .wrap {
+    padding-bottom: 3em;
     background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
 
     @include hidpi(1.5) {
@@ -43,6 +44,7 @@
   color: $blue-chicago;
   font-size: 1.5em;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
 .s-team__about {

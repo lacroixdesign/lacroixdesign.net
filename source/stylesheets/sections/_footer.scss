@@ -53,7 +53,7 @@
     color: $white;
     font-family: $typeface-sans;
     font-size: #{$button-ratio}em;
-    font-weight: bold;
+    font-weight: $bold-weight;
   }
 
   @include media(400px) {
