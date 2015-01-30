@@ -1,5 +1,6 @@
 .s-footer-nav {
-  background: $pink-70;
+  border-bottom: 0.125em solid $pink;
+  background: $black;
   color: $white;
   font-family: $typeface-sans;
   text-align: center;
@@ -24,8 +25,7 @@
   }
 
   a:hover {
-    background: $white;
-    color: $pink-70;
+    background: $pink;
     text-decoration: none;
   }
 

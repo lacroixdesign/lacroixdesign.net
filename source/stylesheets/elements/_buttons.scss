@@ -1,20 +1,15 @@
 /*
- * Button style
+ * ------------------------------------------------
+ * Button base
+ * ------------------------------------------------
  */
-@mixin btn($color, $inverse, $border-size: 1px, $border-color: inherit) {
-  @if $border-color == inherit {
-    $border-color: $color;
-  }
+
+@mixin btn-base {
   @include appearance(none);
   position: relative;
   z-index: 1;
   display: inline-block;
   padding: 1em;
-  margin: 0.25em 0;
-  font-family: $typeface-serif;
-  font-size: 0.875em;
-  font-style: italic;
-  font-weight: bold;
   line-height: normal;
   text-align: center;
   vertical-align: middle;
@@ -24,9 +19,27 @@
   cursor: pointer;
   @include user-select(none);
   @include transition(none);
+}
+
+/*
+ * ------------------------------------------------
+ * Button style
+ * ------------------------------------------------
+ */
+
+@mixin btn($color, $inverse, $border-size: 1px, $border-color: inherit) {
+  @include btn-base;
+  @if $border-color == inherit {
+    $border-color: $color;
+  }
+  margin: 0.25em 0;
+  font-family: $typeface-serif;
+  font-size: 0.875em;
+  font-style: italic;
+  font-weight: bold;
 
   border: $border-size solid $border-color;
-  border-radius: 2px;
+  border-radius: $border-radius;
   box-shadow: none;
   background: transparent;
   color: $color;

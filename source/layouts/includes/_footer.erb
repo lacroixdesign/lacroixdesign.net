@@ -1,9 +1,16 @@
-<div class="s-footer-signup">
-  <form>
+<div id="subscribe" class="s-footer-signup">
+  <div class="s-footer-signup__inner">
     <h3><%= icon 'e600' %> Subscribe for Inside Access</h3>
     <p>Receive monthly briefings on what we have been researching, designing, building and thinking.</p>
-    <input type="email" name="email" value="" placeholder="you@example.com">
-  </form>
+    <form method="post"
+          target="_blank"
+          name="mc-embedded-subscribe-form"
+          action="//lacroixdesign.us2.list-manage.com/subscribe/post?u=cb74d792445887e99b0a36575&amp;id=9875eb3767">
+      <label for="mce-EMAIL" class="visuallyhidden">Email Address</label>
+      <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="you@example.com"><%#
+      %><button type="submit">Join</button>
+    </form>
+  </div>
 </div>
 
 <footer id="footer" class="s-footer">
