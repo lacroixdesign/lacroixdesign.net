@@ -1,8 +1,8 @@
 /*
-* ------------------------------------------------
-* Simple
-* ------------------------------------------------
-*/
+ * ------------------------------------------------
+ * Simple
+ * ------------------------------------------------
+ */
 
 .b-pagination {
   @include clearfix;
@@ -35,10 +35,10 @@
 } // .b-pagination
 
 /*
-* ------------------------------------------------
-* Big
-* ------------------------------------------------
-*/
+ * ------------------------------------------------
+ * Big
+ * ------------------------------------------------
+ */
 
 .b-pagination-btn {
   position: relative;
@@ -50,7 +50,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  @include transition(color 0.2s ease-out);
+  @include transition(color 0.1s ease-out);
 
   &:after {
     @include position(absolute, 0 null 0 0);
@@ -58,7 +58,6 @@
     z-index: -1;
     background: $pink;
     content: '';
-    @include transition(width 0.2s ease-out);
   }
 
   &:hover {
@@ -67,5 +66,6 @@
 
   &:hover:after {
     width: 100%;
+    @include animation(growHorizontal 0.2s ease-out);
   }
 } // .b-pagination-btn
