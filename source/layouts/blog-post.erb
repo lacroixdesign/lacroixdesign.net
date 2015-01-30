@@ -71,13 +71,17 @@
       </ul>
     </div>
 
-    <div class="b-post-cta">
-      <%= component "cta-button" %>
-    </div>
-
   </div>
 
-  <section class="s-post__more-posts"
+  <%# Call to action %>
+  <div class="s-post--cta">
+    <%= partial "partials/cta_section", locals: {
+          text: "We are small design and development team specializing in web and product experiences."
+    } %>
+  </div>
+
+  <%# More posts (async) %>
+  <section class="s-post--more-posts"
             data-current-post="<%= current_page.url %>"
             data-random-posts="3">
   </section>

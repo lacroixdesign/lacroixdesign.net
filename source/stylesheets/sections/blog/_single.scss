@@ -14,13 +14,27 @@
 
 /*
 * ------------------------------------------------
+* Call to action
+* ------------------------------------------------
+*/
+
+.s-post--cta {
+  padding: 4em 0;
+  background: $off-white;
+
+  .b-callout--cta-section {
+    margin: 0 auto;
+  }
+} // .s-post--cta
+
+/*
+* ------------------------------------------------
 * More posts
 * ------------------------------------------------
 */
 
-.s-post__more-posts {
+.s-post--more-posts {
   display: none;
-  margin-top: 3em;
 
   &.is--loaded {
     display: block;
@@ -39,7 +53,7 @@
   @include media(500px) {
     .b-post-box { min-height: 14em; }
   }
-} // .s-post__more-posts
+} // .s-post--more-posts
 
 /*
 * ------------------------------------------------
@@ -47,7 +61,7 @@
 * ------------------------------------------------
 */
 
-.flexbox .s-post__more-posts {
+.flexbox .s-post--more-posts {
   @include flex-wrap(wrap);
 
   &.is--loaded {
@@ -96,4 +110,4 @@
       max-width: $max-width / 2 - $pad;
     }
   } // $max-width
-} // flexbox
+} // .s-post--more-posts
