@@ -37,11 +37,6 @@
     margin: auto;
   }
 
-  // small {
-  //   color: $pink;
-  //   text-decoration: underline;
-  // }
-
   .flexbox & {
     #{$item} {
       @include display(flex);
@@ -55,7 +50,7 @@
 
       #{$item} {
         @include flex(0.5 0.4 40%);
-        min-height: 20em;
+        min-height: 17em;
         margin-bottom: 0;
       }
 
@@ -73,5 +68,9 @@
         margin-left: 1px;
       }
     } // 768px
+
+    @include media(1000px) {
+      #{$item} { min-height: 20em; }
+    }
   } // .flexbox &
 } // .s-home-projects__items
