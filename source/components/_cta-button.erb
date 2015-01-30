@@ -1,5 +1,6 @@
-<% btn = btn || 'btn' %>
-<% id  = id  || nil %>
+<% btn  = btn  || 'btn' %>
+<% id   = id   || nil %>
+<% text = text || 'Start a Project' %>
 
 <a href="<%= data.urls.work_with_us %>"
     class="<%= btn %> will-animate pulse"
@@ -7,5 +8,5 @@
       id="<%= id %>"
     <% end %>
   >
-  Work With Us
+  <%= text %>
 </a>
