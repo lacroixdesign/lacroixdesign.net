@@ -47,41 +47,77 @@
 }
 
 .image--bg-link {
-  @include position(absolute, 0 0 0 0);
+  // sometimes flexbox is off by 1px
+  @include position(absolute, -1px -1px -1px -1px);
   overflow: hidden;
   display: block;
   opacity: 1;
+  cursor: pointer;
+  background-color: inherit;
   @include transform( scale(1.0) );
   @include transition( transform 0.15s ease-in-out, opacity 0.15s ease-in-out );
 }
 
-a.image--bg-link:hover,
-.image--bg-holder:hover a.image--bg-link {
-  opacity: 0.7;
-  cursor: pointer;
-  @include transform( scale(1.025) );
+// Hover grow theme
+a.image--bg-link.theme--grow:hover,
+.image--bg-holder:hover a.image--bg-link.theme--grow {
+  @include transform( scale(1.05) );
 }
 
+// Hover fade theme
+a.image--bg-link.theme--fade:hover,
+.image--bg-holder:hover a.image--bg-link.theme--fade {
+  opacity: 0.4;
+}
+
+// Hover overlay theme
+a.image--bg-link.theme--overlay {
+  .image--bg:after {
+    visibility: hidden;
+    background-color: inherit;
+    opacity: 0;
+  }
+
+  &:hover,
+  .image--bg-holder:hover & {
+    .image--bg:after {
+      visibility: visible;
+      opacity: 0.7;
+    }
+  }
+} // Hover overlay theme
+
+// Image
 .image--bg {
   @include position(absolute, 0 0 0 0);
   @extend .image--cover;
   background-image: image-url('backgrounds/blog-bg.jpg');
+  background-color: inherit;
+}
+// Fixed background theme
+.theme--fixed.image--bg {
+  background-attachment: fixed;
 }
 
+// Content(s)
 .image--bg ~ * {
   position: relative;
 }
 
+// Image after
 .image--bg:after {
   @include position(absolute, 0 0 0 0);
   content: '';
 }
+// Medium theme
 .theme--medium-dark.image--bg:after {
   background: rgba($black, 0.2);
 }
+// Dark theme
 .theme--dark.image--bg:after {
   background: rgba($black, 0.4);
 }
+// Very dark theme
 .theme--very-dark.image--bg:after {
   background: rgba($black, 0.7);
 }

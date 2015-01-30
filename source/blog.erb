@@ -21,10 +21,12 @@ tagline: "Periodic briefings on what we have been researching, designing, buildi
 </section>
 
 <% if next_page %>
-  <a href="<%= next_page.url %>"
-      class="s-posts-index__pagination will-animate fadeInRight">
-    More Articles &rarr;
-  </a>
+  <div class="s-posts-index-pagination">
+    <a href="<%= next_page.url %>"
+        class="b-pagination-btn will-animate fadeInRight">
+      More Articles &rarr;
+    </a>
+  </div>
 <% end %>
 
 <%= partial "partials/cta_section", locals: {

@@ -1,0 +1,25 @@
+<<%= el %>
+    class="b-basic-card image--bg-holder <%= classes %>"
+    style="<%= styles %>">
+
+  <% img_attr = image ? "background-image: url('#{image}')" : "" %>
+
+  <%# Background image %>
+  <% if link %>
+    <a href="<%= link %>"
+        class="image--bg-link <%= link_themes %>"
+        style="<%= link_styles %>">
+      <div class="image--bg <%= theme %>" style="<%= img_attr %>"></div>
+    </a>
+  <% else %>
+    <div class="image--bg <%= theme %>" style="<%= img_attr %>"></div>
+  <% end %>
+
+  <%# Optional content %>
+  <% if block_given? %>
+    <div class="b-basic-card__content">
+      <%= yield %>
+    </div>
+  <% end %>
+
+</<%= el %>>

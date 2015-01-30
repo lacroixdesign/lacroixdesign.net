@@ -79,19 +79,7 @@
 * ------------------------------------------------
 */
 
-.s-posts-index__pagination {
-  display: block;
-  padding: 2em 0;
+.s-posts-index-pagination {
   margin-top: -1px;
   background: $off-white;
-  font-family: $typeface-sans;
-  font-weight: $bold-weight;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover {
-    background: $pink;
-    color: $white;
-  }
-} // .s-posts-index__pagination
+}

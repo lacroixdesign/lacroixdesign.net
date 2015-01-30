@@ -11,6 +11,21 @@ module MacroHelper
     macro("hero", opts, required, &block)
   end
 
+  # Basic Card
+  def macro_basic_card(**data, &block)
+    required = [:image, :classes, :theme, :link, :el, :styles]
+    opts = {
+      el: "div",
+      classes: "",
+      styles: "",
+      link: false,
+      link_themes: "",
+      link_styles: "",
+      theme: ""
+    }.merge(data)
+    macro("basic_card", opts, required, &block)
+  end
+
   # Post Box
   def macro_post_box(**data, &block)
     required = [:post, :classes, :theme]

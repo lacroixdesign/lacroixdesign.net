@@ -22,30 +22,48 @@ cover_header: true
   </div>
 </section>
 
-<%# Recent Work %>
+<%# Featured Work %>
 <section class="s-home-projects" id="recent-work">
   <div class="b-section">
     <header>
       <h1 class="section-title">Featured Work</h1>
     </header>
     <div class="s-home-projects__items">
-      <%= component "case-study-featured", {
-        project: find_case_study_by_title("Justice Film Fest 2014"),
-        delay: '0.2s'
-      } %>
-      <%= component "case-study-featured", {
-        project: find_case_study_by_title("LandID"),
-        delay: '0.4s'
-      } %>
-      <%= component "case-study-featured", {
-        project: find_case_study_by_title("The 5 Love Languages®"),
-        delay: '0.6s',
-        last: true
-      } %>
+      <% case_study_titles = [
+          "Justice Film Fest 2014",
+          "LandID",
+          "The 5 Love Languages®"
+      ] %>
+      <% case_study_titles.each_with_index do |title, index| %>
+
+        <% case_study = find_case_study_by_title(title) %>
+
+        <% content = capture do %>
+          <a href="<% case_study.url %>">
+            <div class="s-home-projects__logo">
+              <%= case_study_logo({}, case_study) %>
+            </div>
+            <%#<small><em>Learn More</em></small>%>
+          </a>
+        <% end %>
+
+        <% styles = case_study.data.color ?
+                      "background-color:#{case_study.data.color}" : "" %>
+
+        <%= macro_basic_card(
+              el: "article",
+              theme: "theme--fixed",
+              link: case_study.url,
+              link_themes: "theme--overlay",
+              link_styles: styles,
+              image: page_image(case_study),
+        ) { content } %>
+
+      <% end %>
     </div>
-    <div class="l-constrained">
-      <a href="<%= data.urls.work %>" class="btn small short">View All</a>
-    </div>
+    <a href="<%= data.urls.work %>" class="b-pagination-btn">
+      View All Work &rarr;
+    </a>
   </div>
 </section>
 
