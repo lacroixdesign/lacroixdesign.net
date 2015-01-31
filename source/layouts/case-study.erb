@@ -1,28 +1,29 @@
 <% wrap_layout :base do %>
-  <% if current_page.data.color %>
+  <% color = current_page.data.color %>
+  <% if color %>
     <style>
       .b-text p a,
       .b-text p a:focus,
       .b-text p a:visited {
-        color: #{current_page.data.color};
+        color: <%= color %>;
       }
       .b-text p a:hover {
-        color: #{current_page.data.color};
+        color: <%= color %>;
       }
       .btn,
       .btn:focus,
       .btn:visited {
-        border-color: #{current_page.data.color};
-        color: #{current_page.data.color};
+        border-color: <%= color %>;
+        color: <%= color %>;
       }
       .btn:hover,
       .btn:active {
-        border-color: #{current_page.data.color};
-        background-color: #{current_page.data.color};
+        border-color: <%= color %>;
+        background-color: <%= color %>;
         color: #fff;
       }
       .btn.animate-faux-progress:after {
-        background: #{current_page.data.color};
+        background: <%= color %>;
       }
     </style>
   <% end %>
