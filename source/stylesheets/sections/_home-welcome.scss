@@ -20,14 +20,15 @@
 
   .s-home-welcome__logo {
     max-width: 20em;
-    margin: 0 auto 1.5em;
+    margin: 0 auto 2em;
   }
 
   h2 {
+    margin-bottom: 1em;
     font-family: $typeface-serif;
     font-weight: normal;
-    line-height: normal;
     font-style: italic;
+    line-height: 1.375;
   }
 
   [class*="btn"] {
