@@ -56,6 +56,13 @@
     font-weight: $bold-weight;
   }
 
+  button:hover {
+    background: $pink-60;
+  }
+  button:active {
+    background: $pink-70;
+  }
+
   @include media(400px) {
     input[type="email"] { max-width: 20em; }
   }
