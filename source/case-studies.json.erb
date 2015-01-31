@@ -1,0 +1,22 @@
+<%
+site_url = "http://www.lacroixdesign.net/"
+src_posts = blog("case-studies").articles
+
+posts = src_posts.map do |post|
+  color = rgba (post.data.color || data.colors.black), 0.4
+  {
+    id: post.url,
+    title: post.title,
+    description: page_description(post),
+    color_string: "rgba(#{color.rgba.join(",")})",
+    logo: case_study_logo_path(:svg, post),
+    logo_png: case_study_logo_path(:png, post),
+    url: URI.join(site_url, post.url).to_s,
+    path: post.url,
+    thumbnail: page_image(post),
+    slug: post.slug
+  }
+end
+%>
+
+<%= posts.to_json %>

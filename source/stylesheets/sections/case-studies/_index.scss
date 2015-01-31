@@ -1,5 +1,12 @@
 .s-case-studies {
+  @include display(flex);
+  @include flex-direction(column);
   @include animation(fadeIn50 1s ease);
+
+  &.theme--async {
+    display: none;
+    &.is--loaded { @include display(flex); }
+  }
 
   > article {
     width: 100%;
@@ -7,7 +14,7 @@
   }
 
   @include media($breakpoint-desktop) {
-    @include display(flex);
+    @include flex-direction(row);
     @include flex-wrap(wrap);
 
     > article:nth-child(2n+1) {

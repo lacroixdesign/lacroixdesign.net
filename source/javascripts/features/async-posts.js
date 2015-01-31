@@ -1,40 +1,28 @@
 (function() {
 
   var randomPostsAttr   = 'data-random-posts';
-  var randomPostsSelect = '[' + randomPostsAttr +']';
-  var currentPostAttr   = 'data-current-post';
-  var isLoadedClass     = 'is--loaded';
+
+  function mapFn (post) {
+    post.publishedHuman = moment(post.published).format("MMM D, YYYY");
+    return post;
+  }
 
   window.pageReady(function() {
+    $('[' + randomPostsAttr +']').each(function() {
 
-    $(randomPostsSelect).each(function() {
       var $this     = $(this);
       var count     = _.parseInt($this.attr(randomPostsAttr));
-      var currentId = $this.attr(currentPostAttr);
+      var currentId = $this.attr('data-current-post');
       var template  = $('[data-template-post]').html();
 
       if (count > 0 && typeof template !== 'undefined') {
         $this.empty();
-        $.getJSON('/blog.json', function randomPostsCb (data) {
-
-          var filtered = _.chain(data)
-              .dropWhile({ 'id': currentId })
-              .sample(count)
-              .map(function(post) {
-                post.publishedHuman = moment(post.published).format("MMM D, YYYY");
-                return post;
-              })
-              .value();
-
-          var tmpl = Hogan.compile(template);
-          var html = tmpl.render({ posts: filtered });
-          $this.append(html);
-
-          $this.addClass(isLoadedClass);
+        $.getJSON('/blog.json', function(data) {
+          window.asyncEntryRenderer(data, count, template, mapFn, $this, currentId);
         });
       }
-    });
 
+    });
   });
 
 })();

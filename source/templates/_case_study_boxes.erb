@@ -1,0 +1,30 @@
+<script data-template-case-studies type="text">
+  {{#posts}}
+    <article class="b-case-study-preview" id="case-study-{{slug}}">
+
+      <a href="{{path}}"
+          style="
+            background-image: url('{{thumbnail}}');
+            background-color: {{color_string}};">
+        <div
+          class="content-wrap will-animate fadeIn"
+          data-wow-delay="0.3s"
+          data-wow-offset="100">
+
+          <div class="content">
+            <div class="logo__case-study">
+              <img
+                src="{{logo}}"
+                data-png-fallback="{{logo_png}}"
+                alt="{{title}}"
+                class="image-fullheight">
+            </div>
+            <h2>{{description}}</h2>
+          </div>
+
+        </div>
+      </a>
+
+    </article>
+  {{/posts}}
+</script>

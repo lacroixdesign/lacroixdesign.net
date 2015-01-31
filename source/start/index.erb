@@ -17,3 +17,10 @@ above_header: true
     <%= partial "partials/project_inquiry_form" %>
   </div>
 </section>
+
+<%# Random case studies (async) %>
+<div class="s-case-studies theme--async"
+      data-current-entry="<%= current_page.url %>"
+      data-random-case-studies="4">
+  <%= partial "templates/case_study_boxes" %>
+</div>

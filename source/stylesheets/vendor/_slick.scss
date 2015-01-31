@@ -236,13 +236,14 @@ $slick-dot-character: '\2022' !default;
     }
 
     &:before {
+      $dot-border-size: 1px;
       position: absolute;
       top: 0;
       left: 0;
       content: "";
-      width: $dot-size;
-      height: $dot-size;
-      border: 1px solid $black;
+      width: $dot-size - ($dot-border-size * 2);
+      height: $dot-size - ($dot-border-size * 2);
+      border: $dot-border-size solid $black;
       border-radius: 500px;
       opacity: 0.25;
       background: $white;

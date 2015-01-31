@@ -1,0 +1,56 @@
+<% wrap_layout :base do %>
+  <% if current_page.data.color %>
+    <style>
+      .b-text p a,
+      .b-text p a:focus,
+      .b-text p a:visited {
+        color: #{current_page.data.color};
+      }
+      .b-text p a:hover {
+        color: #{current_page.data.color};
+      }
+      .btn,
+      .btn:focus,
+      .btn:visited {
+        border-color: #{current_page.data.color};
+        color: #{current_page.data.color};
+      }
+      .btn:hover,
+      .btn:active {
+        border-color: #{current_page.data.color};
+        background-color: #{current_page.data.color};
+        color: #fff;
+      }
+      .btn.animate-faux-progress:after {
+        background: #{current_page.data.color};
+      }
+    </style>
+  <% end %>
+
+  <% content = capture do %>
+    <div class="l-constrained-large s-case-study__hero-content">
+      <div class="logo__case-study will-animate fadeInDown"
+            data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <%= case_study_logo %>
+      </div>
+      <h1 class="title--subheading will-animate fadeInUp"
+            data-wow-duration="0.7s" data-wow-delay="0.2s">
+        <%= current_page.data.tagline %>
+      </h1>
+    </div>
+  <% end %>
+  <!-- TODO use macro? -->
+  <%= hero_image(case_study_bg_path) { content } %>
+
+  <div class="s-case-study">
+    <%= yield %>
+
+    <%# Random case studies (async) %>
+    <div class="s-case-studies theme--async"
+          data-current-entry="<%= current_page.url %>"
+          data-random-case-studies="4">
+      <%= partial "templates/case_study_boxes" %>
+    </div>
+  </div>
+
+<% end %>
