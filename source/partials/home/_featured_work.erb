@@ -1,0 +1,41 @@
+<%# Home > Featured Work %>
+<section class="s-home-projects" id="recent-work">
+  <div class="b-section">
+    <header>
+      <h1 class="section-title">Featured Work</h1>
+    </header>
+    <div class="s-home-projects__items">
+      <% case_study_titles = [
+          "Justice Film Fest 2014",
+          "LandID",
+          "The 5 Love Languages®"
+      ] %>
+      <% case_study_titles.each_with_index do |title, index| %>
+
+        <% case_study = find_case_study_by_title(title) %>
+
+        <% content = capture do %>
+          <a href="<% case_study.url %>">
+            <%= case_study_logo({ class: "image-fullwidth" }, case_study) %>
+          </a>
+        <% end %>
+
+        <% styles = case_study.data.color ?
+                      "background-color:#{case_study.data.color}" : "" %>
+
+        <%= macro_basic_card(
+              el: "article",
+              theme: "theme--fixed",
+              link: case_study.url,
+              link_themes: "theme--overlay",
+              link_styles: styles,
+              image: page_image(case_study),
+        ) { content } %>
+
+      <% end %>
+    </div>
+    <a href="<%= data.urls.work %>" class="b-pagination-btn">
+      View All Work &rarr;
+    </a>
+  </div>
+</section>

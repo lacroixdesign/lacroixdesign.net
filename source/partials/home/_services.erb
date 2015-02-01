@@ -1,0 +1,76 @@
+<%# Home > Services %>
+<section class="s-services" id="services">
+  <div class="b-section">
+
+    <header>
+      <h1 class="section-title">Services</h1>
+    </header>
+
+    <div class="s-services__lists">
+
+      <article
+        class="b-service-list will-animate flipInX"
+        data-wow-duration="0.8s"
+        data-wow-delay="0.2s"
+        data-wow-offset="50">
+        <header>
+          <div class="image-icon">
+            <img
+              src="<%= image_path 'icons/design.svg' %>"
+              onerror="this.src='<%= image_path 'icons/design.png' %>'"
+              class="image-fullwidth"
+              alt="Design Services Icon">
+          </div>
+          <h2>Design</h2>
+        </header>
+        <ul>
+          <li>Web &amp; Mobile Design</li>
+          <li>User Experience</li>
+          <li>User Interface Design</li>
+          <li>Information Architecture</li>
+          <li>Product Design &amp; Branding</li>
+        </ul>
+      </article>
+
+      <article class="b-service-list will-animate flipInX" data-wow-duration="0.8s" data-wow-delay="0.4s">
+        <header>
+          <div class="image-icon">
+            <img
+              src="<%= image_path 'icons/development.svg' %>"
+              onerror="this.src='<%= image_path 'icons/development.png' %>'"
+              class="image-fullwidth"
+              alt="Development Services Icon">
+          </div>
+          <h2>Development</h2>
+        </header>
+        <ul>
+          <li>Websites</li>
+          <li>Web Applications</li>
+          <li>Content Management</li>
+          <li>E-commerce Systems</li>
+        </ul>
+      </article>
+
+      <article class="b-service-list ie-omega will-animate flipInX" data-wow-duration="0.8s" data-wow-delay="0.6s">
+        <header>
+          <div class="image-icon">
+            <img
+              src="<%= image_path 'icons/consulting.svg' %>"
+              onerror="this.src='<%= image_path 'icons/consulting.png' %>'"
+              class="image-fullwidth"
+              alt="Consulting Services Icon">
+          </div>
+          <h2>Consulting</h2>
+        </header>
+        <ul>
+          <li>Email Campaigns</li>
+          <li>Content Strategy</li>
+          <li>SEO/SEM</li>
+          <li>Social Media Integration</li>
+          <li>Concept Development</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>

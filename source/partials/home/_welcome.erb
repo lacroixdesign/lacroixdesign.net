@@ -1,0 +1,18 @@
+<%# Home > Welcome %>
+<section class="s-home-welcome" id="welcome">
+  <div class="l-constrained-large">
+    <div class="s-home-welcome__logo will-animate fadeIn">
+      <img
+        src="<%= image_path "full-logo-light.svg" %>"
+        onerror="this.src='<%= image_path "full-logo-light.png" %>'"
+        alt="<%= data.site.title %>"
+        class="image-fullwidth">
+    </div>
+    <header class="will-animate fadeIn">
+      <h2><%= site_description %></h2>
+    </header>
+    <div class="s-home-welcome__cta">
+      <%= component "cta-button", btn: "btn-bright", id: "cta-welcome" %>
+    </div>
+  </div>
+</section>
