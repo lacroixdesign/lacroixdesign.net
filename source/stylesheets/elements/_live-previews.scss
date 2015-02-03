@@ -12,6 +12,7 @@
   > section {
     position: absolute;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
     overflow-y: scroll;
   }
 
@@ -26,7 +27,7 @@
 
   &[data-live-preview="mobile"] {
     display: block;
-    width: 19em;
+    width: 20em;
 
     [data-live-preview-img="mobile"] {
       display: block;
