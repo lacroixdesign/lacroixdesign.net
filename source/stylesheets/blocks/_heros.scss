@@ -1,5 +1,5 @@
 @mixin hero-image($pad-small: 4em, $pad-large: 7em) {
-  padding: $pad-small + $header-height 0 $pad-small;
+  padding: $pad-small + $header-offset 0 $pad-small;
   background-color: $black;
   background-position: center center;
   background-repeat: no-repeat;
@@ -17,11 +17,11 @@
   }
 
   @include media(min-width 500px min-height 500px) {
-    padding: $pad-large + $header-height 0 $pad-large;
+    padding: $pad-large + $header-offset 0 $pad-large;
   }
 
   @include media-ie {
-    padding: $pad-large + $header-height 0 $pad-large;
+    padding: $pad-large + $header-offset 0 $pad-large;
   }
 } // @mixin hero-image
 

@@ -1,6 +1,6 @@
 @mixin welcome-section-layout {
   .s-home-welcome__content {
-    padding: 4em + $header-height 0 7em;
+    padding: 4em + $header-offset 0 7em;
   }
 
   h1 {
@@ -27,7 +27,7 @@
 
   .s-home-welcome__content {
     position: relative;
-    padding: 2em + $header-height 0 4em;
+    padding: 2em + $header-offset 0 4em;
     background: $pink;
     background: rgba($pink, 0.85);
   }
@@ -59,7 +59,7 @@
   }
 
   @include media(min-width 330px min-height 450px) {
-    .s-home-welcome__content { padding: 3em + $header-height 0 5em; }
+    .s-home-welcome__content { padding: 3em + $header-offset 0 5em; }
   }
 
   @include media(min-width 600px min-height 550px) {

@@ -24,6 +24,12 @@
     </a>
   </div>
 
+  <nav id="menu" class="s-header-nav" role="navigation">
+    <ul>
+      <%= partial "layouts/includes/nav_items" %>
+    </ul>
+  </nav>
+
 </header>
 
 <a id="nav-toggle-btn" href="#menu" data-toggle-nav>
@@ -35,10 +41,7 @@
 <nav id="menu" class="b-menu" role="navigation">
   <ul class="b-menu-list">
     <li><a href="/#welcome">Home</a></li>
-    <li><a href="<%= data.urls.work %>">Work</a></li>
-    <li><a href="<%= data.urls.services %>">Services</a></li>
-    <li><a href="<%= data.urls.team %>">Team</a></li>
-    <li><a href="<%= data.urls.blog %>">Blog</a></li>
+    <%= partial "layouts/includes/nav_items" %>
   </ul>
   <ul class="b-menu-social">
     <%= partial "components/social-icons" %>
