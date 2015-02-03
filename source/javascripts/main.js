@@ -1,5 +1,4 @@
 //= require vendor/lodash.min
-//= require vendor/jquery.pjax
 //= require vendor/slick.min
 //= require vendor/wow.min
 //= require vendor/jquery.fitvids

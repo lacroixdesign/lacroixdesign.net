@@ -21,24 +21,24 @@
     $this.addClass('active');
 
     $element
-    .attr('data-live-preview', device)
-    .each(function() {
-      if (device !== current) {
-        // Re-trigger the fade animation
-        var element = $(this)[0];
-        element.classList.remove("run-animation");
-        // -> triggering reflow /* The actual magic */
-        // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-        element.offsetWidth = element.offsetWidth;
-        // -> and re-adding the class
-        element.classList.add("run-animation");
+      .attr('data-live-preview', device)
+      .each(function() {
+        if (device !== current) {
+          // Re-trigger the fade animation
+          var element = $(this)[0];
+          element.classList.remove("run-animation");
+          // -> triggering reflow /* The actual magic */
+          // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+          element.offsetWidth = element.offsetWidth;
+          // -> and re-adding the class
+          element.classList.add("run-animation");
 
-        // Send an event to analytics
-        var eventLoc  = document.location.pathname + '#live-preview-' + device;
-        var eventName = 'Live Preview - ' + device.toUpperCase();
-        window.clickyEvent(eventLoc, eventName);
-      }
-    });
+          // Send an event to analytics
+          var eventLoc  = document.location.pathname + '#live-preview-' + device;
+          var eventName = 'Live Preview - ' + device.toUpperCase();
+          window.clickyEvent(eventLoc, eventName);
+        }
+      });
   }
 
   /*
