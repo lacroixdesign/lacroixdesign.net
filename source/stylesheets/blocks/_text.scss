@@ -15,16 +15,8 @@
 
   p,
   ul {
-    a,
-    a:focus,
-    a:visited {
-      color: $pink;
-    }
-
-    a:hover {
-      color: lighten($pink, 10);
-    }
-  } // p, ul
+    @include styled-links($pink, $black);
+  }
 
   p:last-child {
     margin-bottom: 0;
