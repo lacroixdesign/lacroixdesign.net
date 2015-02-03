@@ -20,6 +20,7 @@
 .s-home-projects__items {
   $item: '.b-basic-card';
   $content: '.b-basic-card__content';
+  $logo: "#{$content} > a";
 
   #{$item} {
     min-height: 15em;
@@ -33,6 +34,13 @@
   }
 
   #{$content} {
+    width: 100%;
+    margin: auto;
+  }
+
+  #{$logo} {
+    display: block;
+    width: 100%;
     max-width: 10em;
     margin: auto;
   }
@@ -58,9 +66,8 @@
         @include flex(2 2.0 100%);
         margin-bottom: 1px;
 
-        #{$content} {
+        #{$logo} {
           max-width: 15em;
-          margin: 0 auto;
         }
       } // first-child
 
