@@ -21,11 +21,11 @@ Throughout the existence of LaCroix Design Co., we have made deliberate decision
 
 Our backup plan starts with individual computers. This ensures everything on our systems is accessible at any given time. Should we experience a system malfunction, hard drive failure, theft or some other disaster, these backups are available to help us get up and running quickly. These system solutions work in tandem with the other services we outline to provide redundancy.  
 
-**Time Machine**
+#### Time Machine
 
 We start with [Time Machine](http://support.apple.com/en-us/HT201250), the built-in backup feature of OS X. This feature retains a copy of our of our files, as well as a feature that expresses how our system looked on any given day. These backups are synced via our wireless network and stored on two separate hard drives.
 
-**Backblaze**
+#### Backblaze
 
 Time Machine is a terrific feature, but it is backing up the files to disks which reside at the same physical location as our computers. Thus, we require something that will allow us to backup the bulk of our files to remote storage.
 
@@ -37,7 +37,7 @@ Although this backup process is not a fast as a locally attached device or Time 
 
 We find it important to create an additional level of backup for our design files. Very often, these files can be quite large and a loss of the editable versions would require an inordinate amount of time to recreate.
 
-**LayerVault**
+#### LayerVault
 
 For many years, we stored all of our working design files on Dropbox so that we could access them from anywhere. We have since replaced this with one of my most relied-upon online services, [LayerVault](https://layervault.com/r/3X2).
 
@@ -47,14 +47,14 @@ In addition to automatically versioning all of our design files, LayerVault allo
 
 Furthermore, LayerVault retains all of our project files and allows us to leave and rejoin a project at any time. Thus, we are able to remove a folder of project files from our computer and rejoin the project at a later date. Doing so will, in turn, sync all of the design files for a project back to our computer.
 
-**Vault Drive**
+#### Vault Drive
 
 As an added layer of backup, I keep a large hard drive of every LaCroix Design Co. project connected to my computer. As projects are completed, they are organized in folders by year. Additionally, font files and other assets are regularly archived on this drive. Since the drive is attached to my system, it is also backed up using Backblaze. While I imagine that this drive may one day be replaced by [Amazon Glacier](http://aws.amazon.com/glacier/) or something similar, but this current setup has been working out very well.
 
 ### Development Files
 As our design process evolved from building static designs in traditional design applications to a process of iterating, prototyping and building interactive experiences with code, versioning and keeping backups of development files has become immensely important.
 
-**Repositories**
+#### Repositories
 
 All of our development projects are version-controlled using [Git](http://git-scm.com/). We host the majority of these repositories publicly and privately on [GitHub](http://github.com) and utilize [Bitbucket](https://bitbucket.org/) to host repositories for our smaller projects that we wish to keep private.
 
