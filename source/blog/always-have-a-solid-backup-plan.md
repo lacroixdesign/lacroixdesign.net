@@ -15,7 +15,7 @@ In addition to newly designed merchandise, the members of Relient K wanted to re
 
 Since starting LaCroix Design Co. in 2005, we have been victims of a burglary and numerous hard drive failures. The fact that I had retained a collection of files from ten years back was more of a testament to luck than any full-proof backup plan. However, we’ve never been content leaving this up to luck alone.
 
-Throughout the existence of LaCroix Design Co., we have made deliberate decisions to ensure that work we create for our clients is systematically backed up and available for years to come. This is an overview of the redundant system we are using to keep all our files safe.
+From the beginning, we have made deliberate decisions to ensure that work we create for our clients is systematically backed up and available for years to come. This is an overview of the redundant system we are using to keep all our files safe.
 
 ### System Wide
 
