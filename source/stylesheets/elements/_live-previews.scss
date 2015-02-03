@@ -11,9 +11,11 @@
 
   > section {
     position: absolute;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
-    overflow-y: scroll;
+    &::-webkit-scrollbar { width: 0 !important }
   }
 
   iframe {

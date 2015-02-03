@@ -118,6 +118,9 @@ $nav-delay-delta: 0.075;
   z-index: 1000;
   overflow: auto;
   overflow-x: hidden;
+  overflow: -moz-scrollbars-none;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
   visibility: hidden;
   width: $nav-menu-width;
   max-height: 95%;
@@ -126,6 +129,8 @@ $nav-delay-delta: 0.075;
   max-height: calc(100% - #{$nav-position-offset});
   color: $black-10;
   font-family: $typeface-serif;
+
+  &::-webkit-scrollbar { width: 0 !important }
 
   #{$nav-menu-open} & {
     visibility: visible;
