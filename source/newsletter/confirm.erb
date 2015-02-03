@@ -1,0 +1,23 @@
+---
+title: "Almost Done! - Newsletter"
+above_header: true
+---
+
+<% hero = capture do %>
+  <h1>Almost Done!</h1>
+  <h2 class="title--subheading">Check your inbox to confirm your address.</h2>
+<% end %>
+<%= macro_hero(
+    image: asset_url("images/backgrounds/blog-bg.jpg"),
+    theme: "theme--very-dark"
+  ) { hero } %>
+
+<section class="l-constrained-medium b-page" id="thanks">
+  <div class="b-text will-animate fadeInDown"
+        data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <p>We know it&rsquo;s an extra step, but we want to ensure that we have the correct email.</p>
+  </div>
+</section>
+
+<%# Random posts (async) %>
+<div class="s-posts-index" data-random-posts="3"></div>
