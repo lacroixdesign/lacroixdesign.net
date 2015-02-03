@@ -15,7 +15,7 @@
         <% case_study = find_case_study_by_title(title) %>
 
         <% content = capture do %>
-          <a href="<% case_study.url %>">
+          <a href="<%= case_study.url %>">
             <%= case_study_logo({ class: "image-fullwidth" }, case_study) %>
           </a>
         <% end %>
