@@ -1,5 +1,9 @@
 <%# Home > Welcome %>
 <section class="s-home-welcome" id="welcome">
+  <video autoplay loop poster="" id="welcome-video">
+    <source src="/videos/welcome.mp4" type="video/mp4">
+  </video>
+  <div class="s-home-welcome__overlay"></div>
   <div class="l-constrained-large">
     <div class="s-home-welcome__logo will-animate fadeIn">
       <img
@@ -9,7 +13,8 @@
         class="image-fullwidth">
     </div>
     <header class="will-animate fadeIn">
-      <h2><%= site_description %></h2>
+      <!-- <h2><%= site_description %></h2> -->
+      <h2><span>LaCroix Design Co.</span> is a web design, product design and development studio that excels in helping businesses better connect with their audience.</h2>
     </header>
     <div class="s-home-welcome__cta">
       <%= component "cta-button", btn: "btn-bright", id: "cta-welcome" %>

@@ -7,11 +7,14 @@
 } // @mixin welcome-section-layout
 
 .s-home-welcome {
+  position: relative;
+  overflow: hidden;
   padding: 2em + $header-height 0 4em;
-  background: $black image-url('backgrounds/home-welcome.jpg') no-repeat top center;
+  // background: $black image-url('backgrounds/home-welcome.jpg') no-repeat top center;
+  background: $pink; // TODO add by default for non-video browsers
   -webkit-background-size: cover;
   background-size: cover;
-  color: $off-white;
+  color: $white;
   text-align: center;
 
   header {
@@ -19,16 +22,34 @@
   }
 
   .s-home-welcome__logo {
+    display: none;
     max-width: 20em;
     margin: 0 auto 2em;
   }
 
+  video {
+    @include position(absolute, 0 0 0 0);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .s-home-welcome__overlay {
+    display: none;
+    // @include position(absolute, 0 0 0 0);
+    // background: rgba($pink, 0.9);
+  }
+
   h2 {
     margin-bottom: 1em;
-    font-family: $typeface-serif;
-    font-weight: normal;
-    font-style: italic;
+    // font-family: $typeface-serif;
+    font-size: 2.125em;
+    // font-weight: normal;
+    // font-style: italic;
     line-height: 1.375;
+    span { color: $black-10; }
+    span { color: $black; }
   }
 
   [class*="btn"] {
