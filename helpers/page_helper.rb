@@ -17,8 +17,8 @@ module PageHelper
     page.data.title
   end
 
-  def page_description(page = current_page)
-    page.data.tagline || site_description
+  def page_long_title(page = current_page)
+    page.data.long_title || page_title(page)
   end
 
   def page_browser_title(page = current_page)
@@ -26,12 +26,16 @@ module PageHelper
     #   - require #title
     #   - check for pagination
     #   - add context separated by hyphen? => Blog, Case Studies, Team
-    prefix = "#{page.data.title} | " if page_title
+    prefix = "#{page_long_title} | " if page_long_title
     suffix = data.site.title
     unless data.site.title
       raise "Site title is missing: add a `title` field in `data/site.yml`"
     end
     prefix + suffix
+  end
+
+  def page_description(page = current_page)
+    page.data.tagline || site_description
   end
 
   def page_image(page = current_page)
