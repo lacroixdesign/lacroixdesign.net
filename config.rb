@@ -142,13 +142,7 @@ configure :build do
   activate :gzip
 
   activate :asset_host
-  set :asset_host do |asset|
-    if asset =~ %r{^/fonts/}
-      "http://www.lacroixdesign.net"
-    else
-      "http://d2s13a5qoldi0f.cloudfront.net"
-    end
-  end
+  set :asset_host, "http://www.lacroixdesign.net"
 
   # Use relative URLs
   # activate :relative_assets
