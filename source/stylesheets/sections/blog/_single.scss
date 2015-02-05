@@ -10,6 +10,11 @@
     margin: 2.5em auto;
     border-top: 1px solid $medium-white;
   }
+
+  .b-post-inline-header {
+    margin: 0 -5em;
+    @include media-ie(600px) { margin: 0 auto; }
+  }
 } // .s-post
 
 /*
