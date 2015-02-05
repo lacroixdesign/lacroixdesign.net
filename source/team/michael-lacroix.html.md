@@ -1,6 +1,7 @@
 ---
 member: "Michael LaCroix"
 title: "Michael LaCroix - Bio"
+long_title: "Michael LaCroix is a Developer and Designer"
 cover_header: "/images/backgrounds/home-welcome.jpg"
 ---
 
