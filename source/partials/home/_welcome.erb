@@ -1,23 +1,29 @@
 <%# Home > Welcome %>
-<section class="s-home-welcome" id="welcome">
-  <video autoplay loop poster="" id="welcome-video">
-    <source src="/videos/welcome.mp4" type="video/mp4">
+<section class="s-home-welcome" id="welcome" poster="<%= image_path 'backgrounds/blog-bg.jpg' %>">
+
+  <%# Video %>
+  <video autoplay loop muted="muted" preload="auto" id="welcome-video"
+          poster="<%= image_path 'backgrounds/smartphone.jpg' %>"
+          style="display:none;">
+    <source src="/videos/smartphone.300.mp4" type="video/mp4">
+    <source src="/videos/smartphone.300.webm" type="video/webm">
+    <source src="/videos/smartphone.300.ogv" type="video/ogg">
   </video>
-  <div class="s-home-welcome__overlay"></div>
-  <div class="l-constrained-large">
-    <div class="s-home-welcome__logo will-animate fadeIn">
-      <img
-        src="<%= image_path "full-logo-light.svg" %>"
-        onerror="this.src='<%= image_path "full-logo-light.png" %>'"
-        alt="<%= data.site.title %>"
-        class="image-fullwidth">
-    </div>
-    <header class="will-animate fadeIn">
-      <!-- <h2><%= site_description %></h2> -->
-      <h2><span>LaCroix Design Co.</span> is a web design, product design and development studio that excels in helping businesses better connect with their audience.</h2>
-    </header>
-    <div class="s-home-welcome__cta">
-      <%= component "cta-button", btn: "btn-bright", id: "cta-welcome" %>
+
+  <div class="s-home-welcome__content">
+    <div class="l-constrained-large">
+
+      <%# Copy %>
+      <header class="will-animate fadeIn">
+        <h1><strong>LaCroix Design Co.</strong> is a web design, product design and development studio that excels in helping businesses better connect with their audience.</h1>
+      </header>
+
+      <%# Call to action %>
+      <div class="s-home-welcome__cta">
+        <%= component "cta-button", btn: "btn-bright", id: "cta-welcome" %>
+      </div>
+
     </div>
   </div>
+
 </section>

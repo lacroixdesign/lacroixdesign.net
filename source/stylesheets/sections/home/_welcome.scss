@@ -1,31 +1,21 @@
 @mixin welcome-section-layout {
-  padding: 4em + $header-height 0 7em;
+  .s-home-welcome__content {
+    padding: 4em + $header-height 0 7em;
+  }
 
-  header {
-    font-size: 100%;
+  h1 {
+    font-size: 2.25em;
   }
 } // @mixin welcome-section-layout
 
 .s-home-welcome {
   position: relative;
   overflow: hidden;
-  padding: 2em + $header-height 0 4em;
-  // background: $black image-url('backgrounds/home-welcome.jpg') no-repeat top center;
-  background: $pink; // TODO add by default for non-video browsers
+  background: $pink image-url('backgrounds/smartphone.jpg') right center;
   -webkit-background-size: cover;
   background-size: cover;
   color: $white;
   text-align: center;
-
-  header {
-    font-size: 67.5%;
-  }
-
-  .s-home-welcome__logo {
-    display: none;
-    max-width: 20em;
-    margin: 0 auto 2em;
-  }
 
   video {
     @include position(absolute, 0 0 0 0);
@@ -35,22 +25,23 @@
     min-height: 100%;
   }
 
-  .s-home-welcome__overlay {
-    display: none;
-    // @include position(absolute, 0 0 0 0);
-    // background: rgba($pink, 0.9);
+  .s-home-welcome__content {
+    position: relative;
+    padding: 2em + $header-height 0 4em;
+    background: $pink;
+    background: rgba($pink, 0.85);
   }
 
-  h2 {
-    margin-bottom: 1em;
-    // font-family: $typeface-serif;
-    font-size: 2.125em;
-    // font-weight: normal;
-    // font-style: italic;
+  h1 {
+    margin-bottom: 1.5em;
+    font-size: 1.25em;
     line-height: 1.375;
-    span { color: $black-10; }
-    span { color: $black; }
-  }
+
+    strong {
+      color: $black;
+      font-weight: inherit;
+    }
+  } // h1
 
   [class*="btn"] {
     font-family: $typeface-serif;
@@ -59,11 +50,23 @@
     &:hover { color: $black !important; }
   }
 
+  @include media(350px) {
+    h1 { font-size: 1.75em; }
+  }
+
+  @include media(500px) {
+    h1 { font-size: 2.125em; }
+  }
+
+  @include media(min-width 330px min-height 450px) {
+    .s-home-welcome__content { padding: 3em + $header-height 0 5em; }
+  }
+
   @include media(min-width 600px min-height 550px) {
     @include welcome-section-layout;
   }
 
-  @include media-ie {
+  @include media-ie-only {
     @include welcome-section-layout;
   }
 } // .s-home-welcome

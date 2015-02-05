@@ -1,4 +1,5 @@
 //= require vendor/lodash.min
+//= require vendor/ismobile.min
 //= require vendor/slick.min
 //= require vendor/wow.min
 //= require vendor/jquery.fitvids
