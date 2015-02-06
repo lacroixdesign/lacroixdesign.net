@@ -17,11 +17,11 @@ $layout-width-medium: 30em;
 $layout-width-large:  40em;
 
 // Header
-$header-height: 2em;
+$header-height: 2.5em;
 $header-padding: 1em;
 $header-offset: $header-height + ($header-padding * 2);
-$header-cover: ".has-cover-header";
 $header-fill:  ".has-fill-header";
+$nav-breakpoint: 500px;
 
 // Borders
 $border-radius: 2px;

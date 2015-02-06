@@ -1,8 +1,8 @@
 (function() {
 
   /*
-  * Load preview
-  */
+   * Load preview
+   */
 
   function loadLivePreview(el) {
     var $this    = $(el);

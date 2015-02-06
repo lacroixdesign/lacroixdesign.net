@@ -1,6 +1,6 @@
 $nav-menu-open: ".is-menu-open";
 $nav-menu-width: 15em;
-$nav-toggle-size: 2.5em;
+$nav-toggle-size: $header-height;
 $nav-position-offset: 1em;
 $nav-link-total: 5;
 $nav-transition-time: 0.3s;
@@ -14,6 +14,12 @@ $nav-delay-delta: 0.075;
   $delay: unquote("#{ nav-delay($position) }s");
   @include transition(all $nav-transition-time ease $delay);
 }
+
+/*
+ * ------------------------------------------------
+ * Background overlay
+ * ------------------------------------------------
+ */
 
 .b-menu-body-overlay {
   position: fixed;
@@ -34,6 +40,12 @@ $nav-delay-delta: 0.075;
   }
 } // .b-menu-body-overlay
 
+/*
+ * ------------------------------------------------
+ * Toggle button
+ * ------------------------------------------------
+ */
+
 #nav-toggle-btn {
   position: fixed;
   top: $nav-position-offset;
@@ -43,8 +55,20 @@ $nav-delay-delta: 0.075;
   width: $nav-toggle-size;
   height: $nav-toggle-size;
   background: $white;
-  @include animation(fadeIn50 1s ease-in, pulse 0.5s linear 2.5s);
+  @include animation(fadeIn50 1s ease-in);
   @include transition(all 200ms linear);
+
+  @include media-ie($nav-breakpoint) {
+    visibility: hidden;
+    opacity: 0;
+    @include transform( translateX(5em) );
+
+    &.is--visible {
+      visibility: visible;
+      opacity: 1;
+      @include transform( translateX(0) );
+    }
+  } // $nav-breakpoint
 
   @mixin line-top-position($pos) {
     $offset: 2px;
@@ -72,8 +96,7 @@ $nav-delay-delta: 0.075;
   }
 
   .csstransforms3d & {
-    // $line-offset: 8px;
-    $line-offset: 0.4em;
+    $line-offset: 0.4em; // or 8px
 
     .line {
       height: 4px;
@@ -92,6 +115,10 @@ $nav-delay-delta: 0.075;
   } // .csstransforms3d &
 
   .csstransforms3d #{$nav-menu-open} & {
+    visibility: visible !important;
+    opacity: 1 !important;
+    @include transform( translateX(0) );
+
     .line {
       @include line-top-position(50%);
     }
@@ -110,6 +137,12 @@ $nav-delay-delta: 0.075;
     }
   } // .csstransforms3d #{$nav-menu-open} &
 } // #nav-toggle-btn
+
+/*
+ * ------------------------------------------------
+ * Menu
+ * ------------------------------------------------
+ */
 
 .b-menu {
   position: fixed;
@@ -135,6 +168,12 @@ $nav-delay-delta: 0.075;
     visibility: visible;
   }
 } // .b-menu
+
+/*
+ * ------------------------------------------------
+ * Menu list
+ * ------------------------------------------------
+ */
 
 .b-menu-list {
   width: $nav-menu-width;
@@ -172,6 +211,12 @@ $nav-delay-delta: 0.075;
     a { padding: 0.75em 1em 0.75em 0.75em; }
   }
 } // .b-menu-list
+
+/*
+ * ------------------------------------------------
+ * Menu items
+ * ------------------------------------------------
+ */
 
 .b-menu-social {
   width: $nav-menu-width;

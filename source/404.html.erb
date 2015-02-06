@@ -3,13 +3,33 @@ title: "Page Not Found"
 directory_index: false
 ---
 
-<div class="l-constrained-medium s-404">
-  <div class="s-404__image">
-    <%= image_tag "404.gif", class: "image-fullwidth" %>
+<div class="b-page--standard s-404">
+
+  <div class="l-constrained-medium">
+    <%# Image %>
+    <div class="s-404__image">
+      <%= image_tag "404.gif", class: "image-fullwidth" %>
+    </div>
+
+    <%# Copy %>
+    <div class="b-text">
+      <p>Uh oh, the content you were looking for could not be found.</p>
+      <p>You can <a href="/">return home</a> or use the <a href="#header" data-toggle-nav>nav menu</a>.</p>
+    </div>
   </div>
 
-  <div class="b-text">
-    <p>Uh oh, the content you were looking for could not be found.</p>
-    <p>You can <a href="/">return home</a> or use the <a href="#header" data-toggle-nav>nav menu</a>.</p>
+  <%# Call to action %>
+  <div class="s-post--cta">
+    <%= partial "partials/cta_section", locals: {
+          text: "We are small design and development team specializing in web and product experiences."
+    } %>
   </div>
+
+  <%# Random case studies (async) %>
+  <div class="s-case-studies theme--async"
+        data-current-entry="<%= current_page.url %>"
+        data-random-case-studies="4">
+    <%= partial "templates/case_study_boxes" %>
+  </div>
+
 </div>

@@ -19,3 +19,6 @@
 .env
 vendor/bundle
 .cache
+
+# IntelliJ
+/.idea

@@ -1,6 +1,4 @@
 .s-404 {
-  margin-top: 2em;
-  margin-bottom: 3em;
   text-align: center;
   @include fadeInOnPageLoad;
 
@@ -9,7 +7,15 @@
     margin: 0 auto 2em;
   }
 
+  .b-text {
+    margin-bottom: 4em;
+  }
+
   p {
     font-style: italic;
+  }
+
+  .s-case-studies {
+    margin-top: 1px;
   }
 } // .s-404

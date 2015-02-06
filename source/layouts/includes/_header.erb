@@ -2,14 +2,20 @@
   cover   = current_page.data.cover_header || current_page.data.above_header
   no_grad = current_page.data.above_header
   bg      = current_page.data.header_background
-  logo    = cover || current_page.data.light_logo ? 'logo-light' : 'logo-dark'
+  light   = cover || current_page.data.light_logo
+  logo    = light ? 'logo-light' : 'logo-dark'
+  theme   = light ? 'theme--light' : 'theme--dark'
+%>
+
+<%#
+  Header + static nav
 %>
 
 <header id="header"
         class="s-header
-              <%= 'has-cover-header' if cover %>
               <%= 'has-fill-header' if bg %>
-              <%= 'has-no-gradient' if no_grad %>"
+              <%= 'has-no-gradient' if no_grad %>
+              <%= theme %>"
         <% if bg && bg.is_a?(String) %>
           style="background-color: <%= bg %>"
         <% end %>>
@@ -24,7 +30,7 @@
     </a>
   </div>
 
-  <nav id="menu" class="s-header-nav" role="navigation">
+  <nav id="top-menu" class="s-header-nav" role="navigation">
     <ul>
       <%= partial "layouts/includes/nav_items" %>
     </ul>
@@ -32,11 +38,19 @@
 
 </header>
 
+<%#
+  Nav toggle
+%>
+
 <a id="nav-toggle-btn" href="#menu" data-toggle-nav>
   <span class="line line-1"></span>
   <span class="line line-2"></span>
   <span class="line line-3"></span>
 </a>
+
+<%#
+  Floating nav
+%>
 
 <nav id="menu" class="b-menu" role="navigation">
   <ul class="b-menu-list">

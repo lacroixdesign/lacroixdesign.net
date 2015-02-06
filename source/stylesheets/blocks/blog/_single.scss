@@ -75,7 +75,11 @@
 .b-post-header {
   padding: 2em 0;
   background: $off-white;
-}
+
+  &.theme--no-image {
+    padding-top: $header-offset + 2em;
+  }
+} // .b-post-header
 
 .b-post-body {
   margin: 2em auto;

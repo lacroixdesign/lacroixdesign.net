@@ -5,6 +5,9 @@
  */
 .s-header {
   @include clearfix;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: $header-height;
   padding: 0 $header-padding;
@@ -13,12 +16,6 @@
 
   > * {
     height: 100%;
-  }
-
-  &#{$header-cover} {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 } // .s-header
 
@@ -40,7 +37,15 @@
   position: relative;
   float: right;
   z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  max-width: 60%;
+  color: $black;
   font-family: $typeface-sans;
+
+  .theme--light & {
+    color: $white;
+  }
 
   ul {
     @include clearfix;
@@ -61,6 +66,7 @@
     padding-bottom: 0.5em;
     font-size: 0.8125em;
     font-weight: $bold-weight;
+    line-height: 1;
     text-decoration: none;
     text-transform: uppercase;
   }
@@ -71,14 +77,17 @@
     height: 3px;
     background: $pink;
     content: '';
+    @include transition(width 0.2s ease-out);
+
+    .theme--light & { background: $white; }
   }
 
   a:hover:after {
     width: 100%;
-    @include animation(growHorizontal 0.2s ease-out);
+  }
+
+  @include media-ie($nav-breakpoint) {
+    visibility: visible;
+    opacity: 1;
   }
 } // .s-header-nav
-
-#nav-toggle-btn {
-  display: none !important; // TODO remove
-}
