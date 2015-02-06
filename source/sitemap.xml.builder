@@ -36,6 +36,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url.start_with?('/javascripts/')
       throw :next_page if page.url.start_with?('/stylesheets/')
       throw :next_page if page.url.start_with?('/fonts/')
+      throw :next_page if page.url.start_with?('/videos/')
       throw :next_page if page.url.start_with?('/layouts/')
       throw :next_page if page.url.start_with?('/apple-touch-icon')
       throw :next_page if page.url.start_with?('/CNAME')
@@ -46,6 +47,8 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
       throw :next_page if page.url == '/favicon.ico'
       throw :next_page if page.url == '/humans.txt'
       throw :next_page if page.url == '/404.html'
+      throw :next_page if page.url == '/pinterest-e87c7.html'
+      throw :next_page if page.url == '/technoratimedia_sv_6763.txt'
       throw :next_page if page.is_a? Middleman::Sitemap::Extensions::Redirects::RedirectResource
 
       # Exclude drafts
