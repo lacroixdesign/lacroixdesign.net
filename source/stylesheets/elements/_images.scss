@@ -73,16 +73,19 @@ a.image--bg-link.theme--fade:hover,
 // Hover overlay theme
 a.image--bg-link.theme--overlay {
   background-color: $black;
+  @include transition(transform 0.2s ease-out);
 
   .image--bg:after {
     visibility: hidden;
     background-color: inherit;
     opacity: 0;
+    @include transition(opacity 0.2s ease-out, visibility 0.2s ease-out);
   }
 
   &:hover,
   .image--bg-holder:hover & {
     background-color: inherit;
+    @include transform( scale(1.025) );
 
     .image--bg:after {
       visibility: visible;

@@ -3,7 +3,7 @@ site_url = "http://www.lacroixdesign.net/"
 src_posts = blog("case-studies").articles
 
 posts = src_posts.map do |post|
-  color = rgba (post.data.color || data.colors.black), 0.4
+  color = rgba (post.data.color || data.colors.black), 0.7
   {
     id: post.url,
     title: post.title,

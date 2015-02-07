@@ -47,7 +47,7 @@
     font-family: $typeface-serif;
     font-weight: bold;
     font-style: italic;
-    &:hover { color: $black !important; }
+    &:hover { color: $pink !important; }
   }
 
   @include media(350px) {
