@@ -1,9 +1,15 @@
 .s-team {
   position: relative;
   z-index: 1;
-  background: $white;
+  padding-bottom: 1em;
+  background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
   text-align: center;
-}
+
+  @include hidpi(1.5) {
+    background-image: image-url('backgrounds/chicago-skyline_@2X.png');
+    background-size: 1200px 360px;
+  }
+} // .s-team
 
 .s-team__stars {
   width: 100%;
