@@ -70,6 +70,10 @@ module PageHelper
     end
   end
 
+  def page_short_url(page = current_page)
+    page.data.short_url
+  end
+
   def page_fb_type(page = current_page)
     if is_blog_post(page)
       return "article"
