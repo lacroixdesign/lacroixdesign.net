@@ -1,19 +1,14 @@
 @import "blocks/containers";
 
 .s-home-projects {
-  padding-bottom: 2em;
   text-align: center;
+
+  .b-section {
+    padding-bottom: 0;
+  }
 
   .section-title {
     margin: 0 auto;
-  }
-
-  @include media(600px) {
-    padding-bottom: 10%;
-  }
-
-  .no-csstransforms & {
-    padding-bottom: 0;
   }
 } // .s-home-projects
 

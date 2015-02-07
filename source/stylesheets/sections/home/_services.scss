@@ -1,52 +1,46 @@
+$home-services--breakpoint: 700px;
+
 .s-services {
-  position: relative;
-  z-index: 1;
-  padding-right: $page-gutter;
-  padding-left: $page-gutter;
-  padding-bottom: 2em;
-  background: $off-white;
+  padding: 3em $page-gutter;
+  background: image-url('backgrounds/home-welcome.jpg') fixed center;
+  -webkit-background-size: cover;
+  background-size: cover;
   text-align: center;
 
-  &::before,
-  &::after {
-    position: absolute;
-    top: 0;
-    left: -25%;
-    z-index: -1;
-    width: 150%;
-    height: 75%;
-    background: inherit;
-    content: '';
-    pointer-events: none;
-    -webkit-transform: rotate(-3deg);
-    transform: rotate(-3deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
+  .b-section {
+    padding: 0;
   }
 
-  @include media(600px) {
-    padding-bottom: 10%;
+  header {
+    margin-top: 0;
   }
 
-  .no-csstransforms & {
-    padding-bottom: 0;
+  h1 {
+    color: $white;
+  }
+
+  @include media-ie($home-services--breakpoint) {
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 } // .s-services
 
 .s-services__lists {
   max-width: 19em;
   margin: 0 auto 0;
+  border-radius: 8px;
+  color: $white;
   font-size: 87.5%;
 
   article {
-    margin-bottom: 1.5em;
+    margin-bottom: 3em;
   }
 
   article:last-child {
     margin-bottom: 0;
   }
 
-  @include media-ie(700px) {
+  @include media-ie($home-services--breakpoint) {
     @include row;
     @include display(flex);
     max-width: 60em;

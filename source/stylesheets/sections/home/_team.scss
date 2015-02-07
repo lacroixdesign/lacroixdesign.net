@@ -3,35 +3,7 @@
   z-index: 1;
   background: $white;
   text-align: center;
-
-  > .wrap {
-    padding-bottom: 3em;
-    background: $white image-url('backgrounds/chicago-skyline.png') no-repeat center bottom;
-
-    @include hidpi(1.5) {
-      background-image: image-url('backgrounds/chicago-skyline_@2X.png');
-      background-size: 1200px 360px;
-    }
-  } // > .wrap
-
-  &::before,
-  &::after {
-    position: absolute;
-    top: 0;
-    left: -25%;
-    z-index: -1;
-    width: 150%;
-    height: 100%;
-    background: inherit;
-    background-image: none;
-    content: '';
-    pointer-events: none;
-    -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
-    -webkit-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-  }
-} // .s-team
+}
 
 .s-team__stars {
   width: 100%;
@@ -86,7 +58,7 @@
     padding: 0.5em;
     overflow: hidden;
     background: rgba($white, 0.7);
-    color: $red-chicago;
+    color: $pink;
     @include media-ie-only { display: none; }
   }
 
