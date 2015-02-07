@@ -88,6 +88,10 @@
     padding-bottom: 0.75em;
   }
 
+  &.pill {
+    border-radius: 500px;
+  }
+
   &.animate-faux-progress {
     $transition-time: 4s;
     background: transparent;

@@ -68,6 +68,16 @@
         <%= yield %>
       </div>
 
+      <%# Tweet comment %>
+      <% tweet = capture do %>
+        <%= icon 'e49d' %> Discuss on Twitter
+      <% end %>
+      <div class="b-simple-callout">
+        <%= macro_tweet_intent(current_page, {class: "btn small pill"}) {
+              tweet
+        } %>
+      </div>
+
       <%# Author %>
       <div class="b-author-meta will-animate fadeInUp" id="author">
         <div class="b-author-meta__avatar">
