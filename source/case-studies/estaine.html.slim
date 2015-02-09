@@ -1,0 +1,38 @@
+---
+title: "ÉSTAINE"
+date: 2015-02-08 15:00
+cover_header: true
+tagline: "Launching a High Fashion Concept"
+color: "#7a1a67"
+website_url: "http://www.estaine.com/"
+---
+= text_block do
+  p ÉSTAINE was founded by Dr. Zofia Wosinska, a dye chemist who spent much of her career in cancer research, and her husband Jeremy Picker, a cancer survivor and veteran in the fashion industry. While working for Roche developing dye solutions used in cancer diagnosis, Zofia imagined the colors and patterns of the stained cells one day gracing dresses and other textiles. In her vision, these fabrics would tell the story of a cancer survivor.
+
+/ Split text + image – text on left (the default side)
+= split_block image: case_study_image_path('landid-1.jpg'), background: current_page.data.color, color: '#fff'
+  p Éstaine is using fashion as a medium for cancer education and patient support.
+
+= text_block do
+  p At ÉSTAINE, Jeremy and Zofia are using high fashion, to aid those fighting the battle against cancer while also educating the community. Their initial line of high quality, 100% silk scarves and ties are made in Italy. These products feature one-of-a-kind designs feature patterns derrived from the colors and patterns of stained cancer cells. As a result, the scarves and ties tell the stories of cancer survivors with a goal of inviting questions that lead to awareness.
+
+  p We worked with ÉSTAINE to create a logo and brand identity system that communicated high fashion and provided a visual system for the new business to share their message. As part of this process, we designed marketing materials, look books, product tags, a website, and packaging guidelines. All of these pieces work in harmony to communicate ÉSTAINE’s message and the high quality of products that they produce.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('landid-2.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
+  p The ÉSTAINE logo showcases the accented first letter of the brand name and appears as if it is also created from suspended fabric. We designed the mark to feel uplifting and reflect the flow of the high quality textiles that is used in their scarves and ties.
+
+= text_block do
+  p To promote their product and make it accessible to consumers,  we created a responsive website for ÉSTAINE. To keep up with the evolving brand, the website needed to provide flexible content management and commerce functionality. As a result Squarespace was chosen as the publishing platform because it offered the needed features at a low barrier of entry. We handled the design and setup of the site as well as user training to equip their team with everything needed to launch and develop their online business.
+
+  / Slideshow
+= case_study_slideshow %w(landid-slide-1 landid-slide-2 landid-slide-3 landid-slide-4 landid-slide-5)
+
+ / Live Preview
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
+
+= text_block callout: true
+  p Looking for a brand identity and website to launch your business?
+  p = component "cta-button"
+  p You can also visit the <a http://www.estaine.com/" target="_blank">ÉSTAINE website</a>.
