@@ -78,8 +78,6 @@
     background: $pink;
     content: '';
     @include transition(width 0.2s ease-out);
-
-    .theme--light & { background: $white; }
   }
 
   a:hover:after {
