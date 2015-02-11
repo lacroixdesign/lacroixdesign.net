@@ -11,7 +11,7 @@
 .s-home-welcome {
   position: relative;
   overflow: hidden;
-  background: $black-30 image-url('backgrounds/smartphone.jpg') right center;
+  background: $black-50 image-url('backgrounds/smartphone.jpg') right center;
   -webkit-background-size: cover;
   background-size: cover;
   color: $white;
@@ -28,8 +28,8 @@
   .s-home-welcome__content {
     position: relative;
     padding: 2em + $header-offset 0 4em;
-    background: $black-30;
-    background: rgba($black-30, 0.85);
+    background: $black-50;
+    background: rgba($black-50, 0.85);
   }
 
   h1 {
@@ -47,7 +47,7 @@
     font-family: $typeface-serif;
     font-weight: bold;
     font-style: italic;
-    &:hover { color: $black-30 !important; }
+    &:hover { color: $black-50 !important; }
   }
 
   @include media(350px) {
