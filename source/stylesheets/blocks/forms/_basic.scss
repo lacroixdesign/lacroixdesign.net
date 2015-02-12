@@ -9,16 +9,16 @@
 
   fieldset.input--group {}
 
-  #{$all-text-inputs} {
-    max-width: 20em;
-  }
-
   textarea {
     min-height: 8em;
   }
 
   .input--group {
     margin-bottom: 1.5em;
+  }
+
+  .input--group.theme--text {
+    max-width: 20em;
   }
 
   .input--group:last-child,
