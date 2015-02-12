@@ -68,14 +68,25 @@
         <%= yield %>
       </div>
 
-      <%# Tweet comment %>
-      <% tweet = capture do %>
-        <%= icon 'e49d' %> Discuss on Twitter
-      <% end %>
-      <div class="b-simple-callout">
-        <%= macro_tweet_intent(current_page, {class: "btn small pill"}) {
+      <%# Comment %>
+      <div class="b-simple-callout b-callout--comments">
+        <%# Tweet %>
+        <% tweet = capture do %>
+          <%= icon 'e49d' %> Discuss on Twitter
+        <% end %>
+        <%= macro_tweet_intent(current_page, {class: "btn small pill icon--left"}) {
               tweet
         } %>
+        <%# Designer News %>
+        <% if current_page.data.dn_url %>
+          <% dn_content = capture do %>
+            <%= icon 'e600' %> Discuss on Designer News
+          <% end %>
+          <%= link_to(current_page.data.dn_url, {
+                class: "btn small pill icon--left",
+                target: "_blank"
+              }) { dn_content } %>
+        <% end %>
       </div>
 
       <%# Author %>

@@ -119,6 +119,10 @@
   [data-icon] {
     vertical-align: middle;
   }
+
+  &.icon--left [data-icon] {
+    margin-right: 0.25em;
+  }
 } // @mixin btn
 
 @include keyframes(btn-progress) {
