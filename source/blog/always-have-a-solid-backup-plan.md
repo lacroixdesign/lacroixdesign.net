@@ -6,7 +6,6 @@ author: "James LaCroix"
 published: true
 image: "always-have-a-solid-backup-plan.jpg"
 inline_header: true
-above_header: true
 ---
 
 This past autumn, I once again had the opportunity to work with long-time friends and clients, [Relient K](http://relientk.com) designing and producing merchandise for their upcoming tour. Celebrating the 10-year anniversary of their best-selling album, [MMHMM](http://en.wikipedia.org/wiki/Mmhmm), the tour was slated to be a special event for both the band and their fans.
