@@ -33,7 +33,7 @@
   ul {
     list-style: disc;
     padding-left: 2.25em;
-    margin: 1.5em auto;
+    margin: 1em auto;
   }
 
   ul ul {
@@ -42,6 +42,10 @@
 
   ul ul ul {
     list-style: square;
+  }
+
+  li {
+    margin-bottom: 0.5em;
   }
 
   blockquote {
