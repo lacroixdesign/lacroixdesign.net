@@ -7,7 +7,7 @@ posts = src_posts.map do |post|
   {
     id: post.url,
     title: post.title,
-    description: page_description,
+    description: page_description(post),
     url: URI.join(site_url, post.url).to_s,
     path: post.url,
     published: post.date.to_time.iso8601,
