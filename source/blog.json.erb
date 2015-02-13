@@ -1,8 +1,9 @@
 <%
+YEAR_IN_SECONDS = 31536000
 site_url = "http://www.lacroixdesign.net/"
 src_posts = blog("blog").articles
 
-posts = src_posts.map do |post|
+posts = src_posts.reject {|a| a.date < Time.now - YEAR_IN_SECONDS}.map do |post|
   author = page_author(post)
   {
     id: post.url,
