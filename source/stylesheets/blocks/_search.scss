@@ -1,7 +1,11 @@
 .b-search {
   background: $off-white;
-  box-sizing: content-box;
-  padding: 3em 0;
+  padding: 2em 0;
+
+  .b-search--wrapper{
+    max-width: 30em;
+    margin: auto;
+  }
 
   * {
     box-sizing: content-box !important;
