@@ -1,0 +1,40 @@
+---
+title: "Search"
+long_title: "Search through our site, case studies and blog posts to find the what you are looking for."
+pageable: true
+per_page: 10
+tagline: "Are you looking for something specific? Use the search box below."
+---
+
+<div class="b-section--basic-header">
+  <h1 class="will-animate fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <%= current_page.data.title %>
+  </h1>
+  <h2 class="will-animate fadeIn" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <%= current_page.data.tagline %>
+  </h2>
+</div>
+
+<section class="b-search">
+  <div class="l-constrained-medium">
+    <script>
+      (function() {
+        var cx = '012271807909947646118:ekrzi9snjrw';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
+</section>
+
+<%# More posts (async) %>
+<div class="s-posts-index"
+          data-current-post="<%= current_page.url %>"
+          data-random-posts="3">
+</div>
