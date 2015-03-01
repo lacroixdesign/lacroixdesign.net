@@ -120,6 +120,25 @@
     </script>
   <% end %>
 
+  <%# Knowledge Graph %>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "http://www.lacroixdesign.net",
+    "sameAs" : [ "http://www.facebook.com/lacroixdesign",
+      "http://www.twitter.com/lacroixdesign",
+      "http://www.linkedin.com/company/lacroix-design-company",
+      "http://plus.google.com/113390683460121177144"] 
+    "logo": "http://www.lacroixdesign.net/images/logo-dark-4243d8fc.png"
+    "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+1-312-436-1532",
+      "contactType" : "customer service"
+    } ]
+  }
+  </script>
+
   <%# Twitter %>
   <script>
     window.twttr = (function (d, s, id) {
@@ -130,6 +149,7 @@
       return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
     }(document, "script", "twitter-wjs"));
   </script>
+
 
 </body>
 </html>
