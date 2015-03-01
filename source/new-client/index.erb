@@ -1,0 +1,27 @@
+---
+title: "New Client"
+long_title: "Let's get things off to a good start by making certain that we have the correct contact information."
+above_header: true
+---
+
+<% hero = capture do %>
+  <h1>Let&rsquo;s get started!</h1>
+  <h2 class="title--subheading">We are thrilled to be working with you on your project. Please fill out this short form so that we have your most current information.</h2>
+<% end %>
+<%= macro_hero(
+    image: asset_url("images/backgrounds/blog-bg.jpg"),
+    theme: "theme--very-dark"
+  ) { hero } %>
+
+<section class="l-constrained-medium b-page s-project-inquiry" id="thanks">
+  <div class="will-animate fadeInDown" data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <%= partial "partials/new_client_form" %>
+  </div>
+</section>
+
+<%# Random case studies (async) %>
+<div class="s-case-studies theme--async"
+      data-current-entry="<%= current_page.url %>"
+      data-random-case-studies="4">
+  <%= partial "templates/case_study_boxes" %>
+</div>

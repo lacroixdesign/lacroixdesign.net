@@ -1,0 +1,25 @@
+---
+title: "Thanks! - Start a Project"
+above_header: true
+---
+
+<% hero = capture do %>
+  <h1>Thank you!</h1>
+  <h2 class="title--subheading">We&rsquo;ll be in touch shortly.</h2>
+<% end %>
+<%= macro_hero(
+    image: asset_url("images/backgrounds/blog-bg.jpg"),
+    theme: "theme--very-dark"
+  ) { hero } %>
+
+<section class="l-constrained-medium b-page" id="thanks">
+  <div class="b-text will-animate fadeInDown"
+        data-wow-duration="0.7s" data-wow-delay="0.2s">
+    <p>In the meantime, feel free to <a href="<%= data.urls.blog %>">explore our blog</a> or browse through a sampling of our work below.</p>
+  </div>
+</section>
+
+<%# Random case studies (async) %>
+<div class="s-case-studies theme--async" data-random-case-studies="4">
+  <%= partial "templates/case_study_boxes" %>
+</div>
