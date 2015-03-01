@@ -120,6 +120,21 @@
     </script>
   <% end %>
 
+
+  <%# Sitelinks Search Box %>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.example.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "http://www.lacroixdesign.net/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <%# Knowledge Graph %>
   <script type="application/ld+json">
   {
@@ -129,7 +144,7 @@
     "sameAs" : [ "http://www.facebook.com/lacroixdesign",
       "http://www.twitter.com/lacroixdesign",
       "http://www.linkedin.com/company/lacroix-design-company",
-      "http://plus.google.com/113390683460121177144"] 
+      "http://plus.google.com/113390683460121177144"]
     "logo": "http://www.lacroixdesign.net/images/logo-dark-4243d8fc.png"
     "contactPoint" : [
     { "@type" : "ContactPoint",
