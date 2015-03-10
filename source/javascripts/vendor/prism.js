@@ -1,5 +1,5 @@
-/* http://prismjs.com/download.html?themes=prism&languages=markup+css+css-extras+clike+javascript+scss+bash+ruby */
-var self = (typeof window !== 'undefined')
+/* http://prismjs.com/download.html?themes=prism&languages=markup+twig+css+css-extras+clike+javascript+scss+bash+ruby */
+self = (typeof window !== 'undefined')
 	? window   // if in browser
 	: (
 		(typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)
@@ -51,7 +51,7 @@ var _ = self.Prism = {
 					return clone;
 
 				case 'Array':
-					return o.slice();
+					return o.map(function(v) { return _.util.clone(v); });
 			}
 
 			return o;
@@ -69,10 +69,31 @@ var _ = self.Prism = {
 			return lang;
 		},
 
-		// Insert a token before another token in a language literal
+		/**
+		 * Insert a token before another token in a language literal
+		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
+		 * we cannot just provide an object, we need anobject and a key.
+		 * @param inside The key (or language id) of the parent
+		 * @param before The key to insert before. If not provided, the function appends instead.
+		 * @param insert Object with the key/value pairs to insert
+		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
+		 */
 		insertBefore: function (inside, before, insert, root) {
 			root = root || _.languages;
 			var grammar = root[inside];
+			
+			if (arguments.length == 2) {
+				insert = arguments[1];
+				
+				for (var newToken in insert) {
+					if (insert.hasOwnProperty(newToken)) {
+						grammar[newToken] = insert[newToken];
+					}
+				}
+				
+				return grammar;
+			}
+			
 			var ret = {};
 
 			for (var token in grammar) {
@@ -92,6 +113,13 @@ var _ = self.Prism = {
 					ret[token] = grammar[token];
 				}
 			}
+			
+			// Update references in other language definitions
+			_.languages.DFS(_.languages, function(key, value) {
+				if (value === root[inside] && key != inside) {
+					this[key] = ret;
+				}
+			});
 
 			return root[inside] = ret;
 		},
@@ -104,7 +132,8 @@ var _ = self.Prism = {
 
 					if (_.util.type(o[i]) === 'Object') {
 						_.languages.DFS(o[i], callback);
-					} else if (_.util.type(o[i]) === 'Array') {
+					}
+					else if (_.util.type(o[i]) === 'Array') {
 						_.languages.DFS(o[i], callback, i);
 					}
 				}
@@ -153,6 +182,8 @@ var _ = self.Prism = {
 			return;
 		}
 
+		code = code.replace(/^(?:\r?\n|\r)/,'');
+
 		var env = {
 			element: element,
 			language: language,
@@ -182,7 +213,7 @@ var _ = self.Prism = {
 			}));
 		}
 		else {
-			env.highlightedCode = _.highlight(env.code, env.grammar, env.language)
+			env.highlightedCode = _.highlight(env.code, env.grammar, env.language);
 
 			_.hooks.run('before-insert', env);
 
@@ -319,7 +350,7 @@ Token.stringify = function(o, language, parent) {
 		return o;
 	}
 
-	if (Object.prototype.toString.call(o) == '[object Array]') {
+	if (_.util.type(o) === 'Array') {
 		return o.map(function(element) {
 			return Token.stringify(element, language, o);
 		}).join('');
@@ -396,12 +427,12 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ;
 Prism.languages.markup = {
-	'comment': /<!--[\w\W]*?-->/g,
+	'comment': /<!--[\w\W]*?-->/,
 	'prolog': /<\?.+?\?>/,
 	'doctype': /<!DOCTYPE.+?>/,
 	'cdata': /<!\[CDATA\[[\w\W]*?]]>/i,
 	'tag': {
-		pattern: /<\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+))?\s*)*\/?>/gi,
+		pattern: /<\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|[^\s'">=]+))?\s*)*\/?>/i,
 		inside: {
 			'tag': {
 				pattern: /^<\/?[\w:-]+/i,
@@ -411,14 +442,14 @@ Prism.languages.markup = {
 				}
 			},
 			'attr-value': {
-				pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/gi,
+				pattern: /=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,
 				inside: {
-					'punctuation': /=|>|"/g
+					'punctuation': /=|>|"/
 				}
 			},
-			'punctuation': /\/?>/g,
+			'punctuation': /\/?>/,
 			'attr-name': {
-				pattern: /[\w:-]+/g,
+				pattern: /[\w:-]+/,
 				inside: {
 					'namespace': /^[\w-]+?:/
 				}
@@ -426,7 +457,7 @@ Prism.languages.markup = {
 
 		}
 	},
-	'entity': /\&#?[\da-z]{1,8};/gi
+	'entity': /&#?[\da-z]{1,8};/i
 };
 
 // Plugin to make entity title show the real entity, idea by Roman Komarov
@@ -437,93 +468,160 @@ Prism.hooks.add('wrap', function(env) {
 	}
 });
 ;
-Prism.languages.css = {
-	'comment': /\/\*[\w\W]*?\*\//g,
-	'atrule': {
-		pattern: /@[\w-]+?.*?(;|(?=\s*{))/gi,
+Prism.languages.twig = {
+	'comment': /\{#[\s\S]*?#\}/,
+	'tag': {
+		pattern: /(\{\{[\s\S]*?\}\}|\{%[\s\S]*?%\})/,
 		inside: {
-			'punctuation': /[;:]/g
+			'ld': {
+				pattern: /^(\{\{\-?|\{%\-?\s*\w+)/,
+				inside: {
+					'punctuation': /^(\{\{|\{%)\-?/,
+					'keyword': /\w+/
+				}
+			},
+			'rd': {
+				pattern: /\-?(%\}|\}\})$/,
+				inside: {
+					'punctuation': /.*/
+				}
+			},
+			'string': {
+				pattern: /("|')(\\?.)*?\1/,
+				inside: {
+					'punctuation': /^('|")|('|")$/
+				}
+			},
+			'keyword': /\b(if)\b/,
+			'boolean': /\b(true|false|null)\b/,
+			'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?)\b/,
+			'operator': /==|=|!=|<|>|>=|<=|\+|\-|~|\*|\/|\/\/|%|\*\*|\|/,
+			'space-operator': {
+				pattern: /(\s)(\b(not|b\-and|b\-xor|b\-or|and|or|in|matches|starts with|ends with|is)\b|\?|:|\?:)(?=\s)/,
+				lookbehind: true,
+				inside: {
+					'operator': /.*/
+				}
+			},
+			'property': /\b[a-zA-Z_][a-zA-Z0-9_]*\b/,
+			'punctuation': /\(|\)|\[\]|\[|\]|\{|\}|:|\.|,/
 		}
 	},
-	'url': /url\((["']?).*?\1\)/gi,
-	'selector': /[^\{\}\s][^\{\};]*(?=\s*\{)/g,
-	'property': /(\b|\B)[\w-]+(?=\s*:)/ig,
-	'string': /("|')(\\?.)*?\1/g,
-	'important': /\B!important\b/gi,
-	'punctuation': /[\{\};:]/g,
-	'function': /[-a-z0-9]+(?=\()/ig
+
+	// The rest can be parsed as HTML
+	'other': {
+		pattern: /[\s\S]*/,
+		inside: Prism.languages.markup
+	}
+};
+;
+Prism.languages.css = {
+	'comment': /\/\*[\w\W]*?\*\//,
+	'atrule': {
+		pattern: /@[\w-]+?.*?(;|(?=\s*\{))/i,
+		inside: {
+			'punctuation': /[;:]/
+		}
+	},
+	'url': /url\((?:(["'])(\\\n|\\?.)*?\1|.*?)\)/i,
+	'selector': /[^\{\}\s][^\{\};]*(?=\s*\{)/,
+	'string': /("|')(\\\n|\\?.)*?\1/,
+	'property': /(\b|\B)[\w-]+(?=\s*:)/i,
+	'important': /\B!important\b/i,
+	'punctuation': /[\{\};:]/,
+	'function': /[-a-z0-9]+(?=\()/i
 };
 
 if (Prism.languages.markup) {
 	Prism.languages.insertBefore('markup', 'tag', {
 		'style': {
-			pattern: /<style[\w\W]*?>[\w\W]*?<\/style>/ig,
+			pattern: /<style[\w\W]*?>[\w\W]*?<\/style>/i,
 			inside: {
 				'tag': {
-					pattern: /<style[\w\W]*?>|<\/style>/ig,
+					pattern: /<style[\w\W]*?>|<\/style>/i,
 					inside: Prism.languages.markup.tag.inside
 				},
 				rest: Prism.languages.css
-			}
+			},
+			alias: 'language-css'
 		}
 	});
+	
+	Prism.languages.insertBefore('inside', 'attr-value', {
+		'style-attr': {
+			pattern: /\s*style=("|').*?\1/i,
+			inside: {
+				'attr-name': {
+					pattern: /^\s*style/i,
+					inside: Prism.languages.markup.tag.inside
+				},
+				'punctuation': /^\s*=\s*['"]|['"]\s*$/,
+				'attr-value': {
+					pattern: /.+/i,
+					inside: Prism.languages.css
+				}
+			},
+			alias: 'language-css'
+		}
+	}, Prism.languages.markup.tag);
 };
 Prism.languages.css.selector = {
-	pattern: /[^\{\}\s][^\{\}]*(?=\s*\{)/g,
+	pattern: /[^\{\}\s][^\{\}]*(?=\s*\{)/,
 	inside: {
-		'pseudo-element': /:(?:after|before|first-letter|first-line|selection)|::[-\w]+/g,
-		'pseudo-class': /:[-\w]+(?:\(.*\))?/g,
-		'class': /\.[-:\.\w]+/g,
-		'id': /#[-:\.\w]+/g
+		'pseudo-element': /:(?:after|before|first-letter|first-line|selection)|::[-\w]+/,
+		'pseudo-class': /:[-\w]+(?:\(.*\))?/,
+		'class': /\.[-:\.\w]+/,
+		'id': /#[-:\.\w]+/
 	}
 };
 
-Prism.languages.insertBefore('css', 'ignore', {
-	'hexcode': /#[\da-f]{3,6}/gi,
-	'entity': /\\[\da-f]{1,8}/gi,
-	'number': /[\d%\.]+/g
+Prism.languages.insertBefore('css', 'function', {
+	'hexcode': /#[\da-f]{3,6}/i,
+	'entity': /\\[\da-f]{1,8}/i,
+	'number': /[\d%\.]+/
 });;
 Prism.languages.clike = {
 	'comment': [
 		{
-			pattern: /(^|[^\\])\/\*[\w\W]*?\*\//g,
+			pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
 			lookbehind: true
 		},
 		{
-			pattern: /(^|[^\\:])\/\/.*?(\r?\n|$)/g,
+			pattern: /(^|[^\\:])\/\/.+/,
 			lookbehind: true
 		}
 	],
-	'string': /("|')(\\?.)*?\1/g,
+	'string': /("|')(\\\n|\\?.)*?\1/,
 	'class-name': {
-		pattern: /((?:(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/ig,
+		pattern: /((?:(?:class|interface|extends|implements|trait|instanceof|new)\s+)|(?:catch\s+\())[a-z0-9_\.\\]+/i,
 		lookbehind: true,
 		inside: {
 			punctuation: /(\.|\\)/
 		}
 	},
-	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/g,
-	'boolean': /\b(true|false)\b/g,
+	'keyword': /\b(if|else|while|do|for|return|in|instanceof|function|new|try|throw|catch|finally|null|break|continue)\b/,
+	'boolean': /\b(true|false)\b/,
 	'function': {
-		pattern: /[a-z0-9_]+\(/ig,
+		pattern: /[a-z0-9_]+\(/i,
 		inside: {
 			punctuation: /\(/
 		}
 	},
-	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?)\b/g,
-	'operator': /[-+]{1,2}|!|<=?|>=?|={1,3}|&{1,2}|\|?\||\?|\*|\/|\~|\^|\%/g,
-	'ignore': /&(lt|gt|amp);/gi,
-	'punctuation': /[{}[\];(),.:]/g
+	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?)\b/,
+	'operator': /[-+]{1,2}|!|<=?|>=?|={1,3}|&{1,2}|\|?\||\?|\*|\/|~|\^|%/,
+	'ignore': /&(lt|gt|amp);/i,
+	'punctuation': /[{}[\];(),.:]/
 };
 ;
 Prism.languages.javascript = Prism.languages.extend('clike', {
-	'keyword': /\b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|function|get|if|implements|import|in|instanceof|interface|let|new|null|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\b/g,
-	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?|NaN|-?Infinity)\b/g
+	'keyword': /\b(break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|function|get|if|implements|import|in|instanceof|interface|let|new|null|package|private|protected|public|return|set|static|super|switch|this|throw|true|try|typeof|var|void|while|with|yield)\b/,
+	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee][+-]?\d+)?|NaN|-?Infinity)\b/,
+	'function': /(?!\d)[a-z0-9_$]+(?=\()/i
 });
 
 Prism.languages.insertBefore('javascript', 'keyword', {
 	'regex': {
-		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,
+		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,
 		lookbehind: true
 	}
 });
@@ -531,28 +629,29 @@ Prism.languages.insertBefore('javascript', 'keyword', {
 if (Prism.languages.markup) {
 	Prism.languages.insertBefore('markup', 'tag', {
 		'script': {
-			pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/ig,
+			pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/i,
 			inside: {
 				'tag': {
-					pattern: /<script[\w\W]*?>|<\/script>/ig,
+					pattern: /<script[\w\W]*?>|<\/script>/i,
 					inside: Prism.languages.markup.tag.inside
 				},
 				rest: Prism.languages.javascript
-			}
+			},
+			alias: 'language-javascript'
 		}
 	});
 }
 ;
 Prism.languages.scss = Prism.languages.extend('css', {
 	'comment': {
-		pattern: /(^|[^\\])(\/\*[\w\W]*?\*\/|\/\/.*?(\r?\n|$))/g,
+		pattern: /(^|[^\\])(\/\*[\w\W]*?\*\/|\/\/.*?(\r?\n|$))/,
 		lookbehind: true
 	},
 	// aturle is just the @***, not the entire rule (to highlight var & stuffs)
 	// + add ability to highlight number & unit for media queries
-	'atrule': /@[\w-]+(?=\s+(\(|\{|;))/gi,
+	'atrule': /@[\w-]+(?=\s+(\(|\{|;))/i,
 	// url, compassified
-	'url': /([-a-z]+-)*url(?=\()/gi,
+	'url': /([-a-z]+-)*url(?=\()/i,
 	// CSS selector regex is not appropriate for Sass
 	// since there can be lot more things (var, @ directive, nesting..)
 	// a selector must start at the end of a property or after a brace (end of other rules or nesting)
@@ -560,7 +659,7 @@ Prism.languages.scss = Prism.languages.extend('css', {
 	// the end of a selector is found when there is no rules in it ( {} or {\s}) or if there is a property (because an interpolated var
 	// can "pass" as a selector- e.g: proper#{$erty})
 	// this one was ard to do, so please be careful if you edit this one :)
-	'selector': /([^@;\{\}\(\)]?([^@;\{\}\(\)]|&|\#\{\$[-_\w]+\})+)(?=\s*\{(\}|\s|[^\}]+(:|\{)[^\}]+))/gm
+	'selector': /([^@;\{\}\(\)]?([^@;\{\}\(\)]|&|#\{\$[-_\w]+\})+)(?=\s*\{(\}|\s|[^\}]+(:|\{)[^\}]+))/m
 });
 
 Prism.languages.insertBefore('scss', 'atrule', {
@@ -572,37 +671,37 @@ Prism.languages.insertBefore('scss', 'property', {
 	'variable': /((\$[-_\w]+)|(#\{\$[-_\w]+\}))/i
 });
 
-Prism.languages.insertBefore('scss', 'ignore', {
+Prism.languages.insertBefore('scss', 'function', {
 	'placeholder': /%[-_\w]+/i,
-	'statement': /\B!(default|optional)\b/gi,
-	'boolean': /\b(true|false)\b/g,
-	'null': /\b(null)\b/g,
-	'operator': /\s+([-+]{1,2}|={1,2}|!=|\|?\||\?|\*|\/|\%)\s+/g
+	'statement': /\B!(default|optional)\b/i,
+	'boolean': /\b(true|false)\b/,
+	'null': /\b(null)\b/,
+	'operator': /\s+([-+]{1,2}|={1,2}|!=|\|?\||\?|\*|\/|%)\s+/
 });
 ;
 Prism.languages.bash = Prism.languages.extend('clike', {
 	'comment': {
-		pattern: /(^|[^"{\\])(#.*?(\r?\n|$))/g,
+		pattern: /(^|[^"{\\])(#.*?(\r?\n|$))/,
 		lookbehind: true
 	},
 	'string': {
 		//allow multiline string
-		pattern: /("|')(\\?[\s\S])*?\1/g,
+		pattern: /("|')(\\?[\s\S])*?\1/,
 		inside: {
 			//'property' class reused for bash variables
-			'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^\}]+\})/g
+			'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^\}]+\})/
 		}
 	},
-	'keyword': /\b(if|then|else|elif|fi|for|break|continue|while|in|case|function|select|do|done|until|echo|exit|return|set|declare)\b/g
+	'keyword': /\b(if|then|else|elif|fi|for|break|continue|while|in|case|function|select|do|done|until|echo|exit|return|set|declare)\b/
 });
 
 Prism.languages.insertBefore('bash', 'keyword', {
 	//'property' class reused for bash variables
-	'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^}]+\})/g
+	'property': /\$([a-zA-Z0-9_#\?\-\*!@]+|\{[^}]+\})/
 });
 Prism.languages.insertBefore('bash', 'comment', {
 	//shebang must be before comment, 'important' class from css reused
-	'important': /(^#!\s*\/bin\/bash)|(^#!\s*\/bin\/sh)/g
+	'important': /(^#!\s*\/bin\/bash)|(^#!\s*\/bin\/sh)/
 });
 ;
 /**
@@ -612,18 +711,18 @@ Prism.languages.insertBefore('bash', 'comment', {
  * 		constant, builtin, variable, symbol, regex
  */
 Prism.languages.ruby = Prism.languages.extend('clike', {
-	'comment': /#[^\r\n]*(\r?\n|$)/g,
-	'keyword': /\b(alias|and|BEGIN|begin|break|case|class|def|define_method|defined|do|each|else|elsif|END|end|ensure|false|for|if|in|module|new|next|nil|not|or|raise|redo|require|rescue|retry|return|self|super|then|throw|true|undef|unless|until|when|while|yield)\b/g,
+	'comment': /#[^\r\n]*(\r?\n|$)/,
+	'keyword': /\b(alias|and|BEGIN|begin|break|case|class|def|define_method|defined|do|each|else|elsif|END|end|ensure|false|for|if|in|module|new|next|nil|not|or|raise|redo|require|rescue|retry|return|self|super|then|throw|true|undef|unless|until|when|while|yield)\b/,
 	'builtin': /\b(Array|Bignum|Binding|Class|Continuation|Dir|Exception|FalseClass|File|Stat|File|Fixnum|Fload|Hash|Integer|IO|MatchData|Method|Module|NilClass|Numeric|Object|Proc|Range|Regexp|String|Struct|TMS|Symbol|ThreadGroup|Thread|Time|TrueClass)\b/,
-	'constant': /\b[A-Z][a-zA-Z_0-9]*[?!]?\b/g
+	'constant': /\b[A-Z][a-zA-Z_0-9]*[?!]?\b/
 });
 
 Prism.languages.insertBefore('ruby', 'keyword', {
 	'regex': {
-		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,
+		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/,
 		lookbehind: true
 	},
-	'variable': /[@$]+\b[a-zA-Z_][a-zA-Z_0-9]*[?!]?\b/g,
-	'symbol': /:\b[a-zA-Z_][a-zA-Z_0-9]*[?!]?\b/g
+	'variable': /[@$]+\b[a-zA-Z_][a-zA-Z_0-9]*[?!]?\b/,
+	'symbol': /:\b[a-zA-Z_][a-zA-Z_0-9]*[?!]?\b/
 });
 ;
