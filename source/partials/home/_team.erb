@@ -11,7 +11,7 @@
           <article id="<%= member.slug %>" class="will-animate <%= index == 0 ? 'fadeInLeft' : 'fadeInRight' %>" data-wow-duration="0.7s" data-wow-delay="0.2s">
             <a href="/team/<%= member.slug %>">
               <img src="<%= team_member_avatar_path(member) %>"
-                   alt="<%= member.name %>"
+                   alt="<%= member.name %>, a <%= member.job_title %> at <%= data.site.title %>"
                    class="image-circle pulse-grey-to-pink">
               <div class="overlay"><h2><%= member.name %></h2></div>
             </a>

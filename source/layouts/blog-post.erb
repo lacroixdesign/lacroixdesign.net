@@ -39,7 +39,9 @@
 
       <% if current_page.data.inline_header %>
         <div class="b-post-inline-header will-animate fadeIn" data-wow-duration="0.7s">
-          <img class="image-fullwidth" src="<%= page_image %>">
+          <img class="image-fullwidth"
+                src="<%= page_image %>"
+                alt="<%= current_page.data.title %>">
         </div>
       <% end %>
 
@@ -93,7 +95,9 @@
       <div class="b-author-meta will-animate fadeInUp" id="author">
         <div class="b-author-meta__avatar">
           <% img = capture do %>
-            <img class="image-circle image-fullwidth pulse-grey-to-pink" src="<%= team_member_avatar_path(page_author) %>">
+            <img class="image-circle image-fullwidth pulse-grey-to-pink"
+                  src="<%= team_member_avatar_path(page_author) %>"
+                  alt="<%= page_author.name %>, a <%= page_author.job_title %> at <%= data.site.title %>">
           <% end %>
           <%= link_to img, team_member_path(page_author) %>
         </div>
