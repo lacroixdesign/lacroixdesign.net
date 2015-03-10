@@ -1,14 +1,14 @@
 ---
 title: "A Craft Redirect Plugin for Obsolete URLs"
 tagline: "A plugin to automatically redirect to an entry’s new URL if its slug has been revised."
-date: "2015-03-10 12:00"
+date: "2015-03-11 8:00"
 author: "Michael LaCroix"
 image: false
 inline_header: false
 light_logo: false
-short_url: false
+short_url: "http://lcrx.co/1AeiFro"
 dn_url: false
-published: false
+published: true
 ---
 
 During a recent buildout of a [Craft](http://buildwithcraft.com/) website, a client wanted the ability to automatically redirect to an entry’s new URL if (1) its slug has been revised and (2) a visitor landed on the old URL. For example, if an entry started with the URL:
