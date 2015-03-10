@@ -15,17 +15,21 @@
 
   p,
   ul {
+    a {
+      padding-bottom: 1px;
+      border-bottom: 2px solid $pink;
+    }
+
     a,
     a:focus,
     a:visited {
-      padding-bottom: 1px;
-      border-bottom: 2px solid $pink;
       color: inherit;
       text-decoration: none;
     }
 
     a:hover {
       color: $pink;
+      text-decoration: none;
     }
   } // p, ul
 
