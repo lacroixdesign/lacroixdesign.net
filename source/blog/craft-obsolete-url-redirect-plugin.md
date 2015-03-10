@@ -3,9 +3,9 @@ title: "A Craft Redirect Plugin for Obsolete URLs"
 tagline: "A plugin to automatically redirect to an entry’s new URL if its slug has been revised."
 date: "2015-03-11 8:00"
 author: "Michael LaCroix"
-image: false
-inline_header: false
-light_logo: false
+image: "craft-obsolete-url-redirect-plugin.jpg"
+inline_header: true
+light_logo: true
 short_url: "http://lcrx.co/1AeiFro"
 dn_url: false
 published: true
