@@ -1,0 +1,97 @@
+---
+title: "Streamlining Our Proposal Writing Process"
+tagline: "How we are using Git, Markdown, CSS and Marked to create proposals more quickly."
+date: "2015-03-13 10:30"
+author: "James LaCroix"
+image: "streamlining-our-proposal-writing-process.jpg"
+inline_header: true
+light_logo: true
+short_url: false
+dn_url: false
+published: true
+---
+
+As designers and developers, it is our innate desire to spend time making things. Nevertheless, when you are running your own business, there are many other responsibilities required before, during and after a project.
+
+One of these essential duties is writing proposals. After nearly 10 years of running LaCroix Design Co., the role of proposal writer is still one of my least favorites. A great deal of thought and effort goes into every proposal we send out. As a result, many hours are typically spent compiling notes from meetings and phone calls into a well-formulated document that not only proposes the most optimal solution, but also outlines the best process for arriving at that solution. Needless to say, it can be quite disheartening when a proposal is rejected or not even considered.
+
+![](blog/streamlining-our-proposal-writing-process/angry.gif)
+
+Proposals, however, serve a crucial role in the relationship between the client and designer. It defines scope, boundaries, expectations and, of course, payment. As a result, writing proposals is a task that cannot be avoided. In our studio, we are always seeking to optimize processes for a more efficient workflow in every business aspect. Therefore, we have sought to develop a proposal writing process that is more streamlined. Although we may continue to iterate on this process as time goes on, we have arrived at a solution using Git, Markdown and CSS that works very well for our small studio.
+
+### Where We Started
+When I first began writing project proposals, the studio was mainly focused on providing print design and illustration services. Indesign was the obvious tool to create fantastic looking documents that were on-brand. Although it is poor practice, I often did all of my writing and editing in the application as well.
+
+Later on, it became beneficial to have a second set of eyes review each proposal. At this time, Michael had begun working with me on web projects and had zero familiarity with Indesign. We were both already using [Markdown](http://daringfireball.net/projects/markdown/syntax) for taking notes, so it seemed like the obvious transition was to also use this for the drafting phase. We would take turns editing the Markdown file. Then, I would transfer all of the content block by block into the Indesign document. Although the Markdown syntax clearly delineated the different elements, this was still an arduous task.
+
+![](blog/streamlining-our-proposal-writing-process/faint.gif)
+
+We also tried out [Bidsketch](https://www.bidsketch.com/), [Quote Roller](http://www.quoteroller.com/) and  several other web applications designed at solving the proposal creation issue. While these are all fine pieces of software that provided some nice features, none of them really seemed to fit our needs. The editing process was still sluggish since content was separated into different admin sections and often the WYSIWYG editors caused more problems than they were worth. Every time we would abandon one of these tools, we would return to our Indesign process.
+
+### Our Current Process with Git, Markdown & CSS
+Approximately one year ago, we were approached by a number of prospective clients that required a fair amount of proposals to be delivered within a short amount of time. It was at this time that we finally decided we had to find a better process. We were already writing and editing our proposals in Markdown, so it only made sense that we should utilize the strengths of the syntax.
+
+Since we were already using Git for collaborating on website and software projects, using it for documents seemed like a sensible choice for this new process. Today, I begin by creating a draft of the proposal using Markdown — I prefer to use [IA Writer Pro](http://writer.pro/) for this and Michael prefers [Atom}(https://atom.io/) — and commit it to a private [Github](https://github.com/) repository. We then have a Slack notification set for any updates to this particular repo. Michael can then pull the document and provide any edits that he sees fit. We are able to continue this process until we have solidified the proposed solution.
+
+Once the editing phase is completed, we use [Marked 2](http://marked2app.com/) to create a final document. One of Marked’s key features is the ability to style your content with a custom CSS style sheet. We slightly modified the [base stylesheet](https://gist.github.com/jamesdlacroix/d574d925c157114c2d7c) that came with the software to fit our brand’s proposal style. Additionally, with a snippet of HTML, we are able to create a cover page for each document that displays our logo using an SVG.
+
+```
+<div class=“cover”>
+    <div class= “cover-logo”>
+        <img src=“../assets/images/logo.svg” alt=“LaCroix Design Co.” />
+    </div>
+
+# Project Name
+### Client Company Name
+
+##### Prepared For: Client Name
+*13 March, 2015*
+</div>
+```
+
+Marked offers a few key features that allow us to dynamically create some elements of the proposal. For example, a table of contents can be inserted anywhere in the document using the [software’s special syntax](http://marked2app.com/help/Special_Syntax.html).
+
+```
+<!—TOC—>
+```
+
+The same also applies to page breaks.
+
+```
+<!—BREAK—>
+```
+
+However, we are primarily automating page breaks through the apps settings by adding page breaks before every h1 and h2 element. Through the settings, we are a adding dynamically created headers and footers as well.
+
+<%= stretch_image "blog/streamlining-our-proposal-writing-process/marked-paginated-pdf.jpg", "Marked Export Settings", "These are the export settings that we are currently using to create our proposals." %>
+
+Once we are ready to send over the proposal, we output it using the paginated PDF feature and quite often deliver it to the client using [HelloSign](https://www.hellosign.com?ref=92f9561f&s=S). This allows them to digitally sign the delivered proposal with ease.
+
+<%= stretch_image "blog/streamlining-our-proposal-writing-process/marked-paginated-pdf.jpg", "Marked's Paginated PDF Export", "Export using Save PDF (paginated) to include page breaks as well as the header and footer." %>
+
+I have put together an example proposal using [Monocle Ipsum](http://www.monocleipsum.com/) and [AIGA’s Standard Agreement for Design Services](http://www.docracy.com/2822/standard-agreement-for-design-services-interactive-web-works-exclusive-license-no-modification). The files are available via the following links:
+
+* [Markdown Proposal](http://cloud.lacroixdesign.net/text/1d3m1V2u2H1m)
+* [Example PDF](http://cloud.lacroixdesign.net/2I2H2h3h2e17)
+* [Logo SVG](http://cloud.lacroixdesign.net/280W3e0I2B3P0)
+* [Marked Stylesheet](https://gist.github.com/jamesdlacroix/d574d925c157114c2d7c)
+
+### Benefits
+
+The main benefit of this workflow has been timed saved. We are now able to go straight from the editing process into a final proposal. We no longer have to copy and paste content into an Indesign file. Furthermore, many of our proposals are often read online and include links pointing toward recommended services. We are able to utilize the Markdown syntax to generate these links, which is far easier than applying them using Indesign’s interactive hyperlinks panel.
+
+![](blog/streamlining-our-proposal-writing-process/benefits.gif)
+
+Adding visual elements to the proposal also became a lot easier. With Markdown, we are able to quickly add in figures with captions to help explain the solution or provide context to the scope of the project. As you will see in the example, we are creating tables in markdown for the project timeline. Timeline tables provide a great visual reference for our potential clients. Creating tables like these in design software would be much more time consuming, whereas our current solution allows for easy editing and implementation.
+
+### Future Enhancements
+
+As with nearly everything we work on, we are far from finished and are always looking to further iterate our solutions. We are eventually looking at breaking the reusable pieces of our proposals out into partials so that they can easily be inserted into a document. This would include basic contract definitions, intellectual property provisions, interactive provisions and basic elements such as a signature form.
+
+Marked has a special syntax for [multi-file documents](http://marked2app.com/help/Multi-File_Documents.html) which would allow us to begin testing this process out. We have also contemplated creating a local build tool that would provide more customization for this process. A major advantage of creating the reusable components is that we could make changes and have it automatically applied to all future proposals.
+
+Finally, our initial stylesheet relied heavily on Marked’s base CSS. In the future, I’m certain that we will look into further customizing and expanding the styles to create better presentations for our clients.
+
+![](blog/streamlining-our-proposal-writing-process/eyebrow-raise.gif)
+
+Let us know if you have found any ways to streamline your proposal writing process and, as always, contact us if you have any questions about ours.
