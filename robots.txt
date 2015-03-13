@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /services
+Disallow: /services/
+Disallow: /portfolio
+Disallow: /portfolio/
+Disallow: /pinterest-e87c7.html

@@ -1,0 +1,1 @@
+!function(){function t(t){return t}var e="data-random-case-studies";window.pageReady(function(){$("["+e+"]").each(function(){var n=$(this),a=_.parseInt(n.attr(e)),r=n.attr("data-current-entry"),d=$("[data-template-case-studies]").html();a>0&&"undefined"!=typeof d&&(n.empty(),$.getJSON("/case-studies.json",function(e){window.asyncEntryRenderer(e,a,d,t,n,r)}))})})}();

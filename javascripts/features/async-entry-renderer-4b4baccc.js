@@ -1,0 +1,1 @@
+!function(){function n(n,e,a,d,i,r){var s="is--loaded",l=_.isString(r)?r:null,o=_.chain(n).reject({id:l}).sample(e).map(d).value(),c=Hogan.compile(a),p=c.render({posts:o});i.append(p),i.addClass(s)}window.asyncEntryRenderer=n}();

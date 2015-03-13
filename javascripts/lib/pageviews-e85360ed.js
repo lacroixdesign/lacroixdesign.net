@@ -1,0 +1,1 @@
+!function(){var n=function(){var n=window.location.pathname+window.location.hash+window.location.search,i=window[window.GoogleAnalyticsObject];"undefined"!=typeof i&&i("send","pageview",n),"undefined"!=typeof window.clicky&&window.clicky.log(n,null,"pageview")};window.sendPageview=n}();

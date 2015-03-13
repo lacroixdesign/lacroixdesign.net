@@ -1,0 +1,1 @@
+window.pageReady(function(){$("#page-content").fitVids(),Modernizr.video&&!isMobile.any&&$("#welcome-video").show()});

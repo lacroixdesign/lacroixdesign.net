@@ -1,0 +1,1 @@
+var TOGGLE_SEL="#nav-toggle-btn",HEADER_SEL="#header",VISIBLE_CLASS="is--visible";$(function(){function E(){var E=L.height()+L.offset().top,l=o.scrollTop();return l>2*E?S.toggleClass(VISIBLE_CLASS,!0):S.toggleClass(VISIBLE_CLASS,!1)}var S=$(TOGGLE_SEL),L=$(HEADER_SEL),o=$(window);E(),o.scroll(E)});

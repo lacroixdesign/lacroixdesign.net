@@ -1,0 +1,1 @@
+!function(){function n(n,i,o){var e=window[window.GoogleAnalyticsObject];"undefined"!=typeof e&&e("send","event",n,i,o)}var i=function(n,i,o){return o=o||"click","undefined"!=typeof window.clicky?window.clicky.log(n,i,o):void 0};window.clickyEvent=i,window.googleEvent=n}();

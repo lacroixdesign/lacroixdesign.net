@@ -1,0 +1,1 @@
+!function(){var n=function(n){$(document).ready(n)};window.pageReady=n}();

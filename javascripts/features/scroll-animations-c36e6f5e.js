@@ -1,0 +1,1 @@
+window.pageReady(function(){Modernizr.cssanimations&&new WOW({boxClass:"will-animate",mobile:!1}).init()});
