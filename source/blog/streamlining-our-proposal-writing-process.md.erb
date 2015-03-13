@@ -35,7 +35,7 @@ Since we were already using Git for collaborating on website and software projec
 
 Once the editing phase is completed, we use [Marked 2](http://marked2app.com/) to create a final document. One of Marked’s key features is the ability to style your content with a custom CSS style sheet. We slightly modified the [base stylesheet](https://gist.github.com/jamesdlacroix/d574d925c157114c2d7c) that came with the software to fit our brand’s proposal style. Additionally, with a snippet of HTML, we are able to create a cover page for each document that displays our logo using an SVG.
 
-```language-html
+```language-markup
 <div class="cover">
     <div class= "cover-logo">
         <img src="../assets/images/logo.svg" alt="LaCroix Design Co." />
@@ -51,19 +51,19 @@ Once the editing phase is completed, we use [Marked 2](http://marked2app.com/) t
 
 Marked offers a few key features that allow us to dynamically create some elements of the proposal. For example, a table of contents can be inserted anywhere in the document using the [software’s special syntax](http://marked2app.com/help/Special_Syntax.html).
 
-```language-html
+```language-markup
 <!--TOC-->
 ```
 
 The same also applies to page breaks.
 
-```language-html
+```language-markup
 <!--BREAK-->
 ```
 
 However, we are primarily automating page breaks through the apps settings by adding page breaks before every h1 and h2 element. Through the settings, we are a adding dynamically created headers and footers as well.
 
-<%= stretch_image "blog/streamlining-our-proposal-writing-process/marked-paginated-pdf.jpg", "Marked Export Settings", "These are the export settings that we are currently using to create our proposals." %>
+<%= stretch_image "blog/streamlining-our-proposal-writing-process/marked-settings.jpg", "Marked Export Settings", "These are the export settings that we are currently using to create our proposals." %>
 
 Once we are ready to send over the proposal, we output it using the paginated PDF feature and quite often deliver it to the client using [HelloSign](https://www.hellosign.com?ref=92f9561f&s=S). This allows them to digitally sign the delivered proposal with ease.
 
@@ -71,9 +71,9 @@ Once we are ready to send over the proposal, we output it using the paginated PD
 
 I have put together an example proposal using [Monocle Ipsum](http://www.monocleipsum.com/) and [AIGA’s Standard Agreement for Design Services](http://www.docracy.com/2822/standard-agreement-for-design-services-interactive-web-works-exclusive-license-no-modification). The files are available via the following links:
 
-* [Markdown Proposal](http://cloud.lacroixdesign.net/text/1d3m1V2u2H1m)
+* [Markdown Proposal](https://gist.github.com/jamesdlacroix/5a99eec3d11a5c745504)
 * [Example PDF](http://cloud.lacroixdesign.net/2I2H2h3h2e17)
-* [Logo SVG](http://cloud.lacroixdesign.net/280W3e0I2B3P0)
+* [Logo SVG](http://cloud.lacroixdesign.net/3k3h1n023E28)
 * [Marked Stylesheet](https://gist.github.com/jamesdlacroix/d574d925c157114c2d7c)
 
 ### Benefits
