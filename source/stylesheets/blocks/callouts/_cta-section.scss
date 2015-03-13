@@ -11,6 +11,12 @@
 
   h3 {
     margin-bottom: 1em;
-    font-size: 2em;
+    font-size: 1.75em;
   }
+
+  @include media(600px) {
+    h3 {
+      font-size: 2em;
+    }
+  } // 600px
 } // .b-callout--cta-section
