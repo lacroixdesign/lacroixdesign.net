@@ -1,0 +1,33 @@
+---
+title: "Undivided"
+date: 2015-03-16 15:00
+cover_header: true
+tagline: "Promoting a Movie & Growing a Movement to Increase Involvement in Local Schools"
+published: false
+color: "#101349"
+website_url: "http://www.undividedthemovie.com/"
+---
+
+/ Text
+= text_block do
+  p Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('undivided-1.jpg'), background: current_page.data.color, color: '#fff', text_side: "right"
+  p Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+/ Text
+= text_block do
+  p Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.
+
+/ Slideshow
+= case_study_slideshow %w(undivided-slide-1 undivided-slide-2 undivided-slide-3 undivided-slide-4)
+
+/ Live Preview
+= live_preview_block url: current_page.data.website_url, background: "#bf971d", color: data.colors.white
+
+= text_block callout: true
+  p Looking to attract new customers to your business?
+  = component "cta-button"
+  br
+  br
+  p You can also visit the <a href="http://www.briansnyderentertainment.com/" target="_blank">Undivided website</a>.
