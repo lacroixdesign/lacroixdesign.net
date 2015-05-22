@@ -1,0 +1,52 @@
+---
+title: "Stargrin"
+date: 2015-05-22 10    :00
+cover_header: true
+tagline: "Connecting Celebrities with Their Fans for a Unforgettable Experience"
+published: true
+color: "#ffcf40"
+website_url: "http://stargrin.lacroixdesign.net/"
+---
+
+/ Text
+= text_block do
+  p Stargrin was founded with the goal of creating a platform where fans have access to experiences with their favorite celebrities. Whether it is the world’s biggest pop star or the next 15-minute YouTube sensation, Stargrin’s founders had a vision for a marketplace that would provide fans the opportunity to purchase digitally deliverable experiences from their favorite “Starlebrities”. This case study showcases the initial phase of the product that we designed and developed for them.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('stargrin-1.jpg'), background: current_page.data.color, color: '#14191f', text_side: "right"
+  p Starlebrities create a personal profile including their photo, bio, website, social media accounts, a YouTube video and the experiences they are selling.
+
+/ Text
+= text_block do
+  p The online service allows users to create either a Starlebrity or “Fan” account. The former allows the user to create an online profile and sell experiences, whereas the latter allows the fans to purchase experiences from the site. A Fan account is required to make a purchase because all communication between the fan and celebrity takes place within Stargrin’s internal messaging service. This way, both users’ contact information remains confidential and it helps prevent the sale from taking place outside of the service.
+
+/ Split text + image – text on left
+= split_block image: case_study_image_path('stargrin-2.jpg'), background: current_page.data.color, color: '#14191f'
+  p All communication for the details and scheduling of the experience takes place within the internal messaging service.
+
+/ Text
+= text_block do
+  p Once a sale has taken place, both the Starlebrity and Fan receive email confirmation of the purchase along with instructions on how to proceed. Meanwhile, the payment from the purchase is held in escrow until the experience has been delivered. Once both parties have confirmed the delivery of the experience, payment is transferred to the Starlebrity’s bank account, minus a small commission fee.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('stargrin-3.jpg'), background: current_page.data.color, color: '#14191f', text_side: "right"
+  p For both Starlebrities and Fans, the application uses responsive web design to ensure that users can engage with the service on any device.
+
+/ Text
+= text_block do
+  p We handled every design and development phase of the application. This began with several consulting sessions to identify core features needed to deliver a minimum viable product. From there, we determined the flows that Starlebrities, Fans and administrators would need to experience.
+
+  p A visual style guide was established and we began the design and front-end development of the application. The project concluded with back-end development of the custom application, server setup and product testing.
+
+  p
+    strong Stargrin is set to launch soon, but in the meantime, you can experience a demo version of the site below.
+
+/ Slideshow
+= case_study_slideshow %w(stargrin-slide-1 stargrin-slide-2 stargrin-slide-3 stargrin-slide-4 stargrin-slide-5)
+
+/ Live Preview
+= live_preview_block url: current_page.data.website_url, background: '#e4e4e0', color: '#14191f'
+
+= text_block callout: true
+  p Need help launching your product idea?
+  = component "cta-button"
