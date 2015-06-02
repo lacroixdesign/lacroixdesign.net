@@ -7,5 +7,9 @@
 //= require vendor/prism.min
 //= require vendor/moment.min
 //= require vendor/hogan-3.0.2.min
+//= require vendor/scrollmagic/ScrollMagic.min
+//= require vendor/scrollmagic/TweenLite.min
+//= require vendor/scrollmagic/CSSPlugin.min
+//= require vendor/scrollmagic/animation.gsap.min
 //= require_tree ./lib
 //= require_tree ./features

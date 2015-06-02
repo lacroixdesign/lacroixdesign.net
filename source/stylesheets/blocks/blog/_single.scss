@@ -47,8 +47,6 @@
 
 .b-post-header,
 .b-post-cover-header {
-  margin-bottom: 2em;
-
   time {
     margin-top: 3em;
   }
@@ -73,6 +71,7 @@
 }
 
 .b-post-header {
+  position: relative;
   padding: 2em 0;
   background: $off-white;
 
@@ -82,7 +81,10 @@
 } // .b-post-header
 
 .b-post-body {
-  margin: 2em auto;
+  position: relative;
+  padding-top: 2em;
+  margin: 0 auto 2em;
+  background: $white;
 }
 
 .b-post-cta {

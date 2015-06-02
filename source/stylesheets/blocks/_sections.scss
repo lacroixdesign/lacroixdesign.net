@@ -49,8 +49,8 @@
     font-family: $typeface-serif;
     font-size: 1.5em;
     font-weight: normal;
-    line-height: 1.5;
     font-style: italic;
+    line-height: 1.5;
     text-align: center;
   }
 } // .b-section--basic-header
@@ -62,7 +62,9 @@
 */
 
 .b-text-component {
+  position: relative;
   padding: 2.5em 0;
+  background-color: $white;
   background-position: center center;
   -webkit-background-size: cover;
   background-size: cover;

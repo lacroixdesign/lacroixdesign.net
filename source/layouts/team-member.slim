@@ -10,10 +10,11 @@
           = team_member_social_list(member)
 
 
-    .l-constrained-medium.b-post-body
-      .b-text.will-animate.fadeIn(data-wow-duration="0.7s" data-wow-delay="0.2s")
-        = yield
-        p: em: a.link-vivid.link-plain-til-hover(href="/#team") &larr; back to team
-      hr
-      .b-simple-callout
-        = component "cta-button"
+    .b-post-body
+      .l-constrained-medium
+        .b-text.will-animate.fadeIn(data-wow-duration="0.7s" data-wow-delay="0.2s")
+          = yield
+          p: em: a.link-vivid.link-plain-til-hover(href="/#team") &larr; back to team
+        hr
+        .b-simple-callout
+          = component "cta-button"

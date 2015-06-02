@@ -8,7 +8,7 @@
       %>
 
       <% cover_header_content = capture do %>
-        <div class="l-constrained-large b-post-cover-header__content will-animate fadeInUp" data-wow-duration="0.7s">
+        <div class="l-constrained-large b-post-cover-header__content will-animate fadeIn" data-wow-duration="0.7s">
           <h1><%= current_page.data.title %></h1>
           <% if current_page.data.tagline %>
             <h2><%= current_page.data.tagline %></h2>
@@ -38,7 +38,7 @@
       %>
 
       <% if current_page.data.inline_header %>
-        <div class="b-post-inline-header will-animate fadeIn" data-wow-duration="0.7s">
+        <div class="b-post-inline-header" data-wow-duration="0.7s">
           <img class="image-fullwidth"
                 src="<%= page_image %>"
                 alt="<%= current_page.data.title %>">
@@ -46,7 +46,7 @@
       <% end %>
 
       <div class="b-post-header <%= 'theme--no-image' unless current_page.data.inline_header %>">
-        <div class="l-constrained-large will-animate fadeInUp" data-wow-duration="0.7s">
+        <div class="l-constrained-large will-animate fadeIn" data-wow-duration="0.7s">
           <h1><%= current_page.data.title %></h1>
           <% if current_page.data.tagline %>
             <h2><%= current_page.data.tagline %></h2>
@@ -62,52 +62,54 @@
 
     <% end %>
 
-    <div class="b-post-body l-constrained-large">
+    <div class="b-post-body">
+      <div class="l-constrained-large">
 
-      <%# Post content %>
-      <div class="b-text will-animate fadeIn" data-wow-duration="0.7s"
-            data-wow-delay="0.2s" data-wow-offset="50">
-        <%= yield %>
-      </div>
-
-      <%# Comment %>
-      <div class="b-simple-callout b-callout--comments">
-        <%# Tweet %>
-        <% tweet = capture do %>
-          <%= icon 'e49d' %> Discuss on Twitter
-        <% end %>
-        <%= macro_tweet_intent(current_page, {class: "btn small pill icon--left"}) {
-              tweet
-        } %>
-        <%# Designer News %>
-        <% if current_page.data.dn_url %>
-          <% dn_content = capture do %>
-            <%= icon 'e600' %> Discuss on Designer News
-          <% end %>
-          <%= link_to(current_page.data.dn_url, {
-                class: "btn small pill icon--left",
-                target: "_blank"
-              }) { dn_content } %>
-        <% end %>
-      </div>
-
-      <%# Author %>
-      <div class="b-author-meta will-animate fadeInUp" id="author">
-        <div class="b-author-meta__avatar">
-          <% img = capture do %>
-            <img class="image-circle image-fullwidth pulse-grey-to-pink"
-                  src="<%= team_member_avatar_path(page_author) %>"
-                  alt="<%= page_author.name %>, a <%= page_author.job_title %> at <%= data.site.title %>">
-          <% end %>
-          <%= link_to img, team_member_path(page_author) %>
+        <%# Post content %>
+        <div class="b-text will-animate fadeIn" data-wow-duration="0.7s"
+              data-wow-delay="0.2s" data-wow-offset="50">
+          <%= yield %>
         </div>
-        <h1><%= link_to page_author.name, team_member_path(page_author) %></h1>
-        <h2><%= page_author.job_title %></h2>
-        <ul class="social-icons-list">
-          <%= team_member_social_list(page_author) %>
-        </ul>
-      </div>
 
+        <%# Comment %>
+        <div class="b-simple-callout b-callout--comments">
+          <%# Tweet %>
+          <% tweet = capture do %>
+            <%= icon 'e49d' %> Discuss on Twitter
+          <% end %>
+          <%= macro_tweet_intent(current_page, {class: "btn small pill icon--left"}) {
+                tweet
+          } %>
+          <%# Designer News %>
+          <% if current_page.data.dn_url %>
+            <% dn_content = capture do %>
+              <%= icon 'e600' %> Discuss on Designer News
+            <% end %>
+            <%= link_to(current_page.data.dn_url, {
+                  class: "btn small pill icon--left",
+                  target: "_blank"
+                }) { dn_content } %>
+          <% end %>
+        </div>
+
+        <%# Author %>
+        <div class="b-author-meta will-animate fadeInUp" id="author">
+          <div class="b-author-meta__avatar">
+            <% img = capture do %>
+              <img class="image-circle image-fullwidth pulse-grey-to-pink"
+                    src="<%= team_member_avatar_path(page_author) %>"
+                    alt="<%= page_author.name %>, a <%= page_author.job_title %> at <%= data.site.title %>">
+            <% end %>
+            <%= link_to img, team_member_path(page_author) %>
+          </div>
+          <h1><%= link_to page_author.name, team_member_path(page_author) %></h1>
+          <h2><%= page_author.job_title %></h2>
+          <ul class="social-icons-list">
+            <%= team_member_social_list(page_author) %>
+          </ul>
+        </div>
+
+      </div>
     </div>
 
   </article>

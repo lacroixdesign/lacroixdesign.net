@@ -44,7 +44,7 @@
 } // .b-hero-image__content
 
 .b-hero-team-member {
-  @include hero-image(3em, 3em);
+  @include hero-image(3em, 4em);
 
   img {
     width: 6em;

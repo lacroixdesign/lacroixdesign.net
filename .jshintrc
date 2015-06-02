@@ -71,5 +71,14 @@
   "passfail"      : false,
   "white"         : false,
 
-  "predef"        : [ "Modernizr", "_", "Hogan", "moment", "isMobile" ]
+  "predef"        : [
+    "Modernizr",
+    "_",
+    "Hogan",
+    "moment",
+    "isMobile",
+    "Linear",
+    "TweenLite",
+    "ScrollMagic"
+  ]
 }
