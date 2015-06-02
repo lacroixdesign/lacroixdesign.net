@@ -5,13 +5,82 @@
   <id>http://www.lacroixdesign.net/blog</id>
   <link href="http://www.lacroixdesign.net/blog"/>
   <link href="http://www.lacroixdesign.net/feed.xml" rel="self"/>
-  <updated>2015-03-13T11:50:00-05:00</updated>
+  <updated>2015-05-21T10:45:00-05:00</updated>
+  <entry>
+    <title>Far From Finished</title>
+    <link rel="alternate" href="http://www.lacroixdesign.net/blog/far-from-finished/"/>
+    <id>http://www.lacroixdesign.net/blog/far-from-finished/</id>
+    <published>2015-05-21T10:45:00-05:00</published>
+    <updated>2015-05-21T16:43:28-05:00</updated>
+    <author>
+      <name>James LaCroix</name>
+    </author>
+    <content type="html">&lt;p&gt;As it turns out, finding contentment is not one of my stronger traits and this is especially evident when it comes to design. There’s always been the excitement when something Michael and I have made is released to the world. That moment is fleeting once we begin to dissect every minute detail in search of opportunities for improvement.&lt;/p&gt;
+
+&lt;p&gt;Critique is important and I wouldn’t have it any other way. Although, this was quite problematic when I began my career as a print designer and everything that I designed was more permanent. As a web and product designer, I delight in the flexible and iterative qualities of the medium.&lt;/p&gt;
+
+&lt;p&gt;In the business of client services, you do not always get the opportunity to continually improve upon everything that you ship. Very often, the client is happy, the project ends, you get paid and the thing that you created goes on without you. Sadly, these projects miss out on the beneficial iterations that happen after your have been able to assess how the visitors or users interact with the product.&lt;/p&gt;
+
+&lt;p&gt;Luckily, we have had the pleasure to work with a number of clients who allow us to return to previous projects and tackle new challenges. I’m consistently assured that these experiences will continue to improve if we never treat them as finished. Nowhere is this more evident than in our personal projects. For example, our own website is never finished and we are constantly trying to improve the our visitors&amp;#39; experience.&lt;/p&gt;
+
+&lt;p&gt;Nearly a year ago, I wrote a &lt;a target="_blank" href="http://www.lacroixdesign.net/blog/doing-more-with-less/"&gt;post for the launch of our new website&lt;/a&gt; about how a simpler solution provides us with the freedom to iterate. Our current website utilizes &lt;a target="_blank" href="https://middlemanapp.com/"&gt;Middleman&lt;/a&gt; to generate a static site upon deployment and this provides a fantastic venue for exploring and implementing new solutions. Earlier this year, we made some improvements to our website. In this post, I’d like to share the decision making behind these changes and the results that we’ve received.&lt;/p&gt;
+
+&lt;h3&gt;The Homepage Welcome Section&lt;/h3&gt;
+
+&lt;p&gt;First of all, no other place on the site has received more copy revisions than the first section of our homepage. When you tackle a wide variety of design problems with a range of  solutions and tools, describing your business in one sentence is far from easy.&lt;/p&gt;
+
+&lt;p&gt;For the first time in a long time, I feel pretty good about what we have on there now. We love to design solutions that establish a connection and allow our clients to engage the audience in a very human way. We decided this copy needed more emphasis, so we adjusted the typography accordingly.&lt;/p&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="The image background to the welcome section of our site was replaced with video, and typographic updates were made as well." class="image-fullwidth" width="800" height="200" src="http://www.lacroixdesign.net/images/blog/far-from-finished/hero-comparison-89373e60.gif" /&gt;&lt;/figure&gt;
+
+&lt;p&gt;Our previous background for this section was my desk. I believe that we have a nice workspace and I do tend to keep a tidy desk. However, this was far from being a compelling image for the homepage. We explored a number of solutions for this that included illustrations, solid colors, SVG animation and we eventually decided to use video. We love the personal proximity with which people use mobile devices and found that this created a visual connection to what we value. We also explored various methods of tinting the video to match our pink brand color, but we will cover that in a future post.&lt;/p&gt;
+
+&lt;h3&gt;Featured Work &amp;amp; Services Section&lt;/h3&gt;
+
+&lt;p&gt;Another area of our site we were never content with was the featured work section of the homepage. For a while, Michael and I were pretty set on trying to contain these in an interesting shape. After exhausting nearly every option we could think of, we eventually determined it was not the best solution and opted to go with a layout that is more consistent with the case studies on our site. In the end, this provides visitors with a more cohesive experience.&lt;/p&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="Featured Work and Services Section Comparison" class="image-fullwidth" width="800" height="395" src="http://www.lacroixdesign.net/images/blog/far-from-finished/featured-comparison-770a724b.jpg" /&gt;&lt;figcaption&gt;Our previous Featured Work and Services sections &lt;em&gt;(left)&lt;/em&gt; compared to the updated design &lt;em&gt;(right)&lt;/em&gt;.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Previously, we also used an angled container for our services section. On a micro level, we enjoyed this concept, but it did not quite fit with everything else on our website. We determined that our previous image of my workspace might be appropriate in this space. It connects to the collection of tools and devices that we use solve our clients problems. We also made some typography changes to the headers in both of these sections.&lt;/p&gt;
+
+&lt;h3&gt;Improving Visitor Engagement on Blogs &amp;amp; Case Studies&lt;/h3&gt;
+
+&lt;p&gt;Blog posts drive a lot of traffic to our site and this has made writing them a much more enjoyable process. Plus, the increased traffic makes examining the analytics more interesting. We found that many visitors were spending time on the site to read the entire post, but were bouncing off of the page once they finished.&lt;/p&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="Blog Recomendations" class="image-fullwidth" width="800" height="698" src="http://www.lacroixdesign.net/images/blog/far-from-finished/blog-recommendations-a51353b1.jpg" /&gt;&lt;figcaption&gt;Blog posts and individual case studies now featured recommendations to facilitate exploration.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;Thus, we decided to implement a solution that encourages visitors to explore more content. Each post now concludes with a call to action followed by previews for three other posts. We also decided to add a similar experience to the individual case studies pages. The result? We are now seeing visitors land on individual blog or case study and diving deeper into the site.&lt;/p&gt;
+
+&lt;h3&gt;Keeping the Conversation Going&lt;/h3&gt;
+
+&lt;p&gt;Since our website is deployed as a static build, commenting functionality is not a feature of our blog, nor do we really desire to manage comments. However, we do want to keep the conversation going, and Michael and I want to be available for any questions or responses. For this reason, we built a Twitter intent option into our post structure.&lt;/p&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="Blog Post Conversation Actions" class="image-fullwidth" width="1520" height="288" src="http://www.lacroixdesign.net/images/blog/far-from-finished/conversation-actions-bfa533d5.png" /&gt;&lt;figcaption&gt;Readers of our blog posts can now engage in the conversation on Twitter or Designer News.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;We have also found that some of our blog posts garner a lot of readers from &lt;a target="_blank" href="https://news.layervault.com/"&gt;Designer News&lt;/a&gt;. As a result, we decided to add a posting option so that our readers can continue the conversation through comments on Designer News.&lt;/p&gt;
+
+&lt;h3&gt;Increasing Email Newsletter Signup&lt;/h3&gt;
+
+&lt;p&gt;In August of last year, we added a subtle newsletter call to action to the footer of our site. Although we began to see subscribers trickle in, this was in no way a successful solution. Therefore, we decided to redesign this call to action to give it more visual weight.&lt;/p&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="Previous Call-To-Action" class="image-fullwidth" width="800" height="400" src="http://www.lacroixdesign.net/images/blog/far-from-finished/previous-newsletter-signup-de44013e.jpg" /&gt;&lt;figcaption&gt;Our previous newsletter signup call-to-action.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;figure class="image-stretch-wrap"&gt;&lt;img alt="New Call-To-Action" class="image-fullwidth" width="800" height="400" src="http://www.lacroixdesign.net/images/blog/far-from-finished/new-newsletter-signup-6d55fff8.jpg" /&gt;&lt;figcaption&gt;Our new, more prominent newsletter signup call-to-action.&lt;/figcaption&gt;&lt;/figure&gt;
+
+&lt;p&gt;The more prominent call to action has more than doubled our list, and we are regularly adding new subscribers. This, in turn, leads to a new challenge of keeping up with our monthly delivery. Due to a busy workload, we have been a bit lax over the past several months, but we plan to pick back up soon.&lt;/p&gt;
+
+&lt;h3&gt;We’re Still Far from Finished&lt;/h3&gt;
+
+&lt;p&gt;Michael and I have an ongoing &lt;a target="_blank" href="https://trello.com/jameslacroix/recommend"&gt;Trello&lt;/a&gt; board where we regularly add new ideas and discuss solutions for improving our website. In doing so, we are also gaining clients who learn to value the process and set aside budgets for continual improvement.&lt;/p&gt;
+</content>
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.lacroixdesign.net/images/blog/far-from-finished/hurdle-3aaaeaa6.jpg"/>
+  </entry>
   <entry>
     <title>Streamlining Our Proposal Writing Process</title>
     <link rel="alternate" href="http://www.lacroixdesign.net/blog/streamlining-our-proposal-writing-process/"/>
     <id>http://www.lacroixdesign.net/blog/streamlining-our-proposal-writing-process/</id>
     <published>2015-03-13T11:50:00-05:00</published>
-    <updated>2015-03-13T12:32:28-05:00</updated>
+    <updated>2015-04-27T17:08:23-05:00</updated>
     <author>
       <name>James LaCroix</name>
     </author>
@@ -281,28 +350,5 @@
 &lt;p&gt;If it is not obvious by now, our backup process is very important to us. Being able to provide files and assets years after a project is over allows us to continually exceed the expectations of the clients that partner with us. Feel free to &lt;a target="_blank" href="https://twitter.com/lacroixdesign"&gt;comment on Twitter&lt;/a&gt; if you have any questions or need clarity as to how we are using these tools and services.&lt;/p&gt;
 </content>
     <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.lacroixdesign.net/images/blog/always-have-a-solid-backup-plan/always-have-a-solid-backup-plan-15958325.jpg"/>
-  </entry>
-  <entry>
-    <title>Website Launch: Chicago Food Magazine</title>
-    <link rel="alternate" href="http://www.lacroixdesign.net/blog/website-launch-chicago-food-magazine/"/>
-    <id>http://www.lacroixdesign.net/blog/website-launch-chicago-food-magazine/</id>
-    <published>2015-01-28T15:00:00-06:00</published>
-    <updated>2015-01-28T17:25:46-06:00</updated>
-    <author>
-      <name>James LaCroix</name>
-    </author>
-    <content type="html">&lt;p&gt;Of all of the things that we enjoy about Chicago, the food scene is probably at the top of the list. By food scene, I’m not referring to Chicago dogs, deep dish or Italian beef. Instead, I’m talking about the fast-growing assortment of new establishments opening by some of the nation’s most notable new chefs and entrepreneurs. When we are not behind our computers or sketching new ideas at our desks, you will most often find us enjoying craft beers, cocktails and/or a delicious meal somewhere that is most likely becoming our new favorite bar or restaurant.&lt;/p&gt;
-
-&lt;p&gt;You can imagine our delight when we began talking with &lt;a target="_blank" href="http://www.chicagofoodmagazine.com/"&gt;Chicago Food Magazine&lt;/a&gt; back in October. Their team had already begun documenting Chicago’s growing restaurant population through captivating photography. With a vibrant social media presence in place and an ever-growing subscriber base, the team was ready to make their foray into publishing content on their own platform. Their goal was to create an online magazine that provides informative posts on the Chicago food scene in addition to breaking information on news and events.&lt;/p&gt;
-
-&lt;p&gt;Throughout our correspondence with Chicago Food Magazine, we brainstormed features and devised a plan for a publishing platform that would be able to meet their current goals while also providing a strong foundation for future developments. This platform provides the editorial team with tools to publish articles that include a variety of image and social media elements on the responsive website.&lt;/p&gt;
-
-&lt;p&gt;Our design process produced a scalable visual system that would highlight their rich use of photography and provide a pleasant reading experience for visitors. With a large social media following already in place, an important part of the website’s development involved creating a system for sharing content through those channels. To keep followers informed, breaking news is automatically dispersed across those outlets as articles are published.&lt;/p&gt;
-
-&lt;p&gt;We are thrilled to have had the opportunity to design and develop the new Chicago Food Magazine website. Even more so, we have thoroughly enjoyed the content that the magazine has been producing since launch. Over the next few weeks, we will be discussing the project in more detail through a series of blog posts as well as a case study.&lt;/p&gt;
-
-&lt;p&gt;We hope that you take the opportunity to experience the new website at &lt;a target="_blank" href="http://www.chicagofoodmagazine.com/"&gt;www.ChicagoFoodMagazine.com&lt;/a&gt; and hopefully we’ll catch you frequenting one of Chicago’s many top-notch establishments.&lt;/p&gt;
-</content>
-    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://www.lacroixdesign.net/images/blog/website-launch-chicago-food-magazine/website-launch-chicago-food-magazine-5777c0b5.jpg"/>
   </entry>
 </feed>
