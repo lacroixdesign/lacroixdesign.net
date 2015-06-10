@@ -1,6 +1,7 @@
 .b-form {
   .form__required-indicator {
     margin: 2em auto;
+    &:first-child { margin-top: 0; }
   }
 
   fieldset {

@@ -5,8 +5,10 @@
 */
 
 .b-page {
-  margin-top: 3em;
-  margin-bottom: 3em;
+  position: relative;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background: $white;
 }
 
 /*
