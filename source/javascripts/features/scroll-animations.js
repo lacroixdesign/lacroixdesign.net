@@ -13,8 +13,17 @@ window.pageReady(function() {
 
   // ScrollMagic + GSAP
 
+  var currentWindowHeight = 0;
+
+  var calcWindowHeight = function() {
+    currentWindowHeight = $(window).height();
+  };
+
+  $(window).on("resize", calcWindowHeight);
+  calcWindowHeight();
+
   var pauseTweenForShortViewport = function (tween) {
-    if ($(window).height() < 400) {
+    if (currentWindowHeight < 400) {
       tween.pause();
       tween.time(0);
     } else {
