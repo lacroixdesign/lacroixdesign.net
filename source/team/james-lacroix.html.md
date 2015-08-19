@@ -1,7 +1,7 @@
 ---
 member: "James LaCroix"
 title: "James LaCroix - Bio"
-long_title: "James LaCroix is a Designer and Founder"
+long_title: "James LaCroix is a Designer and Founder in Chicago"
 cover_header: "/images/backgrounds/home-welcome.jpg"
 ---
 

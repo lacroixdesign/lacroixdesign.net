@@ -1,7 +1,7 @@
 ---
 member: "Michael LaCroix"
 title: "Michael LaCroix - Bio"
-long_title: "Michael LaCroix is a Developer and Designer"
+long_title: "Michael LaCroix is a Developer and Designer in Chicago"
 cover_header: "/images/backgrounds/home-welcome.jpg"
 ---
 
