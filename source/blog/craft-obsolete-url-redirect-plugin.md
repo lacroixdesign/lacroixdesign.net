@@ -7,7 +7,7 @@ image: "craft-obsolete-url-redirect-plugin.jpg"
 inline_header: true
 light_logo: true
 short_url: "http://lcrx.co/1AeiFro"
-dn_url: "https://news.layervault.com/stories/45826-a-craft-redirect-plugin-for-obsolete-urls"
+dn_url: "https://www.designernews.co/stories/45826-a-craft-redirect-plugin-for-obsolete-urls"
 published: true
 ---
 
