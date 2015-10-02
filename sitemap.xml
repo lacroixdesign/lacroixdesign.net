@@ -169,12 +169,12 @@
     <lastmod>2015-06-02</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
-    <lastmod>2015-03-10</lastmod>
+    <loc>http://www.lacroixdesign.net/case-studies/utter-nonsense/</loc>
+    <lastmod>2015-10-02</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/</loc>
-    <lastmod>2015-06-02</lastmod>
+    <lastmod>2015-10-02</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/favicon-16x16-08e5c2cc.png</loc>
@@ -259,5 +259,9 @@
   <url>
     <loc>http://www.lacroixdesign.net/</loc>
     <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
+    <lastmod>2015-03-10</lastmod>
   </url>
 </urlset>
