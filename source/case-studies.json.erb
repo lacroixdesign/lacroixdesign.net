@@ -2,7 +2,9 @@
 site_url = "http://www.lacroixdesign.net/"
 src_posts = blog("case-studies").articles
 
-posts = src_posts.map do |post|
+posts = src_posts.select { |post|
+  post.data.featured
+}.map do |post|
   color = rgba (post.data.color || data.colors.black), 0.7
   {
     id: post.url,
