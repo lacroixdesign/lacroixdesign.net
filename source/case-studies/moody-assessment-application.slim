@@ -1,0 +1,51 @@
+---
+title: "Moody Publishers Assessment Application"
+date: 2016-3-20 10:00
+cover_header: true
+tagline: "Encouraging Self-Discovery Through Interactive Quizzes and Assessments"
+published: true
+color: "#5f3084"
+website_url: "http://www.5lovelanguages.com"
+featured: true
+---
+
+/ Text
+= text_block do
+  p After a successful launch of a redesigned 5 Love Languages site in 2012, the result was a 200–300% increase of daily online assessment participants. This dramatic jump revealed the need to create a more robust platform that would not only perform well under the large amounts of traffic, but would also offer a slew of much-needed features to benefit users and the 5 Love Languages team.
+
+  / Split text + image – text on right
+= split_block image: case_study_image_path('assessment-application-1.jpg'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p The online assessment application can be branded to match any site that it is embeded onto.
+
+= text_block do
+  p In lieu of the WordPress solution that was implemented by a previous agency, we recommended spinning the assessment tool off into its own digital product. The new custom web application was built on Node.js and utilizes Facebook’s React library to provide users with a performant interactive experience. In order to accommodate large user volumes, we also employed a distributed memory caching system to speed up the dynamic experience.
+
+  / Split text + image – text on left
+= split_block image: case_study_image_path('assessment-application-5.jpg'), background: current_page.data.color, color: '#ffffff', text_side: "left"
+  p Upon completion of the assessment the user receives a detailed report of their results. Content for the results is managed through the administration component of the application.
+
+= text_block do
+  p The new web application provides the team at Moody Publishers with a number of features that were not previously available. The product we designed and developed will not only be repurposed for many products, but it can also be translated into multiple languages. Through the administration system, the team can easily create custom quizzes and assessments that implore different types of logic. Thus, administrators can set how each answer is scored and how results are calculated.
+
+  / Split text + image – text on right
+= split_block image: case_study_image_path('assessment-application-4.gif'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p Each online assessment offers the ability to customize results with representative images.
+
+= text_block do
+  p Users experience a quiz or assessment branded to match any site that it is embedded onto. The entire participant experience has been designed to make completing the sometimes lengthy assessments feel effortless. Upon completion of the process, users receive a report explaining their results. These results can easily be shared via social media and email.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('assessment-application-2.jpg'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p The application allows Moody Publishers to collect demographic data that provides information to help them improve future assessments and books.
+
+= text_block do
+  p Finally, the product provides Moody Publishers analytics on how questions are answered and user demographics. The client also has the option to collect user emails for marketing efforts.
+
+  p The quiz and assessment application can currently be utilized to <a href="http://www.5lovelanguages.com" target="_blank">determine your Love Language</a> or <a href="http://www.5lovelanguages.com/profile/anger/" target="_blank">Personal Anger Assessment</a>.
+
+/ Slideshow
+= case_study_slideshow %w(assessment-application-slide-1 assessment-application-slide-2 assessment-application-slide-3 assessment-application-slide-4)
+
+= text_block callout: true
+  p Are you looking to create a mobile application?
+  = component "cta-button"
