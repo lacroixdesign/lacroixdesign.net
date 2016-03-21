@@ -137,6 +137,10 @@
     <lastmod>2015-03-10</lastmod>
   </url>
   <url>
+    <loc>http://www.lacroixdesign.net/case-studies/else/</loc>
+    <lastmod>2016-03-21</lastmod>
+  </url>
+  <url>
     <loc>http://www.lacroixdesign.net/case-studies/estaine/</loc>
     <lastmod>2015-03-10</lastmod>
   </url>
@@ -151,6 +155,10 @@
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/melanie-joye-lmt/</loc>
     <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/moody-assessment-application/</loc>
+    <lastmod>2016-03-21</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/not-today-coalition/</loc>
@@ -169,12 +177,16 @@
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
+    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
+    <lastmod>2015-10-05</lastmod>
+  </url>
+  <url>
     <loc>http://www.lacroixdesign.net/case-studies/utter-nonsense/</loc>
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/</loc>
-    <lastmod>2015-10-02</lastmod>
+    <lastmod>2016-03-21</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/favicon-16x16-08e5c2cc.png</loc>
@@ -259,9 +271,5 @@
   <url>
     <loc>http://www.lacroixdesign.net/</loc>
     <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
-    <lastmod>2015-10-05</lastmod>
   </url>
 </urlset>
