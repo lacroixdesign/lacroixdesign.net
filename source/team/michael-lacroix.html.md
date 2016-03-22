@@ -1,11 +1,11 @@
 ---
 member: "Michael LaCroix"
 title: "Michael LaCroix - Bio"
-long_title: "Michael LaCroix is a Developer and Designer in Chicago"
+long_title: "Michael LaCroix is a Front End Developer in Chicago"
 cover_header: "/images/backgrounds/home-welcome.jpg"
 ---
 
-Michael’s entry into the world of web development is slightly difficult to pin down. Perhaps it goes back to the video games that he used to build for himself in middle school using BASIC on an old IBM. Regardless, Michael is passionate about well-articulated code and is fluent in JavaScript, Ruby, HTML and CSS.
+Michael’s entry into the world of development is slightly difficult to pin down. Perhaps it goes back to the video games that he used to build for himself in middle school using GW-BASIC on an old Epson 8088. Regardless, Michael is passionate about well-articulated code and is fluent in JavaScript, Ruby, HTML and CSS, and loves building applications with libraries like React and Redux.
 
 He approaches design problems with a passion for usability and user interaction. Clients benefit from a thoughtful systematic approach that creates products which makes complex tasks appear simple and efficient. Innovative and technically savvy, Michael's contribution to projects sets businesses up for both immediate and future success.
 
