@@ -1,0 +1,117 @@
+---
+title: "SmartHabit"
+date: 2016-3-26 10:00
+cover_header: true
+tagline: "Revolutionizing the Workplace Through a Product Experience Designed to Develop Better Habits"
+published: true
+color: "#00b9fd"
+website_url: "http://app.smarthabit.com"
+featured: true
+---
+
+/ Text
+= text_block do
+  p SmartHabit helps leaders and their teams pursue business-critical goals one small step at a time. Coming from the world of highly-customized corporate consulting, SmartHabit’s founders seek to revolutionize how work gets done by helping workers develop simple, intentional actions that can be performed consistently for a surprisingly big impact.
+
+  p SmartHabit differs from traditional corporate consulting in that it embraces technology to automate the process and builds a community for participants. The founders have ambitious goals on how their concepts could be applied across web and native mobile experiences to create transformative change in the workplace. They began working with us to bring the vision to life.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('smarthabit-1.png'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p SmartHabit participants receive a small daily set of challenges to help them build productive habits. They &ldquo;check in&rdquo; to these challenges through their dashboard.
+
+/ Text
+= text_block do
+  h3 Early Stage Prototype
+
+  p We began the process by building out a low-fidelity prototype to validate their concept with little investment. To accomplish this, we needed a notification system to provide users with daily reminders to check in that they had performed their daily action. We utilized MailChimp to perform this task. The second component was that we needed to collect feedback from the participants so that we could assess the level of participation and results. For this component, we utilized Typeform with some conditional outcomes.
+
+  p The prototype was extremely successful and taught us a lot about how users were interacting with the product. It also revealed opportunities for improvement. Now that the proof of concept was validated, we moved forward with designing and developing the application.
+
+/ Split text + image – text on left
+= split_block image: case_study_image_path('smarthabit-2.png'), background: '#28508d' , color: '#ffffff', text_side: "left"
+  p Questions are presented and answered in a public setting to encourage participants to accomplish big challenges as a community.
+
+/ Text
+= text_block do
+  h3 The SmartHabit Experience
+
+  p SmartHabit’s product aims to provide the benefits of a custom consulting engagement through an interactive experience that can operate at scale. SmartHabit participants can be grouped by organizations and groups within the organization. The SmartHabit team builds courses customized to organization or group’s needs.
+
+  p The courses are centered on daily challenges assigned to the user through a morning email message. Users interact with SmartHabit through a personal dashboard that features a new background image each day. The background image is chosen to represent their corporate environment and the goals of the experience.
+
+  p Users “check in” that they’ve completed their daily actions through their dashboard. As they go through the SmartHabit program, they are provided with insights in the form of data visualizations that reveal their performance compared to others in their group.
+
+  p SmartHabit is about building community within the participating organization. To accomplish this,  users are provided scheduled questions throughout the 45–90 day program, which they answer publicly.  These questions are often centered around how to improve outcomes and solve complex problems. The public forum allows other users to respond to posts as the group collaborates through the application to achieve workplace goals.
+
+  p Participants also receive rewards in the form of badges as they demonstrate proficiency through participation. Although the SmartHabit program is tailored to the participating organization, the experience is designed to reveal personal growth to the individual as they develop better workplace habits. At the end of the course, the user is provided with a report documenting the progress that they made.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('smarthabit-3.png'), background: '#a629a6', color: '#ffffff', text_side: "right"
+  p Threaded conversations provide an opportunity for group members to work together to meet goals.
+
+/ Text
+= text_block do
+  h3 Web Application
+
+  p With a plentitude of ideas and possibilities, we have worked with SmartHabit’s founders to ruthlessly prioritize features and view the product as a continual work in progress. Long-term goals include building a SmartHabit experience across multiple platforms. We’ve chosen to focus on the web application to provide an initial platform for formalizing and testing the product.
+
+  p The front-end application runs on <a href="https://nodejs.org/" target="_blank">Node.js</a> and utilizes <a href="https://facebook.github.io/react/" target="_blank">React</a> to deliver the user experience. <a href="https://aws.amazon.com/">Amazon Web Services</a> are handling all of the back-end data storage needs and in order to quickly scale up the product, and we implemented Craft CMS to provide the admin interface.
+
+/ Split text + image – text on left
+= split_block image: case_study_image_path('smarthabit-4.png'), background: current_page.data.color, color: '#ffffff', text_side: "left"
+  p Data visualizations provide users with insights on where they are at in the program, how they are performing and how their team is performing.
+
+/ Text
+= text_block do
+  h3 The Process
+
+  p We needed to establish a framework for how to approach new features as they enter into the roadmap. Since the team is distributed, we are not regularly working together at the same location. This framework allows us to continually take deliberate steps in the right direction.
+
+  p We split potential features or updates into small manageable components. For a feature to enter into the product roadmap, it must go through the following process:
+
+  ol
+    li
+      p <strong>Identify:</strong> Before we get too far along discussing any feature, we need to identify the problem that the feature is trying to solve. Identifying what we are trying to solve provides two great advantages.
+      p First, it sets the beginning stages of a benchmark for testing. The performance of every feature will be judged first on whether or not it solved the problem that it was responsible for. After that, we can apply metrics and examine to what extent the feature is successfully solving the problem. This offers an opportunity to continually iterate and improve upon what we are building.
+
+    li
+      p <strong>Define:</strong> Before we begin designing or developing anything, we work with SmartHabit’s founders to define the solution. For example, if the user is receiving a badge to award them for something, we define: What circumstances or metrics trigger that reward, how does the user discover these metrics and how does the user become aware that they received the award. Much like the first stage, this involves asking a lot of challenging questions and proposing a lot of ideas so that we can define the right solution for the given problem at the current stage of the product life cycle.
+
+    li
+      p <strong>Design:</strong> The product is moving fast and we are constantly rolling out new updates to the application. Our strategy is to have design out in front of development as much as possible. Thus, we have a prototype route established that provides a venue for designing the views. This way, the styles and JSX markup can easily be transitioned into the functional application.
+      p The design system was created to easily be customized with a daily background image fitting of the organization or group participating in the program. The modular system also allows for new features to be deployed as the product continues to grow. Vibrant colors and a friendly typographic system are utilized to provide a fun and upbeat component to the workplace.
+
+    li
+      p <strong>Develop:</strong> After a feature has made it through the design phase and gets client approval, the feature is developed, tested in staging and eventually deployed to the final product.
+
+    li
+      p <strong>Research & Iterate:</strong> SmartHabit is an innovative company with exciting new ideas. We want to continually test our assumptions against user engagement. By examining this use, we can continue to improve upon and prioritize features.
+
+/ Split text + image – text on right
+= split_block image: case_study_image_path('smarthabit-5.png'), background: '#28508d' , color: '#ffffff', text_side: "right"
+  p Badges are awarded to mark accomplishments in proficiency. The badge system is designed to expand as the product grows.
+
+= text_block do
+  h3 Values
+
+  p As we continue to build SmartHabit, we have uncovered and documented the core values that arise. We continually reference these values as we grow the product to ensure that the experience remains on target. We expect this value set to continue to grow along with this exciting product.
+
+  p These values include:
+
+  ul
+    li
+      p <strong>Proficiency-based Rewards:</strong> Rewards represent proficiency rather than just activity alone.
+    li
+      p <strong>Community over Competition:</strong> Metrics should foster community through awareness instead of positioning coworkers against one another.
+    li
+      p <strong>A Perfect Complement to Work:</strong> Although helping to improve the workplace, SmartHabit shouldn’t feel like work, nor should it get in the way of it.
+
+  h3 Always Evolving
+
+  p SmartHabit is just getting started and we are thrilled to be their design and development partner as they grow their product. We will continue to update the case study, and you can find out more at the <a href="http://www.smarthabit.com/" target="_blank">SmartHabit website</a>.
+
+= live_preview_block url: current_page.data.website_url, background: current_page.data.color, color: data.colors.white
+
+= text_block callout: true
+  p Are you looking to create a mobile application?
+  = component "cta-button"

@@ -13,6 +13,7 @@
     ("background-color: #{background};" if background)
   ].join(' ')
 
+  bg_color = "background-color: #{background};"
   bg_image = "background-image: url('#{image}');"
 
   side_class = text_side.to_s == 'right' ? 'right' : 'left'
@@ -29,7 +30,7 @@
 <% end %>
 
 <% split_block_image = capture_html do %>
-  <aside style="<%= bg_image %>"></aside>
+  <aside style="<%= bg_color %><%= bg_image %>"></aside>
 <% end %>
 
 <div class="b-split-component">
