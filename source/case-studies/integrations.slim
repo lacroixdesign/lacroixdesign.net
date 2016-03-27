@@ -1,0 +1,46 @@
+---
+title: "Integrations.io"
+date: 2016-3-26 10:00
+cover_header: true
+tagline: "Providing a Painless Solution for Integrating Online Services"
+published: true
+color: "#30babf"
+website_url: "https://www.integrations.io"
+featured: true
+---
+
+/ Text
+= text_block do
+  p Integrations.io is a new solution that provides a platform for connecting ecommerce services. The service provides a quick and painless way to connect various web entities without the need to build your own connections. The integrations offerings are highly customizable and allow developers to shape solutions according to business needs.
+
+  / Split text + image – text on right
+= split_block image: case_study_image_path('assessment-application-1.jpg'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p The online assessment application can be branded to match any site that it is embeded onto.
+
+= text_block do
+  p The web application assures that orders are never lost and systematically retries connections if a problem is discovered. Users are provided alerts via a notification system to provide awareness of any issues and make the process of tracking and resolving them effortless.
+
+  / Split text + image – text on left
+= split_block image: case_study_image_path('assessment-application-5.jpg'), background: current_page.data.color, color: '#ffffff', text_side: "left"
+  p Upon completion of the assessment the user receives a detailed report of their results. Content for the results is managed through the administration component of the application.
+
+= text_block do
+  p We provided all design and front-end development for the initial launch of the web application, while Buildrx handled all of the back-end development. Since this was the initial launch of the minimum viable product, we were aware that the product would continue to expand over time. Thus, we created a modular style guide that would provide the visual direction for continually building on the product.
+
+  / Split text + image – text on right
+= split_block image: case_study_image_path('assessment-application-4.gif'), background: current_page.data.color, color: '#ffffff', text_side: "right"
+  p Each online assessment offers the ability to customize results with representative images.
+
+= text_block do
+  p Integrations.io is in its final stages of development and will be launching soon.
+
+  p The quiz and assessment application can currently be utilized to <a href="http://www.5lovelanguages.com" target="_blank">determine your Love Language</a> or <a href="http://www.5lovelanguages.com/profile/anger/" target="_blank">Personal Anger Assessment</a>.
+
+/ Slideshow
+= case_study_slideshow %w(assessment-application-slide-1 assessment-application-slide-2 assessment-application-slide-3 assessment-application-slide-4)
+
+= live_preview_block url: current_page.data.website_url, background: '#445878', color: data.colors.white
+
+= text_block callout: true
+  p Are you looking to create a mobile application?
+  = component "cta-button"
