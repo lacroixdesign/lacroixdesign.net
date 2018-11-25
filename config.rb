@@ -142,7 +142,7 @@ configure :build do
   activate :gzip
 
   activate :asset_host
-  set :asset_host, "http://www.lacroixdesign.net"
+  set :asset_host, "https://www.lacroixdesign.net"
 
   # Use relative URLs
   # activate :relative_assets
