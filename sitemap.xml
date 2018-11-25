@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.lacroixdesign.net/android-chrome-144x144-be0a6556.png</loc>
+    <loc>http://www.lacroixdesign.net/blog/page/3/</loc>
+    <lastmod>2015-02-04</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/</loc>
+    <lastmod>2015-02-04</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/new-client/thanks/</loc>
+    <lastmod>2015-06-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/new-client/</loc>
+    <lastmod>2015-06-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/mstile-310x310-7c32f750.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/mstile-144x144-4b40a25f.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
@@ -9,31 +29,43 @@
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/android-chrome-36x36-f520060c.png</loc>
+    <loc>http://www.lacroixdesign.net/mstile-70x70-d6663744.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/android-chrome-48x48-76357053.png</loc>
+    <loc>http://www.lacroixdesign.net/favicon-194x194-eecd4dab.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/android-chrome-72x72-99d6a55a.png</loc>
-    <lastmod>2015-02-17</lastmod>
+    <loc>http://www.lacroixdesign.net/start/thanks/</loc>
+    <lastmod>2015-06-10</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/android-chrome-96x96-f3a6d43f.png</loc>
-    <lastmod>2015-02-17</lastmod>
+    <loc>http://www.lacroixdesign.net/start/</loc>
+    <lastmod>2015-06-10</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/a-study-in-craft/</loc>
+    <loc>http://www.lacroixdesign.net/case-studies/</loc>
+    <lastmod>2016-09-21</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/far-from-finished/</loc>
     <lastmod>2015-09-24</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/always-have-a-solid-backup-plan/</loc>
-    <lastmod>2015-02-12</lastmod>
+    <loc>http://www.lacroixdesign.net/blog/why-choose-responsive-web-design/</loc>
+    <lastmod>2015-01-27</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/announcing-our-new-monthly-newsletter/</loc>
+    <loc>http://www.lacroixdesign.net/blog/website-launch-chicago-food-magazine/</loc>
+    <lastmod>2015-01-28</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/setting-goals-for-your-web-project/</loc>
+    <lastmod>2015-01-27</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/dish-2013-student-design-conference/</loc>
     <lastmod>2015-01-27</lastmod>
   </url>
   <url>
@@ -41,7 +73,11 @@
     <lastmod>2015-09-24</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/dish-2013-student-design-conference/</loc>
+    <loc>http://www.lacroixdesign.net/blog/new-adventures-in-collaboration-apps-services-part-1/</loc>
+    <lastmod>2015-01-27</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/recommended-reading-insites-the-book/</loc>
     <lastmod>2015-01-27</lastmod>
   </url>
   <url>
@@ -49,11 +85,23 @@
     <lastmod>2015-01-27</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/estaine-kickstarter-campaign/</loc>
-    <lastmod>2015-03-10</lastmod>
+    <loc>http://www.lacroixdesign.net/blog/announcing-our-new-monthly-newsletter/</loc>
+    <lastmod>2015-01-27</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/far-from-finished/</loc>
+    <loc>http://www.lacroixdesign.net/blog/what-does-success-look-like/</loc>
+    <lastmod>2015-01-27</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/streamlining-our-proposal-writing-process/</loc>
+    <lastmod>2015-09-24</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/signal-tower-interview/</loc>
+    <lastmod>2015-01-27</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/a-study-in-craft/</loc>
     <lastmod>2015-09-24</lastmod>
   </url>
   <url>
@@ -61,12 +109,16 @@
     <lastmod>2015-02-10</lastmod>
   </url>
   <url>
+    <loc>http://www.lacroixdesign.net/blog/one-year-of-node-bourbon/</loc>
+    <lastmod>2015-01-27</lastmod>
+  </url>
+  <url>
     <loc>http://www.lacroixdesign.net/blog/lessons-learned-from-working-remotely/</loc>
     <lastmod>2015-01-27</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/new-adventures-in-collaboration-apps-services-part-1/</loc>
-    <lastmod>2015-01-27</lastmod>
+    <loc>http://www.lacroixdesign.net/blog/always-have-a-solid-backup-plan/</loc>
+    <lastmod>2015-02-12</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/blog/new-adventures-in-collaboration-apps-services-part-2/</loc>
@@ -77,51 +129,15 @@
     <lastmod>2015-01-27</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/blog/one-year-of-node-bourbon/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/recommended-reading-insites-the-book/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/setting-goals-for-your-web-project/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/signal-tower-interview/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/streamlining-our-proposal-writing-process/</loc>
-    <lastmod>2015-09-24</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/website-launch-chicago-food-magazine/</loc>
-    <lastmod>2015-01-28</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/what-does-success-look-like/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/why-choose-responsive-web-design/</loc>
-    <lastmod>2015-01-27</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/</loc>
-    <lastmod>2015-02-04</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/1-page-sites/</loc>
+    <loc>http://www.lacroixdesign.net/blog/estaine-kickstarter-campaign/</loc>
     <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/justice-film-fest/</loc>
+    <lastmod>2016-09-21</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/canc3r/</loc>
-    <lastmod>2015-03-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/chapman-live/</loc>
     <lastmod>2015-03-10</lastmod>
   </url>
   <url>
@@ -129,11 +145,15 @@
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/danger-house/</loc>
-    <lastmod>2015-03-10</lastmod>
+    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
+    <lastmod>2015-10-05</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/dish-conference-2013/</loc>
+    <loc>http://www.lacroixdesign.net/case-studies/not-today-coalition/</loc>
+    <lastmod>2016-01-07</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/danger-house/</loc>
     <lastmod>2015-03-10</lastmod>
   </url>
   <url>
@@ -141,51 +161,43 @@
     <lastmod>2016-03-21</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/estaine/</loc>
-    <lastmod>2015-03-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/integrations/</loc>
-    <lastmod>2016-09-21</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/justice-film-fest/</loc>
-    <lastmod>2016-09-21</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/landid/</loc>
-    <lastmod>2015-10-05</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/melanie-joye-lmt/</loc>
-    <lastmod>2015-03-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/moody-assessment-application/</loc>
-    <lastmod>2016-09-21</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/not-today-coalition/</loc>
-    <lastmod>2016-01-07</lastmod>
-  </url>
-  <url>
     <loc>http://www.lacroixdesign.net/case-studies/signature-group-holdings/</loc>
     <lastmod>2015-03-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/case-studies/smarthabit/</loc>
-    <lastmod>2016-09-21</lastmod>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/case-studies/snyder-entertainment/</loc>
     <lastmod>2016-09-21</lastmod>
   </url>
   <url>
+    <loc>http://www.lacroixdesign.net/case-studies/smarthabit/</loc>
+    <lastmod>2016-09-21</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/integrations/</loc>
+    <lastmod>2016-09-21</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/1-page-sites/</loc>
+    <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/chapman-live/</loc>
+    <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/dish-conference-2013/</loc>
+    <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
     <loc>http://www.lacroixdesign.net/case-studies/stargrin/</loc>
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/the-5-love-languages/</loc>
+    <loc>http://www.lacroixdesign.net/case-studies/estaine/</loc>
+    <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/case-studies/landid/</loc>
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
@@ -193,32 +205,20 @@
     <lastmod>2015-10-05</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/case-studies/</loc>
+    <loc>http://www.lacroixdesign.net/case-studies/moody-assessment-application/</loc>
     <lastmod>2016-09-21</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/favicon-16x16-08e5c2cc.png</loc>
+    <loc>http://www.lacroixdesign.net/case-studies/melanie-joye-lmt/</loc>
+    <lastmod>2015-03-10</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/mstile-310x150-4beb1355.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/favicon-194x194-eecd4dab.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/favicon-32x32-40d8f0e3.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/favicon-96x96-99840bf4.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/page/3/</loc>
-    <lastmod>2015-02-04</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/blog/page/2/</loc>
-    <lastmod>2015-02-04</lastmod>
+    <loc>http://www.lacroixdesign.net/</loc>
+    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>http://www.lacroixdesign.net/team/michael-lacroix/</loc>
@@ -229,11 +229,11 @@
     <lastmod>2015-08-19</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/start/thanks/</loc>
-    <lastmod>2015-06-10</lastmod>
+    <loc>http://www.lacroixdesign.net/favicon-96x96-99840bf4.png</loc>
+    <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/start/</loc>
+    <loc>http://www.lacroixdesign.net/newsletter/confirm/</loc>
     <lastmod>2015-06-10</lastmod>
   </url>
   <url>
@@ -245,39 +245,39 @@
     <lastmod>2015-06-10</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/newsletter/confirm/</loc>
-    <lastmod>2015-06-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/new-client/thanks/</loc>
-    <lastmod>2015-06-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/new-client/</loc>
-    <lastmod>2015-06-10</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/mstile-70x70-d6663744.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/mstile-310x310-7c32f750.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
-    <loc>http://www.lacroixdesign.net/mstile-310x150-4beb1355.png</loc>
-    <lastmod>2015-02-17</lastmod>
-  </url>
-  <url>
     <loc>http://www.lacroixdesign.net/mstile-150x150-eb1c40fa.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/mstile-144x144-4b40a25f.png</loc>
+    <loc>http://www.lacroixdesign.net/android-chrome-36x36-f520060c.png</loc>
     <lastmod>2015-02-17</lastmod>
   </url>
   <url>
-    <loc>http://www.lacroixdesign.net/</loc>
-    <changefreq>weekly</changefreq>
+    <loc>http://www.lacroixdesign.net/android-chrome-96x96-f3a6d43f.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/android-chrome-72x72-99d6a55a.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/android-chrome-48x48-76357053.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/favicon-32x32-40d8f0e3.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/android-chrome-144x144-be0a6556.png</loc>
+    <lastmod>2015-02-17</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/blog/page/2/</loc>
+    <lastmod>2015-02-04</lastmod>
+  </url>
+  <url>
+    <loc>http://www.lacroixdesign.net/favicon-16x16-08e5c2cc.png</loc>
+    <lastmod>2015-02-17</lastmod>
   </url>
 </urlset>
