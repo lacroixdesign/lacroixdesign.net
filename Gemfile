@@ -4,6 +4,7 @@ source 'http://rubygems.org'
 
 gem "middleman", ">= 3.3"
 gem "middleman-blog"
+gem "rake"
 gem "redcarpet"
 gem "compass", ">= 1.0.0.alpha.19"
 gem "sass", ">= 3.3"
