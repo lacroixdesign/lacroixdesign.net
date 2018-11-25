@@ -1,7 +1,7 @@
 ---
 member: "Michael LaCroix"
 title: "Michael LaCroix - Bio"
-long_title: "Michael LaCroix is a Front End Developer in Chicago"
+long_title: "Michael LaCroix is a Software Engineer in San Francisco"
 cover_header: "/images/backgrounds/home-welcome.jpg"
 ---
 
