@@ -1,0 +1,12 @@
+# Ruby 3.4 to match the global toolchain (mise replaced rbenv + brew ruby).
+#
+# NOTE: `bundle install` does NOT work here, and did not before this pin either.
+# Gemfile.lock says `BUNDLED WITH 1.17.1`, and bundler 1.17 calls
+# `String#untaint`, which Ruby removed in 3.2 — so it fails identically on the
+# old rbenv 3.3.6 and on brew's ruby 4.0.6. Pre-existing, not a mise issue.
+#
+# Reviving the build needs a decision, not a version bump: modern bundler would
+# then hit compass/sass 3.x in the Gemfile, both abandoned. The alternative is
+# pinning ruby = "3.1" here (last release that still has `untaint`).
+[tools]
+ruby = "3.4"
